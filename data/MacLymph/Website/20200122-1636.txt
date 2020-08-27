@@ -1,0 +1,4 @@
+Date: 20200122
+Time: 1636
+Duration: 30
+Description: "Updated ALA logo"

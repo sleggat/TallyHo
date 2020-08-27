@@ -1,0 +1,4 @@
+Date: 20190718
+Time: 1800
+Duration: 75
+Description: "Designed the image to go on the Voucher page. Updated website. Took a while!"

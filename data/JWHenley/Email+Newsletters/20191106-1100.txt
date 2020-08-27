@@ -1,0 +1,4 @@
+Date: 20191106
+Time: 1100
+Duration: 60
+Description: "Setting up email newsletter templates .. designing with new name/tagline."

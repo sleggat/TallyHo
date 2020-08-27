@@ -1,0 +1,4 @@
+Date: 20200527
+Time: 2141
+Duration: 60
+Description: "Building site template for WP"

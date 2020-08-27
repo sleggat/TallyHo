@@ -1,0 +1,4 @@
+Date: 20191119
+Time: 1518
+Duration: 15
+Description: "Send out email 00 and check stats"

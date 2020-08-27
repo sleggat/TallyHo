@@ -1,0 +1,4 @@
+Date: 20190919
+Time: 2025
+Duration: 15
+Description: "Emailed through cover art for MP3s"

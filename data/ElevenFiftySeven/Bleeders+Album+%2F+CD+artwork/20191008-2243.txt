@@ -1,0 +1,4 @@
+Date: 20191008
+Time: 2243
+Duration: 60
+Description: "Made up graphic for Bleeding Heart CD, Added 1157 logo to FB header."

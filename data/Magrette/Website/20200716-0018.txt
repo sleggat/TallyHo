@@ -1,0 +1,4 @@
+Date: 20200716
+Time: 0018
+Duration: 20
+Description: "Started planning re-adding watches and having popup for paired strap"

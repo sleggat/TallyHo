@@ -1,0 +1,4 @@
+Date: 20190925
+Time: 1054
+Duration: 90
+Description: "Bought and installed SSL (yearly $10US)"

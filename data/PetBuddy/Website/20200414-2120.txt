@@ -1,0 +1,4 @@
+Date: 20200414
+Time: 2120
+Duration: 60
+Description: "Getting everything finished up. Now uploaded onto server for testing."

@@ -1,0 +1,4 @@
+Date: 20190809
+Time: 1600
+Duration: 210
+Description: "More on New sections.. adding blog too. Lots of styling."

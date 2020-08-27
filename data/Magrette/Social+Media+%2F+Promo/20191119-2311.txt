@@ -1,0 +1,4 @@
+Date: 20191119
+Time: 2311
+Duration: 30
+Description: "Planning Black Friday promo"

@@ -1,0 +1,4 @@
+Date: 20200805
+Time: 1443
+Duration: 60
+Description: "Worked on cover and fixing bullets"

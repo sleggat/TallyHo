@@ -1,0 +1,4 @@
+Date: 20191107
+Time: 1647
+Duration: 150
+Description: "Adding newsletter section to homepage. Fixing a few things in Mailchimp"

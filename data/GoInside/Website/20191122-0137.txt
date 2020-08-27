@@ -1,0 +1,4 @@
+Date: 20191122
+Time: 0137
+Duration: 90
+Description: "Setting up server, getting more info from Roger"

@@ -1,0 +1,4 @@
+Date: 20200803
+Time: 1148
+Duration: 60
+Description: "Update cards with Milford details"

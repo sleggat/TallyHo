@@ -1,0 +1,4 @@
+Date: 20200713
+Time: 2042
+Duration: 25
+Description: "Drawing outline for postcard"

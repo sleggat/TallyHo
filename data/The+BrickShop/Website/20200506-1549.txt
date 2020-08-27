@@ -1,0 +1,4 @@
+Date: 20200506
+Time: 1549
+Duration: 45
+Description: "Changes to css, making it work on mobile"

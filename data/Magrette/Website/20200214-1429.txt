@@ -1,0 +1,4 @@
+Date: 20200214
+Time: 1429
+Duration: 30
+Description: "Added 15% Off to product thumbs"

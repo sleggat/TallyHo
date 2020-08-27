@@ -1,0 +1,4 @@
+Date: 20200507
+Time: 1638
+Duration: 180
+Description: "Fixing up mortar colours, creating json to spit out products"

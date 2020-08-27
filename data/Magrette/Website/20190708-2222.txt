@@ -1,0 +1,4 @@
+Date: 20190708
+Time: 2222
+Duration: 30
+Description: "Researching Shopify Backup solutions"

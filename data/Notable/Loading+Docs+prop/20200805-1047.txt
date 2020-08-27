@@ -1,0 +1,4 @@
+Date: 20200805
+Time: 1047
+Duration: 300
+Description: "Working on first 6 or so pages"

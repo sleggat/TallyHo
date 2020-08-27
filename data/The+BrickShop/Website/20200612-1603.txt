@@ -1,0 +1,4 @@
+Date: 20200612
+Time: 1603
+Duration: 15
+Description: "Doing the galaxy half/half and emailing Grant about stuff"

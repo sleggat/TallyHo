@@ -1,0 +1,4 @@
+Date: 20191120
+Time: 2212
+Duration: 60
+Description: "Creating CSS for the Black Friday page(s)"

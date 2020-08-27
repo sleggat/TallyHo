@@ -1,0 +1,4 @@
+Date: 20200317
+Time: 2111
+Duration: 20
+Description: "Changes to GMT (remove some variants, add in email notification)"

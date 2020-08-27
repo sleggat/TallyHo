@@ -1,0 +1,4 @@
+Date: 20190910
+Time: 1300
+Duration: 60
+Description: "Exported out artwork again and uploaded to SpinRoad"

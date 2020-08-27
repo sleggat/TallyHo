@@ -1,0 +1,4 @@
+Date: 20191108
+Time: 1427
+Duration: 30
+Description: "Added a few more products to FB catalogue"

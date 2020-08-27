@@ -1,0 +1,4 @@
+Date: 20191101
+Time: 1806
+Duration: 60
+Description: "Setting up business profile for Facebook and Instagram ads. Added a test product. Takes a wee while to set everything up."

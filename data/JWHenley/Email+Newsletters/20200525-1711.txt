@@ -1,0 +1,4 @@
+Date: 20200525
+Time: 1711
+Duration: 15
+Description: "Create email \'I hate traveling\'"

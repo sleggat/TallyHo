@@ -1,0 +1,4 @@
+Date: 20191007
+Time: 2356
+Duration: 60
+Description: "More changes to BigCartel, added vinyl mock-ups"

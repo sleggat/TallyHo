@@ -1,0 +1,4 @@
+Date: 20190930
+Time: 1757
+Duration: 30
+Description: "Rounded sticker"

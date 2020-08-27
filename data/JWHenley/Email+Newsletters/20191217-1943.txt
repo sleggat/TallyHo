@@ -1,0 +1,4 @@
+Date: 20191217
+Time: 1943
+Duration: 45
+Description: "Prepare and send out issue 02 (the third one)"

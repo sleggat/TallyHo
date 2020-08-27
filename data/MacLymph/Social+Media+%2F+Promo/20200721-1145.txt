@@ -1,0 +1,4 @@
+Date: 20200721
+Time: 1145
+Duration: 60
+Description: "Create Window sticker idea"

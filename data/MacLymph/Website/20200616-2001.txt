@@ -1,0 +1,4 @@
+Date: 20200616
+Time: 2001
+Duration: 15
+Description: "Emailing regarding branding and changing the homepage"

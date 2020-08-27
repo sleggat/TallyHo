@@ -1,0 +1,4 @@
+Date: 20190920
+Time: 1626
+Duration: 15
+Description: "More anaytics from previous (sept) newsletter"

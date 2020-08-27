@@ -1,0 +1,4 @@
+Date: 20200128
+Time: 1459
+Duration: 30
+Description: "Updating IG product tags and a few other things"

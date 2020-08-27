@@ -1,0 +1,4 @@
+Date: 20190704
+Time: 2202
+Duration: 45
+Description: "Make final artwork and save off files"

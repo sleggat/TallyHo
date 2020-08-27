@@ -1,0 +1,4 @@
+Date: 20190822
+Time: 1200
+Duration: 15
+Description: "Finally got Journal online for testing. Emailed Jay about it."

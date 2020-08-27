@@ -1,0 +1,4 @@
+Date: 20191108
+Time: 1720
+Duration: 75
+Description: "Create sticky label design sheets"

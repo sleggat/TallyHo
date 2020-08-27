@@ -1,0 +1,4 @@
+Date: 20190906
+Time: 1515
+Duration: 45
+Description: "Create September newsletter"

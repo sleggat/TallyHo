@@ -1,0 +1,4 @@
+Date: 20190711
+Time: 1300
+Duration: 60
+Description: "Add video (incl installing plugin)"

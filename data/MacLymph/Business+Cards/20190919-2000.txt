@@ -1,0 +1,4 @@
+Date: 20190919
+Time: 2000
+Duration: 15
+Description: "Finished up card and sent through"

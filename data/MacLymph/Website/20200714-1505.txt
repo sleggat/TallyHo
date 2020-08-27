@@ -1,0 +1,4 @@
+Date: 20200714
+Time: 1505
+Duration: 15
+Description: "Create printable mockup of postcard"

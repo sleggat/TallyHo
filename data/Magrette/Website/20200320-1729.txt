@@ -1,0 +1,4 @@
+Date: 20200320
+Time: 1729
+Duration: 60
+Description: "Create and schedule Mar 2020 newsletter"

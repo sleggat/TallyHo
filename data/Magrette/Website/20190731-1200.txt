@@ -1,0 +1,4 @@
+Date: 20190731
+Time: 1200
+Duration: 30
+Description: "Emailing about CDN and other minor stuff"

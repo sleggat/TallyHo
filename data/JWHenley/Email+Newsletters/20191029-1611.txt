@@ -1,0 +1,4 @@
+Date: 20191029
+Time: 1611
+Duration: 90
+Description: "Set up MailChimp, started designing template"

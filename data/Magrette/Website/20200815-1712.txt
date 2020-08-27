@@ -1,0 +1,4 @@
+Date: 20200815
+Time: 1712
+Duration: 5
+Description: "Emailed Jay about Insta shoppable updates"

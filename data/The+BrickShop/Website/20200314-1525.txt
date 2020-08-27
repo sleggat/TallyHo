@@ -1,0 +1,4 @@
+Date: 20200314
+Time: 1525
+Duration: 30
+Description: "Assist Zoom in getting the Outlook 365 stuff set up. Changing NS/TXT/CNAME and MX records"

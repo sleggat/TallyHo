@@ -1,0 +1,4 @@
+Date: 20190905
+Time: 2030
+Duration: 120
+Description: "Finishing up and exporting (hopefully) one of the final drafts."

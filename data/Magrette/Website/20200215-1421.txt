@@ -1,0 +1,4 @@
+Date: 20200215
+Time: 1421
+Duration: 30
+Description: "Re-compressed the Belmoto video file so it loads quicker. Changed code on page"

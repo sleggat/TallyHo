@@ -1,0 +1,4 @@
+Date: 20200515
+Time: 1454
+Duration: 180
+Description: "Working on homepage hero idea / subtle animation"

@@ -1,0 +1,4 @@
+Date: 20200715
+Time: 1557
+Duration: 25
+Description: "Email/planning on the updating of News section, adding to homepage and possibly emailing subscribers when there\'s new News."

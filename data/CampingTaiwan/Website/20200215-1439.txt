@@ -1,0 +1,4 @@
+Date: 20200215
+Time: 1439
+Duration: 10
+Description: "Updated booked-out dates"

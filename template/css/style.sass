@@ -1,0 +1,59 @@
+@import "_bulma.sass"
+
+.task_container, .task_container_header
+  display: flex
+  border-bottom: 1px solid #eee
+  margin: 0 0 5px 0
+  padding: 5px 0 10px 0
+  div
+    display: flex
+    // margin-right: 20px
+    text-overflow: ellipsis
+    overflow: hidden
+    white-space: nowrap
+    // background-color: rgba(5,5,5,.2)
+  .task_duration
+    min-width: 5%
+    margin-right: 30px
+    justify-content: flex-end
+  .task_date_container
+    min-width: 15%
+    margin-right: 15px
+  .task_project_container
+    min-width: 25%
+    margin-right: 15px
+  .task_client
+    margin-right: 15px
+  .task_description
+    min-width: 50%
+  .task_time
+    margin-right: 15px
+  .task_date
+    margin-right: 15px
+.task_container_header
+  font-weight: 800
+.task_container
+  &:hover
+    background-color: #f5d9ff
+    cursor: pointer
+
+ 
+// .modal a.close-modal[class*="icon-"]
+//   top: -10px
+//   right: -10px
+//   width: 20px
+//   height: 20px
+//   color: #fff
+//   line-height: 1.25
+//   text-align: center
+//   text-decoration: none
+//   text-indent: 0
+//   background: #900
+//   border: 2px solid #fff
+//   -webkit-border-radius:  26px
+//   -moz-border-radius:     26px
+//   -o-border-radius:       26px
+//   -ms-border-radius:      26px
+//   -moz-box-shadow:    1px 1px 5px rgba(0,0,0,0.5)
+//   -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.5)
+//   box-shadow:         1px 1px 5px rgba(0,0,0,0.5)

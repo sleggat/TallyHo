@@ -1,0 +1,4 @@
+Date: 20190913
+Time: 1230
+Duration: 30
+Description: "Added new Waterman GMT"

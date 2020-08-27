@@ -1,0 +1,4 @@
+Date: 20200728
+Time: 2230
+Duration: 60
+Description: "Alter logo with new byline and replace in Window sticker"

@@ -1,0 +1,4 @@
+Date: 20200629
+Time: 2101
+Duration: 60
+Description: "Create email Excerpt Pt. I, sent test. There was a bit of work in coverting the PDF and fixing up the text."

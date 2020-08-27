@@ -1,0 +1,4 @@
+Date: 20200613
+Time: 1036
+Duration: 20
+Description: "Creating the galaxy 1.5 course and updating website"

@@ -1,0 +1,4 @@
+Date: 20200317
+Time: 2121
+Duration: 10
+Description: "Updated booking and fixed caching (time wasn\'t checked correctly)"

@@ -1,0 +1,4 @@
+Date: 20191113
+Time: 1841
+Duration: 105
+Description: "Making up newsletter 00. Redoing template."

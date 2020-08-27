@@ -1,0 +1,4 @@
+Date: 20200322
+Time: 1136
+Duration: 10
+Description: "Removed surfgirl photo from Wavestaiwan"

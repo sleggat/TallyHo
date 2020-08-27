@@ -1,0 +1,4 @@
+Date: 20190919
+Time: 0000
+Duration: 30
+Description: "Keep an eye on newsletter and check analytics"

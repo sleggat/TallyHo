@@ -1,0 +1,4 @@
+Date: 20200321
+Time: 0030
+Duration: 15
+Description: "Put TeAoMarama online and checked newsletter would go out correctly."

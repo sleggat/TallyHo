@@ -1,0 +1,4 @@
+Date: 20200113
+Time: 1213
+Duration: 15
+Description: "Uploaded and tested new booking schedule. Sent out email."

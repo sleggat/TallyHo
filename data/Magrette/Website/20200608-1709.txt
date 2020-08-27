@@ -1,0 +1,4 @@
+Date: 20200608
+Time: 1709
+Duration: 30
+Description: "Trying to fix customer gallery again"

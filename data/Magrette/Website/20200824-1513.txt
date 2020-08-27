@@ -1,0 +1,4 @@
+Date: 20200824
+Time: 1513
+Duration: 30
+Description: "Replicate navigation a footer"
