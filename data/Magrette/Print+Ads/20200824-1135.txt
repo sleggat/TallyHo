@@ -1,4 +1,0 @@
-Date: 20200824
-Time: 1135
-Duration: 30
-Description: "Finished PDF of the DLE"

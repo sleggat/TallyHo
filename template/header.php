@@ -15,11 +15,11 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
-
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Work_Sans:wght@100,200,300;400;500,600,700,800,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="http://localhost/timesheet/template/css/style.css">
   <link rel="stylesheet" href="http://localhost/timesheet/guts/css/micromodal.css">
 
   <meta name="theme-color" content="#fafafa">
 </head>
 
-<body>
+<body class="is-dark">

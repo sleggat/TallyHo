@@ -1,4 +1,0 @@
-Date: 20200714
-Time: 0955
-Duration: 15
-Description: "Add TaipeiTimes clipping photo. Re-edited"

@@ -1,4 +1,0 @@
-Date: 20200813
-Time: 2136
-Duration: 20
-Description: "Add two new Migrante articles to website"

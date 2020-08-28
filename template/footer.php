@@ -3,18 +3,55 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 	<script src="http://localhost/timesheet/guts/js/main.js"></script>
+	<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
 
-	<div class="modal" id="modal" aria-hidden="true">
-		<form>
+	<div class="modal" id="modal_update" aria-hidden="true">
+		<h2 id="modal_header"></h2>
+		<form method="post" class="modal_form">
+			<div class="field">
+				<label class="label">Date</label>
+				<div class="control">
+					<input id="Date" name="Date" class="input" type="date" value="" min="2018-01-01" max="6666-06-06" >
+				</div>
+			</div>
+			<div class="field">
+				<label class="label">Start Time</label>
+				<div class="control">
+					<input id="Time" name="Time" class="input" type="text" value="" >
+				</div>
+			</div>
+			<div class="field">
+				<label class="label">Duration</label>
+				<div class="control">
+					<input id="Duration" name="Duration" class="input" type="number" step="5" value="" >
+				</div>
+			</div>
+			<div class="field is-fullwidth">
+				<label class="label">Client</label>
+				<div class="control">
+					<input id="Client" name="Client" class="input" type="text" value="" >
+				</div>
+			</div>
+			<div class="field is-fullwidth">
+				<label class="label">Project</label>
+				<div class="control">
+					<input id="Project" name="Project" class="input" type="text" value="" >
+				</div>
+			</div>
+			<div class="field is-fullwidth">
+				<label class="label">Description</label>
+				<div class="control">
+					<input id="Description" name="Description" class="input" type="text" value="" >
+				</div>
+			</div>
 
-			<input id="Date" value="" type=date />
-			<input id="Time" value="" type=text />
-			<input id="Duration" value="" type=text />
-			<input id="Client" value="" type=text />
-			<input id="Project" value="" type=text />
-			<input id="Description" value="" type=text />
-			<input id="Affects" value="" type=hidden/>
-			<input type="submit" value="Submit">
+			<input id="Affects" name="Affects" value="" type="hidden"/>
+
+			<div class="field is-fullwidth">
+				<div class="control">
+					<button class="button is-link" type="submit" name="submit" >Submit</button>
+				</div>
+			</div>
 
 		</form>
 	</div>

@@ -1,4 +1,0 @@
-Date: 20200806
-Time: 0915
-Duration: 45
-Description: "Making changes"

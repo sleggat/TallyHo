@@ -10,7 +10,7 @@ $array = array_map("str_getcsv", preg_split('/\r*\n+|\r+/', $source));
 foreach ($array as $part) {
 	$client = urlencode(trim($part[8]));
 	$project = urlencode(trim($part[9]));
-	$desc = addslashes(trim($part[11]));
+	$description = addslashes(trim($part[11]));
 	$rate = trim($part[14]);
 	$status = trim($part[12]);
 	$duration = trim($part[3])/60;
@@ -30,7 +30,9 @@ foreach ($array as $part) {
 	$content .= "Date: ".$date.$br;
 	$content .= "Time: ".$time.$br;
 	$content .= "Duration: ".$duration.$br;
-	$content .= "Description: \"".$desc."\"";
+	$content .= "Description: \"".$description."\"";
+// consider making the above a function as it's also used in the update code
+
 
 	echo $content;
 
