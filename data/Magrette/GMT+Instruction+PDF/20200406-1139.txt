@@ -1,4 +1,4 @@
-Date: 20200406
-Time: 1139
+Date: '20200406'
+Time: '1139'
 Duration: 15
 Description: "Changing text and slights change to bitmap"

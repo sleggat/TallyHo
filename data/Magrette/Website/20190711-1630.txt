@@ -1,4 +1,4 @@
-Date: 20190711
-Time: 1630
+Date: '20190711'
+Time: '1630'
 Duration: 15
 Description: "Remove a couple of archived watches"

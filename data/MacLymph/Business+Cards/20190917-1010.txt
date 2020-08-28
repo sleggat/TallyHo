@@ -1,4 +1,4 @@
-Date: 20190917
-Time: 1010
+Date: '20190917'
+Time: '1010'
 Duration: 60
 Description: "Make up cards with updated logo and new byline and address."

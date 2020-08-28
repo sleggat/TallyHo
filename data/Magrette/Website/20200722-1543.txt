@@ -1,4 +1,4 @@
-Date: 20200722
-Time: 1543
+Date: '20200722'
+Time: '1543'
 Duration: 15
 Description: "Remove an out of stock item (GMT ceramic)"

@@ -1,4 +1,4 @@
-Date: 20200717
-Time: 1636
+Date: '20200717'
+Time: '1636'
 Duration: 10
 Description: "updates to email etc"

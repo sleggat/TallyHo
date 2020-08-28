@@ -1,4 +1,4 @@
-Date: 20190927
-Time: 1216
+Date: '20190927'
+Time: '1216'
 Duration: 45
 Description: "Create sticker"

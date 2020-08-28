@@ -1,4 +1,4 @@
-Date: 20200316
-Time: 2131
+Date: '20200316'
+Time: '2131'
 Duration: 15
 Description: "Minor mobile style changes to cart"

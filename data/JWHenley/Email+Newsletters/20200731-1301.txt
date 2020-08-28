@@ -1,4 +1,4 @@
-Date: 20200731
-Time: 1301
+Date: '20200731'
+Time: '1301'
 Duration: 25
 Description: "Send email: Outcasts and update Single Signup Email"

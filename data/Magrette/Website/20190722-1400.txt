@@ -1,4 +1,4 @@
-Date: 20190722
-Time: 1400
+Date: '20190722'
+Time: '1400'
 Duration: 60
 Description: "Speeding up site. Changing minify stuff."

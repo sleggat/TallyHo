@@ -1,4 +1,4 @@
-Date: 20200804
-Time: 2028
+Date: '20200804'
+Time: '2028'
 Duration: 5
 Description: "Email about signage"

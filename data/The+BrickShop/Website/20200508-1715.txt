@@ -1,4 +1,4 @@
-Date: 20200508
-Time: 1715
+Date: '20200508'
+Time: '1715'
 Duration: 30
 Description: "Fixing up mortar colour on Toolonga, small changes to form so it doesnt re-submit on modal close"

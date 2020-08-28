@@ -1,4 +1,4 @@
-Date: 20200718
-Time: 1053
+Date: '20200718'
+Time: '1053'
 Duration: 10
 Description: "Stressing about email not going out"

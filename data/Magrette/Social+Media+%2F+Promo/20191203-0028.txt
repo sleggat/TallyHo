@@ -1,4 +1,4 @@
-Date: 20191203
-Time: 0028
+Date: '20191203'
+Time: '0028'
 Duration: 45
 Description: "Remove all Black Friday stuff."

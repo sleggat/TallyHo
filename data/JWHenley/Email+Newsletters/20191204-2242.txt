@@ -1,4 +1,4 @@
-Date: 20191204
-Time: 2242
+Date: '20191204'
+Time: '2242'
 Duration: 15
 Description: "Add another article to music. Add email to archive"

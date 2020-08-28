@@ -1,4 +1,4 @@
-Date: 20200206
-Time: 2301
+Date: '20200206'
+Time: '2301'
 Duration: 10
 Description: "Added another article to home/music"

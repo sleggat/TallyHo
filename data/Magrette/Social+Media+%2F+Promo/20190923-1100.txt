@@ -1,4 +1,4 @@
-Date: 20190923
-Time: 1100
+Date: '20190923'
+Time: '1100'
 Duration: 45
 Description: "Put together GMT newsletter"

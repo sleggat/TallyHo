@@ -1,4 +1,4 @@
-Date: 20200110
-Time: 1744
+Date: '20200110'
+Time: '1744'
 Duration: 150
 Description: "Updated available booking dates on site, set up new email and prepared first mail for 2020 to go out."

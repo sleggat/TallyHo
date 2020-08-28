@@ -1,4 +1,4 @@
-Date: 20190911
-Time: 1400
+Date: '20190911'
+Time: '1400'
 Duration: 15
 Description: "Add in Book Now button for wellness (phasing out Timely)"

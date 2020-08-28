@@ -1,4 +1,4 @@
-Date: 20190815
-Time: 1600
+Date: '20190815'
+Time: '1600'
 Duration: 45
 Description: "Emailign about shopify and campaignmonitor stuff"

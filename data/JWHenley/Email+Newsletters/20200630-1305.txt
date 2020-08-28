@@ -1,4 +1,4 @@
-Date: 20200630
-Time: 1305
+Date: '20200630'
+Time: '1305'
 Duration: 10
 Description: "Send out Excerpt Pt. I and update Single welcome email"

@@ -1,4 +1,4 @@
-Date: 20191126
-Time: 1524
+Date: '20191126'
+Time: '1524'
 Duration: 150
 Description: "Setting things up for Black Friday"

@@ -1,4 +1,4 @@
-Date: 20191024
-Time: 2102
+Date: '20191024'
+Time: '2102'
 Duration: 240
 Description: "Lots of updates; Remove instagram for now Add Crime page, add a bunch of new articles, and new clients."

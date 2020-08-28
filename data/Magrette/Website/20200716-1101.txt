@@ -1,4 +1,4 @@
-Date: 20200716
-Time: 1101
+Date: '20200716'
+Time: '1101'
 Duration: 15
 Description: "Looking into the JS and popup for recommended products"

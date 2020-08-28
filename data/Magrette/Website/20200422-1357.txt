@@ -1,4 +1,4 @@
-Date: 20200422
-Time: 1357
+Date: '20200422'
+Time: '1357'
 Duration: 15
 Description: "Jay\'s tweaks to GMT page and PDF"

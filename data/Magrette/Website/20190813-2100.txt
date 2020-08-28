@@ -1,4 +1,4 @@
-Date: 20190813
-Time: 2100
+Date: '20190813'
+Time: '2100'
 Duration: 45
 Description: "More news stuff"

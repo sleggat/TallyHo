@@ -27,8 +27,8 @@ foreach ($array as $part) {
 	$file = $folder.'/'.$date.'-'.$time.'.txt';
 	echo "<br>Making ".$file;
 	$content = "";
-	$content .= "Date: ".$date.$br;
-	$content .= "Time: ".$time.$br;
+	$content .= "Date: '".$date."'".$br;
+	$content .= "Time: '".$time."'".$br;
 	$content .= "Duration: ".$duration.$br;
 	$content .= "Description: \"".$description."\"";
 // consider making the above a function as it's also used in the update code

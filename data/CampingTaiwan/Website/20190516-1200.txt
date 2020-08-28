@@ -1,4 +1,4 @@
-Date: 20190516
-Time: 1200
+Date: '20190516'
+Time: '1200'
 Duration: 105
 Description: "1.75 created Mailchimp acc, set up and styled form on website"

@@ -1,4 +1,4 @@
-Date: 20190919
-Time: 1100
+Date: '20190919'
+Time: '1100'
 Duration: 30
 Description: "Emailing Jay about IG and results of The Vault campaign"

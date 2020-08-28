@@ -1,4 +1,4 @@
-Date: 20200101
-Time: 0005
+Date: '20200101'
+Time: '0005'
 Duration: 30
 Description: "Put Kaha online at midnight on NYE."

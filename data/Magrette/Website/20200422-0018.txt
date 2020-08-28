@@ -1,4 +1,4 @@
-Date: 20200422
-Time: 0018
+Date: '20200422'
+Time: '0018'
 Duration: 45
 Description: "Add using GMT page to site."

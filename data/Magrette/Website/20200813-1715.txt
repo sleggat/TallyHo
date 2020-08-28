@@ -1,4 +1,4 @@
-Date: 20200813
-Time: 1715
+Date: '20200813'
+Time: '1715'
 Duration: 15
 Description: "Add MPP Ti Blue to Insta shoppable - somehow got skipped"

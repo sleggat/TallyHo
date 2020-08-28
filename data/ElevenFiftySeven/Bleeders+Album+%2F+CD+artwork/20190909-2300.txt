@@ -1,4 +1,4 @@
-Date: 20190909
-Time: 2300
+Date: '20190909'
+Time: '2300'
 Duration: 75
 Description: "Finishing up some final stuff with Bubba including adding Bad News to sleeve and insert"

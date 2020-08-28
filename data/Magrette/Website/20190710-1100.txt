@@ -1,4 +1,4 @@
-Date: 20190710
-Time: 1100
+Date: '20190710'
+Time: '1100'
 Duration: 30
 Description: "Adding 3 wallpapers"

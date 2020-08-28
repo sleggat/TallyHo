@@ -1,4 +1,4 @@
-Date: 20190829
-Time: 1730
+Date: '20190829'
+Time: '1730'
 Duration: 90
 Description: ""

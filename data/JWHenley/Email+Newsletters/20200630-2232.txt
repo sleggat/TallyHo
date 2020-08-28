@@ -1,4 +1,4 @@
-Date: 20200630
-Time: 2232
+Date: '20200630'
+Time: '2232'
 Duration: 30
 Description: "Prepare Excerpt II. Lots more formatting errors."

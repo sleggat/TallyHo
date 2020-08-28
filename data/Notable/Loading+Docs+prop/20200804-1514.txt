@@ -1,4 +1,4 @@
-Date: 20200804
-Time: 1514
+Date: '20200804'
+Time: '1514'
 Duration: 60
 Description: "Preparation. Creating basic doc, and some duotone ideas"

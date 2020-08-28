@@ -1,4 +1,4 @@
-Date: 20200120
-Time: 1025
+Date: '20200120'
+Time: '1025'
 Duration: 15
 Description: "Modified IG link, made changes to CSS so it\'s more obvious"

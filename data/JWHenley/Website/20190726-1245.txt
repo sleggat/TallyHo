@@ -1,4 +1,4 @@
-Date: 20190726
-Time: 1245
+Date: '20190726'
+Time: '1245'
 Duration: 30
 Description: "Updated SLIR"

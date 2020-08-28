@@ -1,4 +1,4 @@
-Date: 20190917
-Time: 1500
+Date: '20190917'
+Time: '1500'
 Duration: 360
 Description: "Adding The Vault category and page. Trying to get head around the new API. Holy crap"

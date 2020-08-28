@@ -1,4 +1,4 @@
-Date: 20200807
-Time: 1331
+Date: '20200807'
+Time: '1331'
 Duration: 5
 Description: "Update Press page"

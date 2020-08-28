@@ -1,4 +1,4 @@
-Date: 20200512
-Time: 1919
+Date: '20200512'
+Time: '1919'
 Duration: 30
 Description: "Send email 3, Well Well Well and work through ideas with Joe"

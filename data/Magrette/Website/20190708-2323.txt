@@ -1,4 +1,4 @@
-Date: 20190708
-Time: 2323
+Date: '20190708'
+Time: '2323'
 Duration: 15
 Description: "Trying to split MPP Ti pre-orders and in-stock"

@@ -1,4 +1,4 @@
-Date: 20190717
-Time: 1700
+Date: '20190717'
+Time: '1700'
 Duration: 60
 Description: "Emails and checking out the site."

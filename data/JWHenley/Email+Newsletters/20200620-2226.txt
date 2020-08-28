@@ -1,4 +1,4 @@
-Date: 20200620
-Time: 2226
+Date: '20200620'
+Time: '2226'
 Duration: 15
 Description: "Create  \'Migrante PreOrder Pt II\'"

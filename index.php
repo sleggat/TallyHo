@@ -31,6 +31,7 @@ foreach ($array as $task) {
 
 
 	// this is where we can do filtering by client/project and dates.
+	// client, project, client+project would be the first to do
 	if ($previous_day != $task_array['Date']) {
 		$day_class = "new_day";
 	}

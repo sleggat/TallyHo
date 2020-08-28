@@ -1,4 +1,4 @@
-Date: 20200730
-Time: 1614
+Date: '20200730'
+Time: '1614'
 Duration: 15
 Description: "Fix up a couple of things and email with Kat a couple of times"

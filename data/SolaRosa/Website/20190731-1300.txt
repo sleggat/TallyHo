@@ -1,4 +1,4 @@
-Date: 20190731
-Time: 1300
+Date: '20190731'
+Time: '1300'
 Duration: 60
 Description: "Fix up Contact page (messy layout). Add SSL. Start thinking of ideas for updated site"

@@ -447,12 +447,12 @@
 		"oAP": "/data/GoInside/Website/20200713-1410.txt",
 		"oF": 0
 		},
-	"/data/GoInside/Website/20200714-955.txt": {
+	"/data/GoInside/Website/20200714-0955.txt": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/data/GoInside/Website/20200714-955.txt",
+		"oAP": "/data/GoInside/Website/20200714-0955.txt",
 		"oF": 0
 		},
 	"/data/GoInside/Website/20200724-1017.txt": {
@@ -839,12 +839,12 @@
 		"oAP": "/data/JWHenley/Website/20200729-2326.txt",
 		"oF": 0
 		},
-	"/data/JWHenley/Website/20200813-2138.txt": {
+	"/data/JWHenley/Website/20200813-2136.txt": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/data/JWHenley/Website/20200813-2138.txt",
+		"oAP": "/data/JWHenley/Website/20200813-2136.txt",
 		"oF": 0
 		},
 	"/data/MacLymph/A5+Brochure/20190911-1405.txt": {
@@ -1207,12 +1207,12 @@
 		"oAP": "/data/Magrette/Print+Ads/20200819-1654.txt",
 		"oF": 0
 		},
-	"/data/Magrette/Print+Ads/20200820-1426.txt": {
+	"/data/Magrette/Print+Ads/20200820-1425.txt": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/data/Magrette/Print+Ads/20200820-1426.txt",
+		"oAP": "/data/Magrette/Print+Ads/20200820-1425.txt",
 		"oF": 0
 		},
 	"/data/Magrette/Print+Ads/20200821-1648.txt": {
@@ -1223,6 +1223,14 @@
 		"oAP": "/data/Magrette/Print+Ads/20200821-1648.txt",
 		"oF": 0
 		},
+	"/data/Magrette/Print+Ads/20200824-1135.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/Magrette/Print+Ads/20200824-1135.txt",
+		"oF": 0
+		},
 	"/data/Magrette/Print+Ads/20200824-2012.txt": {
 		"cB": 0,
 		"ft": 8192,
@@ -1231,12 +1239,44 @@
 		"oAP": "/data/Magrette/Print+Ads/20200824-2012.txt",
 		"oF": 0
 		},
-	"/data/Magrette/Print+Ads/20200828-2153.txt": {
+	"/data/Magrette/Print+Ads/20200829-0001.txt": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/data/Magrette/Print+Ads/20200828-2153.txt",
+		"oAP": "/data/Magrette/Print+Ads/20200829-0001.txt",
+		"oF": 0
+		},
+	"/data/Magrette/Print+Ads/20200829-0002.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/Magrette/Print+Ads/20200829-0002.txt",
+		"oF": 0
+		},
+	"/data/Magrette/Print+Ads/20200829-0004.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/Magrette/Print+Ads/20200829-0004.txt",
+		"oF": 0
+		},
+	"/data/Magrette/Print+Ads/20200829-0103.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/Magrette/Print+Ads/20200829-0103.txt",
+		"oF": 0
+		},
+	"/data/Magrette/Print+Ads/20200829-2666.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/Magrette/Print+Ads/20200829-2666.txt",
 		"oF": 0
 		},
 	"/data/Magrette/Social+Media+%2F+Promo/20190708-1449.txt": {
@@ -2151,6 +2191,14 @@
 		"oAP": "/data/Magrette/Website/20200701-1258.txt",
 		"oF": 0
 		},
+	"/data/Magrette/Website/20200716-0018.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/Magrette/Website/20200716-0018.txt",
+		"oF": 0
+		},
 	"/data/Magrette/Website/20200716-1101.txt": {
 		"cB": 0,
 		"ft": 8192,
@@ -2173,14 +2221,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/data/Magrette/Website/20200716-1634.txt",
-		"oF": 0
-		},
-	"/data/Magrette/Website/20200716-1800.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/data/Magrette/Website/20200716-1800.txt",
 		"oF": 0
 		},
 	"/data/Magrette/Website/20200716-2048.txt": {
@@ -2207,20 +2247,20 @@
 		"oAP": "/data/Magrette/Website/20200717-1636.txt",
 		"oF": 0
 		},
+	"/data/Magrette/Website/20200718-0305.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/Magrette/Website/20200718-0305.txt",
+		"oF": 0
+		},
 	"/data/Magrette/Website/20200718-1053.txt": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/data/Magrette/Website/20200718-1053.txt",
-		"oF": 0
-		},
-	"/data/Magrette/Website/20200718-3050.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/data/Magrette/Website/20200718-3050.txt",
 		"oF": 0
 		},
 	"/data/Magrette/Website/20200720-1137.txt": {
@@ -2375,6 +2415,14 @@
 		"oAP": "/data/Magrette/Website/20200824-1513.txt",
 		"oF": 0
 		},
+	"/data/Magrette/Website/20200829-0131.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/Magrette/Website/20200829-0131.txt",
+		"oF": 0
+		},
 	"/data/Mighty+Mighty/Labels/20190706-0100.txt": {
 		"cB": 0,
 		"ft": 8192,
@@ -2399,6 +2447,14 @@
 		"oAP": "/data/Notable/Glossy+Six60+brochure/20200620-2226.txt",
 		"oF": 0
 		},
+	"/data/Notable/Glossy+Six60+brochure/20200622-0017.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/Notable/Glossy+Six60+brochure/20200622-0017.txt",
+		"oF": 0
+		},
 	"/data/Notable/Glossy+Six60+brochure/20200622-1010.txt": {
 		"cB": 0,
 		"ft": 8192,
@@ -2413,14 +2469,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/data/Notable/Glossy+Six60+brochure/20200622-1552.txt",
-		"oF": 0
-		},
-	"/data/Notable/Glossy+Six60+brochure/20200622-1700.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/data/Notable/Glossy+Six60+brochure/20200622-1700.txt",
 		"oF": 0
 		},
 	"/data/Notable/Glossy+Six60+brochure/20200622-1746.txt": {
@@ -2503,6 +2551,14 @@
 		"oAP": "/data/Notable/Loading+Docs+prop/20200805-2220.txt",
 		"oF": 0
 		},
+	"/data/Notable/Loading+Docs+prop/20200806-0915.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/Notable/Loading+Docs+prop/20200806-0915.txt",
+		"oF": 0
+		},
 	"/data/Notable/Loading+Docs+prop/20200806-1500.txt": {
 		"cB": 0,
 		"ft": 8192,
@@ -2525,14 +2581,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/data/Notable/Loading+Docs+prop/20200806-1554.txt",
-		"oF": 0
-		},
-	"/data/Notable/Loading+Docs+prop/20200806-915.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/data/Notable/Loading+Docs+prop/20200806-915.txt",
 		"oF": 0
 		},
 	"/data/PetBuddy/Website/20200113-1418.txt": {
@@ -3000,6 +3048,17 @@
 		"oA": 0,
 		"oAP": "/guts/functions.php",
 		"oF": 0
+		},
+	"/guts/js/main-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/guts/js/main-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
 		},
 	"/guts/js/main.js": {
 		"bF": 0,

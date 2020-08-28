@@ -1,4 +1,4 @@
-Date: 20191202
-Time: 1051
+Date: '20191202'
+Time: '1051'
 Duration: 15
 Description: "Checking on Discount Code stats, emailing Jay."

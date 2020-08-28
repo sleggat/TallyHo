@@ -1,4 +1,4 @@
-Date: 20200325
-Time: 1520
+Date: '20200325'
+Time: '1520'
 Duration: 60
 Description: "Uploaded new SDK updates and tested."

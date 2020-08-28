@@ -1,4 +1,4 @@
-Date: 20190924
-Time: 0040
+Date: '20190924'
+Time: '0040'
 Duration: 120
 Description: "Migrating away from old JS code"

@@ -1,4 +1,4 @@
-Date: 20191104
-Time: 1548
+Date: '20191104'
+Time: '1548'
 Duration: 90
 Description: "Set up products in Facebook catalogue (time consuming!)"

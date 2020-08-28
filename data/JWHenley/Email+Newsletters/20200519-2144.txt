@@ -1,4 +1,4 @@
-Date: 20200519
-Time: 2144
+Date: '20200519'
+Time: '2144'
 Duration: 15
 Description: "Send email and update the Welcome email"

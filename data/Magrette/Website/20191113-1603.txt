@@ -1,4 +1,4 @@
-Date: 20191113
-Time: 1603
+Date: '20191113'
+Time: '1603'
 Duration: 45
 Description: "Adding OOS to Timepieces page.. emailing Jay"

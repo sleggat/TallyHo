@@ -1,4 +1,4 @@
-Date: 20200701
-Time: 1258
+Date: '20200701'
+Time: '1258'
 Duration: 25
 Description: "Insta changed their API again, but luckily it didnt take as long to fix"

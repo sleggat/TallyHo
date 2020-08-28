@@ -1,4 +1,4 @@
-Date: 20190725
-Time: 1100
+Date: '20190725'
+Time: '1100'
 Duration: 60
 Description: "Big email to Jay about emails, abandoned carts etc."

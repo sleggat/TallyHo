@@ -1,4 +1,4 @@
-Date: 20200721
-Time: 1352
+Date: '20200721'
+Time: '1352'
 Duration: 30
 Description: "Update website (*remove pre-order stuff, add in buy now)"

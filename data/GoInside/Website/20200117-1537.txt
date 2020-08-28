@@ -1,4 +1,4 @@
-Date: 20200117
-Time: 1537
+Date: '20200117'
+Time: '1537'
 Duration: 15
 Description: "Updating Press page"

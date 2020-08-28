@@ -1,4 +1,4 @@
-Date: 20200203
-Time: 1524
+Date: '20200203'
+Time: '1524'
 Duration: 15
 Description: "Added 1 wallpaper"

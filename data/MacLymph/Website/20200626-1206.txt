@@ -1,4 +1,4 @@
-Date: 20200626
-Time: 1206
+Date: '20200626'
+Time: '1206'
 Duration: 45
 Description: "Re-add Timely buttons site wide. Fix up little bits of wonky content"

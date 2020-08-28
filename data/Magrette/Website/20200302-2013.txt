@@ -1,4 +1,4 @@
-Date: 20200302
-Time: 2013
+Date: '20200302'
+Time: '2013'
 Duration: 45
 Description: "Work work on migrating Shopify to newer API"

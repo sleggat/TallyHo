@@ -1,4 +1,4 @@
-Date: 20200103
-Time: 1130
+Date: '20200103'
+Time: '1130'
 Duration: 15
 Description: "Sent Newsletter for Kaha."

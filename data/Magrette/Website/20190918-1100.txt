@@ -1,4 +1,4 @@
-Date: 20190918
-Time: 1100
+Date: '20190918'
+Time: '1100'
 Duration: 145
 Description: "Updating GMT page and creating newsletter."

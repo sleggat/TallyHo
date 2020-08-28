@@ -1,4 +1,4 @@
-Date: 20200328
-Time: 1358
+Date: '20200328'
+Time: '1358'
 Duration: 45
 Description: "Work on plan/ideas for website"

@@ -1,4 +1,4 @@
-Date: 20200810
-Time: 2116
+Date: '20200810'
+Time: '2116'
 Duration: 60
 Description: "Add all other timepieces to Insta shoppable"

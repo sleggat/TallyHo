@@ -1,4 +1,4 @@
-Date: 20200627
-Time: 1515
+Date: '20200627'
+Time: '1515'
 Duration: 40
 Description: "Changing logos to SVG, adding in the mask-icon (favicon for safari), optimising google fonts"

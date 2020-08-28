@@ -1,4 +1,4 @@
-Date: 20200604
-Time: 2114
+Date: '20200604'
+Time: '2114'
 Duration: 15
 Description: "Create email \'Crazy\'"

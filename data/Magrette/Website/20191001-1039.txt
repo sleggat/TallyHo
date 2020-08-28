@@ -1,4 +1,4 @@
-Date: 20191001
-Time: 1039
+Date: '20191001'
+Time: '1039'
 Duration: 15
 Description: "Update text on homepage (sport brand)"

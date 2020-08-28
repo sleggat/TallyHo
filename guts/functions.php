@@ -64,6 +64,7 @@ function format_date($date) {
     return $pretty_date;
 }
 function format_time($time) {
+    //echo $time;
     $formatted_time = DateTime::createFromFormat('Hi', $time);
     $pretty_time = date_format($formatted_time, 'g:ia');
     return $pretty_time;

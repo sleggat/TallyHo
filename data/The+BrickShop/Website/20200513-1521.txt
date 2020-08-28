@@ -1,4 +1,4 @@
-Date: 20200513
-Time: 1521
+Date: '20200513'
+Time: '1521'
 Duration: 20
 Description: "Purchased SSL (nz15)"

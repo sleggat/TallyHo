@@ -1,4 +1,4 @@
-Date: 20190905
-Time: 1200
+Date: '20190905'
+Time: '1200'
 Duration: 30
 Description: "Updated contact page (address and map) and did some research about JaneApp"

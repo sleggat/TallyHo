@@ -1,4 +1,4 @@
-Date: 20190912
-Time: 0126
+Date: '20190912'
+Time: '0126'
 Duration: 30
 Description: "Saved off the labels again without transparency and as PDF 1.3. Took a while to sort out."

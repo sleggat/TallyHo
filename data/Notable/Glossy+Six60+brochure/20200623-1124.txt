@@ -1,4 +1,4 @@
-Date: 20200623
-Time: 1124
+Date: '20200623'
+Time: '1124'
 Duration: 30
 Description: "Just a few more changes... (again)"

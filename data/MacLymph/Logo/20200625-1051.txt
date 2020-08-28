@@ -1,4 +1,4 @@
-Date: 20200625
-Time: 1051
+Date: '20200625'
+Time: '1051'
 Duration: 15
 Description: "Mockup of the new byline (tricolour)"

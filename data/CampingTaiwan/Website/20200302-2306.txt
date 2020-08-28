@@ -1,4 +1,4 @@
-Date: 20200302
-Time: 2306
+Date: '20200302'
+Time: '2306'
 Duration: 30
 Description: "Updated bookings and added waitlist function"

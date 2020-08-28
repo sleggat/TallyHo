@@ -1,4 +1,4 @@
-Date: 20190731
-Time: 1815
+Date: '20190731'
+Time: '1815'
 Duration: 30
 Description: "Making changes to srcset again. And working more on Archives page"

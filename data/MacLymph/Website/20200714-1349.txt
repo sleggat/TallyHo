@@ -1,4 +1,4 @@
-Date: 20200714
-Time: 1349
+Date: '20200714'
+Time: '1349'
 Duration: 90
 Description: "Create mockup of postcard"

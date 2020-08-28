@@ -1,4 +1,4 @@
-Date: 20200526
-Time: 1947
+Date: '20200526'
+Time: '1947'
 Duration: 20
 Description: "Send email and update the Welcome email"

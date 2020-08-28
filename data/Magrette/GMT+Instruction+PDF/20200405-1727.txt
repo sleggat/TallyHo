@@ -1,4 +1,4 @@
-Date: 20200405
-Time: 1727
+Date: '20200405'
+Time: '1727'
 Duration: 45
 Description: "Scrapped the re-draft version and cleaned up the bitmap"

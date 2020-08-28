@@ -1,4 +1,4 @@
-Date: 20200122
-Time: 1544
+Date: '20200122'
+Time: '1544'
 Duration: 30
 Description: "Added 4 wallpapers"

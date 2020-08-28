@@ -1,4 +1,4 @@
-Date: 20190917
-Time: 1100
+Date: '20190917'
+Time: '1100'
 Duration: 15
 Description: "Wondering if we can just print stickers ourselves"

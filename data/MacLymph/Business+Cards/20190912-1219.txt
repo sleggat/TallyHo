@@ -1,4 +1,4 @@
-Date: 20190912
-Time: 1219
+Date: '20190912'
+Time: '1219'
 Duration: 60
 Description: "Update business cards with new address/parking"

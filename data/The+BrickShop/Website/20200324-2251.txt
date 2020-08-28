@@ -1,4 +1,4 @@
-Date: 20200324
-Time: 2251
+Date: '20200324'
+Time: '2251'
 Duration: 60
 Description: "Working on site template"

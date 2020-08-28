@@ -1,4 +1,4 @@
-Date: 20190924
-Time: 1126
+Date: '20190924'
+Time: '1126'
 Duration: 35
 Description: "Sent out GMT email, put GMT online and checked things going smoothly."

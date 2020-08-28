@@ -1,4 +1,4 @@
-Date: 20191009
-Time: 1230
+Date: '20191009'
+Time: '1230'
 Duration: 60
 Description: ""

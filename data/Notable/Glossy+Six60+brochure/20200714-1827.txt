@@ -1,4 +1,4 @@
-Date: 20200714
-Time: 1827
+Date: '20200714'
+Time: '1827'
 Duration: 70
 Description: "Modifying brochure for NZ"

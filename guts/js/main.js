@@ -26,9 +26,8 @@ $(document).ready(function() {
     event.preventDefault();
     var dt = new Date();
     var current = $(this).parents(".task_container");
-    var affects = current.attr('data-affects');
     var date = dt.getFullYear() + ("0"+(dt.getMonth()+1)).slice(-2) + ("0"+dt.getDate()).slice(-2);
-    var time = dt.getHours() + dt.getMinutes();
+    var time = ("00"+dt.getHours()).slice(-2) + ("00"+dt.getMinutes()).slice(-2);
     var duration = current.attr("data-duration");
     var client = current.attr("data-client");
     var project = current.attr("data-project");
@@ -40,7 +39,7 @@ $(document).ready(function() {
     $("#Client").val(client);
     $("#Project").val(project);
     $("#Description").val(description);
-    $("#Affects").val(affects);
+    $("#Affects").val('');
     $("#modal_update").modal({
       fadeDuration: 50
     });

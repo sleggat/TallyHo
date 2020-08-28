@@ -1,4 +1,4 @@
-Date: 20190724
-Time: 1615
+Date: '20190724'
+Time: '1615'
 Duration: 150
 Description: "Trying to sort out Dion\'s email issues (Google)"

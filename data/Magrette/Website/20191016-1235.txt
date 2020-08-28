@@ -1,4 +1,4 @@
-Date: 20191016
-Time: 1235
+Date: '20191016'
+Time: '1235'
 Duration: 30
 Description: "Make final payment for MPP Ti Black"

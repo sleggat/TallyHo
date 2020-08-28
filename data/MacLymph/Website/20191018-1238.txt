@@ -1,4 +1,4 @@
-Date: 20191018
-Time: 1238
+Date: '20191018'
+Time: '1238'
 Duration: 135
 Description: "Update logos and bylines (images and main text) on website. Also resolved SSL error which stopped FB finding images (had to reinstall SSL, including CA Bundle)"

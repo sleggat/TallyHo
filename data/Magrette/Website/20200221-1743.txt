@@ -1,4 +1,4 @@
-Date: 20200221
-Time: 1743
+Date: '20200221'
+Time: '1743'
 Duration: 120
 Description: "OMFG Shopify just died and it took me a while to figure out."

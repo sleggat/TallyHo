@@ -1,4 +1,4 @@
-Date: 20191125
-Time: 2205
+Date: '20191125'
+Time: '2205'
 Duration: 360
 Description: "Lots of setting up the site, designing layouts and adding content."

@@ -1,4 +1,4 @@
-Date: 20200325
-Time: 1317
+Date: '20200325'
+Time: '1317'
 Duration: 10
 Description: "Working on site template"

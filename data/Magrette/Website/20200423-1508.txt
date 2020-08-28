@@ -1,4 +1,4 @@
-Date: 20200423
-Time: 1508
+Date: '20200423'
+Time: '1508'
 Duration: 30
 Description: "More changes to GMT page and PDF"

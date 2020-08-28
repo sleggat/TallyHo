@@ -1,4 +1,4 @@
-Date: 20191111
-Time: 1555
+Date: '20191111'
+Time: '1555'
 Duration: 105
 Description: "Print off 7 sheets of labels"

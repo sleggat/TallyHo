@@ -1,4 +1,4 @@
-Date: 20200123
-Time: 2204
+Date: '20200123'
+Time: '2204'
 Duration: 30
 Description: "Removed Kaha and a couple of other time  pieces"

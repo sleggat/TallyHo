@@ -1,4 +1,4 @@
-Date: 20200806
-Time: 1533
+Date: '20200806'
+Time: '1533'
 Duration: 45
 Description: "Finishing up"

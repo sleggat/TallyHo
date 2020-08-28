@@ -1,4 +1,4 @@
-Date: 20200716
-Time: 1301
+Date: '20200716'
+Time: '1301'
 Duration: 40
 Description: "Duplicating products, updating content for Steel and Black"

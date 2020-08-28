@@ -1,4 +1,4 @@
-Date: 20200627
-Time: 1550
+Date: '20200627'
+Time: '1550'
 Duration: 15
 Description: "Fixed mobile columns bug on homepage"

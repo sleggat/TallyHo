@@ -1,4 +1,4 @@
-Date: 20200702
-Time: 1224
+Date: '20200702'
+Time: '1224'
 Duration: 5
 Description: "Send Excerpt II."

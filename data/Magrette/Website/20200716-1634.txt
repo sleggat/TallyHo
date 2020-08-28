@@ -1,4 +1,4 @@
-Date: 20200716
-Time: 1634
+Date: '20200716'
+Time: '1634'
 Duration: 40
 Description: "Added the JS for popup and did graphic"

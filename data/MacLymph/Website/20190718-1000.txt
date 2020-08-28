@@ -1,4 +1,4 @@
-Date: 20190718
-Time: 1000
+Date: '20190718'
+Time: '1000'
 Duration: 30
 Description: "Sorting out chaniing Shop to a top level"

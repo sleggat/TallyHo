@@ -1,4 +1,4 @@
-Date: 20200715
-Time: 1804
+Date: '20200715'
+Time: '1804'
 Duration: 10
 Description: "Edti Treatments page, adding table formatting"

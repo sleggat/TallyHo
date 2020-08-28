@@ -1,4 +1,4 @@
-Date: 20191203
-Time: 1208
+Date: '20191203'
+Time: '1208'
 Duration: 30
 Description: "Prepare issue 01 (the second one)"

@@ -1,4 +1,4 @@
-Date: 20190927
-Time: 1035
+Date: '20190927'
+Time: '1035'
 Duration: 45
 Description: "Updating desc on GMT page. Adding GMT to slider"

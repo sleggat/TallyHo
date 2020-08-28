@@ -1,4 +1,4 @@
-Date: 20200731
-Time: 2255
+Date: '20200731'
+Time: '2255'
 Duration: 20
 Description: "Put the Kia Atawhai online and checked the email schedule ok"

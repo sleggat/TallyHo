@@ -1,4 +1,4 @@
-Date: 20190715
-Time: 1410
+Date: '20190715'
+Time: '1410'
 Duration: 60
 Description: "Researching and Setting up vouchers thru Timely (Paypal payments)"

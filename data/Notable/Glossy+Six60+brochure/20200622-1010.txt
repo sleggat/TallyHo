@@ -1,4 +1,4 @@
-Date: 20200622
-Time: 1010
+Date: '20200622'
+Time: '1010'
 Duration: 10
 Description: "Added in hi-res logo"

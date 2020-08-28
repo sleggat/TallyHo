@@ -1,4 +1,4 @@
-Date: 20200609
-Time: 1715
+Date: '20200609'
+Time: '1715'
 Duration: 45
 Description: "Fix customer gallery again - seems to work. For now."

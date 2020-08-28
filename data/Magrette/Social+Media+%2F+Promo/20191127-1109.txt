@@ -1,4 +1,4 @@
-Date: 20191127
-Time: 1109
+Date: '20191127'
+Time: '1109'
 Duration: 75
 Description: "Setting up scheduling and more black friday email/promo stuff"

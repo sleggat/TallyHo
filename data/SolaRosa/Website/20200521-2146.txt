@@ -1,4 +1,4 @@
-Date: 20200521
-Time: 2146
+Date: '20200521'
+Time: '2146'
 Duration: 300
 Description: "Building site template for WP"

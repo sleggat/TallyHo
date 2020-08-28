@@ -1,4 +1,4 @@
-Date: 20190823
-Time: 1600
+Date: '20190823'
+Time: '1600'
 Duration: 30
 Description: "Getting/downloading ideas for crust punk lyrics Checking out Illustrator templates from pressing co"

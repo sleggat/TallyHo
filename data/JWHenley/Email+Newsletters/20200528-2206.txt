@@ -1,4 +1,4 @@
-Date: 20200528
-Time: 2206
+Date: '20200528'
+Time: '2206'
 Duration: 15
 Description: "Create email \'Stand with HK\'"

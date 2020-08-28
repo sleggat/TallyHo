@@ -1,4 +1,4 @@
-Date: 20200323
-Time: 1756
+Date: '20200323'
+Time: '1756'
 Duration: 150
 Description: "Setting up website.. bulma stuff. Also started on Coming Soon page"

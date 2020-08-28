@@ -1,4 +1,4 @@
-Date: 20190916
-Time: 1129
+Date: '20190916'
+Time: '1129'
 Duration: 60
 Description: "New by-line and slogan"

@@ -1,4 +1,4 @@
-Date: 20200824
-Time: 2012
+Date: '20200824'
+Time: '2012'
 Duration: 20
 Description: "Email Dion about Vistaprint cost breakdown"

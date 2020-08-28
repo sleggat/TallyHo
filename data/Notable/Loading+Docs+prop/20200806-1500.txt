@@ -1,4 +1,4 @@
-Date: 20200806
-Time: 1500
+Date: '20200806'
+Time: '1500'
 Duration: 105
 Description: "Almost done"
