@@ -10,6 +10,11 @@ include __DIR__."/guts/update_task.php";
 
 $array = sort_tasks_by_time(find_all_files('data'));
 ?>
+<div id="floating_bar">
+	<div class="container">
+		<div>Total $<span id="total_cost"></span></div>
+	</div>
+</div>
 <div class="container">
 	This is where the other stuff goes.<br>
 	Add; new task, new client, new project<br>
@@ -50,6 +55,8 @@ foreach ($array as $task) {
 	else {
 		$day_class = "";
 	}
+
+	$cost = calculate_cost($task_array['Duration'],$task_array['Path']);
 	?>
 		<div class="table_row task_container <?= $day_class ?>" 
 		data-affects="<?= $task_array['Path'] ?>" 
@@ -61,7 +68,7 @@ foreach ($array as $task) {
 		data-description="<?= $task_array['Description'] ?>" >
 			<div class="table_col">
 				<span class="task_duration"><?= $task_array['Duration'] ?></span><span class="italic">&nbsp;mins</span><br>
-				<span class="task_value">$ <?= calculate_cost($task_array['Duration'],$task_array['Path'])['formatted']; ?></span><a href="#">Linkee</a>
+				<span class="task_value" data-costraw="<?= $cost['raw']; ?>">$&nbsp;<?= $cost['formatted']; ?></span>
 			</div>
 			<div class="table_col">
 				<span class="task_time"><?= format_time($task_array['Time']) ?></span><br>

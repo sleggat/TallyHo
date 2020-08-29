@@ -44,9 +44,18 @@ $(document).ready(function() {
       fadeDuration: 50
     });
   });
-
-  $(".task_container > *").not('.task_container > .action_icons, .task_container > a').click(function(event) {
+  //$('.task_container >:not(span)').css("background-color", "rgba(200,1,1,.5)");
+  $('.table_col:not(.action_icons)').click(function(event) {
     event.preventDefault();
     $(this).parents(".task_container").toggleClass("highlighted");
+
+    var total_cost = 0;
+    $( ".highlighted" ).each(function( index ) {
+      var current = $(this).children().find('.task_value').attr("data-costraw");
+      total_cost = total_cost + parseFloat(current);
+    });
+
+    if (total_cost == 0) { $("#floating_bar").fadeOut('fast'); } else { $("#floating_bar").fadeIn('fast'); }
+    $("#total_cost").text(total_cost);
   });
 })
