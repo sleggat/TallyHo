@@ -44,4 +44,9 @@ $(document).ready(function() {
       fadeDuration: 50
     });
   });
+
+  $(".task_container > *").not('.task_container > .action_icons, .task_container > a').click(function(event) {
+    event.preventDefault();
+    $(this).parents(".task_container").toggleClass("highlighted");
+  });
 })

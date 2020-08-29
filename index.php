@@ -11,7 +11,12 @@ include __DIR__."/guts/update_task.php";
 $array = sort_tasks_by_time(find_all_files('data'));
 ?>
 <div class="container">
-	This is where the other guys lies.
+	This is where the other stuff goes.<br>
+	Add; new task, new client, new project<br>
+	Tools: remove empty client/project folders<br>
+	Filters<br>
+	<br>
+	<br>
 </div>
 <div class="container">
 	<div class="table">
@@ -26,12 +31,19 @@ $array = sort_tasks_by_time(find_all_files('data'));
 $previous_day = "00000000";
 $day_class = "";
 foreach ($array as $task) {
+
 	$task_array = get_task_array($task);
 	//print_r($task_array);
 
 
 	// this is where we can do filtering by client/project and dates.
 	// client, project, client+project would be the first to do
+	// partial matching
+
+	// do a case insensitive match
+	//if ($task_array['Project'] != "Website") { continue; }
+	//if ($task_array['Client'] != "Magrette") { continue; }
+
 	if ($previous_day != $task_array['Date']) {
 		$day_class = "new_day";
 	}
@@ -49,7 +61,7 @@ foreach ($array as $task) {
 		data-description="<?= $task_array['Description'] ?>" >
 			<div class="table_col">
 				<span class="task_duration"><?= $task_array['Duration'] ?></span><span class="italic">&nbsp;mins</span><br>
-				<span class="task_value">$ <?= calculate_cost($task_array['Duration'])['formatted']; ?></span>
+				<span class="task_value">$ <?= calculate_cost($task_array['Duration'],$task_array['Path'])['formatted']; ?></span><a href="#">Linkee</a>
 			</div>
 			<div class="table_col">
 				<span class="task_time"><?= format_time($task_array['Time']) ?></span><br>

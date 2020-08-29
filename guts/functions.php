@@ -16,8 +16,14 @@ function find_all_files($dir) {
     $root = scandir($dir);
     foreach($root as $value)
     {
+        
         if($value === '.' || $value === '..' || $value === '.DS_Store') {continue;}
-        if(is_file("$dir/$value")) {$result[]="$dir/$value";continue;}
+
+        if (is_file("$dir/$value")) {
+            if(substr($value, -4, 4) != '.txt') {continue;} // skip if not a .txt file
+            $result[]="$dir/$value";
+            continue;
+        }
         foreach(find_all_files("$dir/$value") as $value)
         {
             $result[]=$value;
@@ -60,7 +66,7 @@ function log_change($type,$new,$old) {
 
 function format_date($date) {
     $formatted_date = DateTime::createFromFormat('Ymd', $date);
-    $pretty_date = date_format($formatted_date, 'D d M');
+    $pretty_date = date_format($formatted_date, 'D d M ’y');
     return $pretty_date;
 }
 function format_time($time) {
@@ -70,9 +76,25 @@ function format_time($time) {
     return $pretty_time;
 }
 
-function calculate_cost($mins) {
+function calculate_cost($mins, $affects) {
     global $default_rate;
-    $cost['raw'] = $default_rate * ($mins / 60);
+    // search for yaml in project folder first, then client folder, else use default
+    $pieces = explode("/", $affects);
+    $project_yaml = $pieces[0].'/'.$pieces[1].'/'.$pieces[2].'/_info.yaml';
+    $client_yaml = $pieces[0].'/'.$pieces[1].'/_info.yaml';
+    if (is_file($project_yaml)) {
+        $yaml = spyc_load_file($project_yaml);
+        $rate = $yaml['Rate'];
+    }
+    elseif (is_file($client_yaml)) {
+        $yaml = spyc_load_file($client_yaml);
+        $rate = $yaml['Rate'];
+    }
+    else {
+        $rate = $default_rate;
+    }
+
+    $cost['raw'] = $rate * ($mins / 60);
     $cost['formatted'] = number_format($cost['raw'], 2, '.', ',');
     return $cost;
 }
