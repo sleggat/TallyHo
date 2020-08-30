@@ -1,6 +1,8 @@
 
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+	<link rel="stylesheet" href="http://localhost/timesheet/guts/css/flatpickr.css">
+	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 	<script src="http://localhost/timesheet/guts/js/main.js"></script>
 	<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>

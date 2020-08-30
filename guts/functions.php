@@ -12,16 +12,17 @@ function scandir_clean($dir) {
 
 function find_all_files($dir) {
 
-    // fails if there's an empty client folder, or empty project folder
     $root = scandir($dir);
     foreach($root as $value)
     {
-        
-        if($value === '.' || $value === '..' || $value === '.DS_Store') {continue;}
+        if($value === '.' || $value === '..' || $value === '.DS_Store') { continue; }
 
         if (is_file("$dir/$value")) {
-            if(substr($value, -4, 4) != '.txt') {continue;} // skip if not a .txt file
-            $result[]="$dir/$value";
+            if(substr($value, -4, 4) == '.txt') {
+                $result[]="$dir/$value";
+            } // skip if not a .txt file
+            else { // echo $dir.'/'.$value.BR;
+        }
             continue;
         }
         foreach(find_all_files("$dir/$value") as $value)
@@ -29,7 +30,13 @@ function find_all_files($dir) {
             $result[]=$value;
         }
     }
-    return $result;
+    if (empty($result)) {
+        echo "Error with client/projector folders. Maybe an empty folder somewhere?";
+        return null;
+    }
+    else {
+        return $result;
+    }
 }
 
 function sort_tasks_by_time($array) {
@@ -85,16 +92,25 @@ function calculate_cost($mins, $affects) {
     if (is_file($project_yaml)) {
         $yaml = spyc_load_file($project_yaml);
         $rate = $yaml['Rate'];
+        $cost['source'] = "$".$rate.'/hr (Project Rate)';
     }
     elseif (is_file($client_yaml)) {
         $yaml = spyc_load_file($client_yaml);
         $rate = $yaml['Rate'];
+        $cost['source'] = "$".$rate.'/hr (Client Rate)';
     }
     else {
         $rate = $default_rate;
+        $cost['source'] = "$".$rate.'/hr (Default Rate)';
     }
 
     $cost['raw'] = $rate * ($mins / 60);
     $cost['formatted'] = number_format($cost['raw'], 2, '.', ',');
     return $cost;
+}
+function timeheat($time) {
+    $val = intval($time / 30);
+    if ($val < 0) { $val = 0; }
+    if ($val > 4) { $val = 4; }
+    return $val;
 }

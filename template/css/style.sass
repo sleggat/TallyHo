@@ -5,7 +5,7 @@ html
   font-size: 16px
 
 *, *:before, *:after 
-  box-sizing: inherit
+  //box-sizing: inherit // temporarily removed as it broke the grid on the modal form
 
 body, h1, h2, h3, h4, h5, h6, p, ol, ul 
   margin: 0
@@ -20,89 +20,136 @@ img
   height: auto
 //
 
+@import "tailwind_colors.sass"
+
+$primary: #513cda // purple
+$primary-invert: saturate(lighten($primary, 43%),60%)
+$bodytext: #141416
+$bodytext-invert: #ddd
+$bodytext-lightererer: saturate(lighten($bodytext, 60%),10%)
+$bodytext-lighterer: saturate(lighten($bodytext, 45%),10%)
+$bodytext-lighter: saturate(lighten($bodytext, 10%),10%)
+$bodytext-darker: saturate(darken($bodytext, 30%),20%)
+$bodytext-darkerer: saturate(darken($bodytext, 50%),20%)
+$primary-lighterererer: saturate(lighten($primary, 43%),60%)
+$primary-lightererer: saturate(lighten($primary, 40%),30%)
+$primary-lighterer: saturate(lighten($primary, 20%),20%)
+$primary-lighter: saturate(lighten($primary, 10%),10%)
+$primary-darker: saturate(darken($primary, 25%),30%)
+$link: $primary-darker
+$link-hover: $primary-lighterer
 
 
-$dark: #191029
-$primary: #fbadd5
-$primary-invert: #fff
-$primary-lighterer: saturate(lighten($primary, 15%),20%)
-$primary-lighter: saturate(lighten($primary, 7%),20%)
-$primary-darker: saturate(darken($primary, 30%),20%)
-$primary-darkerer: saturate(darken($primary, 50%),20%)
-$dark-lighterer: saturate(lighten($dark, 15%),20%)
-$dark-lighter: saturate(lighten($dark, 5%),20%)
-$dark-darker: saturate(darken($dark, 55%),30%)
-$link: saturate(darken($primary, 25%),20%)
-$link-hover: saturate(lighten($primary, 5%),50%)
+// https://tailwindcss.com/docs/customizing-colors#default-color-palette
 
 body
-  background-color: $dark
-  font-family: "Work Sans", sans-serif
-  color: $primary
+  background-color: $white
+  font-family: sans-serif
+  color: $gray-800
   line-height: 1.6em
-  font-size: .8em
-  font-weight: 400
+  font-size: .7em
+  font-weight: 200
+  margin: 0 20px
 
 .container
   max-width: 1200px
   margin: 20px auto
 .table
   display: table
-  //table-layout: fixed
-  background-color: transparent
+  table-layout: fixed
+  width: 100%
 .table_row
   display: table-row
 .table_col
   display: table-cell
-  border-bottom: 1px solid $dark-lighter
-  height: 4.5em
-  padding: 5px 10px 5px 10px
-  vertical-align: middle
-  &:nth-of-type(1)
-    // min-width: 50px
-  &:nth-of-type(2)
-    min-width: 150px
-  &:nth-of-type(3)
-    min-width: 200px
-  &:nth-of-type(4)
+  border-top: 1px solid $purple-200
+  padding: 15px 20px 13px 20px
+  vertical-align: top
+  &.task_col_1
+    width: 10%
+  &.task_col_2
+    width: 20%
+  &.task_col_3
     width: auto
-  &:nth-of-type(5)
-    white-space: nowrap
-  .icon 
-    a
-      font-size: 150%
-      color: $link
-      transition: color .5s
-      &:hover
-        color: $link-hover
-        transition: color .2s
-.task_duration, .task_time, .task_project
+  &.task_col_4
+    width: auto
+  &.task_col_graph
+    width: 1%
+    span
+      display: inline-block
+      width: 5px
+      height: 33px
+      border-radius: 3px
+      background-color: $purple-300
+      margin-left: -5px
+      &.heat_0
+        background-color: #caefff
+      &.heat_1
+        background-color: #e9ef9c
+      &.heat_2
+        background-color: #ffc33b
+      &.heat_3
+        background-color: #ff6a38
+      &.heat_4
+        background-color: #ff1d16
+
+.new_day
+  color: $purple-700
+  width: 100%
+  padding: 20px 0 20px 0px
+  font-size: 300%
+  line-height: 2em
+  border-top: 1px solid $purple-300
+  cursor: pointer
+.task_duration, .task_project, .task_value, .task_client
   font-size: 150%
+  font-weight: 400
   margin-left: -.05em // pedantic nudging so the larger text lines up a little nicer with text underneath
+.task_description, .task_time, .task_value_source
+  color: $gray-600
+.task_client
+  margin-right: 5px
+.task_project
+  font-weight: 200
+  color: $purple-700
+.task_value_currency
+  font-size: 75%
+  vertical-align: 6%
+  margin-right: 1px
 .cell_alignright
   text-align: right
-.task_container_header
-  font-weight: 800
 .task_container
   &:nth-of-type(n + 100)
-    // display: none
+    display: none
 .highlighted
-  background-color: $dark-lighterer
-.italic
-  font-family: 'Lora', Serif
-  font-style: italic
-  color: $primary-darker
-.task_description
-  color: $primary-lighter
-.task_time, .task_project, .task_duration
-  color: $primary-lighterer
-.new_day .table_col
-  border-top: 5px solid $dark-lighterer
-
+  background-color: $purple-100
+  .action_icons .icon a
+    background: $white
+.action_icons
+  text-align: right
+  .icon
+    a
+      font-size: 16px
+      color: $purple-600
+      transition: color .5s, border-radius .5s, background-color .5s
+      background: $purple-100
+      vertical-align: middle
+      align: center
+      padding: 10px 11px 7px 11px
+      border-radius: 5px
+      line-height: 1
+      display: inline-block
+      &:hover
+        color: $purple-900
+        background: $purple-200
+        transition: color .2s, border-radius .2s, background-color .2s
+        border-radius: 10px
+      &.modal_update // this icon looks off-centre, so let's correct that.
+        padding: 9px 9px 8px 13px
 #floating_bar
   display: none
-  background-color: white
-  color: $dark
+  background-color: $purple-700
+  color: $purple-100
   padding: 10px 10px
   font-size: 150%
   z-index: 2
@@ -110,10 +157,12 @@ body
   top: 0
   left: 0
   width: 100%
-.modal a.close-modal
-  top: 2.5px !important
-  right: 2.5px !important
-
+.modal
+  a.close-modal
+    top: 2.5px !important
+    right: 2.5px !important
+.jquery-modal
+  z-index: 2 !important
 .modal_form
   display: grid
   grid-gap: 1em
@@ -125,12 +174,16 @@ body
 input
   width: calc(100% - 20px)
   padding: 5px 10px
-  border: 1px solid $primary-lighter
+  border: 1px solid $gray-300
   font-size: 120%
   border-radius: 3px
-
+select
+  border: 1px solid $gray-300
+  font-size: 120%
+  border-radius: 3px
+  background-color: transparent
 button
-  background-color: $link
+  background-color: $purple-600
   float: right
   padding: 10px 20px
   margin: 0
@@ -139,5 +192,9 @@ button
   color: white
   font-size: 120%
   &:hover
-    background-color: darken($link,10%)
+    background-color: $purple-800
     cursor: pointer
+
+
+@media (max-width: 1024px)
+ //

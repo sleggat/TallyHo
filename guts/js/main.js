@@ -1,4 +1,14 @@
 $(document).ready(function() {
+
+  flatpickr('#Date',{ 
+  dateFormat: 'Ymd' });
+
+  flatpickr('#Time',{ 
+  enableTime: true,
+  noCalendar: true,
+  dateFormat: "Hi",
+  time_24hr: true }); // see https://www.cssscript.com/flat-style-javascript-date-picker-flatpickr/
+
   $('.modal_update').click(function(event) {
     event.preventDefault();
     var current = $(this).parents(".task_container");
@@ -45,17 +55,30 @@ $(document).ready(function() {
     });
   });
   //$('.task_container >:not(span)').css("background-color", "rgba(200,1,1,.5)");
-  $('.table_col:not(.action_icons)').click(function(event) {
-    event.preventDefault();
-    $(this).parents(".task_container").toggleClass("highlighted");
-
+  function recalculate_costs() {
     var total_cost = 0;
     $( ".highlighted" ).each(function( index ) {
       var current = $(this).children().find('.task_value').attr("data-costraw");
       total_cost = total_cost + parseFloat(current);
     });
-
-    if (total_cost == 0) { $("#floating_bar").fadeOut('fast'); } else { $("#floating_bar").fadeIn('fast'); }
+    total_cost = total_cost.toFixed(2);
     $("#total_cost").text(total_cost);
+    if (total_cost == 0) { $("#floating_bar").fadeOut('fast'); } else { $("#floating_bar").fadeIn('fast'); }
+  }
+  $('.new_day').click(function(event) {
+    event.preventDefault();
+    toggledate = $(this).attr("data-date");
+    $('.'+toggledate+" > .task_container").toggleClass("highlighted");
+    recalculate_costs();
+  });
+  $('.table_col:not(.action_icons)').click(function(event) {
+    event.preventDefault();
+    $(this).parents(".task_container").toggleClass("highlighted");
+    recalculate_costs();
+  });
+  $('#floating_bar').click(function(event) {
+    event.preventDefault();
+    $('.task_container').removeClass("highlighted");
+    recalculate_costs();
   });
 })
