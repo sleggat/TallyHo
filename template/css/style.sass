@@ -1,25 +1,4 @@
-
-// reset
-html 
-  box-sizing: border-box
-  font-size: 16px
-
-*, *:before, *:after 
-  //box-sizing: inherit // temporarily removed as it broke the grid on the modal form
-
-body, h1, h2, h3, h4, h5, h6, p, ol, ul 
-  margin: 0
-  padding: 0
-  font-weight: normal
-
-ol, ul
-  list-style: none
-
-img 
-  max-width: 100%
-  height: auto
-//
-
+@import "reset.sass"
 @import "tailwind_colors.sass"
 
 $primary: #513cda // purple
@@ -41,19 +20,40 @@ $link-hover: $primary-lighterer
 
 
 // https://tailwindcss.com/docs/customizing-colors#default-color-palette
-
+html
+  padding: 0
+  margin: 0
 body
   background-color: $white
-  font-family: sans-serif
+  font-family: "Barlow", sans-serif
   color: $gray-800
   line-height: 1.6em
-  font-size: .7em
+  font-size: .85em
   font-weight: 200
-  margin: 0 20px
+  padding: 0
 
+h1,h2,h3,h4, .day_header
+  line-height: 1.6em
+  font-weight: 200
+  color: $purple-600
+
+h1, .day_header
+  font-size: 300%
+h2
+  font-size: 250%
+h3
+  font-size: 200%
+h4
+  font-size: 150%
 .container
   max-width: 1200px
-  margin: 20px auto
+  margin: 0px auto
+
+.head
+  background-color: $gray-200
+  padding: 60px 0 30px 0
+  margin: 0 0 30px 0
+
 .table
   display: table
   table-layout: fixed
@@ -64,24 +64,24 @@ body
   display: table-cell
   border-top: 1px solid $purple-200
   padding: 15px 20px 13px 20px
-  vertical-align: top
+  vertical-align: middle
   &.task_col_1
     width: 10%
   &.task_col_2
     width: 20%
   &.task_col_3
-    width: auto
+    width: 50%
   &.task_col_4
-    width: auto
+    width: 150px
   &.task_col_graph
     width: 1%
-    span
+    div
       display: inline-block
-      width: 5px
-      height: 33px
-      border-radius: 3px
-      background-color: $purple-300
-      margin-left: -5px
+      width: 6px
+      height: 46px
+      border-radius: 5px
+      margin-left: -10px
+      border: 1px solid white
       &.heat_0
         background-color: #caefff
       &.heat_1
@@ -93,17 +93,16 @@ body
       &.heat_4
         background-color: #ff1d16
 
-.new_day
-  color: $purple-700
+.day_header
   width: 100%
   padding: 20px 0 20px 0px
-  font-size: 300%
-  line-height: 2em
   border-top: 1px solid $purple-300
   cursor: pointer
+.day_header:nth-of-type(1)
+  border: none
 .task_duration, .task_project, .task_value, .task_client
   font-size: 150%
-  font-weight: 400
+  font-weight: 500
   margin-left: -.05em // pedantic nudging so the larger text lines up a little nicer with text underneath
 .task_description, .task_time, .task_value_source
   color: $gray-600
@@ -163,19 +162,24 @@ body
     right: 2.5px !important
 .jquery-modal
   z-index: 2 !important
-.modal_form
+.form
   display: grid
   grid-gap: 1em
   grid-template-columns: 1fr 1fr 1fr
-.is-fullwidth
+  grid-auto-flow: auto
+.span-3
   grid-column: span 3
+.span-2
+  grid-column: span 2
+.span-1 // probably not needed?
+  grid-column: span 1
 .field
   padding-top: 10px
 input
-  width: calc(100% - 20px)
-  padding: 5px 10px
+  width: 100%
+  padding: 10px 10px
   border: 1px solid $gray-300
-  font-size: 120%
+  font-size: 125%
   border-radius: 3px
 select
   border: 1px solid $gray-300
@@ -197,4 +201,10 @@ button
 
 
 @media (max-width: 1024px)
- //
+ .table_col
+    &.task_col_1
+      width: 15%
+    &.task_col_2
+      width: 20%
+    &.task_col_3
+      width: 45%

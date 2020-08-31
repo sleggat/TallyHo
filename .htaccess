@@ -25,7 +25,7 @@ RewriteRule (^|/)\.(?!well-known\/) index.php [L]
 RewriteRule ^data/(.*) index.php [L]
 
 # block all files in the site folder from being accessed directly, except js and css folders
-RewriteRule ^guts/(js|css)/ - [L]
+RewriteRule ^guts/(js|css|forms)/ - [L]
 RewriteRule ^guts/(.*) index.php [F]
 
 # make site links work

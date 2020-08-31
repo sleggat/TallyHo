@@ -4,40 +4,27 @@ define("BR", "<br>");
 define("NL", '
 ');
 
-
 function scandir_clean($dir) {
 	$contents = array_diff(scandir($dir), array('..', '.'));
 	return $contents;
 }
 
-function find_all_files($dir) {
-
-    $root = scandir($dir);
-    foreach($root as $value)
-    {
-        if($value === '.' || $value === '..' || $value === '.DS_Store') { continue; }
-
-        if (is_file("$dir/$value")) {
+function find_all_files($dir, &$results = array()) {
+    $files = scandir($dir);
+    foreach ($files as $key => $value) {
+        $path = $dir . DIRECTORY_SEPARATOR . $value;
+        if (!is_dir($path)) {
             if(substr($value, -4, 4) == '.txt') {
-                $result[]="$dir/$value";
-            } // skip if not a .txt file
-            else { // echo $dir.'/'.$value.BR;
-        }
-            continue;
-        }
-        foreach(find_all_files("$dir/$value") as $value)
-        {
-            $result[]=$value;
+                $results[] = $path;
+            }
+        } else if ($value != "." && $value != "..") {
+            find_all_files($path, $results);
+            // $results[] = $path; // don't show empty folders in results
         }
     }
-    if (empty($result)) {
-        echo "Error with client/projector folders. Maybe an empty folder somewhere?";
-        return null;
-    }
-    else {
-        return $result;
-    }
+    return $results;
 }
+
 
 function sort_tasks_by_time($array) {
 	// takes the result of find_all_files()

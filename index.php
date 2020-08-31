@@ -6,34 +6,87 @@ require_once __DIR__."/guts/config.php";
 require_once __DIR__."/guts/vendor/mustangostang/spyc/spyc.php";
 require_once __DIR__."/guts/functions.php";
 include __DIR__."/template/header.php";
-include __DIR__."/guts/update_task.php";
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+	var_dump($_POST);
+	if ($_POST['Submit'] == 'update') {
+		include __DIR__."/guts/update_task.php"; // update and duplicate
+	}
+	if ($_POST['Submit'] == 'add') {
+		include __DIR__."/guts/add_task.php"; // update and duplicate
+	}
+}
 
 $array = sort_tasks_by_time(find_all_files('data'));
-?>
-<div id="floating_bar">
+$tasks_total = count($array);
+?><div id="floating_bar">
 	<div class="container">
 		<div>Total $<span id="total_cost"></span></div>
 	</div>
 </div>
-<div class="container">
-	This is where the other stuff goes.<br>
-	Add; new task, new client, new project<br>
-	Tools: remove empty client/project folders<br>
-	Filters<br>
-	<br>
-	<br>
+<div class="head">
+	<div class="container">
+		<h1>TallyHo!</h1>
+		This is where the other stuff goes.<br>
+		Add; new task, new client, new project<br>
+		Tools: remove empty client/project folders<br>
+		Filters<br>
+		<?= 'Total tasks'.$tasks_total; ?>
+		<br>
+		<br>
+		<form method="post" class="form" action="" id="form_add">
+			<div class="field">
+				<label class="label">Date</label>
+				<div class="control">
+					<input id="add_date" name="Date" class="input" type="date" value="" min="2018-01-01" max="6666-06-06" >
+				</div>
+			</div>
+			<div class="field">
+				<label class="label">Start Time</label>
+				<div class="control">
+					<input id="add_time" name="Time" class="input" type="text" value="" >
+				</div>
+			</div>
+			<div class="field">
+				<label class="label">Duration</label>
+				<div class="control">
+					<input id="add_duration" name="Duration" class="input" type="number" step="5" value="" >
+				</div>
+			</div>
+			<div class="field span-1">
+				<label class="label">Client</label>
+				<div class="control">
+					<input id="add_client" name="Client" class="input" type="text" value="" >
+				</div>
+			</div>
+			<div class="field span-2">
+				<label class="label">Project</label>
+				<div class="control">
+					<input id="add_project" name="Project" class="input" type="text" value="" >
+				</div>
+			</div>
+			<div class="field span-3">
+				<label class="label">Description</label>
+				<div class="control">
+					<input id="add_description" name="Description" class="input" type="text" value="" >
+				</div>
+			</div>
+
+			<input id="add_affects" name="Affects" value="" type="hidden"/>
+
+			<div class="field span-3">
+				<div class="control">
+					<button class="button is-link" type="submit" name="Submit" value="update">Submit</button>
+				</div>
+			</div>
+
+		</form>
+	</div>
 </div>
 <div class="container">
-<!-- 		<div class="table_row task_container_header">
-			<div class="table_col">Duration</div>
-			<div class="table_col">Start Time</div>
-			<div class="table_col">Project</div>
-			<div class="table_col">Description</div>
-			<div class="table_col">Actions</div>
-		</div> -->
+
 <?php
-$previous_day = "00000000";
-$day_class = "";
+$previous_day = "";
 foreach ($array as $task) {
 
 	$task_array = get_task_array($task);
@@ -49,7 +102,7 @@ foreach ($array as $task) {
 	//if ($task_array['Client'] != "Magrette") { continue; }
 
 	if ($previous_day != $task_array['Date']) {
-		echo '<div class="new_day" data-date="'.$task_array['Date'].'">'.format_date($task_array['Date']).'</div>';
+		echo '<div class="day_header" data-date="'.$task_array['Date'].'">'.format_date($task_array['Date']).'</div>';
 	}
 
 	$cost = calculate_cost($task_array['Duration'],$task_array['Path']);
@@ -63,7 +116,7 @@ foreach ($array as $task) {
 			data-client="<?= $task_array['Client'] ?>" 
 			data-project="<?= $task_array['Project'] ?>" 
 			data-description="<?= $task_array['Description'] ?>" >
-			<div class="table_col task_col_graph"><span class="heat_<?= timeheat($task_array['Duration']) ?>"></span></div>
+			<div class="table_col task_col_graph"><div class="heat_<?= timeheat($task_array['Duration']) ?>"></div></div>
 			<div class="table_col task_col_1">
 				<span class="task_duration"><?= $task_array['Duration'] ?></span> <span>mins</span><br>
 				<span class="task_time"><?= format_time($task_array['Time']) ?></span>

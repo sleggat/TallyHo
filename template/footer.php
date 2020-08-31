@@ -9,49 +9,49 @@
 
 	<div class="modal" id="modal_update" aria-hidden="true">
 		<h2 id="modal_header"></h2>
-		<form method="post" class="modal_form">
-			<div class="field">
+		<form method="post" class="form">
+			<div class="field span-1">
 				<label class="label">Date</label>
 				<div class="control">
-					<input id="Date" name="Date" class="input" type="date" value="" min="2018-01-01" max="6666-06-06" >
+					<input id="modal_date" name="Date" class="input" type="date" value="" min="2018-01-01" max="6666-06-06" >
 				</div>
 			</div>
-			<div class="field">
+			<div class="field span-1">
 				<label class="label">Start Time</label>
 				<div class="control">
-					<input id="Time" name="Time" class="input" type="text" value="" >
+					<input id="modal_time" name="Time" class="input" type="text" value="" >
 				</div>
 			</div>
-			<div class="field">
+			<div class="field span-1">
 				<label class="label">Duration</label>
 				<div class="control">
-					<input id="Duration" name="Duration" class="input" type="number" step="5" value="" >
+					<input id="modal_duration" name="Duration" class="input" type="number" step="5" value="" >
 				</div>
 			</div>
-			<div class="field is-fullwidth">
+			<div class="field span-1">
 				<label class="label">Client</label>
 				<div class="control">
-					<input id="Client" name="Client" class="input" type="text" value="" >
+					<input id="modal_client" name="Client" class="input" type="text" value="" >
 				</div>
 			</div>
-			<div class="field is-fullwidth">
+			<div class="field span-2">
 				<label class="label">Project</label>
 				<div class="control">
-					<input id="Project" name="Project" class="input" type="text" value="" >
+					<input id="modal_project" name="Project" class="input" type="text" value="" >
 				</div>
 			</div>
-			<div class="field is-fullwidth">
+			<div class="field span-3">
 				<label class="label">Description</label>
 				<div class="control">
-					<input id="Description" name="Description" class="input" type="text" value="" >
+					<input id="modal_description" name="Description" class="input" type="text" value="" >
 				</div>
 			</div>
 
-			<input id="Affects" name="Affects" value="" type="hidden"/>
+			<input id="modal_affects" name="Affects" value="" type="hidden"/>
 
-			<div class="field is-fullwidth">
+			<div class="field span-3">
 				<div class="control">
-					<button class="button is-link" type="submit" name="submit" >Submit</button>
+					<button class="button is-link" type="submit" name="Submit" value="update">Submit</button>
 				</div>
 			</div>
 

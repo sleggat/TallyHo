@@ -20,13 +20,13 @@ $(document).ready(function() {
     var project = current.attr("data-project");
     var description = current.attr("data-description");
     $("#modal_header").html("Update Task");
-    $("#Date").val(date);
-    $("#Time").val(time);
-    $("#Duration").val(duration);
-    $("#Client").val(client);
-    $("#Project").val(project);
-    $("#Description").val(description);
-    $("#Affects").val(affects);
+    $("#modal_date").val(date);
+    $("#modal_time").val(time);
+    $("#modal_duration").val(duration);
+    $("#modal_client").val(client);
+    $("#modal_project").val(project);
+    $("#modal_description").val(description);
+    $("#modal_affects").val(affects);
     $("#modal_update").modal({
       fadeDuration: 50
     });
@@ -43,13 +43,13 @@ $(document).ready(function() {
     var project = current.attr("data-project");
     var description = current.attr("data-description");
     $("#modal_header").html("Duplicate Task");
-    $("#Date").val(date);
-    $("#Time").val(time);
-    $("#Duration").val(duration);
-    $("#Client").val(client);
-    $("#Project").val(project);
-    $("#Description").val(description);
-    $("#Affects").val('');
+    $("#modal_date").val(date);
+    $("#modal_time").val(time);
+    $("#modal_duration").val(duration);
+    $("#modal_client").val(client);
+    $("#modal_project").val(project);
+    $("#modal_description").val(description);
+    $("#modal_affects").val('');
     $("#modal_update").modal({
       fadeDuration: 50
     });
