@@ -1,27 +1,16 @@
 $(document).ready(function() {
 
-  flatpickr('#Date',{ 
-  dateFormat: 'Ymd' });
-
-  flatpickr('#Time',{ 
-  enableTime: true,
-  noCalendar: true,
-  dateFormat: "Hi",
-  time_24hr: true }); // see https://www.cssscript.com/flat-style-javascript-date-picker-flatpickr/
-
   $('.modal_update').click(function(event) {
     event.preventDefault();
     var current = $(this).parents(".task_container");
     var affects = current.attr('data-affects');
-    var date = current.attr("data-date");
-    var time = current.attr("data-time");
+    var datetime = current.attr("data-datetime");
     var duration = current.attr("data-duration");
     var client = current.attr("data-client");
     var project = current.attr("data-project");
     var description = current.attr("data-description");
     $("#modal_header").html("Update Task");
-    $("#modal_date").val(date);
-    $("#modal_time").val(time);
+    $("#modal_datetime").val(datetime);
     $("#modal_duration").val(duration);
     $("#modal_client").val(client);
     $("#modal_project").val(project);
@@ -30,6 +19,7 @@ $(document).ready(function() {
     $("#modal_update").modal({
       fadeDuration: 50
     });
+    initpicker();
   });
 
   $('.modal_duplicate').click(function(event) {
@@ -54,6 +44,43 @@ $(document).ready(function() {
       fadeDuration: 50
     });
   });
+  function initpicker() {
+    $('.DateTime').daterangepicker({
+    "singleDatePicker": true,
+    "timePicker": true,
+    "timePickerIncrement": 5,
+    "locale": {
+        "format": "YYYY-MM-DD hh:mm A",
+        "applyLabel": "Apply",
+        "cancelLabel": "Cancel",
+        "daysOfWeek": [
+            "Su",
+            "Mo",
+            "Tu",
+            "We",
+            "Th",
+            "Fr",
+            "Sa"
+        ],
+        "monthNames": [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
+        ]
+    },
+    "autoUpdateInput": true
+  });
+  }
+
   //$('.task_container >:not(span)').css("background-color", "rgba(200,1,1,.5)");
   function recalculate_costs() {
     var total_cost = 0;
@@ -65,7 +92,7 @@ $(document).ready(function() {
     $("#total_cost").text(total_cost);
     if (total_cost == 0) { $("#floating_bar").fadeOut('fast'); } else { $("#floating_bar").fadeIn('fast'); }
   }
-  $('.new_day').click(function(event) {
+  $('.day_header').click(function(event) {
     event.preventDefault();
     toggledate = $(this).attr("data-date");
     $('.'+toggledate+" > .task_container").toggleClass("highlighted");

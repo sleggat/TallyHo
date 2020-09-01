@@ -4,9 +4,11 @@ $br ="
 ";
 
 // import Projects (and Clients) from Kimai CSV
-$source = file_get_contents('./kimai-export-2.csv');
-$array = array_map("str_getcsv", preg_split('/\r*\n+|\r+/', $source));
-
+$source = file_get_contents('./kimai-export.csv');
+// $array = array_map("str_getcsv", preg_split('/\r*\n+|\r+/', $source));
+$array = array_map("str_getcsv", preg_split('/\r*\n+\"+|\r+/', $source)); // slightly modified to allow fields with linebreaks
+// print_r($array);
+// die;
 foreach ($array as $part) {
 	$client = urlencode(trim($part[8]));
 	$project = urlencode(trim($part[9]));
@@ -15,7 +17,7 @@ foreach ($array as $part) {
 	$status = trim($part[12]);
 	$duration = trim($part[3])/60;
 
-	$date = str_replace('-','',trim($part[0]));
+	$date = str_replace(array('-','"'),'',trim($part[0]));
 	$time = str_replace(':','',trim($part[1]));
 
 

@@ -24,18 +24,21 @@ html
   padding: 0
   margin: 0
 body
-  background-color: $white
+  background-color: $gray-200
   font-family: "Barlow", sans-serif
   color: $gray-800
   line-height: 1.6em
   font-size: .85em
-  font-weight: 200
-  padding: 0
+  font-weight: 400
+  display: grid
+  grid-template-columns: 400px 1fr
 
 h1,h2,h3,h4, .day_header
   line-height: 1.6em
   font-weight: 200
-  color: $purple-600
+  color: $gray-500
+ion-icon
+  vertical-align: -10%
 
 h1, .day_header
   font-size: 300%
@@ -46,42 +49,50 @@ h3
 h4
   font-size: 150%
 .container
-  max-width: 1200px
-  margin: 0px auto
+  // max-width: 1200px
 
 .head
-  background-color: $gray-200
   padding: 60px 0 30px 0
-  margin: 0 0 30px 0
-
+  margin: 0 30px 30px 30px
+  position: -webkit-sticky
+  position: sticky
+  top: 0
+  height: 100vh
+.sheet
+  background-color: $white
+  margin: 20px 20px 0 0px
+  padding: 20px 30px 0 30px
+  filter: drop-shadow(0px 0px 2px $gray-400)
 .table
   display: table
-  table-layout: fixed
+  //table-layout: fixed
   width: 100%
 .table_row
   display: table-row
 .table_col
   display: table-cell
   border-top: 1px solid $purple-200
-  padding: 15px 20px 13px 20px
-  vertical-align: middle
+  padding: 15px 5px 13px 5px
+  vertical-align: top
   &.task_col_1
-    width: 10%
+    width: 100px
   &.task_col_2
-    width: 20%
+    width: 200px
   &.task_col_3
-    width: 50%
+    width: auto
   &.task_col_4
-    width: 150px
+    width: 160px
   &.task_col_graph
-    width: 1%
+    width: 10px
     div
       display: inline-block
-      width: 6px
-      height: 46px
+      width: 5px
+      height: 50px
       border-radius: 5px
-      margin-left: -10px
+      margin-left: -5px
+      margin-right: 5px
       border: 1px solid white
+      vertical-align: middle
       &.heat_0
         background-color: #caefff
       &.heat_1
@@ -149,7 +160,7 @@ h4
   display: none
   background-color: $purple-700
   color: $purple-100
-  padding: 10px 10px
+  padding: 20px 0px
   font-size: 150%
   z-index: 2
   position: fixed

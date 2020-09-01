@@ -49,6 +49,19 @@ function get_task_array($task) {
 	return $task_yaml;
 }
 
+function clients_and_projects($array) {
+    $new = array();
+    foreach ($array as $path) {
+        $explode = explode("/",$path);
+        if (@!in_array(urldecode($explode[2]), $new[urldecode($explode[1])]))
+        {
+            $new[urldecode($explode[1])][] = urldecode($explode[2]);
+        }
+        
+    }
+    return $new;
+}
+
 function log_change($type,$new,$old) {
     $filename = 'cache/history/'.$type.'.txt';
     $fileContents = @file_get_contents($filename);
@@ -69,7 +82,11 @@ function format_time($time) {
     $pretty_time = date_format($formatted_time, 'g:ia');
     return $pretty_time;
 }
-
+function format_datetime($date, $time) {
+    $datetime = DateTime::createFromFormat('YmdHi', $date.$time);
+    $dt = date_format($datetime, 'Y-m-d h:i A');
+    return $dt;
+}
 function calculate_cost($mins, $affects) {
     global $default_rate;
     // search for yaml in project folder first, then client folder, else use default

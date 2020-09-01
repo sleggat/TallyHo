@@ -1,6 +1,7 @@
 <?php
 
 // import Projects (and Clients) from Kimai CSV
+// need a way to generate the rates for clients and projects too
 
 $array = array_map("str_getcsv", preg_split('/\r*\n+|\r+/', "16,A5 Brochure,MacLymph,,,,,#d2d6de,TRUE,
 22,Australia vs Taiwan map,CampingTaiwan,,,,,#d2d6de,TRUE,

@@ -1,4 +1,5 @@
 Date: '20190716'
 Time: '1700'
 Duration: 90
-Description: "Setting up CDN / Firewall / Security. Server co made a boohoo (added their own SSL) which caused site to go down."
+Description: "Setting up CDN / Firewall / Security.
+Server co made a boohoo (added their own SSL) which caused site to go down."

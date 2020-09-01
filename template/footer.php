@@ -1,25 +1,21 @@
 
-	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-	<link rel="stylesheet" href="http://localhost/timesheet/guts/css/flatpickr.css">
-	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 	<script src="http://localhost/timesheet/guts/js/main.js"></script>
-	<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+	<script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
 
 	<div class="modal" id="modal_update" aria-hidden="true">
 		<h2 id="modal_header"></h2>
 		<form method="post" class="form">
-			<div class="field span-1">
-				<label class="label">Date</label>
+			<div class="field span-2">
+				<label class="label">Date &amp; Time</label>
 				<div class="control">
-					<input id="modal_date" name="Date" class="input" type="date" value="" min="2018-01-01" max="6666-06-06" >
-				</div>
-			</div>
-			<div class="field span-1">
-				<label class="label">Start Time</label>
-				<div class="control">
-					<input id="modal_time" name="Time" class="input" type="text" value="" >
+					<input id="modal_datetime" name="DateTime" class="DateTime input" value="" >
 				</div>
 			</div>
 			<div class="field span-1">
