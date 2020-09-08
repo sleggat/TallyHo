@@ -30,9 +30,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 $all_records = find_all_files('data');
 $array = sort_tasks_by_time($all_records);
 $clients_and_projects = clients_and_projects($all_records);
-// print_r($clients_and_projects);
+//print_r($clients_and_projects);
 //print_r($array);
 $tasks_total = count($array);
+//foreach (array_keys($clients_and_projects) as $client) {
+$client_options = '"'.implode('","',array_keys($clients_and_projects)).'"';
+//echo $client_options;
+//}
+$additional_js = '
+	var client_options = {
+    	data: ['.$client_options.']
+	}
+	var project_options = {
+    	data: ["Email Newsletters", "Planning/Quoting", "Print Design", "IT/Server Maintenance", "Social Media/Promo", "Website"]
+	};
+	';
+
 
 // zip_backup('data/', './backups/'.date("Ymd-His").'.zip')
 

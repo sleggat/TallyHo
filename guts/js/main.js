@@ -1,5 +1,7 @@
 $(document).ready(function() {
     initpicker('#form_add');
+    $("#add_client").easyAutocomplete(client_options);
+    $("#add_project").easyAutocomplete(project_options);
 })
 $('.toggle_filters .icon_svg').click(function(event) {
     event.preventDefault();
@@ -134,3 +136,4 @@ $('#floating_bar').click(function(event) {
     $('.task_container').removeClass("highlighted");
     recalculate_costs();
 });
+

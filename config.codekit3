@@ -3079,6 +3079,16 @@
 		"oAP": "/guts/cnfig.php",
 		"oF": 1
 		},
+	"/guts/css/easy-autocomplete.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/guts/css/easy-autocomplete-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/guts/delete_task.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -3094,6 +3104,17 @@
 		"oA": 1,
 		"oAP": "/guts/functions.php",
 		"oF": 1
+		},
+	"/guts/js/jquery.easy-autocomplete.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "/guts/js/jquery.easy-autocomplete-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
 		},
 	"/guts/js/main-min.js": {
 		"bF": 0,

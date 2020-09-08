@@ -57,6 +57,9 @@
 			</div>
 		</form>
 	</div>
+	<script>
+		<?php echo $additional_js; ?>
+	</script>
 	<script src="http://localhost/timesheet/guts/js/main.js"></script>
 </body>
 
