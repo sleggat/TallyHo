@@ -759,20 +759,52 @@
 		"oAP": "/data/JWHenley/Email+Newsletters/20200907-2200.txt",
 		"oF": 0
 		},
-	"/data/JWHenley/Email+Newsletters/20200908-1345.txt": {
+	"/data/JWHenley/Email+Newsletters/20200908-1755.txt": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/data/JWHenley/Email+Newsletters/20200908-1345.txt",
+		"oAP": "/data/JWHenley/Email+Newsletters/20200908-1755.txt",
 		"oF": 0
 		},
-	"/data/JWHenley/Email+Newsletters/20200911-2130.txt": {
+	"/data/JWHenley/Email+Newsletters/20200908-1850.txt": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/data/JWHenley/Email+Newsletters/20200911-2130.txt",
+		"oAP": "/data/JWHenley/Email+Newsletters/20200908-1850.txt",
+		"oF": 0
+		},
+	"/data/JWHenley/Email+Newsletters/20200909-0740.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/JWHenley/Email+Newsletters/20200909-0740.txt",
+		"oF": 0
+		},
+	"/data/JWHenley/Email+Newsletters/20200910-1810.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/JWHenley/Email+Newsletters/20200910-1810.txt",
+		"oF": 0
+		},
+	"/data/JWHenley/Email+Newsletters/20200914-1810.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/JWHenley/Email+Newsletters/20200914-1810.txt",
+		"oF": 0
+		},
+	"/data/JWHenley/Email+Newsletters/20201029-1810.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/JWHenley/Email+Newsletters/20201029-1810.txt",
 		"oF": 0
 		},
 	"/data/JWHenley/Website/20190726-1245.txt": {
@@ -3046,6 +3078,14 @@
 		"oA": 1,
 		"oAP": "/guts/cnfig.php",
 		"oF": 1
+		},
+	"/guts/delete_task.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/guts/delete_task.php",
+		"oF": 0
 		},
 	"/guts/functions.php": {
 		"cB": 0,

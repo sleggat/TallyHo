@@ -5,6 +5,7 @@ $('.toggle_filters .icon_svg').click(function(event) {
     event.preventDefault();
     $('.filters_form').toggle();
 });
+
 $('.modal_update').click(function(event) {
     event.preventDefault();
     var current = $(this).parents(".task_container");
@@ -14,18 +15,18 @@ $('.modal_update').click(function(event) {
     var client = current.attr("data-client");
     var project = current.attr("data-project");
     var description = current.attr("data-description");
-    $("#modal_header").html("Update Task");
-    $("#modal_datetime").val(datetime);
-    $("#modal_duration").val(duration);
-    $("#modal_client").val(client);
-    $("#modal_project").val(project);
-    $("#modal_description").val(description);
-    $("#modal_path").val(path);
+    $("#modal_update .modal_header").html("Update Task");
+    $("#modal_update .modal_datetime").val(datetime);
+    $("#modal_update .modal_duration").val(duration);
+    $("#modal_update .modal_client").val(client);
+    $("#modal_update .modal_project").val(project);
+    $("#modal_update .modal_description").val(description);
+    $("#modal_update .modal_path").val(path);
     $("#modal_update").modal({
         fadeDuration: 300,
         fadeDelay: 0.5
     });
-    initpicker('.modal');
+    initpicker('#modal_update');
 });
 
 $('.modal_duplicate').click(function(event) {
@@ -38,22 +39,35 @@ $('.modal_duplicate').click(function(event) {
     var client = current.attr("data-client");
     var project = current.attr("data-project");
     var description = current.attr("data-description");
-    $("#modal_header").html("Duplicate Task");
-    $("#modal_datetime").val(datetime);
-    $("#modal_duration").val(duration);
-    $("#modal_client").val(client);
-    $("#modal_project").val(project);
-    $("#modal_description").val(description);
-    $("#modal_path").val('');
+    $("#modal_update .modal_header").html("Duplicate Task");
+    $("#modal_update .modal_datetime").val(datetime);
+    $("#modal_update .modal_duration").val(duration);
+    $("#modal_update .modal_client").val(client);
+    $("#modal_update .modal_project").val(project);
+    $("#modal_update .modal_description").val(description);
+    $("#modal_update .modal_path").val('');
     $("#modal_update").modal({
         fadeDuration: 300,
         fadeDelay: 0.5
     });
-    initpicker('.modal');
+    initpicker('#modal_update');
+});
+
+$('.modal_delete').click(function(event) {
+    event.preventDefault();
+    var current = $(this).parents(".task_container");
+    var path = current.attr('data-path');
+    $("#modal_delete .modal_header").html("Delete Task");
+    $("#modal_delete .modal_path").val(path);
+    $("#modal_delete .modal_delete_path").html(path);
+    $("#modal_delete").modal({
+        fadeDuration: 300,
+        fadeDelay: 0.5
+    });
 });
 
 function initpicker(element) {
-    $(element+' .DateTime').daterangepicker({
+    $(element+' .modal_datetime').daterangepicker({
         "singleDatePicker": true,
         "timePicker": true,
         "timePickerIncrement": 5,
