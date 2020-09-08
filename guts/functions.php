@@ -86,10 +86,10 @@ function format_datetime($date, $format='Y-m-d h:i A') {
 	$datetime = date_format($formatted, $format);
 	return $datetime;
 }
-function calculate_cost($mins, $affects) {
+function calculate_cost($mins, $path) {
 	global $default_rate;
 	// search for yaml in project folder first, then client folder, else use default
-	$pieces = explode("/", $affects);
+	$pieces = explode("/", $path);
 	$project_yaml = $pieces[0].'/'.$pieces[1].'/'.$pieces[2].'/_info.yaml';
 	$client_yaml = $pieces[0].'/'.$pieces[1].'/_info.yaml';
 	if (is_file($project_yaml)) {

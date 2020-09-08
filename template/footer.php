@@ -33,7 +33,7 @@
 				</div>
 			</div>
 
-			<input id="modal_affects" name="Affects" value="" type="hidden"/>
+			<input id="modal_path" name="Path" value="" type="hidden"/>
 
 			<div class="field span-6">
 				<div class="control">

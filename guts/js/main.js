@@ -6,9 +6,9 @@ $('.toggle_filters .icon_svg').click(function(event) {
     $('.filters_form').toggle();
 });
 $('.modal_update').click(function(event) {
-    //event.preventDefault();
+    event.preventDefault();
     var current = $(this).parents(".task_container");
-    var affects = current.attr('data-affects');
+    var path = current.attr('data-path');
     var datetime = current.attr("data-datetime");
     var duration = current.attr("data-duration");
     var client = current.attr("data-client");
@@ -20,7 +20,7 @@ $('.modal_update').click(function(event) {
     $("#modal_client").val(client);
     $("#modal_project").val(project);
     $("#modal_description").val(description);
-    $("#modal_affects").val(affects);
+    $("#modal_path").val(path);
     $("#modal_update").modal({
         fadeDuration: 300,
         fadeDelay: 0.5
@@ -44,7 +44,7 @@ $('.modal_duplicate').click(function(event) {
     $("#modal_client").val(client);
     $("#modal_project").val(project);
     $("#modal_description").val(description);
-    $("#modal_affects").val('');
+    $("#modal_path").val('');
     $("#modal_update").modal({
         fadeDuration: 300,
         fadeDelay: 0.5

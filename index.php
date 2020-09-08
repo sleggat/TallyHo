@@ -80,7 +80,7 @@ $tasks_total = count($array);
 				</div>
 			</div>
 
-			<input id="add_affects" name="Affects" value="" type="hidden"/>
+			<input id="add_path" name="Path" value="" type="hidden"/>
 
 			<div class="field span-3">
 				<div class="control">
@@ -154,7 +154,7 @@ $tasks_total = count($array);
 		?>
 		<div class="table <?= format_date($task_array['Date'],'Ymd') ?>">
 			<div class="table_row task_container" 
-				data-affects="<?= $task_array['Path'] ?>" 
+				data-path="<?= $task_array['Path'] ?>" 
 				data-datetime="<?= $task_array['Date'] ?>" 
 				data-date="<?= $task_array['Date'] ?>"
 				data-duration="<?= $task_array['Duration'] ?>" 
