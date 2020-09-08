@@ -1,4 +1,4 @@
-Date: '20200624'
-Time: '1336'
+Date: '2020-06-24 01:36 PM'
+DateUpdated: '2020-06-24 01:36 PM'
 Duration: 40
 Description: "Finished up pack shot vinyl and uploaded"

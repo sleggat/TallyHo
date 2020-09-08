@@ -1,4 +1,4 @@
-Date: '20200406'
-Time: '2119'
+Date: '2020-04-06 09:19 PM'
+DateUpdated: '2020-04-06 09:19 PM'
 Duration: 15
 Description: "Finish up with new text and export"

@@ -1,4 +1,4 @@
-Date: '20200622'
-Time: '1841'
+Date: '2020-06-22 06:41 PM'
+DateUpdated: '2020-06-22 06:41 PM'
 Duration: 20
 Description: "Just a few more changes..."

@@ -1,4 +1,4 @@
-Date: '20190804'
-Time: '2230'
+Date: '2019-08-04 10:30 PM'
+DateUpdated: '2019-08-04 10:30 PM'
 Duration: 30
 Description: "Emails about instagram, and fixed up Post which was set to Audio which changed the CSS"

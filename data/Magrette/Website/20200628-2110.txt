@@ -1,4 +1,4 @@
-Date: '20200628'
-Time: '2110'
+Date: '2020-06-28 09:10 PM'
+DateUpdated: '2020-06-28 09:10 PM'
 Duration: 25
 Description: "Moved Tiki PVD into the archive"

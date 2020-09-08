@@ -1,4 +1,4 @@
-Date: '20200605'
-Time: '1448'
+Date: '2020-06-05 02:48 PM'
+DateUpdated: '2020-06-05 02:48 PM'
 Duration: 60
 Description: "Building site template for WP"

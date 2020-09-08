@@ -1,4 +1,4 @@
-Date: '20200528'
-Time: '2237'
+Date: '2020-05-28 10:37 PM'
+DateUpdated: '2020-05-28 10:37 PM'
 Duration: 10
 Description: "Update booked out (all)"

@@ -1,4 +1,4 @@
-Date: '20200401'
-Time: '1610'
+Date: '2020-04-01 04:10 PM'
+DateUpdated: '2020-04-01 04:10 PM'
 Duration: 120
 Description: "Work on template for website"

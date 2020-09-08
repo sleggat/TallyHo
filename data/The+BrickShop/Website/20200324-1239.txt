@@ -1,4 +1,4 @@
-Date: '20200324'
-Time: '1239'
+Date: '2020-03-24 12:39 PM'
+DateUpdated: '2020-03-24 12:39 PM'
 Duration: 60
 Description: "Setting up Coming Soon page/form and uploaded"

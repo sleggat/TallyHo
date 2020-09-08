@@ -1,4 +1,4 @@
-Date: '20191112'
-Time: '1155'
+Date: '2019-11-12 11:55 AM'
+DateUpdated: '2019-11-12 11:55 AM'
 Duration: 120
 Description: "Created Out of Stock section on Product page (and the Campaign Monitor/Shopofy stuff)"

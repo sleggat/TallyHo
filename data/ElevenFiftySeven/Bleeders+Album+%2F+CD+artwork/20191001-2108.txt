@@ -1,4 +1,4 @@
-Date: '20191001'
-Time: '2108'
+Date: '2019-10-01 09:08 PM'
+DateUpdated: '2019-10-01 09:08 PM'
 Duration: 15
 Description: "Finish sticker and sent thru"

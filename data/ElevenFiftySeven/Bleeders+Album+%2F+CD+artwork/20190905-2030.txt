@@ -1,4 +1,4 @@
-Date: '20190905'
-Time: '2030'
+Date: '2019-09-05 08:30 PM'
+DateUpdated: '2019-09-05 08:30 PM'
 Duration: 120
 Description: "Finishing up and exporting (hopefully) one of the final drafts."

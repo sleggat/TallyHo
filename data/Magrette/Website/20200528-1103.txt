@@ -1,4 +1,4 @@
-Date: '20200528'
-Time: '1103'
+Date: '2020-05-28 11:03 AM'
+DateUpdated: '2020-05-28 11:03 AM'
 Duration: 15
 Description: "Updaing guarantee form (urgent)"

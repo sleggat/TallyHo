@@ -1,4 +1,4 @@
-Date: '20190708'
-Time: '2222'
+Date: '2019-07-08 10:22 PM'
+DateUpdated: '2019-07-08 10:22 PM'
 Duration: 30
 Description: "Researching Shopify Backup solutions"

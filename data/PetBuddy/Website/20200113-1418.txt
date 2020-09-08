@@ -1,4 +1,4 @@
-Date: '20200113'
-Time: '1418'
+Date: '2020-01-13 02:18 PM'
+DateUpdated: '2020-01-13 02:18 PM'
 Duration: 120
 Description: "Fixing up site (changing colours and branding) and sending screenshots"

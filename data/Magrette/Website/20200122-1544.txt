@@ -1,4 +1,4 @@
-Date: '20200122'
-Time: '1544'
+Date: '2020-01-22 03:44 PM'
+DateUpdated: '2020-01-22 03:44 PM'
 Duration: 30
 Description: "Added 4 wallpapers"

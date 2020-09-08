@@ -1,4 +1,4 @@
-Date: '20200729'
-Time: '2326'
+Date: '2020-07-29 11:26 PM'
+DateUpdated: '2020-07-29 11:26 PM'
 Duration: 15
 Description: "Added Barnes link"

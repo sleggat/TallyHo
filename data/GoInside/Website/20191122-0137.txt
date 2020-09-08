@@ -1,4 +1,4 @@
-Date: '20191122'
-Time: '0137'
+Date: '2019-11-22 01:37 AM'
+DateUpdated: '2019-11-22 01:37 AM'
 Duration: 90
 Description: "Setting up server, getting more info from Roger"

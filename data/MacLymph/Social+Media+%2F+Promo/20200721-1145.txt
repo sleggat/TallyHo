@@ -1,4 +1,4 @@
-Date: '20200721'
-Time: '1145'
+Date: '2020-07-21 11:45 AM'
+DateUpdated: '2020-07-21 11:45 AM'
 Duration: 60
 Description: "Create Window sticker idea"

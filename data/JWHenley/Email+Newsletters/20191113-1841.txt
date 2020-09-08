@@ -1,4 +1,4 @@
-Date: '20191113'
-Time: '1841'
+Date: '2019-11-13 06:41 PM'
+DateUpdated: '2019-11-13 06:41 PM'
 Duration: 105
 Description: "Making up newsletter 00. Redoing template."

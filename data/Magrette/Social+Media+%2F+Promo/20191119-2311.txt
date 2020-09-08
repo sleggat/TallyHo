@@ -1,4 +1,4 @@
-Date: '20191119'
-Time: '2311'
+Date: '2019-11-19 11:11 PM'
+DateUpdated: '2019-11-19 11:11 PM'
 Duration: 30
 Description: "Planning Black Friday promo"

@@ -1,4 +1,4 @@
-Date: '20190913'
-Time: '1230'
+Date: '2019-09-13 12:30 PM'
+DateUpdated: '2019-09-13 12:30 PM'
 Duration: 30
 Description: "Added new Waterman GMT"

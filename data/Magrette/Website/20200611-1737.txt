@@ -1,4 +1,4 @@
-Date: '20200611'
-Time: '1737'
+Date: '2020-06-11 05:37 PM'
+DateUpdated: '2020-06-11 05:37 PM'
 Duration: 120
 Description: "Major issue with localStorage.getItem(\'checkoutId\'); I think due to expired checkoutId."

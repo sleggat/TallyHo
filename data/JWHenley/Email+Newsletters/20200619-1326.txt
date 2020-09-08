@@ -1,4 +1,4 @@
-Date: '20200619'
-Time: '1326'
+Date: '2020-06-19 01:26 PM'
+DateUpdated: '2020-06-19 01:26 PM'
 Duration: 30
 Description: "Create and Send \'Migrante PreOrder\'"

@@ -1,4 +1,4 @@
-Date: '20200723'
-Time: '1301'
+Date: '2020-07-23 01:01 PM'
+DateUpdated: '2020-07-23 01:01 PM'
 Duration: 15
 Description: "Send email: Now It\'s Real"

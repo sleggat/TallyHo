@@ -1,4 +1,4 @@
-Date: '20200308'
-Time: '0209'
+Date: '2020-03-08 02:09 AM'
+DateUpdated: '2020-03-08 02:09 AM'
 Duration: 45
 Description: "Work work on migrating Shopify to newer API"

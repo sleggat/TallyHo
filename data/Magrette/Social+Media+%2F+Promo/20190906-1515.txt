@@ -1,4 +1,4 @@
-Date: '20190906'
-Time: '1515'
+Date: '2019-09-06 03:15 PM'
+DateUpdated: '2019-09-06 03:15 PM'
 Duration: 45
 Description: "Create September newsletter"

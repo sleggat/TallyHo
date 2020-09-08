@@ -1,4 +1,4 @@
-Date: '20200611'
-Time: '2104'
+Date: '2020-06-11 09:04 PM'
+DateUpdated: '2020-06-11 09:04 PM'
 Duration: 15
 Description: "Send \'Life Among the dead pt II\'"

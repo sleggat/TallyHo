@@ -1,4 +1,4 @@
-Date: '20191106'
-Time: '1100'
+Date: '2019-11-06 11:00 AM'
+DateUpdated: '2019-11-06 11:00 AM'
 Duration: 60
 Description: "Setting up email newsletter templates .. designing with new name/tagline."

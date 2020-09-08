@@ -1,4 +1,4 @@
-Date: '20200611'
-Time: '2105'
+Date: '2020-06-11 09:05 PM'
+DateUpdated: '2020-06-11 09:05 PM'
 Duration: 60
 Description: "Creating 1.5 course photos from single course and editing website"

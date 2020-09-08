@@ -1,4 +1,4 @@
-Date: '20200210'
-Time: '1305'
+Date: '2020-02-10 01:05 PM'
+DateUpdated: '2020-02-10 01:05 PM'
 Duration: 30
 Description: "Discusinng IG shop idea (links on our embedded IG)"

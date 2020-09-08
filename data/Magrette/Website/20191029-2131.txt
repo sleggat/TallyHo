@@ -1,4 +1,4 @@
-Date: '20191029'
-Time: '2131'
+Date: '2019-10-29 09:31 PM'
+DateUpdated: '2019-10-29 09:31 PM'
 Duration: 240
 Description: "Working on IG landing page"

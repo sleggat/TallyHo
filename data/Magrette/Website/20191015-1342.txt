@@ -1,4 +1,4 @@
-Date: '20191015'
-Time: '1342'
+Date: '2019-10-15 01:42 PM'
+DateUpdated: '2019-10-15 01:42 PM'
 Duration: 90
 Description: "Sorted out instagram feed. Now using access_token from IG."

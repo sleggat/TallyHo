@@ -1,4 +1,4 @@
-Date: '20200619'
-Time: '1325'
+Date: '2020-06-19 01:25 PM'
+DateUpdated: '2020-06-19 01:25 PM'
 Duration: 90
 Description: "Create the pack shot vinyl, idea thru to execution (not finished)"

@@ -1,4 +1,4 @@
-Date: '20190703'
-Time: '2200'
+Date: '2019-07-03 10:00 PM'
+DateUpdated: '2019-07-03 10:00 PM'
 Duration: 45
 Description: "More cap designs"

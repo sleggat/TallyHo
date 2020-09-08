@@ -1,4 +1,4 @@
-Date: '20200407'
-Time: '1211'
+Date: '2020-04-07 12:11 PM'
+DateUpdated: '2020-04-07 12:11 PM'
 Duration: 60
 Description: "Working on JSON structure and trying to figure out what\'s essential on Stage 1."

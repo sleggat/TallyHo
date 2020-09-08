@@ -1,4 +1,4 @@
-Date: '20191112'
-Time: '2006'
+Date: '2019-11-12 08:06 PM'
+DateUpdated: '2019-11-12 08:06 PM'
 Duration: 30
 Description: "Added 4x wallpapers. Emailed Jay about that and also about the Out of Stock page."

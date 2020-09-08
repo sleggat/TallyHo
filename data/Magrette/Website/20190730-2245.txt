@@ -1,4 +1,4 @@
-Date: '20190730'
-Time: '2245'
+Date: '2019-07-30 10:45 PM'
+DateUpdated: '2019-07-30 10:45 PM'
 Duration: 60
 Description: "Added Archive page"

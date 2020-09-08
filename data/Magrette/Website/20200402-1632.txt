@@ -1,4 +1,4 @@
-Date: '20200402'
-Time: '1632'
+Date: '2020-04-02 04:32 PM'
+DateUpdated: '2020-04-02 04:32 PM'
 Duration: 15
 Description: "Added 3 new wallpapers and sent thru stats to Jay."

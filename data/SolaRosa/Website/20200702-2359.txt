@@ -1,4 +1,4 @@
-Date: '20200702'
-Time: '2359'
+Date: '2020-07-02 11:59 PM'
+DateUpdated: '2020-07-02 11:59 PM'
 Duration: 20
 Description: "Add new video"

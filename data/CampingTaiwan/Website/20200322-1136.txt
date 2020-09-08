@@ -1,4 +1,4 @@
-Date: '20200322'
-Time: '1136'
+Date: '2020-03-22 11:36 AM'
+DateUpdated: '2020-03-22 11:36 AM'
 Duration: 10
 Description: "Removed surfgirl photo from Wavestaiwan"

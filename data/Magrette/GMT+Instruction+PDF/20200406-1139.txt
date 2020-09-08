@@ -1,4 +1,4 @@
-Date: '20200406'
-Time: '1139'
+Date: '2020-04-06 11:39 AM'
+DateUpdated: '2020-04-06 11:39 AM'
 Duration: 15
 Description: "Changing text and slights change to bitmap"

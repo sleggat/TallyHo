@@ -1,4 +1,4 @@
-Date: '20200608'
-Time: '1709'
+Date: '2020-06-08 05:09 PM'
+DateUpdated: '2020-06-08 05:09 PM'
 Duration: 30
 Description: "Trying to fix customer gallery again"

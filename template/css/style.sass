@@ -23,16 +23,30 @@ $link-hover: $primary-lighterer
 html
   padding: 0
   margin: 0
+  overflow: -moz-scrollbars-vertical
+  overflow-y: scroll // these fix the modal issue where it removes scrollbar and bungs layout
+  text-edge: cap alphabetic // these two don't actually work just yet.
+  leading-trim: both // these two don't actually work just yet.
 body
   background-color: $gray-200
-  font-family: "Barlow", sans-serif
+  font-family: Heebo, sans-serif
   color: $gray-800
   line-height: 1.6em
   font-size: .85em
   font-weight: 400
   display: grid
-  grid-template-columns: 400px 1fr
+  grid-template-columns: 1fr 2fr
+img
+  width: 100%
+  height: auto
 
+.logo 
+  width: 75%
+  max-width: 300px
+  margin: 0 auto
+  margin-bottom: 60px
+.hide
+  display: none
 h1,h2,h3,h4, .day_header
   line-height: 1.6em
   font-weight: 200
@@ -46,11 +60,18 @@ h2
   font-size: 250%
 h3
   font-size: 200%
+  border-top: 1px solid $gray-400
+  padding: 15px 0px 13px 0px
 h4
   font-size: 150%
 .container
-  // max-width: 1200px
-
+  max-width: 1200px
+.day_header
+  width: 100%
+  padding: 20px 0 10px 0px
+  cursor: pointer
+.sheet > .day_header:nth-child(2)
+  padding-top: 0
 .head
   padding: 60px 0 30px 0
   margin: 0 30px 30px 30px
@@ -104,13 +125,7 @@ h4
       &.heat_4
         background-color: #ff1d16
 
-.day_header
-  width: 100%
-  padding: 20px 0 20px 0px
-  border-top: 1px solid $purple-300
-  cursor: pointer
-.day_header:nth-of-type(1)
-  border: none
+
 .task_duration, .task_project, .task_value, .task_client
   font-size: 150%
   font-weight: 500
@@ -122,6 +137,7 @@ h4
 .task_project
   font-weight: 200
   color: $purple-700
+  white-space: nowrap
 .task_value_currency
   font-size: 75%
   vertical-align: 6%
@@ -129,7 +145,7 @@ h4
 .cell_alignright
   text-align: right
 .task_container
-  &:nth-of-type(n + 100)
+  &:nth-of-type(n + 50)
     display: none
 .highlighted
   background-color: $purple-100
@@ -137,27 +153,30 @@ h4
     background: $white
 .action_icons
   text-align: right
-  .icon
-    a
-      font-size: 16px
-      color: $purple-600
-      transition: color .5s, border-radius .5s, background-color .5s
-      background: $purple-100
-      vertical-align: middle
-      align: center
-      padding: 10px 11px 7px 11px
-      border-radius: 5px
-      line-height: 1
-      display: inline-block
-      &:hover
-        color: $purple-900
-        background: $purple-200
-        transition: color .2s, border-radius .2s, background-color .2s
-        border-radius: 10px
-      &.modal_update // this icon looks off-centre, so let's correct that.
-        padding: 9px 9px 8px 13px
+.icon_svg
+  img
+    width: 15px
+    height: auto
+    filter: invert(40%) sepia(50%) hue-rotate(226deg) saturate(900%) // hehe
+  a
+    transition: color .5s, border-radius .5s, background-color .5s
+    background: $purple-100
+    vertical-align: middle
+    align: center
+    padding: 10px 11px 7px 11px
+    border-radius: 5px
+    line-height: 1
+    display: inline-block
+    &:hover
+      color: $purple-900
+      background: $purple-200
+      transition: color .2s, border-radius .2s, background-color .2s
+      border-radius: 10px
+    &.modal_update // this icon looks off-centre, so let's correct that.
+      padding: 9px 9px 8px 13px
 #floating_bar
   display: none
+  text-align: center
   background-color: $purple-700
   color: $purple-100
   padding: 20px 0px
@@ -173,25 +192,42 @@ h4
     right: 2.5px !important
 .jquery-modal
   z-index: 2 !important
-.form
+.drp-buttons
+  span 
+    display: none
+  button
+    width: 42%
+    padding: 2px 9px
+    margin: 2px 9px
+  .cancelBtn
+    background-color: $gray-400
+.grid-6
   display: grid
-  grid-gap: 1em
-  grid-template-columns: 1fr 1fr 1fr
-  grid-auto-flow: auto
-.span-3
-  grid-column: span 3
+  grid-gap: 10px
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+  grid-auto-flow: row
+.span-1
+  grid-column: span 1
 .span-2
   grid-column: span 2
-.span-1 // probably not needed?
-  grid-column: span 1
+.span-3
+  grid-column: span 3
+.span-4
+  grid-column: span 4
+.span-5
+  grid-column: span 5
+.span-6
+  grid-column: span 6
 .field
-  padding-top: 10px
+  // padding-top: 10px
 input
   width: 100%
-  padding: 10px 10px
+  padding: 0px 10px
   border: 1px solid $gray-300
   font-size: 125%
   border-radius: 3px
+  height: 38px
+  vertical-align: top
 select
   border: 1px solid $gray-300
   font-size: 120%
@@ -199,8 +235,10 @@ select
   background-color: transparent
 button
   background-color: $purple-600
-  float: right
+  width: 100%
+  vertical-align: middle
   padding: 10px 20px
+  height: 38px
   margin: 0
   border: 0
   border-radius: 3px
@@ -210,12 +248,52 @@ button
     background-color: $purple-800
     cursor: pointer
 
+.toggle_filters
+  text-align: right
+  height: 20px
+.filters_form
+  // display: none
+  padding: 0px 0 20px 0
+  margin: 0 0 20px 0
+  border-bottom: 1px solid $purple-800
 
 @media (max-width: 1024px)
- .table_col
+  body
+    font-size: .7em
+  .span-1
+    grid-column: span 3
+  .span-2
+    grid-column: span 3
+  .span-3
+    grid-column: span 6
+  .span-4
+    grid-column: span 6
+  .span-5
+    grid-column: span 6
+  .span-6
+    grid-column: span 6
+@media (max-width: 768px)
+  body
+    grid-template-columns: 1fr
+  .logo
+    max-width: 120px
+    margin: 0 auto
+  .head
+    padding: 20px 0 30px 0
+    margin: 0 30px 30px 30px
+    position: relative
+    height: auto
+  .sheet
+    margin: 20px 10px 0 10px
+    padding: 20px 20px 0 20px
+    filter: drop-shadow(0px 0px 2px $gray-400)
+  .table_col
     &.task_col_1
       width: 15%
     &.task_col_2
       width: 20%
     &.task_col_3
       width: 45%
+    .icon_svg
+      a
+        padding: 8px 9px 8px 9px

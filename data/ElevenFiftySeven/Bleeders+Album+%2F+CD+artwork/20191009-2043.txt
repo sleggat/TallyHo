@@ -1,4 +1,4 @@
-Date: '20191009'
-Time: '2043'
+Date: '2019-10-09 08:43 PM'
+DateUpdated: '2019-10-09 08:43 PM'
 Duration: 60
 Description: "Tshirt mockup on white and then black"

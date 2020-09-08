@@ -1,4 +1,4 @@
-Date: '20191129'
-Time: '1559'
+Date: '2019-11-29 03:59 PM'
+DateUpdated: '2019-11-29 03:59 PM'
 Duration: 60
 Description: "Created email for Discount Codes"

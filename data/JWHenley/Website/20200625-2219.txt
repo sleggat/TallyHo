@@ -1,4 +1,4 @@
-Date: '20200625'
-Time: '2219'
+Date: '2020-06-25 10:19 PM'
+DateUpdated: '2020-06-25 10:19 PM'
 Duration: 15
 Description: "Upload and test the Migrante pages"

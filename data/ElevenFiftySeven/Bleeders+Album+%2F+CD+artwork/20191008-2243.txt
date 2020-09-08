@@ -1,4 +1,4 @@
-Date: '20191008'
-Time: '2243'
+Date: '2019-10-08 10:43 PM'
+DateUpdated: '2019-10-08 10:43 PM'
 Duration: 60
 Description: "Made up graphic for Bleeding Heart CD, Added 1157 logo to FB header."

@@ -1,4 +1,4 @@
-Date: '20200724'
-Time: '1017'
+Date: '2020-07-24 10:17 AM'
+DateUpdated: '2020-07-24 10:17 AM'
 Duration: 20
 Description: "Add Yeah Taipei to Our Work"

@@ -1,4 +1,4 @@
-Date: '20200515'
-Time: '1454'
+Date: '2020-05-15 02:54 PM'
+DateUpdated: '2020-05-15 02:54 PM'
 Duration: 180
 Description: "Working on homepage hero idea / subtle animation"

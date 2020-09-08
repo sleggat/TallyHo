@@ -1,4 +1,4 @@
-Date: '20190705'
-Time: '2200'
+Date: '2019-07-05 10:00 PM'
+DateUpdated: '2019-07-05 10:00 PM'
 Duration: 45
 Description: "Add scar logo to 2 pages. research video"

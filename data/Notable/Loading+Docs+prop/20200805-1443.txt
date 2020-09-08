@@ -1,4 +1,4 @@
-Date: '20200805'
-Time: '1443'
+Date: '2020-08-05 02:43 PM'
+DateUpdated: '2020-08-05 02:43 PM'
 Duration: 60
 Description: "Worked on cover and fixing bullets"

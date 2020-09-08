@@ -1,4 +1,4 @@
-Date: '20200423'
-Time: '1350'
+Date: '2020-04-23 01:50 PM'
+DateUpdated: '2020-04-23 01:50 PM'
 Duration: 15
 Description: "Working on hero"

@@ -20,17 +20,15 @@ foreach ($array as $part) {
 	$date = str_replace(array('-','"'),'',trim($part[0]));
 	$time = str_replace(':','',trim($part[1]));
 
-
-
-	//$date = DateTime::createFromFormat('Y-d-m', '2009-08-12');
-	//$newdate = $date->format('Y-m-d');
+	$newdate = DateTime::createFromFormat('Ymd Hi', $date.' '.$time);
+	$formatteddate = $newdate->format('Y-m-d h:i A');
 
 	$folder = "../data/".$client."/".$project;
 	$file = $folder.'/'.$date.'-'.$time.'.txt';
 	echo "<br>Making ".$file;
 	$content = "";
-	$content .= "Date: '".$date."'".$br;
-	$content .= "Time: '".$time."'".$br;
+	$content .= "Date: '".$formatteddate."'".$br;
+	$content .= "DateUpdated: '".$formatteddate."'".$br;
 	$content .= "Duration: ".$duration.$br;
 	$content .= "Description: \"".$description."\"";
 // consider making the above a function as it's also used in the update code

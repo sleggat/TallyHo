@@ -1,4 +1,4 @@
-Date: '20190730'
-Time: '1200'
+Date: '2019-07-30 12:00 PM'
+DateUpdated: '2019-07-30 12:00 PM'
 Duration: 45
 Description: "Checking out current WP site, giving suggestions, seeing what I can do without FTP"

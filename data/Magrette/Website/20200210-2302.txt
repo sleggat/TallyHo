@@ -1,4 +1,4 @@
-Date: '20200210'
-Time: '2302'
+Date: '2020-02-10 11:02 PM'
+DateUpdated: '2020-02-10 11:02 PM'
 Duration: 30
 Description: "CSS updates to Belmoto sub-site"

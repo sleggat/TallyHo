@@ -1,4 +1,4 @@
-Date: '20200608'
-Time: '2303'
+Date: '2020-06-08 11:03 PM'
+DateUpdated: '2020-06-08 11:03 PM'
 Duration: 40
 Description: "Create emails \'Life Among the dead pt I & II\'"

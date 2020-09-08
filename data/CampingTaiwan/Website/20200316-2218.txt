@@ -1,4 +1,4 @@
-Date: '20200316'
-Time: '2218'
+Date: '2020-03-16 10:18 PM'
+DateUpdated: '2020-03-16 10:18 PM'
 Duration: 5
 Description: "Updated bookings"

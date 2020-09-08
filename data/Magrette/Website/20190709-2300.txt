@@ -1,4 +1,4 @@
-Date: '20190709'
-Time: '2300'
+Date: '2019-07-09 11:00 PM'
+DateUpdated: '2019-07-09 11:00 PM'
 Duration: 20
 Description: "Installing Shopify Backup"

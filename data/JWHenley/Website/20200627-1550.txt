@@ -1,4 +1,4 @@
-Date: '20200627'
-Time: '1550'
+Date: '2020-06-27 03:50 PM'
+DateUpdated: '2020-06-27 03:50 PM'
 Duration: 15
 Description: "Fixed mobile columns bug on homepage"

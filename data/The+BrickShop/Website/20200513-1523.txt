@@ -1,4 +1,4 @@
-Date: '20200513'
-Time: '1523'
+Date: '2020-05-13 03:23 PM'
+DateUpdated: '2020-05-13 03:23 PM'
 Duration: 15
 Description: "Installed SSL"

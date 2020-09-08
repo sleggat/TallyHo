@@ -1,4 +1,4 @@
-Date: '20191001'
-Time: '2115'
+Date: '2019-10-01 09:15 PM'
+DateUpdated: '2019-10-01 09:15 PM'
 Duration: 15
 Description: "Add grey strap"

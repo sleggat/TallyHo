@@ -1,4 +1,4 @@
-Date: '20200806'
-Time: '1554'
+Date: '2020-08-06 03:54 PM'
+DateUpdated: '2020-08-06 03:54 PM'
 Duration: 10
 Description: "Finishing up.. this time!"

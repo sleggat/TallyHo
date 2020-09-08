@@ -1,4 +1,4 @@
-Date: '20190710'
-Time: '0100'
+Date: '2019-07-10 01:00 AM'
+DateUpdated: '2019-07-10 01:00 AM'
 Duration: 20
 Description: "Finished MPP Ti (blue non-preorder)"

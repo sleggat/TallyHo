@@ -1,4 +1,4 @@
-Date: '20191120'
-Time: '2213'
+Date: '2019-11-20 10:13 PM'
+DateUpdated: '2019-11-20 10:13 PM'
 Duration: 90
 Description: "Thinking. Also making changes to the logo."

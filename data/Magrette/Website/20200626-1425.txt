@@ -1,4 +1,4 @@
-Date: '20200626'
-Time: '1425'
+Date: '2020-06-26 02:25 PM'
+DateUpdated: '2020-06-26 02:25 PM'
 Duration: 40
 Description: "Create and send out Moana Pacific Professional Titanium email (to all recipients except previous list)"

@@ -1,4 +1,4 @@
-Date: '20190711'
-Time: '1300'
+Date: '2019-07-11 01:00 PM'
+DateUpdated: '2019-07-11 01:00 PM'
 Duration: 60
 Description: "Add video (incl installing plugin)"

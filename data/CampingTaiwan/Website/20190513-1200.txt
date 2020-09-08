@@ -1,4 +1,5 @@
-Date: '20190513'
-Time: '1200'
+Date: '2019-05-13 12:00 PM'
+DateUpdated: '2019-05-13 12:00 PM'
 Duration: 45
-Description: "0.5 updated Booking dates (charge set price, was it $150?) .25 updated Booking dates (charge set price, was it $150?) 13 may"
+Description: ".5 updated Booking dates (charge set price, was it $150?)
+.25 updated Booking dates (charge set price, was it $150?) 13 may"

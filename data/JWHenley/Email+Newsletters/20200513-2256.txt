@@ -1,4 +1,4 @@
-Date: '20200513'
-Time: '2256'
+Date: '2020-05-13 10:56 PM'
+DateUpdated: '2020-05-13 10:56 PM'
 Duration: 30
 Description: "Create New subscriber email"

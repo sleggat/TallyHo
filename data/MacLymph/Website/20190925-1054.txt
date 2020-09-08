@@ -1,4 +1,4 @@
-Date: '20190925'
-Time: '1054'
+Date: '2019-09-25 10:54 AM'
+DateUpdated: '2019-09-25 10:54 AM'
 Duration: 90
 Description: "Bought and installed SSL (yearly $10US)"

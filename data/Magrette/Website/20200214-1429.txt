@@ -1,4 +1,4 @@
-Date: '20200214'
-Time: '1429'
+Date: '2020-02-14 02:29 PM'
+DateUpdated: '2020-02-14 02:29 PM'
 Duration: 30
 Description: "Added 15% Off to product thumbs"

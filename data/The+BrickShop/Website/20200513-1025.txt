@@ -1,4 +1,4 @@
-Date: '20200513'
-Time: '1025'
+Date: '2020-05-13 10:25 AM'
+DateUpdated: '2020-05-13 10:25 AM'
 Duration: 60
 Description: "Move site and make it live. Test forms. Fix looping video"

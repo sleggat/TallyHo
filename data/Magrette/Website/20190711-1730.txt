@@ -1,4 +1,4 @@
-Date: '20190711'
-Time: '1730'
+Date: '2019-07-11 05:30 PM'
+DateUpdated: '2019-07-11 05:30 PM'
 Duration: 30
 Description: "Remove the Sold Out timepieces from Timepices, Shop pages"

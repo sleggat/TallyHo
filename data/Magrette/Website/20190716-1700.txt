@@ -1,5 +1,5 @@
-Date: '20190716'
-Time: '1700'
+Date: '2019-07-16 05:00 PM'
+DateUpdated: '2019-07-16 05:00 PM'
 Duration: 90
 Description: "Setting up CDN / Firewall / Security.
 Server co made a boohoo (added their own SSL) which caused site to go down."

@@ -10,19 +10,19 @@ function scandir_clean($dir) {
 }
 
 function find_all_files($dir, &$results = array()) {
-    $files = scandir($dir);
-    foreach ($files as $key => $value) {
-        $path = $dir . DIRECTORY_SEPARATOR . $value;
-        if (!is_dir($path)) {
-            if(substr($value, -4, 4) == '.txt') {
-                $results[] = $path;
-            }
-        } else if ($value != "." && $value != "..") {
-            find_all_files($path, $results);
-            // $results[] = $path; // don't show empty folders in results
-        }
-    }
-    return $results;
+	$files = scandir($dir);
+	foreach ($files as $key => $value) {
+		$path = $dir . DIRECTORY_SEPARATOR . $value;
+		if (!is_dir($path)) {
+			if(substr($value, -4, 4) == '.txt') {
+				$results[] = $path;
+			}
+		} else if ($value != "." && $value != "..") {
+			find_all_files($path, $results);
+			// $results[] = $path; // don't show empty folders in results
+		}
+	}
+	return $results;
 }
 
 
@@ -34,10 +34,10 @@ function sort_tasks_by_time($array) {
 
 function cmp($a, $b) {
 	// sorting companion for sort_tasks_by_time()
-    if (substr($a, -17, 14) == substr($b, -17, 14)) {
-        return 0;
-    }
-    return (substr($a, -17, 14) > substr($b, -17, 14)) ? -1 : 1;
+	if (substr($a, -17, 14) == substr($b, -17, 14)) {
+		return 0;
+	}
+	return (substr($a, -17, 14) > substr($b, -17, 14)) ? -1 : 1;
 }
 
 function get_task_array($task) {
@@ -50,71 +50,99 @@ function get_task_array($task) {
 }
 
 function clients_and_projects($array) {
-    $new = array();
-    foreach ($array as $path) {
-        $explode = explode("/",$path);
-        if (@!in_array(urldecode($explode[2]), $new[urldecode($explode[1])]))
-        {
-            $new[urldecode($explode[1])][] = urldecode($explode[2]);
-        }
-        
-    }
-    return $new;
+	$new = array();
+	foreach ($array as $path) {
+		$explode = explode("/",$path);
+		if (@!in_array(urldecode($explode[2]), $new[urldecode($explode[1])]))
+		{
+			$new[urldecode($explode[1])][] = urldecode($explode[2]);
+		}
+		
+	}
+	return $new;
 }
 
 function log_change($type,$new,$old) {
-    $filename = 'cache/history/'.$type.'.txt';
-    $fileContents = @file_get_contents($filename);
-    $fp = fopen($filename, 'w+');
-    $content = date('Y-m-d H:i:s')."\n\r# NEW RECORD\n\r".$old."\n\r\n\r# OLD RECORD\n\r".$new."\n\r----\n\r";
-    fwrite($fp, $content . $fileContents);
-    fclose($fp);
+	$filename = 'cache/history/'.$type.'.txt';
+	$fileContents = @file_get_contents($filename);
+	$fp = fopen($filename, 'w+');
+	$content = date('Y-m-d H:i:s')."\n\r# NEW RECORD\n\r".$old."\n\r\n\r# OLD RECORD\n\r".$new."\n\r----\n\r";
+	fwrite($fp, $content . $fileContents);
+	fclose($fp);
 }
 
-function format_date($date) {
-    $formatted_date = DateTime::createFromFormat('Ymd', $date);
-    $pretty_date = date_format($formatted_date, 'D d M ’y');
-    return $pretty_date;
+function format_date($date, $format='D d M Y') { // can be extended to allow both in_format and out_format
+	$formatted = DateTime::createFromFormat(DATE_FORMAT, $date);
+	$dateout = date_format($formatted, $format);
+	return $dateout;
 }
-function format_time($time) {
-    //echo $time;
-    $formatted_time = DateTime::createFromFormat('Hi', $time);
-    $pretty_time = date_format($formatted_time, 'g:ia');
-    return $pretty_time;
+function format_time($date, $format='g:ia') {
+	$formatted = DateTime::createFromFormat(DATE_FORMAT, $date);
+	$time_out = date_format($formatted, $format);
+	return $time_out;
 }
-function format_datetime($date, $time) {
-    $datetime = DateTime::createFromFormat('YmdHi', $date.$time);
-    $dt = date_format($datetime, 'Y-m-d h:i A');
-    return $dt;
+function format_datetime($date, $format='Y-m-d h:i A') {
+	$formatted = DateTime::createFromFormat(DATE_FORMAT, $date);
+	$datetime = date_format($formatted, $format);
+	return $datetime;
 }
 function calculate_cost($mins, $affects) {
-    global $default_rate;
-    // search for yaml in project folder first, then client folder, else use default
-    $pieces = explode("/", $affects);
-    $project_yaml = $pieces[0].'/'.$pieces[1].'/'.$pieces[2].'/_info.yaml';
-    $client_yaml = $pieces[0].'/'.$pieces[1].'/_info.yaml';
-    if (is_file($project_yaml)) {
-        $yaml = spyc_load_file($project_yaml);
-        $rate = $yaml['Rate'];
-        $cost['source'] = "$".$rate.'/hr (Project Rate)';
-    }
-    elseif (is_file($client_yaml)) {
-        $yaml = spyc_load_file($client_yaml);
-        $rate = $yaml['Rate'];
-        $cost['source'] = "$".$rate.'/hr (Client Rate)';
-    }
-    else {
-        $rate = $default_rate;
-        $cost['source'] = "$".$rate.'/hr (Default Rate)';
-    }
+	global $default_rate;
+	// search for yaml in project folder first, then client folder, else use default
+	$pieces = explode("/", $affects);
+	$project_yaml = $pieces[0].'/'.$pieces[1].'/'.$pieces[2].'/_info.yaml';
+	$client_yaml = $pieces[0].'/'.$pieces[1].'/_info.yaml';
+	if (is_file($project_yaml)) {
+		$yaml = spyc_load_file($project_yaml);
+		$rate = $yaml['Rate'];
+		$cost['source'] = "$".$rate.'/hr (Project Rate)';
+	}
+	elseif (is_file($client_yaml)) {
+		$yaml = spyc_load_file($client_yaml);
+		$rate = $yaml['Rate'];
+		$cost['source'] = "$".$rate.'/hr (Client Rate)';
+	}
+	else {
+		$rate = $default_rate;
+		$cost['source'] = "$".$rate.'/hr (Default Rate)';
+	}
 
-    $cost['raw'] = $rate * ($mins / 60);
-    $cost['formatted'] = number_format($cost['raw'], 2, '.', ',');
-    return $cost;
+	$cost['raw'] = $rate * ($mins / 60);
+	$cost['formatted'] = number_format($cost['raw'], 2, '.', ',');
+	return $cost;
 }
 function timeheat($time) {
-    $val = intval($time / 30);
-    if ($val < 0) { $val = 0; }
-    if ($val > 4) { $val = 4; }
-    return $val;
+	$val = intval($time / 30);
+	if ($val < 0) { $val = 0; }
+	if ($val > 4) { $val = 4; }
+	return $val;
+}
+
+function zip_backup($source, $destination){
+	if (extension_loaded('zip') === true) {
+		if (file_exists($source) === true) {
+			$zip = new ZipArchive();
+			if ($zip->open($destination, ZIPARCHIVE::CREATE) === true){
+				$source = realpath($source);
+				if (is_dir($source) === true){
+					$files = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($source), RecursiveIteratorIterator::SELF_FIRST);
+					foreach ($files as $file){
+						$file = realpath($file);
+						if (is_dir($file) === true){
+							$zip->addEmptyDir(str_replace($source . '/', '', $file . '/'));
+						}
+
+						else if (is_file($file) === true){
+							$zip->addFromString(str_replace($source . '/', '', $file), file_get_contents($file));
+						}
+					}
+				}
+				else if (is_file($source) === true){
+					$zip->addFromString(basename($source), file_get_contents($source));
+				}
+			}
+			return $zip->close();
+		}
+	}
+	return false;
 }

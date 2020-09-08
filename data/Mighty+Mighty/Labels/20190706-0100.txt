@@ -1,4 +1,4 @@
-Date: '20190706'
-Time: '0100'
+Date: '2019-07-06 01:00 AM'
+DateUpdated: '2019-07-06 01:00 AM'
 Duration: 90
 Description: ""

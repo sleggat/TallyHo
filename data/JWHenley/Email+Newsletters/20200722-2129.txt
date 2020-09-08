@@ -1,4 +1,0 @@
-Date: '20200722'
-Time: '2129'
-Duration: 15
-Description: "Prepare email: Now It\'s Real"

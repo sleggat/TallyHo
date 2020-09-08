@@ -1,4 +1,4 @@
-Date: '20200730'
-Time: '1614'
+Date: '2020-07-30 04:14 PM'
+DateUpdated: '2020-07-30 04:14 PM'
 Duration: 30
 Description: "Prepare email: Outcasts"

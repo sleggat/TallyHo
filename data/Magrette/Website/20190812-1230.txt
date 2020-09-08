@@ -1,4 +1,4 @@
-Date: '20190812'
-Time: '1230'
+Date: '2019-08-12 12:30 PM'
+DateUpdated: '2019-08-12 12:30 PM'
 Duration: 60
 Description: "More on the news/blog section"

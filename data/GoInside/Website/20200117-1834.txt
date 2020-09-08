@@ -1,4 +1,4 @@
-Date: '20200117'
-Time: '1834'
+Date: '2020-01-17 06:34 PM'
+DateUpdated: '2020-01-17 06:34 PM'
 Duration: 15
 Description: "Added IG link, made changes to CSS so it\'s more obvious"

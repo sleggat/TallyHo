@@ -1,4 +1,4 @@
-Date: '20190918'
-Time: '2300'
+Date: '2019-09-18 11:00 PM'
+DateUpdated: '2019-09-18 11:00 PM'
 Duration: 15
 Description: "2 Small updates"

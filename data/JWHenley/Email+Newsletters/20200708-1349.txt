@@ -1,4 +1,4 @@
-Date: '20200708'
-Time: '1349'
+Date: '2020-07-08 01:49 PM'
+DateUpdated: '2020-07-08 01:49 PM'
 Duration: 20
 Description: "Send email: What do I owe?, update Single SignUp"
