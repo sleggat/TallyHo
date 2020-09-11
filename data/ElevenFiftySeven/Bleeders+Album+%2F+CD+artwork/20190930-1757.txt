@@ -1,4 +1,4 @@
-Date: '2019-09-30 05:57 PM'
+DateAdded: '2019-09-30 05:57 PM'
 DateUpdated: '2019-09-30 05:57 PM'
 Duration: 30
-Description: "Rounded sticker"
+Description: 'Rounded sticker'

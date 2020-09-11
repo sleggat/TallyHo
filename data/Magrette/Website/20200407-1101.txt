@@ -1,4 +1,4 @@
-Date: '2020-04-07 11:01 AM'
+DateAdded: '2020-04-07 11:01 AM'
 DateUpdated: '2020-04-07 11:01 AM'
 Duration: 45
-Description: "Update GMT ( dupe current, then remove pre-order, update slider )"
+Description: 'Update GMT ( dupe current, then remove pre-order, update slider )'

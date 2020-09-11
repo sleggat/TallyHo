@@ -1,4 +1,4 @@
-Date: '2020-06-22 10:10 AM'
+DateAdded: '2020-06-22 10:10 AM'
 DateUpdated: '2020-06-22 10:10 AM'
 Duration: 10
-Description: "Added in hi-res logo"
+Description: 'Added in hi-res logo'

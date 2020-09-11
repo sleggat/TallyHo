@@ -1,4 +1,4 @@
-Date: '2020-08-14 05:26 PM'
+DateAdded: '2020-08-14 05:26 PM'
 DateUpdated: '2020-08-14 05:26 PM'
 Duration: 60
-Description: "Created script which generates a CSV of all products and then schedules Insta shoppable updates every 12 hrs."
+Description: 'Created script which generates a CSV of all products and then schedules Insta shoppable updates every 12 hrs.'

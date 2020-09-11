@@ -1,4 +1,4 @@
-Date: '2019-10-01 09:15 PM'
+DateAdded: '2019-10-01 09:15 PM'
 DateUpdated: '2019-10-01 09:15 PM'
 Duration: 15
-Description: "Add grey strap"
+Description: 'Add grey strap'

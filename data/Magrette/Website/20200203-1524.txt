@@ -1,4 +1,4 @@
-Date: '2020-02-03 03:24 PM'
+DateAdded: '2020-02-03 03:24 PM'
 DateUpdated: '2020-02-03 03:24 PM'
 Duration: 15
-Description: "Added 1 wallpaper"
+Description: 'Added 1 wallpaper'

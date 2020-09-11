@@ -1,4 +1,4 @@
-Date: '2019-09-17 11:00 AM'
+DateAdded: '2019-09-17 11:00 AM'
 DateUpdated: '2019-09-17 11:00 AM'
 Duration: 15
-Description: "Wondering if we can just print stickers ourselves"
+Description: 'Wondering if we can just print stickers ourselves'

@@ -1,4 +1,4 @@
-Date: '2020-04-05 05:27 PM'
+DateAdded: '2020-04-05 05:27 PM'
 DateUpdated: '2020-04-05 05:27 PM'
 Duration: 45
-Description: "Scrapped the re-draft version and cleaned up the bitmap"
+Description: 'Scrapped the re-draft version and cleaned up the bitmap'

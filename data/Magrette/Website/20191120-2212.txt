@@ -1,4 +1,4 @@
-Date: '2019-11-20 10:12 PM'
+DateAdded: '2019-11-20 10:12 PM'
 DateUpdated: '2019-11-20 10:12 PM'
 Duration: 60
-Description: "Creating CSS for the Black Friday page(s)"
+Description: 'Creating CSS for the Black Friday page(s)'

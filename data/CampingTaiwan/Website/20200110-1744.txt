@@ -1,4 +1,4 @@
-Date: '2020-01-10 05:44 PM'
+DateAdded: '2020-01-10 05:44 PM'
 DateUpdated: '2020-01-10 05:44 PM'
 Duration: 150
-Description: "Updated available booking dates on site, set up new email and prepared first mail for 2020 to go out."
+Description: 'Updated available booking dates on site, set up new email and prepared first mail for 2020 to go out.'

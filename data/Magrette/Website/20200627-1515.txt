@@ -1,4 +1,4 @@
-Date: '2020-06-27 03:15 PM'
+DateAdded: '2020-06-27 03:15 PM'
 DateUpdated: '2020-06-27 03:15 PM'
 Duration: 40
-Description: "Changing logos to SVG, adding in the mask-icon (favicon for safari), optimising google fonts"
+Description: 'Changing logos to SVG, adding in the mask-icon (favicon for safari), optimising google fonts'

@@ -1,4 +1,4 @@
-Date: '2019-09-18 11:00 AM'
+DateAdded: '2019-09-18 11:00 AM'
 DateUpdated: '2019-09-18 11:00 AM'
 Duration: 145
-Description: "Updating GMT page and creating newsletter."
+Description: 'Updating GMT page and creating newsletter.'

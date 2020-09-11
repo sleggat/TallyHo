@@ -1,4 +1,4 @@
-Date: '2020-04-16 08:25 PM'
+DateAdded: '2020-04-16 08:25 PM'
 DateUpdated: '2020-04-16 08:25 PM'
 Duration: 45
-Description: "Getting everything finished up. Now uploaded onto server for testing."
+Description: 'Getting everything finished up. Now uploaded onto server for testing.'

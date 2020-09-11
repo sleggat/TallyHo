@@ -1,4 +1,4 @@
-Date: '2019-07-30 12:00 PM'
+DateAdded: '2019-07-30 12:00 PM'
 DateUpdated: '2019-07-30 12:00 PM'
 Duration: 45
-Description: "Checking out current WP site, giving suggestions, seeing what I can do without FTP"
+Description: 'Checking out current WP site, giving suggestions, seeing what I can do without FTP'

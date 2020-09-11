@@ -1,22 +1,8 @@
 @import "reset.sass"
 @import "tailwind_colors.sass"
 
-$primary: #513cda // purple
-$primary-invert: saturate(lighten($primary, 43%),60%)
-$bodytext: #141416
-$bodytext-invert: #ddd
-$bodytext-lightererer: saturate(lighten($bodytext, 60%),10%)
-$bodytext-lighterer: saturate(lighten($bodytext, 45%),10%)
-$bodytext-lighter: saturate(lighten($bodytext, 10%),10%)
-$bodytext-darker: saturate(darken($bodytext, 30%),20%)
-$bodytext-darkerer: saturate(darken($bodytext, 50%),20%)
-$primary-lighterererer: saturate(lighten($primary, 43%),60%)
-$primary-lightererer: saturate(lighten($primary, 40%),30%)
-$primary-lighterer: saturate(lighten($primary, 20%),20%)
-$primary-lighter: saturate(lighten($primary, 10%),10%)
-$primary-darker: saturate(darken($primary, 25%),30%)
-$link: $primary-darker
-$link-hover: $primary-lighterer
+$link: $purple-300
+$link-hover: $purple-400
 
 
 // https://tailwindcss.com/docs/customizing-colors#default-color-palette
@@ -28,29 +14,32 @@ html
   text-edge: cap alphabetic // these two don't actually work just yet.
   leading-trim: both // these two don't actually work just yet.
 body
-  background-color: $gray-200
+  background-color: $purple-100
   font-family: Heebo, sans-serif
   color: $gray-800
   line-height: 1.6em
   font-size: .85em
   font-weight: 400
-  display: grid
-  grid-template-columns: 1fr 2fr
+a
+  color: $link
+  text-decoration: none
+  transition: all .3s
+  &:hover
+    color: $link-hover
+    transition: all .3s
 img
   width: 100%
   height: auto
 
 .logo 
-  width: 75%
-  max-width: 300px
-  margin: 0 auto
-  margin-bottom: 60px
+  width: 80px
+  margin: 10px 20px
 .hide
   display: none
 h1,h2,h3,h4, .day_header
   line-height: 1.6em
   font-weight: 200
-  color: $gray-500
+  color: $pink-400
 ion-icon
   vertical-align: -10%
 
@@ -60,30 +49,28 @@ h2
   font-size: 250%
 h3
   font-size: 200%
-  border-top: 1px solid $gray-400
+  font-weight: 400
+  border-top: 2px solid $purple-200
   padding: 15px 0px 13px 0px
 h4
   font-size: 150%
 .container
   max-width: 1200px
+  margin: 0 auto
+  padding: 0 20px
 .day_header
   width: 100%
   padding: 20px 0 10px 0px
   cursor: pointer
 .sheet > .day_header:nth-child(2)
   padding-top: 0
-.head
-  padding: 60px 0 30px 0
-  margin: 0 30px 30px 30px
-  position: -webkit-sticky
-  position: sticky
-  top: 0
-  height: 100vh
-.sheet
+.box
   background-color: $white
-  margin: 20px 20px 0 0px
-  padding: 20px 30px 0 30px
-  filter: drop-shadow(0px 0px 2px $gray-400)
+  filter: drop-shadow(0px 0px 2px rgba($purple-300, .6))
+.sheet, .filters_form, .quick_add_form
+  margin: 20px 0px 20px 0px
+  padding: 20px 20px 20px 20px
+
 .table
   display: table
   //table-layout: fixed
@@ -92,7 +79,7 @@ h4
   display: table-row
 .table_col
   display: table-cell
-  border-top: 1px solid $purple-200
+  border-top: 2px solid $purple-200
   padding: 15px 5px 13px 5px
   vertical-align: top
   &.task_col_1
@@ -135,8 +122,8 @@ h4
 .task_client
   margin-right: 5px
 .task_project
-  font-weight: 200
-  color: $purple-700
+  font-weight: 300
+  color: $gray-500
   white-space: nowrap
 .task_value_currency
   font-size: 75%
@@ -187,6 +174,8 @@ h4
   left: 0
   width: 100%
 .modal
+  padding: 20px 20px 40px 20px
+  background-color: $purple-100
   a.close-modal
     top: 2.5px !important
     right: 2.5px !important
@@ -203,7 +192,7 @@ h4
     background-color: $gray-400
 .grid-6
   display: grid
-  grid-gap: 10px
+  grid-gap: 20px
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
   grid-auto-flow: row
 .span-1
@@ -220,14 +209,22 @@ h4
   grid-column: span 6
 .field
   // padding-top: 10px
+label
+  padding: 0 0 0 5px
+  color: $gray-500
+  font-weight: 300
 input
   width: 100%
   padding: 0px 10px
-  border: 1px solid $gray-300
+  border: 2px solid $purple-200
   font-size: 125%
   border-radius: 3px
-  height: 38px
+  height: 48px
   vertical-align: top
+.easy-autocomplete 
+  width:100% !important
+.easy-autocomplete input
+  width: 100%
 select
   border: 1px solid $gray-300
   font-size: 120%
@@ -238,7 +235,7 @@ button
   width: 100%
   vertical-align: middle
   padding: 10px 20px
-  height: 38px
+  height: 48px
   margin: 0
   border: 0
   border-radius: 3px
@@ -251,45 +248,33 @@ button
   background-color: $red-600
   &:hover
     background-color: $red-700
-.toggle_filters
-  text-align: right
-  height: 20px
-.filters_form
-  // display: none
-  padding: 0px 0 20px 0
-  margin: 0 0 20px 0
-  border-bottom: 1px solid $purple-800
+.highlight
+  background-color: $yellow-100
 
+.pagination
+  margin: 20px 0 40px 0px
+  display: flex
+  a
+    padding: 10px 15px 9px 15px
+    // margin: 5px
+    background-color: $white
+    filter: drop-shadow(0px 0px 2px rgba($purple-300, .6))
+    &.page_current
+      color: $purple-500
 @media (max-width: 1024px)
   body
     font-size: .7em
-  .span-1
-    grid-column: span 3
-  .span-2
-    grid-column: span 3
-  .span-3
-    grid-column: span 6
-  .span-4
-    grid-column: span 6
-  .span-5
-    grid-column: span 6
-  .span-6
+  .span-1, .span-2, .span-3, .span-4, .span-5, .span-6
     grid-column: span 6
 @media (max-width: 768px)
-  body
-    grid-template-columns: 1fr
   .logo
     max-width: 120px
     margin: 0 auto
-  .head
-    padding: 20px 0 30px 0
-    margin: 0 30px 30px 30px
-    position: relative
-    height: auto
-  .sheet
-    margin: 20px 10px 0 10px
-    padding: 20px 20px 0 20px
-    filter: drop-shadow(0px 0px 2px $gray-400)
+  .sheet, .quick_add_form, .filters_form
+    //margin: 20px 20px 20px 20px
+    //padding: 20px 20px 20px 20px
+  .pagination
+    //margin: 20px 10px 20px 10px
   .table_col
     &.task_col_1
       width: 15%

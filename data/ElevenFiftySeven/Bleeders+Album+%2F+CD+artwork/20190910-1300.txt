@@ -1,4 +1,4 @@
-Date: '2019-09-10 01:00 PM'
+DateAdded: '2019-09-10 01:00 PM'
 DateUpdated: '2019-09-10 01:00 PM'
 Duration: 60
-Description: "Exported out artwork again and uploaded to SpinRoad"
+Description: 'Exported out artwork again and uploaded to SpinRoad'

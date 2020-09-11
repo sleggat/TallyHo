@@ -1,4 +1,4 @@
-Date: '2019-09-09 11:00 AM'
+DateAdded: '2019-09-09 11:00 AM'
 DateUpdated: '2019-09-09 11:00 AM'
 Duration: 60
-Description: "Finish up newsletter and send out"
+Description: 'Finish up newsletter and send out'

@@ -1,4 +1,4 @@
-Date: '2019-09-17 03:00 PM'
+DateAdded: '2019-09-17 03:00 PM'
 DateUpdated: '2019-09-17 03:00 PM'
 Duration: 360
-Description: "Adding The Vault category and page. Trying to get head around the new API. Holy crap"
+Description: 'Adding The Vault category and page. Trying to get head around the new API. Holy crap'

@@ -1,4 +1,4 @@
-Date: '2019-07-31 01:00 PM'
+DateAdded: '2019-07-31 01:00 PM'
 DateUpdated: '2019-07-31 01:00 PM'
 Duration: 60
-Description: "Fix up Contact page (messy layout). Add SSL. Start thinking of ideas for updated site"
+Description: 'Fix up Contact page (messy layout). Add SSL. Start thinking of ideas for updated site'

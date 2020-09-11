@@ -1,4 +1,4 @@
-Date: '2020-07-28 10:30 PM'
+DateAdded: '2020-07-28 10:30 PM'
 DateUpdated: '2020-07-28 10:30 PM'
 Duration: 60
-Description: "Alter logo with new byline and replace in Window sticker"
+Description: 'Alter logo with new byline and replace in Window sticker'

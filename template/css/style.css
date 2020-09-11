@@ -102,14 +102,22 @@ html {
 }
 
 body {
-  background-color: #edf2f7;
+  background-color: #faf5ff;
   font-family: Heebo, sans-serif;
   color: #2d3748;
   line-height: 1.6em;
   font-size: 0.85em;
   font-weight: 400;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+}
+
+a {
+  color: #d6bcfa;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+a:hover {
+  color: #b794f4;
+  transition: all 0.3s;
 }
 
 img {
@@ -118,10 +126,8 @@ img {
 }
 
 .logo {
-  width: 75%;
-  max-width: 300px;
-  margin: 0 auto;
-  margin-bottom: 60px;
+  width: 80px;
+  margin: 10px 20px;
 }
 
 .hide {
@@ -131,7 +137,7 @@ img {
 h1, h2, h3, h4, .day_header {
   line-height: 1.6em;
   font-weight: 200;
-  color: #a0aec0;
+  color: #f687b3;
 }
 
 ion-icon {
@@ -148,7 +154,8 @@ h2 {
 
 h3 {
   font-size: 200%;
-  border-top: 1px solid #cbd5e0;
+  font-weight: 400;
+  border-top: 2px solid #e9d8fd;
   padding: 15px 0px 13px 0px;
 }
 
@@ -158,6 +165,8 @@ h4 {
 
 .container {
   max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .day_header {
@@ -170,21 +179,15 @@ h4 {
   padding-top: 0;
 }
 
-.head {
-  padding: 60px 0 30px 0;
-  margin: 0 30px 30px 30px;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  height: 100vh;
+.box {
+  background-color: #fff;
+  -webkit-filter: drop-shadow(0px 0px 2px rgba(214, 188, 250, 0.6));
+          filter: drop-shadow(0px 0px 2px rgba(214, 188, 250, 0.6));
 }
 
-.sheet {
-  background-color: #fff;
-  margin: 20px 20px 0 0px;
-  padding: 20px 30px 0 30px;
-  -webkit-filter: drop-shadow(0px 0px 2px #cbd5e0);
-          filter: drop-shadow(0px 0px 2px #cbd5e0);
+.sheet, .filters_form, .quick_add_form {
+  margin: 20px 0px 20px 0px;
+  padding: 20px 20px 20px 20px;
 }
 
 .table {
@@ -198,7 +201,7 @@ h4 {
 
 .table_col {
   display: table-cell;
-  border-top: 1px solid #e9d8fd;
+  border-top: 2px solid #e9d8fd;
   padding: 15px 5px 13px 5px;
   vertical-align: top;
 }
@@ -258,8 +261,8 @@ h4 {
 }
 
 .task_project {
-  font-weight: 200;
-  color: #6b46c1;
+  font-weight: 300;
+  color: #a0aec0;
   white-space: nowrap;
 }
 
@@ -328,6 +331,10 @@ h4 {
   width: 100%;
 }
 
+.modal {
+  padding: 20px 20px 40px 20px;
+  background-color: #faf5ff;
+}
 .modal a.close-modal {
   top: 2.5px !important;
   right: 2.5px !important;
@@ -351,7 +358,7 @@ h4 {
 
 .grid-6 {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 20px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-auto-flow: row;
 }
@@ -380,14 +387,28 @@ h4 {
   grid-column: span 6;
 }
 
+label {
+  padding: 0 0 0 5px;
+  color: #a0aec0;
+  font-weight: 300;
+}
+
 input {
   width: 100%;
   padding: 0px 10px;
-  border: 1px solid #e2e8f0;
+  border: 2px solid #e9d8fd;
   font-size: 125%;
   border-radius: 3px;
-  height: 38px;
+  height: 48px;
   vertical-align: top;
+}
+
+.easy-autocomplete {
+  width: 100% !important;
+}
+
+.easy-autocomplete input {
+  width: 100%;
 }
 
 select {
@@ -402,7 +423,7 @@ button {
   width: 100%;
   vertical-align: middle;
   padding: 10px 20px;
-  height: 38px;
+  height: 48px;
   margin: 0;
   border: 0;
   border-radius: 3px;
@@ -421,15 +442,22 @@ button:hover {
   background-color: #c53030;
 }
 
-.toggle_filters {
-  text-align: right;
-  height: 20px;
+.highlight {
+  background-color: #fffff0;
 }
 
-.filters_form {
-  padding: 0px 0 20px 0;
-  margin: 0 0 20px 0;
-  border-bottom: 1px solid #553c9a;
+.pagination {
+  margin: 20px 0 40px 0px;
+  display: flex;
+}
+.pagination a {
+  padding: 10px 15px 9px 15px;
+  background-color: #fff;
+  -webkit-filter: drop-shadow(0px 0px 2px rgba(214, 188, 250, 0.6));
+          filter: drop-shadow(0px 0px 2px rgba(214, 188, 250, 0.6));
+}
+.pagination a.page_current {
+  color: #9f7aea;
 }
 
 @media (max-width: 1024px) {
@@ -437,52 +465,14 @@ button:hover {
     font-size: 0.7em;
   }
 
-  .span-1 {
-    grid-column: span 3;
-  }
-
-  .span-2 {
-    grid-column: span 3;
-  }
-
-  .span-3 {
-    grid-column: span 6;
-  }
-
-  .span-4 {
-    grid-column: span 6;
-  }
-
-  .span-5 {
-    grid-column: span 6;
-  }
-
-  .span-6 {
+  .span-1, .span-2, .span-3, .span-4, .span-5, .span-6 {
     grid-column: span 6;
   }
 }
 @media (max-width: 768px) {
-  body {
-    grid-template-columns: 1fr;
-  }
-
   .logo {
     max-width: 120px;
     margin: 0 auto;
-  }
-
-  .head {
-    padding: 20px 0 30px 0;
-    margin: 0 30px 30px 30px;
-    position: relative;
-    height: auto;
-  }
-
-  .sheet {
-    margin: 20px 10px 0 10px;
-    padding: 20px 20px 0 20px;
-    -webkit-filter: drop-shadow(0px 0px 2px #cbd5e0);
-            filter: drop-shadow(0px 0px 2px #cbd5e0);
   }
 
   .table_col.task_col_1 {

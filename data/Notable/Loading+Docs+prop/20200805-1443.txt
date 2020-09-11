@@ -1,4 +1,4 @@
-Date: '2020-08-05 02:43 PM'
+DateAdded: '2020-08-05 02:43 PM'
 DateUpdated: '2020-08-05 02:43 PM'
 Duration: 60
-Description: "Worked on cover and fixing bullets"
+Description: 'Worked on cover and fixing bullets'

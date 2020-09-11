@@ -1,4 +1,4 @@
-Date: '2019-10-04 12:11 AM'
+DateAdded: '2019-10-04 12:11 AM'
 DateUpdated: '2019-10-04 12:11 AM'
 Duration: 15
-Description: "Adding 3 wallpapers"
+Description: 'Adding 3 wallpapers'

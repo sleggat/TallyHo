@@ -1,4 +1,4 @@
-Date: '2020-07-21 01:52 PM'
+DateAdded: '2020-07-21 01:52 PM'
 DateUpdated: '2020-07-21 01:52 PM'
 Duration: 30
-Description: "Update website (*remove pre-order stuff, add in buy now)"
+Description: 'Update website (*remove pre-order stuff, add in buy now)'

@@ -1,4 +1,4 @@
-Date: '2020-07-31 01:01 PM'
+DateAdded: '2020-07-31 01:01 PM'
 DateUpdated: '2020-07-31 01:01 PM'
 Duration: 25
-Description: "Send email: Outcasts and update Single Signup Email"
+Description: 'Send email: Outcasts and update Single Signup Email'

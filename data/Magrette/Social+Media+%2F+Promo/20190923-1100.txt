@@ -1,4 +1,4 @@
-Date: '2019-09-23 11:00 AM'
+DateAdded: '2019-09-23 11:00 AM'
 DateUpdated: '2019-09-23 11:00 AM'
 Duration: 45
-Description: "Put together GMT newsletter"
+Description: 'Put together GMT newsletter'

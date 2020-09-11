@@ -1,4 +1,4 @@
-Date: '2019-07-15 02:10 PM'
+DateAdded: '2019-07-15 02:10 PM'
 DateUpdated: '2019-07-15 02:10 PM'
 Duration: 60
-Description: "Researching and Setting up vouchers thru Timely (Paypal payments)"
+Description: 'Researching and Setting up vouchers thru Timely (Paypal payments)'

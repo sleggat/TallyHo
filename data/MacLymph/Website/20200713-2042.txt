@@ -1,4 +1,4 @@
-Date: '2020-07-13 08:42 PM'
+DateAdded: '2020-07-13 08:42 PM'
 DateUpdated: '2020-07-13 08:42 PM'
 Duration: 25
-Description: "Drawing outline for postcard"
+Description: 'Drawing outline for postcard'

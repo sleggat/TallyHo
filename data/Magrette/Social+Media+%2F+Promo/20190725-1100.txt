@@ -1,4 +1,4 @@
-Date: '2019-07-25 11:00 AM'
+DateAdded: '2019-07-25 11:00 AM'
 DateUpdated: '2019-07-25 11:00 AM'
 Duration: 60
-Description: "Big email to Jay about emails, abandoned carts etc."
+Description: 'Big email to Jay about emails, abandoned carts etc.'

@@ -1,4 +1,4 @@
-Date: '2020-07-23 09:30 PM'
+DateAdded: '2020-07-23 09:30 PM'
 DateUpdated: '2020-07-23 09:30 PM'
 Duration: 120
-Description: "Add Kia Atawhai, edit video, alter JS so the video can go under photos."
+Description: 'Add Kia Atawhai, edit video, alter JS so the video can go under photos.'

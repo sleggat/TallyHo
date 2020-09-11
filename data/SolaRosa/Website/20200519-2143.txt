@@ -1,4 +1,4 @@
-Date: '2020-05-19 09:43 PM'
+DateAdded: '2020-05-19 09:43 PM'
 DateUpdated: '2020-05-19 09:43 PM'
 Duration: 120
-Description: "Andrew came around and we tinkered for about an hour. After than, more tinkering, but not worth charging for"
+Description: 'Andrew came around and we tinkered for about an hour. After than, more tinkering, but not worth charging for'

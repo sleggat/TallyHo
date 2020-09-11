@@ -1,4 +1,4 @@
-Date: '2020-08-03 11:48 AM'
+DateAdded: '2020-08-03 11:48 AM'
 DateUpdated: '2020-08-03 11:48 AM'
 Duration: 60
-Description: "Update cards with Milford details"
+Description: 'Update cards with Milford details'

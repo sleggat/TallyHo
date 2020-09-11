@@ -1,4 +1,4 @@
-Date: '2019-12-03 03:54 PM'
+DateAdded: '2019-12-03 03:54 PM'
 DateUpdated: '2019-12-03 03:54 PM'
 Duration: 60
-Description: "More alterations to the site. Creating partner images"
+Description: 'More alterations to the site. Creating partner images'

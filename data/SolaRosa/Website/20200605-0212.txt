@@ -1,4 +1,4 @@
-Date: '2020-06-05 02:12 AM'
+DateAdded: '2020-06-05 02:12 AM'
 DateUpdated: '2020-06-05 02:12 AM'
 Duration: 150
-Description: "Building site template for WP"
+Description: 'Building site template for WP'

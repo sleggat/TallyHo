@@ -1,4 +1,4 @@
-Date: '2019-08-21 12:00 PM'
+DateAdded: '2019-08-21 12:00 PM'
 DateUpdated: '2019-08-21 12:00 PM'
 Duration: 45
-Description: "Even more news stuff.. making Journal section"
+Description: 'Even more news stuff.. making Journal section'

@@ -1,4 +1,4 @@
-Date: '2019-11-07 04:47 PM'
+DateAdded: '2019-11-07 04:47 PM'
 DateUpdated: '2019-11-07 04:47 PM'
 Duration: 150
-Description: "Adding newsletter section to homepage. Fixing a few things in Mailchimp"
+Description: 'Adding newsletter section to homepage. Fixing a few things in Mailchimp'

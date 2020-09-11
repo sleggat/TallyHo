@@ -1,4 +1,4 @@
-Date: '2019-11-11 09:32 PM'
+DateAdded: '2019-11-11 09:32 PM'
 DateUpdated: '2019-11-11 09:32 PM'
 Duration: 30
-Description: "Emails and phone call with Dion regarding plans for Out Of Stock page (and a few other points)"
+Description: 'Emails and phone call with Dion regarding plans for Out Of Stock page (and a few other points)'

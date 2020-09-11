@@ -1,4 +1,4 @@
-Date: '2019-10-07 05:15 PM'
+DateAdded: '2019-10-07 05:15 PM'
 DateUpdated: '2019-10-07 05:15 PM'
 Duration: 60
-Description: "BigCartel theme edits"
+Description: 'BigCartel theme edits'

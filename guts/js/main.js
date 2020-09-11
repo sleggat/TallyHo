@@ -136,4 +136,3 @@ $('#floating_bar').click(function(event) {
     $('.task_container').removeClass("highlighted");
     recalculate_costs();
 });
-

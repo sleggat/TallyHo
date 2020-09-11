@@ -1,4 +1,4 @@
-Date: '2019-07-17 04:30 PM'
+DateAdded: '2019-07-17 04:30 PM'
 DateUpdated: '2019-07-17 04:30 PM'
 Duration: 45
-Description: "Create mockups"
+Description: 'Create mockups'

@@ -1,4 +1,4 @@
-Date: '2020-03-02 11:06 PM'
+DateAdded: '2020-03-02 11:06 PM'
 DateUpdated: '2020-03-02 11:06 PM'
 Duration: 30
-Description: "Updated bookings and added waitlist function"
+Description: 'Updated bookings and added waitlist function'

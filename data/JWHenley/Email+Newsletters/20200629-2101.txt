@@ -1,4 +1,4 @@
-Date: '2020-06-29 09:01 PM'
+DateAdded: '2020-06-29 09:01 PM'
 DateUpdated: '2020-06-29 09:01 PM'
 Duration: 60
-Description: "Create email Excerpt Pt. I, sent test. There was a bit of work in coverting the PDF and fixing up the text."
+Description: 'Create email Excerpt Pt. I, sent test. There was a bit of work in coverting the PDF and fixing up the text.'

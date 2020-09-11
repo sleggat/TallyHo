@@ -1,4 +1,4 @@
-Date: '2019-08-09 04:00 PM'
+DateAdded: '2019-08-09 04:00 PM'
 DateUpdated: '2019-08-09 04:00 PM'
 Duration: 210
-Description: "More on New sections.. adding blog too. Lots of styling."
+Description: 'More on New sections.. adding blog too. Lots of styling.'

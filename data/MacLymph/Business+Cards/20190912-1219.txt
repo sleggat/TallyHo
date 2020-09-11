@@ -1,4 +1,4 @@
-Date: '2019-09-12 12:19 PM'
+DateAdded: '2019-09-12 12:19 PM'
 DateUpdated: '2019-09-12 12:19 PM'
 Duration: 60
-Description: "Update business cards with new address/parking"
+Description: 'Update business cards with new address/parking'

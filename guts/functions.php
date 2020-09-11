@@ -40,16 +40,21 @@ function cmp($a, $b) {
 	return (substr($a, -17, 14) > substr($b, -17, 14)) ? -1 : 1;
 }
 
-function get_task_array($task) {
-	$explode = explode("/",$task);
-	$task_yaml = spyc_load_file($task);
+function get_task_array($in) {
+	// takes a path to the task (e.g. 20203112-2359.txt) and returns an array.
+	$explode = explode("/",$in);
+	$task_yaml = spyc_load_file($in);
+	$date = substr($explode[3], 0, -4);
+	$formatted = DateTime::createFromFormat('Ymd-Hi', $date);
+	$task_yaml["Date"] = date_format($formatted,'Y-m-d h:i A');
 	$task_yaml["Client"] = urldecode($explode[1]);
 	$task_yaml["Project"] = urldecode($explode[2]);
-	$task_yaml["Path"] = $task;
+	$task_yaml["Path"] = $in;
 	return $task_yaml;
 }
 
 function clients_and_projects($array) {
+	// returns an multi-dim array with clients and their projects
 	$new = array();
 	foreach ($array as $path) {
 		$explode = explode("/",$path);
@@ -57,7 +62,6 @@ function clients_and_projects($array) {
 		{
 			$new[urldecode($explode[1])][] = urldecode($explode[2]);
 		}
-		
 	}
 	return $new;
 }

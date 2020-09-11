@@ -1,4 +1,4 @@
-Date: '2020-08-13 05:15 PM'
+DateAdded: '2020-08-13 05:15 PM'
 DateUpdated: '2020-08-13 05:15 PM'
 Duration: 15
-Description: "Add MPP Ti Blue to Insta shoppable - somehow got skipped"
+Description: 'Add MPP Ti Blue to Insta shoppable - somehow got skipped'

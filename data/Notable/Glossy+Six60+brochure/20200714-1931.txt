@@ -1,4 +1,4 @@
-Date: '2020-07-14 07:31 PM'
+DateAdded: '2020-07-14 07:31 PM'
 DateUpdated: '2020-07-14 07:31 PM'
 Duration: 10
-Description: "Minor updates to brochure for NZ"
+Description: 'Minor updates to brochure for NZ'

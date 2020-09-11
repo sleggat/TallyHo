@@ -1,4 +1,4 @@
-Date: '2019-10-23 11:13 AM'
+DateAdded: '2019-10-23 11:13 AM'
 DateUpdated: '2019-10-23 11:13 AM'
 Duration: 30
-Description: "Send Jay stats on last 30 days"
+Description: 'Send Jay stats on last 30 days'

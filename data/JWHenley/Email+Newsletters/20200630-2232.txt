@@ -1,4 +1,4 @@
-Date: '2020-06-30 10:32 PM'
+DateAdded: '2020-06-30 10:32 PM'
 DateUpdated: '2020-06-30 10:32 PM'
 Duration: 30
-Description: "Prepare Excerpt II. Lots more formatting errors."
+Description: 'Prepare Excerpt II. Lots more formatting errors.'

@@ -1,4 +1,4 @@
-Date: '2019-07-31 06:15 PM'
+DateAdded: '2019-07-31 06:15 PM'
 DateUpdated: '2019-07-31 06:15 PM'
 Duration: 30
-Description: "Making changes to srcset again. And working more on Archives page"
+Description: 'Making changes to srcset again. And working more on Archives page'

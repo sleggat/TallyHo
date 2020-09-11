@@ -1,4 +1,4 @@
-Date: '2019-08-13 09:00 PM'
+DateAdded: '2019-08-13 09:00 PM'
 DateUpdated: '2019-08-13 09:00 PM'
 Duration: 45
-Description: "More news stuff"
+Description: 'More news stuff'
