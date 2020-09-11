@@ -1,0 +1,864 @@
+2020-09-11 09:12:03
+# NEW RECORD
+DateAdded: '2020-09-11 09:10 AM'
+DateUpdated: '2020-09-11 09:12 AM'
+Duration: 20
+Description: "Emailed about Tomoko having cart issues client and also archived Waka"
+Client: Magrette
+Project: Website
+
+# OLD RECORD
+Client: ""
+Project: ""
+
+----
+2020-09-10 11:39:11
+# NEW RECORD
+DateAdded: '2020-09-08 01:30 PM'
+DateUpdated: '2020-09-10 11:39 AM'
+Duration: 5
+Description: "Send email: Migrante Launch Reflections"
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+DateAdded: 2020-09-08 01:30 PM
+DateUpdated: 2020-09-10 11:38 AM
+Duration: 10
+Description: 'Send email: Migrante Launch Reflections'
+Date: 2020-09-08 01:30 PM
+Client: JWHenley
+Project: Email Newsletters
+Path: >
+  data/JWHenley/Email+Newsletters/20200908-1330.txt
+
+----
+2020-09-10 11:38:01
+# NEW RECORD
+DateAdded: '2020-09-08 01:30 PM'
+DateUpdated: '2020-09-10 11:38 AM'
+Duration: 10
+Description: "Send email: Migrante Launch Reflections"
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+DateAdded: 2020-09-08 01:31 PM
+DateUpdated: 2020-09-08 01:31 PM
+Duration: 5
+Description: 'Send email: Migrante Launch Reflections'
+Date: 2020-09-08 01:31 PM
+Client: JWHenley
+Project: Email Newsletters
+Path: >
+  data/JWHenley/Email+Newsletters/20200908-1331.txt
+
+----
+2020-09-09 11:37:11
+# NEW RECORD
+DateAdded: '2020-08-31 05:50 PM'
+DateUpdated: '2020-09-09 11:37 AM'
+Duration: 40
+Description: "Set up whanau1ace code. Also email Scott Elliot"
+Client: Magrette
+Project: Website
+
+# OLD RECORD
+DateAdded: 2020-08-31 05:50 PM
+DateUpdated: 2020-09-09 11:11 AM
+Duration: 35
+Description: >
+  Set up whanau1ace code. Also email Scott
+  Elliot
+Date: 2020-08-31 05:50 PM
+Client: Magrette
+Project: Website
+Path: data/Magrette/Website/20200831-1750.txt
+
+----
+2020-09-09 11:11:53
+# NEW RECORD
+DateAdded: '2020-08-31 05:50 PM'
+DateUpdated: '2020-09-09 11:11 AM'
+Duration: 35
+Description: "Set up whanau1ace code. Also email Scott Elliot"
+Client: Magrette
+Project: Website
+
+# OLD RECORD
+DateAdded: 2020-08-31 05:52 PM
+DateUpdated: 2020-08-31 05:52 PM
+Duration: 30
+Description: >
+  Set up whanau1ace code. Also email Scott
+  Elliot
+Date: 2020-08-31 05:52 PM
+Client: Magrette
+Project: Website
+Path: data/Magrette/Website/20200831-1752.txt
+
+----
+2020-09-09 11:11:44
+# NEW RECORD
+DateAdded: '2020-08-28 04:30 PM'
+DateUpdated: '2020-09-09 11:11 AM'
+Duration: 45
+Description: "Update details on Milford cards and create extra-wide logo for roof signage"
+Client: MacLymph
+Project: Business Cards
+
+# OLD RECORD
+DateAdded: 2020-08-28 04:30 PM
+DateUpdated: 2020-09-09 11:11 AM
+Duration: 55
+Description: >
+  Update details on Milford cards and
+  create extra-wide logo for roof signage
+Date: 2020-08-28 04:30 PM
+Client: MacLymph
+Project: Business Cards
+Path: >
+  data/MacLymph/Business+Cards/20200828-1630.txt
+
+----
+2020-09-09 11:11:06
+# NEW RECORD
+DateAdded: '2020-08-28 04:30 PM'
+DateUpdated: '2020-09-09 11:11 AM'
+Duration: 55
+Description: "Update details on Milford cards and create extra-wide logo for roof signage"
+Client: MacLymph
+Project: Business Cards
+
+# OLD RECORD
+DateAdded: 2020-08-28 04:30 PM
+DateUpdated: 2020-09-09 11:07 AM
+Duration: 50
+Description: >
+  Update details on Milford cards and
+  create extra-wide logo for roof signage
+Date: 2020-08-28 04:30 PM
+Client: MacLymph
+Project: Business Cards
+Path: >
+  data/MacLymph/Business+Cards/20200828-1630.txt
+
+----
+2020-09-09 11:07:55
+# NEW RECORD
+DateAdded: '2020-08-28 04:30 PM'
+DateUpdated: '2020-09-09 11:07 AM'
+Duration: 50
+Description: "Update details on Milford cards and create extra-wide logo for roof signage"
+Client: MacLymph
+Project: Business Cards
+
+# OLD RECORD
+DateAdded: 2020-08-28 04:28 PM
+DateUpdated: 2020-08-28 04:28 PM
+Duration: 45
+Description: >
+  Update details on Milford cards and
+  create extra-wide logo for roof signage
+Date: 2020-08-28 04:28 PM
+Client: MacLymph
+Project: Business Cards
+Path: >
+  data/MacLymph/Business+Cards/20200828-1628.txt
+
+----
+2020-09-09 11:01:36
+# NEW RECORD
+DateAdded: '2020-09-01 11:45 AM'
+DateUpdated: '2020-09-09 11:01 AM'
+Duration: 25
+Description: "Generate a new access code for Instagram. I think this is going to happen every 60 days or so."
+Client: Magrette
+Project: Website
+
+# OLD RECORD
+DateAdded: 2020-09-01 11:44 AM
+DateUpdated: 2020-09-01 11:44 AM
+Duration: 20
+Description: >
+  Generate a new access code for
+  Instagram. I think this is going to
+  happen every 60 days or so.
+Date: 2020-09-01 11:44 AM
+Client: Magrette
+Project: Website
+Path: data/Magrette/Website/20200901-1144.txt
+
+----
+2020-09-08 22:37:26
+# NEW RECORD
+Date: '2020-08-22 02:45 PM'
+DateUpdated: '2020-09-08 10:37 PM'
+Duration: 30
+Description: "Uploaded tweaked site onto beta.magrette.com"
+Client: Magrette
+Project: Website
+
+# OLD RECORD
+Date: 2020-08-24 02:43 PM
+DateUpdated: 2020-08-24 02:43 PM
+Duration: 30
+Description: >
+  Uploaded tweaked site onto
+  beta.magrette.com
+Client: Magrette
+Project: Website
+Path: data/Magrette/Website/20200824-1443.txt
+
+----
+2020-09-08 20:44:55
+# NEW RECORD
+Date: ''
+DateUpdated: '2020-09-08 08:44 PM'
+Duration: 
+Description: ""
+Client: 
+Project: 
+
+# OLD RECORD
+Date: 2020-09-08 06:14 PM
+DateUpdated: 2020-09-08 06:14 PM
+Duration: 15
+Description: Wee
+Client: JWHenley
+Project: Email Newsletters
+Path: >
+  data/JWHenley/Email+Newsletters/20200908-1814.txt
+
+----
+2020-09-08 20:33:48
+# NEW RECORD
+Date: ''
+DateUpdated: '2020-09-08 08:33 PM'
+Duration: 
+Description: ""
+Client: 
+Project: 
+
+# OLD RECORD
+Client: ""
+Project: ""
+
+----
+2020-09-08 20:28:33
+# NEW RECORD
+Date: '2020-10-29 06:10 PM'
+DateUpdated: '2020-09-08 08:28 PM'
+Duration: 30
+Description: "Hey!!!"
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+Date: 2020-10-29 06:10 PM
+DateUpdated: 2020-09-08 08:28 PM
+Duration: 30
+Description: '!!!'
+Client: JWHenley
+Project: Email Newsletters
+Path: >
+  data/JWHenley/Email+Newsletters/20201029-1810.txt
+
+----
+2020-09-08 20:28:02
+# NEW RECORD
+Date: '2020-10-29 06:10 PM'
+DateUpdated: '2020-09-08 08:28 PM'
+Duration: 30
+Description: "!!!"
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+Date: 2020-09-17 06:10 PM
+DateUpdated: 2020-09-08 06:08 PM
+Duration: 30
+Description: '!!!'
+Client: JWHenley
+Project: Email Newsletters
+Path: >
+  data/JWHenley/Email+Newsletters/20200917-1810.txt
+
+----
+2020-09-08 18:11:35
+# NEW RECORD
+Date: '2020-09-14 06:10 PM'
+DateUpdated: '2020-09-08 06:11 PM'
+Duration: 30
+Description: "!!!"
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+Client: ""
+Project: ""
+
+----
+2020-09-08 18:08:50
+# NEW RECORD
+Date: '2020-09-17 06:10 PM'
+DateUpdated: '2020-09-08 06:08 PM'
+Duration: 30
+Description: "!!!"
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+Client: ""
+Project: ""
+Path: ""
+
+----
+2020-09-08 18:00:26
+# NEW RECORD
+Date: '2020-09-10 06:10 PM'
+DateUpdated: '2020-09-08 06:00 PM'
+Duration: 30
+Description: "Prepare email: Now It\'s Real"
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+Client: ""
+Project: ""
+
+----
+2020-09-08 17:56:51
+# NEW RECORD
+Date: '2020-09-08 05:55 PM'
+DateUpdated: '2020-09-08 05:56 PM'
+Duration: 30
+Description: "Prepare email: Now It\'s Real"
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+Client: ""
+Project: ""
+
+----
+2020-09-08 17:56:35
+# NEW RECORD
+Date: '2020-09-09 07:40 AM'
+DateUpdated: '2020-09-08 05:56 PM'
+Duration: 30
+Description: "Prepare email: Now It\'s Real"
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+Date: 2020-09-10 07:35 AM
+DateUpdated: 2020-09-08 05:56 PM
+Duration: 30
+Description: "Prepare email: Now It's Real"
+Client: JWHenley
+Project: Email Newsletters
+Path: >
+  data/JWHenley/Email+Newsletters/20200910-0735.txt
+
+----
+2020-09-08 17:56:25
+# NEW RECORD
+Date: '2020-09-10 07:35 AM'
+DateUpdated: '2020-09-08 05:56 PM'
+Duration: 30
+Description: "Prepare email: Now It\'s Real"
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+Date: 2020-09-10 07:35 PM
+DateUpdated: 2020-09-08 05:56 PM
+Duration: 30
+Description: "Prepare email: Now It's Real"
+Client: JWHenley
+Project: Email Newsletters
+Path: >
+  data/JWHenley/Email+Newsletters/20200910-1935.txt
+
+----
+2020-09-08 17:56:16
+# NEW RECORD
+Date: '2020-09-10 07:35 PM'
+DateUpdated: '2020-09-08 05:56 PM'
+Duration: 30
+Description: "Prepare email: Now It\'s Real"
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+Date: 2020-09-10 07:35 PM
+DateUpdated: 2020-09-08 05:56 PM
+Duration: 30
+Description: "Prepare email: Now It's Real!!"
+Client: JWHenley
+Project: Email Newsletters
+Path: >
+  data/JWHenley/Email+Newsletters/20200910-1935.txt
+
+----
+2020-09-08 17:56:09
+# NEW RECORD
+Date: '2020-09-10 07:35 PM'
+DateUpdated: '2020-09-08 05:56 PM'
+Duration: 30
+Description: "Prepare email: Now It\'s Real!!"
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+Date: 2020-09-10 07:35 PM
+DateUpdated: 2020-09-08 05:55 PM
+Duration: 35
+Description: "Prepare email: Now It's Real!!"
+Client: JWHenley
+Project: Email Newsletters
+Path: >
+  data/JWHenley/Email+Newsletters/20200910-1935.txt
+
+----
+2020-09-08 17:55:47
+# NEW RECORD
+Date: '2020-09-10 07:35 PM'
+DateUpdated: '2020-09-08 05:55 PM'
+Duration: 35
+Description: "Prepare email: Now It\'s Real!!"
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+Date: 2020-09-11 07:35 PM
+DateUpdated: 2020-09-08 05:54 PM
+Duration: 25
+Description: "Prepare email: Now It's Real"
+Client: JWHenley
+Project: Email Newsletters
+Path: >
+  data/JWHenley/Email+Newsletters/20200911-1935.txt
+
+----
+2020-09-08 17:54:44
+# NEW RECORD
+Date: '2020-09-11 07:35 PM'
+DateUpdated: '2020-09-08 05:54 PM'
+Duration: 25
+Description: "Prepare email: Now It\'s Real"
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+Date: 2020-09-11 07:30 PM
+DateUpdated: 2020-09-08 05:49 PM
+Duration: 25
+Description: "Prepare email: Now It's Real"
+Client: JWHenley
+Project: Email Newsletters
+Path: >
+  data/JWHenley/Email+Newsletters/20200911-1930.txt
+
+----
+2020-09-08 17:49:48
+# NEW RECORD
+Date: '2020-09-08 06:50 PM'
+DateUpdated: '2020-09-08 05:49 PM'
+Duration: 25
+Description: "Prepare email: Now It\'s Real"
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+Client: ""
+Project: ""
+
+----
+2020-09-08 17:49:09
+# NEW RECORD
+Date: '2020-09-11 07:30 PM'
+DateUpdated: '2020-09-08 05:49 PM'
+Duration: 25
+Description: "Prepare email: Now It\'s Real"
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+Date: 2020-09-11 07:30 PM
+DateUpdated: 2020-09-08 05:44 PM
+Duration: 20
+Description: "Prepare email: Now It's Real"
+Client: JWHenley
+Project: Email Newsletters
+Path: >
+  data/JWHenley/Email+Newsletters/20200911-1930.txt
+
+----
+2020-09-08 17:44:17
+# NEW RECORD
+Date: '2020-09-11 07:30 PM'
+DateUpdated: '2020-09-08 05:44 PM'
+Duration: 20
+Description: "Prepare email: Now It\'s Real"
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+Date: 2020-09-11 09:30 PM
+DateUpdated: 2020-09-08 05:43 PM
+Duration: 30
+Description: "Prepare email: Now It's Real!!"
+Client: JWHenley
+Project: Email Newsletters
+Path: >
+  data/JWHenley/Email+Newsletters/20200911-2130.txt
+
+----
+2020-09-08 17:43:43
+# NEW RECORD
+Date: '2020-09-11 09:30 PM'
+DateUpdated: '2020-09-08 05:43 PM'
+Duration: 30
+Description: "Prepare email: Now It\'s Real!!"
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+Date: 2020-09-11 09:30 PM
+DateUpdated: 2020-09-08 01:29 PM
+Duration: 30
+Description: "Prepare email: Now It's Real"
+Client: JWHenley
+Project: Email Newsletters
+Path: >
+  data/JWHenley/Email+Newsletters/20200911-2130.txt
+
+----
+2020-09-08 17:35:23
+# NEW RECORD
+Date: '202009081735'
+DateUpdated: '2020-09-08 05:35 PM'
+Duration: 15
+Description: "Wooohay!"
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+Client: ""
+Project: ""
+
+----
+2020-09-08 13:29:21
+# NEW RECORD
+Date: '2020-09-11 09:30 PM'
+DateUpdated: '2020-09-08 01:29 PM'
+Duration: 30
+Description: "Prepare email: Now It\'s Real"
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+Date: 2020-09-11 09:30 PM
+DateUpdated: 2020-09-08 01:28 PM
+Duration: 20
+Description: "Prepare email: Now It's Real"
+Client: JWHenley
+Project: Email Newsletters
+Path: >
+  data/JWHenley/Email+Newsletters/20200911-2130.txt
+
+----
+2020-09-08 13:28:14
+# NEW RECORD
+Date: '2020-09-11 09:30 PM'
+DateUpdated: '2020-09-08 01:28 PM'
+Duration: 20
+Description: "Prepare email: Now It\'s Real"
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+Date: 2020-09-10 09:30 PM
+DateUpdated: 2020-09-07 09:58 PM
+Duration: 15
+Description: "Prepare email: Now It's Real"
+Client: JWHenley
+Project: Email Newsletters
+Path: >
+  data/JWHenley/Email+Newsletters/20200910-2130.txt
+
+----
+2020-09-07 21:58:18
+# NEW RECORD
+Date: '2020-09-10 09:30 PM'
+DateUpdated: '2020-09-07 09:58 PM'
+Duration: 15
+Description: "Prepare email: Now It\'s Real"
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+Date: 2020-07-22 09:29 PM
+DateUpdated: 2020-07-22 09:29 PM
+Duration: 15
+Description: "Prepare email: Now It's Real"
+Client: JWHenley
+Project: Email Newsletters
+Path: >
+  data/JWHenley/Email+Newsletters/20200722-2129.txt
+
+----
+2020-09-07 21:41:58
+# NEW RECORD
+Date: '2020-09-07 09:10 PM'
+DateUpdated: '2020-09-07 09:41 PM'
+Duration: 30
+Description: "Generate a new access code for Instagram. I think this is going to happen every 60 days or so."
+Client: Magrette
+Project: Website
+
+# OLD RECORD
+Date: 2020-09-07 09:31 PM
+DateUpdated: 2020-09-07 09:39 PM
+Duration: 30
+Description: >
+  Generate a new access code for
+  Instagram. I think this is going to
+  happen every 60 days or so.
+Client: Magrette
+Project: Website
+Path: data/Magrette/Website/20200907-2115.txt
+
+----
+2020-09-07 21:39:58
+# NEW RECORD
+Date: '2020-09-07 09:31 PM'
+DateUpdated: '2020-09-07 09:39 PM'
+Duration: 30
+Description: "Generate a new access code for Instagram. I think this is going to happen every 60 days or so."
+Client: Magrette
+Project: Website
+
+# OLD RECORD
+Date: 2020-09-07 09:31 PM
+DateUpdated: 2020-09-07 09:39 PM
+Duration: 30
+Description: >
+  Generate a new access code for
+  Instagram. I think this is going to
+  happen every 60 days or so.
+Client: Magrette
+Project: Website
+Path: data/Magrette/Website/20200907-2130.txt
+
+----
+2020-09-07 21:39:16
+# NEW RECORD
+Date: '2020-09-07 09:31 PM'
+DateUpdated: '2020-09-07 09:39 PM'
+Duration: 30
+Description: "Generate a new access code for Instagram. I think this is going to happen every 60 days or so."
+Client: Magrette
+Project: Website
+
+# OLD RECORD
+Date: 2020-09-07 09:31 PM
+DateUpdated: 2020-09-07 09:38 PM
+Duration: 35
+Description: >
+  Generate a new access code for
+  Instagram. I think this is going to
+  happen every 60 days or so.
+Client: Magrette
+Project: Website
+Path: data/Magrette/Website/20200907-2130.txt
+
+----
+2020-09-07 21:38:41
+# NEW RECORD
+Date: ''
+DateUpdated: '2020-09-07 09:38 PM'
+Duration: 35
+Description: "Generate a new access code for Instagram. I think this is going to happen every 60 days or so."
+Client: Magrette
+Project: Website
+
+# OLD RECORD
+0: data/Magrette/Website/20200908-2221.txt
+Client: Magrette
+Project: Website
+Path: data/Magrette/Website/20200908-2221.txt
+
+----
+2020-09-07 21:38:37
+# NEW RECORD
+Date: ''
+DateUpdated: '2020-09-07 09:38 PM'
+Duration: 35
+Description: "Generate a new access code for Instagram. I think this is going to happen every 60 days or so."
+Client: Magrette
+Project: Website
+
+# OLD RECORD
+0: data/Magrette/Website/20200908-2221.txt
+Client: Magrette
+Project: Website
+Path: data/Magrette/Website/20200908-2221.txt
+
+----
+2020-09-07 21:37:58
+# NEW RECORD
+Date: '2020-09-07 09:32 PM'
+DateUpdated: '2020-09-07 09:37 PM'
+Duration: 35
+Description: "Generate a new access code for Instagram. I think this is going to happen every 60 days or so."
+Client: Magrette
+Project: Website
+
+# OLD RECORD
+Date: 2020-09-07 09:32 PM
+DateUpdated: 2020-09-07 09:32 PM
+Duration: 30
+Description: >
+  Generate a new access code for
+  Instagram. I think this is going to
+  happen every 60 days or so.
+Client: Magrette
+Project: Website
+Path: data/Magrette/Website/20200908-2221.txt
+
+----
+2020-09-07 21:35:48
+# NEW RECORD
+Date: '2020-09-07 09:32 PM'
+DateUpdated: '2020-09-07 09:35 PM'
+Duration: 35
+Description: "Generate a new access code for Instagram. I think this is going to happen every 60 days or so."
+Client: Magrette
+Project: Website
+
+# OLD RECORD
+Date: 2020-09-07 09:32 PM
+DateUpdated: 2020-09-07 09:32 PM
+Duration: 30
+Description: >
+  Generate a new access code for
+  Instagram. I think this is going to
+  happen every 60 days or so.
+Client: Magrette
+Project: Website
+Path: data/Magrette/Website/20200908-2221.txt
+
+----
+2020-09-07 21:32:08
+# NEW RECORD
+Date: ''
+DateUpdated: '2020-09-07 09:32 PM'
+Duration: 30
+Description: "Generate a new access code for Instagram. I think this is going to happen every 60 days or so."
+Client: Magrette
+Project: Website
+
+# OLD RECORD
+Date: ""
+DateUpdated: 2020-09-07 09:31 PM
+Duration: 25
+Description: >
+  Generate a new access code for
+  Instagram. I think this is going to
+  happen every 60 days or so.
+Client: Magrette
+Project: Website
+Path: data/Magrette/Website/-.txt
+
+----
+2020-09-07 21:31:41
+# NEW RECORD
+Date: ''
+DateUpdated: '2020-09-07 09:31 PM'
+Duration: 25
+Description: "Generate a new access code for Instagram. I think this is going to happen every 60 days or so."
+Client: Magrette
+Project: Website
+
+# OLD RECORD
+Date: 2020-09-07 09:30 PM
+DateUpdated: 2020-09-07 09:30 PM
+Duration: 20
+Description: >
+  Generate a new access code for
+  Instagram. I think this is going to
+  happen every 60 days or so.
+Client: Magrette
+Project: Website
+Path: data/Magrette/Website/-.txt
+
+----
+2020-09-07 21:30:41
+# NEW RECORD
+Date: ''
+DateUpdated: '2020-09-07 09:30 PM'
+Duration: 20
+Description: "Generate a new access code for Instagram. I think this is going to happen every 60 days or so."
+Client: Magrette
+Project: Website
+
+# OLD RECORD
+Date: ""
+DateUpdated: 2020-09-07 09:27 PM
+Duration: 10
+Description: >
+  Generate a new access code for
+  Instagram. I think this is going to
+  happen every 60 days or so.
+Client: Magrette
+Project: Website
+Path: data/Magrette/Website/20200901-1145.txt
+
+----
+2020-09-07 21:27:41
+# NEW RECORD
+Date: ''
+DateUpdated: '2020-09-07 09:27 PM'
+Duration: 10
+Description: "Generate a new access code for Instagram. I think this is going to happen every 60 days or so."
+Client: Magrette
+Project: Website
+
+# OLD RECORD
+Date: 2020-09-01 11:44 AM
+DateUpdated: 2020-09-01 11:44 AM
+Duration: 20
+Description: >
+  Generate a new access code for
+  Instagram. I think this is going to
+  happen every 60 days or so.
+Client: Magrette
+Project: Website
+Path: data/Magrette/Website/20200901-1144.txt
+
+----
+2020-09-07 20:49:43
+# NEW RECORD
+DateAdded: ''
+DateUpdated: '2020-09-07 08:49 PM'
+Duration: 35
+Description: "Set up whanau1ace code. Also email Scott Elliot"
+Client: Magrette
+Project: Website
+
+# OLD RECORD
+Date: "20200831"
+Time: "1745"
+Duration: 30
+Description: >
+  Set up whanau1ace code. Also email Scott
+  Elliot
+Client: Magrette
+Project: Website
+Path: data/Magrette/Website/20200831-1745.txt
+
+----
+

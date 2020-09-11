@@ -1,0 +1,4 @@
+DateAdded: '2020-08-20 02:25 PM'
+DateUpdated: '2020-08-20 02:25 PM'
+Duration: 5
+Description: 'DLE for a 10% discount - modify text'

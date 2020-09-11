@@ -3314,6 +3314,19 @@
 		"oS": 0,
 		"sct": 0
 		},
+	"/template/css/bulmacolumns.sass": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 2,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/template/css/bulmacolumns.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
 	"/template/css/reset.css": {
 		"aP": 1,
 		"bl": 0,

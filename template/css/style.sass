@@ -4,6 +4,9 @@
 $link: $purple-300
 $link-hover: $purple-400
 
+$column-gap: 10px
+$variable-columns: true !default
+@import "bulmacolumns.sass"
 
 // https://tailwindcss.com/docs/customizing-colors#default-color-palette
 html
@@ -190,23 +193,6 @@ h4
     margin: 2px 9px
   .cancelBtn
     background-color: $gray-400
-.grid-6
-  display: grid
-  grid-gap: 20px
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
-  grid-auto-flow: row
-.span-1
-  grid-column: span 1
-.span-2
-  grid-column: span 2
-.span-3
-  grid-column: span 3
-.span-4
-  grid-column: span 4
-.span-5
-  grid-column: span 5
-.span-6
-  grid-column: span 6
 .field
   // padding-top: 10px
 label
@@ -261,11 +247,9 @@ button
     filter: drop-shadow(0px 0px 2px rgba($purple-300, .6))
     &.page_current
       color: $purple-500
-@media (max-width: 1024px)
+@media (max-width: 1200px)
   body
     font-size: .7em
-  .span-1, .span-2, .span-3, .span-4, .span-5, .span-6
-    grid-column: span 6
 @media (max-width: 768px)
   .logo
     max-width: 120px

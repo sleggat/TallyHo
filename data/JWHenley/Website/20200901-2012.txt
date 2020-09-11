@@ -1,0 +1,4 @@
+DateAdded: '2020-09-01 08:12 PM'
+DateUpdated: '2020-09-01 08:12 PM'
+Duration: 15
+Description: 'Added SportsIllustrated article and to clients'

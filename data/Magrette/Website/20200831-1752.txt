@@ -1,0 +1,4 @@
+DateAdded: '2020-08-31 05:52 PM'
+DateUpdated: '2020-08-31 05:52 PM'
+Duration: 30
+Description: 'Set up whanau1ace code. Also email Scott Elliot'

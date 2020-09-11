@@ -1,0 +1,4 @@
+DateAdded: '2020-09-05 08:13 AM'
+DateUpdated: '2020-09-05 08:13 AM'
+Duration: 40
+Description: 'Talked to Scott Elliott about analytics'

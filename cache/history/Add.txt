@@ -1,0 +1,97 @@
+2020-09-10 22:45:03
+# NEW RECORD
+Date: '2020-09-10 10:45 PM'
+DateUpdated: '2020-09-10 10:45 PM'
+Duration: 15
+Description: ""
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+
+----
+2020-09-10 21:00:23
+# NEW RECORD
+Date: '2020-09-10 09:00 PM'
+DateUpdated: '2020-09-10 09:00 PM'
+Duration: 15
+Description: "Delete this one!"
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+
+----
+2020-09-08 20:27:32
+# NEW RECORD
+Date: '2020-09-08 08:27 PM'
+DateUpdated: '2020-09-08 08:27 PM'
+Duration: 15
+Description: "Wee"
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+
+----
+2020-09-08 18:14:29
+# NEW RECORD
+Date: '2020-09-08 06:14 PM'
+DateUpdated: '2020-09-08 06:14 PM'
+Duration: 15
+Description: "Wee"
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+
+----
+2020-09-08 18:14:29
+# NEW RECORD
+Date: '2020-09-08 06:14 PM'
+DateUpdated: '2020-09-08 06:14 PM'
+Duration: 15
+Description: "Wee"
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+
+----
+2020-09-08 13:57:35
+# NEW RECORD
+Date: '2020-09-08 01:57 PM'
+DateUpdated: '2020-09-08 01:57 PM'
+Duration: 15
+Description: ""
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+
+----
+2020-09-08 13:47:09
+# NEW RECORD
+Date: '2020-09-08 01:47 PM'
+DateUpdated: '2020-09-08 01:47 PM'
+Duration: 15
+Description: ""
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+
+----
+2020-09-08 13:47:03
+# NEW RECORD
+Date: '2020-09-08 01:47 PM'
+DateUpdated: '2020-09-08 01:47 PM'
+Duration: 15
+Description: ""
+Client: JWHenley
+Project: Email Newsletters
+
+# OLD RECORD
+
+----
+

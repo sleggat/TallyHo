@@ -78,38 +78,38 @@ var project_options = {
 </div>
 <div class="container">
 	<div class=""><div class="logo"><img src="template/images/logo2.png"></div></div>
-	<div class="grid-6">
-		<div class="span-2">
+	<div class="columns is-multiline">
+		<div class="column is-4">
 			<div class="hide">
 				<?= 'Total tasks'.$tasks_total; ?>
 			</div>
 			<div class="box quick_add_form">
-				<form method="post" class="grid-6" action="" id="form_add">
-					<div class="field span-4">
+				<form method="post" class="columns is-multiline is-variable is-1" action="" id="form_add">
+					<div class="column is-8">
 						<label class="label">Started</label>
 						<div class="control">
-							<input id="add_datetime" name="DateTime" class="DateTime input" type="text" value="<?= date('Y-m-d h:i A') ?>" required>
+							<input id="add_datetime" name="DateTime" class="modal_datetime input" type="text" value="<?= date('Y-m-d h:i A') ?>" required>
 						</div>
 					</div>
-					<div class="field span-2">
+					<div class="column is-4">
 						<label class="label">Duration</label>
 						<div class="control">
 							<input id="add_duration" name="Duration" class="input" type="number" step="5" min="5" value="15" required>
 						</div>
 					</div>
-					<div class="field span-3">
+					<div class="column is-6">
 						<label class="label">Client</label>
 						<div class="control">
 							<input id="add_client" name="Client" class="input" type="text" value="<?= get_task_array($array[0])["Client"] ?>" required>
 						</div>
 					</div>
-					<div class="field span-3">
+					<div class="column is-6">
 						<label class="label">Project</label>
 						<div class="control">
 							<input id="add_project" name="Project" class="input" type="text" value="<?= get_task_array($array[0])["Project"] ?>" required>
 						</div>
 					</div>
-					<div class="field span-6">
+					<div class="column is-12">
 						<label class="label">Description</label>
 						<div class="control">
 							<input id="add_description" name="Description" class="input" type="text" value="" >
@@ -118,7 +118,7 @@ var project_options = {
 
 					<input id="add_path" name="Path" value="" type="hidden"/>
 
-					<div class="field span-3">
+					<div class="column is-6">
 						<div class="control">
 							<button class="button is-link" type="submit" name="Submit" value="add">Add Task</button>
 						</div>
@@ -127,18 +127,18 @@ var project_options = {
 			</div>
 			<div class="box filters_form">
 				<form class="" method="get">
-					<div class="grid-6">
-						<div class="field span-3">
+					<div class="columns is-multiline is-variable is-1">
+						<div class="column is-6">
 							<div class="control">
 								<input id="filter_client" name="FilterClient" class="input" type="text" value="<?= $filter_client ?>" placeholder="Client" >
 							</div>
 						</div>
-						<div class="field span-3">
+						<div class="column is-6">
 							<div class="control">
 								<input id="filter_project" name="FilterProject" class="input" type="text" value="<?= $filter_project ?>" placeholder="Project">
 							</div>
 						</div>
-						<div class="field span-3">
+						<div class="column is-6">
 							<div class="control">
 								<button class="button is-link" type="submit" name="Submit" value="filter">Filter</button>
 							</div>
@@ -147,7 +147,7 @@ var project_options = {
 				</form>
 			</div>
 		</div>
-		<div class="span-4">
+		<div class="column is-8">
 			<div class="box sheet">
 
 				<?php
