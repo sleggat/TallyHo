@@ -3321,7 +3321,7 @@
 		"ec": 1,
 		"ft": 2,
 		"ma": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/template/css/bulmacolumns.css",
 		"oF": 0,
 		"oS": 0,
@@ -4166,6 +4166,16 @@
 		"oS": 0,
 		"sct": 0
 		},
+	"/template/css/style_bck.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/template/css/style_bck-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/template/css/style_bck.sass": {
 		"aP": 1,
 		"bl": 0,
@@ -4175,42 +4185,6 @@
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/template/css/style_bck.css",
-		"oF": 0,
-		"oS": 0,
-		"sct": 0
-		},
-	"/template/css/style_bck2.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/template/css/style_bck2-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/template/css/style_bck2.sass": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"ec": 1,
-		"ft": 2,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/template/css/style_bck2.css",
-		"oF": 0,
-		"oS": 0,
-		"sct": 0
-		},
-	"/template/css/style_bck3.sass": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"ec": 1,
-		"ft": 2,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/template/css/style_bck3.css",
 		"oF": 0,
 		"oS": 0,
 		"sct": 0
@@ -16654,9 +16628,9 @@
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
-	"allowInjectionReloads": 0,
+	"allowInjectionReloads": 1,
 	"alwaysUseExternalServer": 1,
-	"animateCSSInjections": 0,
+	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
 	"autoprefixerEnableIEGrid": 0,
 	"babel7PresetType": 1,

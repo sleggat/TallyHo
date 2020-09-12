@@ -29,7 +29,7 @@
 			<div class="column is-12">
 				<label class="label">Description</label>
 				<div class="control">
-					<input class="modal_description" name="Description" class="input" type="text" value="" >
+					<textarea class="modal_description" name="Description" class="textarea" type="text"></textarea>
 				</div>
 			</div>
 

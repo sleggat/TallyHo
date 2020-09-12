@@ -104,7 +104,10 @@ function initpicker(element) {
         "autoUpdateInput": true
     });
 }
-
+function auto_grow(element) {
+    element.style.height = "5px";
+    element.style.height = (element.scrollHeight)+"px";
+}
 //$('.task_container >:not(span)').css("background-color", "rgba(200,1,1,.5)");
 function recalculate_costs() {
     var total_cost = 0;
