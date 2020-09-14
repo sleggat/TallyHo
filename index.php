@@ -81,72 +81,74 @@ var project_options = {
 	<div class="hide"><div class="logo"><img src="template/images/logo2.png"></div></div>
 	<div class="columns is-multiline">
 		<div class="column is-12-tablet is-4-desktop">
-			<div class="box_alt quick_add_form">
-				<form method="post" class="columns is-mobile is-multiline is-variable is-1" action="" id="form_add">
-					<div class="column is-6-mobile is-9-tablet">
-						<label class="label">Started</label>
-						<div class="control">
-							<input id="add_datetime" name="DateTime" class="modal_datetime input" type="text" value="<?= date('Y-m-d h:i A') ?>" required>
+			<div class="sticky">
+				<div class="box_alt quick_add_form">
+					<form method="post" class="columns is-mobile is-multiline is-variable is-1" action="" id="form_add">
+						<div class="column is-6-mobile is-9-tablet">
+							<label class="label">Started</label>
+							<div class="control">
+								<input id="add_datetime" name="DateTime" class="modal_datetime input" type="text" value="<?= date('Y-m-d h:i A') ?>" required>
+							</div>
 						</div>
-					</div>
-					<div class="column is-6-mobile is-3-tablet">
-						<label class="label">Duration</label>
-						<div class="control">
-							<input id="add_duration" name="Duration" class="input" type="text" min="5" value="15" required>
+						<div class="column is-6-mobile is-3-tablet">
+							<label class="label">Duration</label>
+							<div class="control">
+								<input id="add_duration" name="Duration" class="input" type="text" min="5" value="15" required>
+							</div>
 						</div>
-					</div>
-					<div class="column is-6-mobile">
-						<label class="label">Client</label>
-						<div class="control">
-							<input id="add_client" name="Client" class="input" type="text" value="<?= get_task_array($array[0])["Client"] ?>" required>
+						<div class="column is-6-mobile">
+							<label class="label">Client</label>
+							<div class="control">
+								<input id="add_client" name="Client" class="input" type="text" value="<?= get_task_array($array[0])["Client"] ?>" required>
+							</div>
 						</div>
-					</div>
-					<div class="column is-6-mobile">
-						<label class="label">Project</label>
-						<div class="control">
-							<input id="add_project" name="Project" class="input" type="text" value="<?= get_task_array($array[0])["Project"] ?>" required>
+						<div class="column is-6-mobile">
+							<label class="label">Project</label>
+							<div class="control">
+								<input id="add_project" name="Project" class="input" type="text" value="<?= get_task_array($array[0])["Project"] ?>" required>
+							</div>
 						</div>
-					</div>
-					<div class="column is-12">
-						<label class="label">Description</label>
-						<div class="control">
-							<textarea id="add_description" name="Description" class="textarea" type="text" value="" oninput="auto_grow(this)"></textarea>
+						<div class="column is-12">
+							<label class="label">Description</label>
+							<div class="control">
+								<textarea id="add_description" name="Description" class="textarea" type="text" value="" oninput="auto_grow(this)"></textarea>
+							</div>
 						</div>
-					</div>
 
-					<input id="add_path" name="Path" value="" type="hidden"/>
+						<input id="add_path" name="Path" value="" type="hidden"/>
 
-					<div class="column is-6-mobile is-6-tablet">
-						<div class="control">
-							<button class="button is-link" type="submit" name="Submit" value="add">Add Task</button>
-						</div>
-					</div>
-				</form>
-			</div>
-			<div class="box_alt filters_form">
-				<form class="" method="get">
-					<div class="columns is-mobile is-multiline is-variable is-1">
-						<div class="column is-6-mobile is-4-tablet">
+						<div class="column is-6-mobile is-6-tablet">
 							<div class="control">
-								<input id="filter_client" name="FilterClient" class="input" type="text" value="<?= $filter_client ?>" placeholder="Client" >
+								<button class="button is-link" type="submit" name="Submit" value="add">Add Task</button>
 							</div>
 						</div>
-						<div class="column is-6-mobile is-4-tablet">
-							<div class="control">
-								<input id="filter_project" name="FilterProject" class="input" type="text" value="<?= $filter_project ?>" placeholder="Project">
-							</div>
-						</div>
-						<div class="column is-6-mobile is-4-tablet">
-							<div class="control">
-								<button class="button is-link" type="submit" name="Submit" value="filter">Filter</button>
-							</div>
-						</div>
-					</div>
-				</form>
+					</form>
+				</div>
 			</div>
 		</div>
 		<div class="column is-12-tablet is-8-desktop">
 			<div class="box sheet">
+				<div class="filters_form">
+					<form class="" method="get">
+						<div class="columns is-mobile is-multiline is-variable is-1">
+							<div class="column is-offset-6-tablet is-2-tablet is-offset-0-mobile">
+								<div class="control">
+									<input id="filter_client" name="FilterClient" class="input" type="text" value="<?= $filter_client ?>" placeholder="Client" >
+								</div>
+							</div>
+							<div class="column is-2-tablet">
+								<div class="control">
+									<input id="filter_project" name="FilterProject" class="input" type="text" value="<?= $filter_project ?>" placeholder="Project">
+								</div>
+							</div>
+							<div class="column is-2-tablet">
+								<div class="control">
+									<button class="button is-link" type="submit" name="Submit" value="filter">Filter</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
 
 				<?php
 				foreach ($array as $task) {

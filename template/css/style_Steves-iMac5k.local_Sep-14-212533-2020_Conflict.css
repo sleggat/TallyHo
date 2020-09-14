@@ -2222,7 +2222,7 @@ body {
   font-size: 0.8rem;
   line-height: 1.2rem;
   font-weight: 400;
-  margin-top: 30px;
+  margin-top: 80px;
 }
 
 textarea, input, button, select {
@@ -2309,9 +2309,7 @@ h2 {
 }
 
 .filters_form {
-  padding: 0px 0px 40px 0px;
-  margin: 20px 0px 50px 0px;
-  border-bottom: 1px solid #cbd5e0;
+  margin: 0px 0px 10px 0px;
 }
 
 .table {
@@ -2445,7 +2443,6 @@ ion-icon {
 
 /* Floating bar where the tally goes */
 #floating_bar {
-  display: none;
   text-align: center;
   background-color: rgba(247, 250, 252, 0.5);
   color: #718096;
@@ -2508,8 +2505,6 @@ label {
   font-weight: 400;
   text-transform: uppercase;
   font-size: 0.5rem;
-  display: inline-block;
-  min-height: 20px;
 }
 
 input, textarea {

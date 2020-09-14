@@ -93,14 +93,6 @@ th:not([align]) {
 /** Purple **/
 /** Pink **/
 /*! bulma.io v0.9.0 | MIT License | github.com/jgthms/bulma */
-@-webkit-keyframes spinAround {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
 @keyframes spinAround {
   from {
     transform: rotate(0deg);
@@ -1753,8 +1745,6 @@ th:not([align]) {
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
-  min-height: -webkit-min-content;
-  min-height: -moz-min-content;
   min-height: min-content;
 }
 .tile.is-ancestor {
@@ -2206,9 +2196,8 @@ th:not([align]) {
   padding-bottom: 3rem !important;
 }
 
-/* Main styles */
 html {
-  background: #e2e8f0;
+  background: #edf2f7;
   padding: 0;
   margin: 0;
   overflow: -moz-scrollbars-vertical;
@@ -2222,7 +2211,7 @@ body {
   font-size: 0.8rem;
   line-height: 1.2rem;
   font-weight: 400;
-  margin-top: 30px;
+  margin-top: 80px;
 }
 
 textarea, input, button, select {
@@ -2245,44 +2234,56 @@ img {
   height: auto;
 }
 
+.logo {
+  width: 120px;
+  padding: 20px 20px 0 0;
+  margin: 0 auto;
+}
+
 .hide {
   display: none;
 }
 
-/* Typography */
-h1, h2, .day_header {
+h1, h2, h3, h4, .day_header {
   font-weight: 300;
   color: #cbd5e0;
-  text-transform: uppercase;
+  margin: 1.5rem 0 1rem 0;
+}
+
+ion-icon {
+  vertical-align: -10%;
 }
 
 h1, .day_header {
   font-size: 2.5rem;
-  margin: 1.5rem 0 1rem 0;
 }
 
 h2 {
-  font-size: 1.5rem;
-  margin: 2rem 0;
+  font-size: 2rem;
 }
 
-/* Layout */
+h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  border-top: 2px solid #e9d8fd;
+  padding: 15px 0px 13px 0px;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
 .container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.sticky {
-  top: 80px;
-  position: -webkit-sticky;
-  position: sticky;
-}
-
 .day_header {
   width: 100%;
   padding: 10px 0 10px 0px;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .sheet > .day_header:nth-child(2) {
@@ -2299,19 +2300,13 @@ h2 {
   border-radius: 5px;
 }
 
-.sheet, .quick_add_form {
+.sheet, .filters_form, .quick_add_form {
   margin: 0px 0px 10px 0px;
   padding: 30px 40px 30px 40px;
 }
 
-.quick_add_form {
+.filters_form, .quick_add_form {
   padding: 30px 20px 30px 20px;
-}
-
-.filters_form {
-  padding: 0px 0px 40px 0px;
-  margin: 20px 0px 50px 0px;
-  border-bottom: 1px solid #cbd5e0;
 }
 
 .table {
@@ -2345,12 +2340,13 @@ h2 {
   width: 10px;
 }
 .table_col.task_col_graph div {
-  width: 18px;
-  height: 18px;
-  border-radius: 50px;
-  margin-left: 0px;
+  display: block;
+  width: 5px;
+  height: 38px;
+  border-radius: 5px;
+  margin-left: -5px;
   margin-right: 5px;
-  border: 2px solid white;
+  border: 1px solid white;
   vertical-align: baseline;
 }
 .table_col.task_col_graph div.heat_0 {
@@ -2416,8 +2412,7 @@ h2 {
 .icon_svg img {
   width: 15px;
   height: auto;
-  -webkit-filter: invert(40%) sepia(50%) hue-rotate(226deg) saturate(900%);
-          filter: invert(40%) sepia(50%) hue-rotate(226deg) saturate(900%);
+  filter: invert(40%) sepia(50%) hue-rotate(226deg) saturate(900%);
 }
 .icon_svg a {
   transition: color 0.5s, border-radius 0.5s, background-color 0.5s;
@@ -2439,28 +2434,20 @@ h2 {
   padding: 9px 9px 8px 13px;
 }
 
-ion-icon {
-  vertical-align: -10%;
-}
-
-/* Floating bar where the tally goes */
 #floating_bar {
-  display: none;
   text-align: center;
-  background-color: rgba(247, 250, 252, 0.5);
-  color: #718096;
+  background-color: #44337a;
+  color: #d6bcfa;
+  border-bottom: 1px solid #e9d8fd;
   padding: 20px 0px;
-  font-size: 1.25rem;
-  text-align: right;
+  font-size: 2rem;
   z-index: 2;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  pointer-events: none;
 }
 
-/* Modal custom styles */
 .modal {
   padding: 20px 20px 40px 20px;
   background-color: #fdfaff;
@@ -2474,7 +2461,6 @@ ion-icon {
   z-index: 2 !important;
 }
 
-/* DateRangePicker custom styles */
 .drp-buttons span {
   display: none;
 }
@@ -2482,34 +2468,17 @@ ion-icon {
   width: 42%;
   padding: 2px 9px;
   margin: 2px 9px;
-  font-weight: inherit !important;
 }
 .drp-buttons .cancelBtn {
-  background-color: #edf2f7;
+  background-color: #cbd5e0;
 }
 
-.daterangepicker select.hourselect,
-.daterangepicker select.minuteselect,
-.daterangepicker select.secondselect,
-.daterangepicker select.ampmselect {
-  outline: 0;
-  border: 1px solid #cbd5e0;
-  padding: 5px 10px;
-  box-shadow: none !important;
-  -webkit-appearance: none;
-  background-color: #fff;
-  width: auto;
-}
-
-/* form elements */
 label {
   padding: 0 0 0 5px;
   color: #a0aec0;
   font-weight: 400;
   text-transform: uppercase;
   font-size: 0.5rem;
-  display: inline-block;
-  min-height: 20px;
 }
 
 input, textarea {
@@ -2519,15 +2488,9 @@ input, textarea {
   border-radius: 3px;
   height: 35px;
   vertical-align: top;
-  color: #4a5568;
 }
 input:not([type=checkbox]):not([type=radio]), textarea:not([type=checkbox]):not([type=radio]) {
   -webkit-appearance: none;
-}
-input:focus, textarea:focus {
-  outline: 0;
-  border: 1px solid #a0aec0;
-  color: #1a202c;
 }
 
 textarea {
@@ -2563,8 +2526,7 @@ button {
   border-radius: 3px;
   color: #b794f4;
 }
-button:hover, button:focus {
-  outline: 0;
+button:hover {
   background-color: #faf5ff;
   border: 1px solid #b794f4;
   color: #9f7aea;
@@ -2573,20 +2535,15 @@ button:hover, button:focus {
 
 .is-alert {
   background-color: #e53e3e;
-  border: 0;
-  color: #fff5f5;
 }
 .is-alert:hover {
-  background-color: #f56565;
-  border: 0;
-  color: #fff;
+  background-color: #c53030;
 }
 
 .highlight {
   background-color: #fffff0;
 }
 
-/* Pagination */
 .pagination {
   margin: 20px 0 40px 0px;
   display: flex;
@@ -2594,29 +2551,13 @@ button:hover, button:focus {
 .pagination a {
   padding: 10px 15px 9px 15px;
   background-color: #fff;
-  -webkit-filter: drop-shadow(0px 0px 2px rgba(214, 188, 250, 0.6));
-          filter: drop-shadow(0px 0px 2px rgba(214, 188, 250, 0.6));
+  filter: drop-shadow(0px 0px 2px rgba(214, 188, 250, 0.6));
 }
 .pagination a.page_current {
   color: #9f7aea;
 }
 
-@media (max-width: 1200px) {
-  .task_project {
-    white-space: normal;
-  }
-
-  .table_col.task_col_1 {
-    width: 15%;
-  }
-  .table_col.task_col_2 {
-    width: 20%;
-  }
-  .table_col.task_col_3 {
-    width: 50%;
-  }
-}
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .logo {
     max-width: 120px;
     margin: 0 auto;
@@ -2629,9 +2570,9 @@ button:hover, button:focus {
     width: 20%;
   }
   .table_col.task_col_3 {
-    width: 45%;
+    width: 55%;
   }
   .table_col .icon_svg a {
-    padding: 5px 6px 5px 6px;
+    padding: 8px 9px 8px 9px;
   }
 }

@@ -3,35 +3,29 @@
 
 $link: $purple-300
 $link-hover: $purple-400
-
-//$gap: 46px
 $column-gap: 10px
-// $variable-columns: true !default
-// $widescreen-enabled: true
-// @import "bulmacolumns.sass"
 $family-sans-serif: Heebo, sans-serif
- 
+
 @import "_bulma.sass"
 
-// https://tailwindcss.com/docs/customizing-colors#default-color-palette
+/* Main styles */
+
 html
-  background: $gray-200
+  background: $gray-300
   padding: 0
   margin: 0
-  font-size: 16px
   overflow: -moz-scrollbars-vertical
   overflow-y: scroll // these fix the modal issue where it removes scrollbar and bungs layout
   text-rendering: optimizeLegibility
   //text-edge: cap alphabetic // these two don't actually work just yet.
   //leading-trim: both // these two don't actually work just yet.
 body
-  // background-color: #f2f0f5
   font-family: $family-sans-serif
   color: $gray-800
   font-size: .8rem
   line-height: 1.2rem
   font-weight: 400
-  margin-top: 80px
+  margin-top: 30px
 textarea, input, button, select
   font-size: inherit
   font-family: inherit // FF needs these
@@ -46,61 +40,69 @@ img
   width: 100%
   height: auto
 
-.logo 
-  width: 120px
-  padding: 20px 20px 0 0
-  margin: 0 auto
 .hide
   display: none
-h1,h2,h3,h4, .day_header
+
+/* Typography */
+
+h1,h2, .day_header
   font-weight: 300
   color: $gray-400
-  margin: 1.5rem 0 1rem 0
-ion-icon
-  vertical-align: -10%
+  text-transform: uppercase
 
 h1, .day_header
   font-size: 2.5rem
+  margin: 1.5rem 0 1rem 0
 h2
-  font-size: 2rem
-h3
   font-size: 1.5rem
-  font-weight: 400
-  border-top: 2px solid $purple-200
-  padding: 15px 0px 13px 0px
-h4
-  font-size: 1.25rem
+  margin: 2rem 0
+
+/* Layout */
+
 .container
   max-width: 1400px
   margin: 0 auto
   padding: 0 20px
+
+.sticky
+  top: 80px
+  position: sticky
+
 .day_header
   width: 100%
   padding: 10px 0 10px 0px
   cursor: pointer
-  text-transform: uppercase
+
 .sheet > .day_header:nth-child(2)
   padding-top: 0
+
 .box
   background-color: $white
-  // border: 1px solid $purple-200
-  border-radius: 5px
-.box_alt
-  background-color: lighten($gray-200, 2%)
-  //border: 1px solid $purple-200
   border-radius: 5px
 
-.sheet, .filters_form, .quick_add_form
+.box_alt
+  background-color: lighten($gray-200, 2%)
+  border-radius: 5px
+
+.sheet, .quick_add_form
   margin: 0px 0px 10px 0px
   padding: 30px 40px 30px 40px
-.filters_form, .quick_add_form
+
+.quick_add_form
   padding: 30px 20px 30px 20px
+
+.filters_form
+  padding: 0px 0px 40px 0px
+  margin: 20px 0px 50px 0px
+  border-bottom: 1px solid $gray-400
+
 .table
   display: table
-  //table-layout: fixed
   width: 100%
+
 .table_row
   display: table-row
+
 .table_col
   display: table-cell
   border-top: 1px solid $gray-300
@@ -117,13 +119,12 @@ h4
   &.task_col_graph
     width: 10px
     div
-      display: block
-      width: 5px
-      height: 38px
-      border-radius: 5px
-      margin-left: -5px
+      width: 18px
+      height: 18px
+      border-radius: 50px
+      margin-left: 0px
       margin-right: 5px
-      border: 1px solid white
+      border: 2px solid white
       vertical-align: baseline
       &.heat_0
         background-color: #caefff
@@ -136,34 +137,41 @@ h4
       &.heat_4
         background-color: #ff1d16
 
-
 .task_duration, .task_project, .task_value, .task_client
   font-size: 1.25rem
   font-weight: 500
   margin-left: -.05em // pedantic nudging so the larger text lines up a little nicer with text underneath
+
 .task_description, .task_time, .task_value_source
   color: $gray-500
+
 .task_client
   margin-right: 5px
+
 .task_project
-  // font-weight: 300
   color: $gray-600
   white-space: nowrap
+
 .task_value_currency
   font-size: .75rem
   vertical-align: 6%
   margin-right: 1px
+
 .cell_alignright
   text-align: right
+
 .task_container
   &:nth-of-type(n + 50)
     display: none
+
 .highlighted
   background-color: $purple-100
   .action_icons .icon a
     background: $white
+
 .action_icons
   text-align: right
+
 .icon_svg
   img
     width: 15px
@@ -185,19 +193,29 @@ h4
       border-radius: 10px
     &.modal_update // this icon looks off-centre, so let's correct that.
       padding: 9px 9px 8px 13px
+
+ion-icon
+  vertical-align: -10%
+
+/* Floating bar where the tally goes */
+
 #floating_bar
-  // display: none
+  display: none
   text-align: center
-  background-color: $purple-900
-  color: $purple-300
-  border-bottom: 1px solid $purple-200
+  background-color: rgba($gray-100, .5)
+  color: $gray-600
   padding: 20px 0px
-  font-size: 2rem
+  font-size: 1.25rem
+  text-align: right
   z-index: 2
   position: fixed
   top: 0
   left: 0
   width: 100%
+  pointer-events: none
+
+/* Modal custom styles */
+
 .modal
   padding: 20px 20px 40px 20px
   background-color: lighten($purple-100, 1%)
@@ -206,21 +224,41 @@ h4
     right: 2.5px !important
 .jquery-modal
   z-index: 2 !important
+
+/* DateRangePicker custom styles */
+
 .drp-buttons
-  span 
+  span
     display: none
   button
     width: 42%
     padding: 2px 9px
     margin: 2px 9px
+    font-weight: inherit !important
   .cancelBtn
-    background-color: $gray-400
+    background-color: $gray-200
+.daterangepicker select.hourselect,
+.daterangepicker select.minuteselect,
+.daterangepicker select.secondselect,
+.daterangepicker select.ampmselect
+  outline: 0
+  border: 1px solid $gray-400
+  padding: 5px 10px
+  box-shadow: none !important
+  -webkit-appearance: none
+  background-color: #fff
+  width: auto
+
+/* form elements */
+
 label
   padding: 0 0 0 5px
   color: $gray-500
   font-weight: 400
   text-transform: uppercase
   font-size: .5rem
+  display: inline-block
+  min-height: 20px
 input, textarea
   width: 100%
   padding: 10px 10px
@@ -228,8 +266,13 @@ input, textarea
   border-radius: 3px
   height: 35px
   vertical-align: top
+  color: $gray-700
   &:not([type=checkbox]):not([type=radio])
     -webkit-appearance: none // remove shadow on mobile safari
+  &:focus
+    outline: 0
+    border: 1px solid $gray-500
+    color: $gray-900
 textarea
   max-width: 100%
   max-height: 500px
@@ -254,17 +297,24 @@ button
   border: 1px solid $purple-300
   border-radius: 3px
   color: $purple-400
-  &:hover
+  &:hover, &:focus
+    outline: 0
     background-color: $purple-100
     border: 1px solid $purple-400
     color: $purple-500
     cursor: pointer
 .is-alert
   background-color: $red-600
+  border: 0
+  color: $red-100
   &:hover
-    background-color: $red-700
+    background-color: $red-500
+    border: 0
+    color: $white
 .highlight
   background-color: $yellow-100
+
+/* Pagination */
 
 .pagination
   margin: 20px 0 40px 0px
@@ -276,9 +326,19 @@ button
     filter: drop-shadow(0px 0px 2px rgba($purple-300, .6))
     &.page_current
       color: $purple-500
-@media (max-width: 1200px)
 
-@media (max-width: 1024px)
+@media (max-width: 1200px)
+  .task_project
+    white-space: normal
+  .table_col
+    &.task_col_1
+      width: 15%
+    &.task_col_2
+      width: 20%
+    &.task_col_3
+      width: 50%
+
+@media (max-width: 900px)
   .logo
     max-width: 120px
     margin: 0 auto
@@ -288,7 +348,7 @@ button
     &.task_col_2
       width: 20%
     &.task_col_3
-      width: 55%
+      width: 45%
     .icon_svg
       a
-        padding: 8px 9px 8px 9px
+        padding: 5px 6px 5px 6px
