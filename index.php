@@ -8,6 +8,7 @@ $page_end = 50;
 $current_page = 0;
 $filter_client = "";
 $filter_project = "";
+$skipped = 0;
 $task_number = 0;
 $previous_day = "";
 
@@ -39,7 +40,7 @@ if (isset($_GET['p'])) {
 }
 
 
-if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['Submit'])) {
 	$filter_client = isset($_GET['FilterClient']) ? $_GET['FilterClient'] : '';
 	$filter_project = isset($_GET['FilterProject']) ? $_GET['FilterProject'] : '';
 }
@@ -79,10 +80,7 @@ var project_options = {
 <div class="container">
 	<div class="hide"><div class="logo"><img src="template/images/logo2.png"></div></div>
 	<div class="columns is-multiline">
-		<div class="column is-4 is-12-mobile">
-			<div class="hide">
-				<?= 'Total tasks'.$tasks_total; ?>
-			</div>
+		<div class="column is-12-tablet is-4-desktop">
 			<div class="box_alt quick_add_form">
 				<form method="post" class="columns is-mobile is-multiline is-variable is-1" action="" id="form_add">
 					<div class="column is-6-mobile is-9-tablet">
@@ -118,7 +116,7 @@ var project_options = {
 
 					<input id="add_path" name="Path" value="" type="hidden"/>
 
-					<div class="column is-4">
+					<div class="column is-6-mobile is-6-tablet">
 						<div class="control">
 							<button class="button is-link" type="submit" name="Submit" value="add">Add Task</button>
 						</div>
@@ -128,17 +126,17 @@ var project_options = {
 			<div class="box_alt filters_form">
 				<form class="" method="get">
 					<div class="columns is-mobile is-multiline is-variable is-1">
-						<div class="column is-5-mobile is-6-tablet">
+						<div class="column is-6-mobile is-4-tablet">
 							<div class="control">
 								<input id="filter_client" name="FilterClient" class="input" type="text" value="<?= $filter_client ?>" placeholder="Client" >
 							</div>
 						</div>
-						<div class="column is-5-mobile is-6-tablet">
+						<div class="column is-6-mobile is-4-tablet">
 							<div class="control">
 								<input id="filter_project" name="FilterProject" class="input" type="text" value="<?= $filter_project ?>" placeholder="Project">
 							</div>
 						</div>
-						<div class="column is-2-mobile is-4-tablet">
+						<div class="column is-6-mobile is-4-tablet">
 							<div class="control">
 								<button class="button is-link" type="submit" name="Submit" value="filter">Filter</button>
 							</div>
@@ -147,29 +145,25 @@ var project_options = {
 				</form>
 			</div>
 		</div>
-		<div class="column is-8">
+		<div class="column is-12-tablet is-8-desktop">
 			<div class="box sheet">
 
 				<?php
 				foreach ($array as $task) {
 
-				$task_number ++; // work on pagination
-				if ($task_number < $page_start or $task_number > $page_end) { continue; }
-
 				$task_array = get_task_array($task);
 
-
-				// this is where we can do filtering by client/project and dates.
-				// client, project, client+project would be the first to do
-				// partial matching
-
-				// do a case insensitive match
 				if ($filter_project != "") {
-					if (stristr($task_array['Project'],$filter_project) === false) { continue; }
+					if (stristr($task_array['Project'],$filter_project) === false) { $skipped++; continue; }
 				}
 				if ($filter_client != "") {
-					if (stristr($task_array['Client'],$filter_client) === false) { continue; }
+					if (stristr($task_array['Client'],$filter_client) === false) { $skipped++; continue; }
 				}
+
+				$task_number ++; // work on pagination
+				if ($task_number < $page_start || $task_number > $page_end) { continue; }
+
+
 				if ($previous_day != format_date($task_array['Date'],'Ymd')) {
 					echo '<div class="day_header" data-date="'.format_date($task_array['Date'],'Ymd').'">'.format_date($task_array['Date'],'D d M Y').'</div>';
 				}
@@ -208,6 +202,7 @@ var project_options = {
 						<span class="task_description"><?= $task_array['Description'] ?></span>
 					</div>
 					<div class="table_col  task_col_4 action_icons">
+						<a href="/?FilterClient=<?= $task_array['Client'] ?>&FilterProject=<?= $task_array['Project'] ?>&Submit=filter">~</a>
 						<span class="icon_svg">
 							<a href="#" class="modal_update">
 								<img src="template/ionicons-5.1.2.designerpack/create-outline.svg" />
@@ -237,17 +232,21 @@ var project_options = {
 		</div><!-- end table -->
 	<?php 
 	$total_pages = count($array) / $page_limit;
+	$query = "";
+	if ($filter_client || $filter_project) {
+		$query = "&FilterClient=".$filter_client."&FilterProject=".$filter_project."&Submit=filter";
+	}
 	echo '<div class="pagination">';
 	for ($i=0; $i < $total_pages; $i++) { 
 		if ($i == ($current_page)) {
-			echo '<a href="?p='.$i.'" class="page_current">'.($i+1).'</a>';
+			echo '<a href="?p='.$i.$query.'" class="page_current">'.($i+1).'</a>';
 		}
 		else {
-			echo '<a href="?p='.$i.'">'.($i+1).'</a>';
+			echo '<a href="?p='.$i.$query.'">'.($i+1).'</a>';
 		}
 	}
 	echo '</div>';
-	echo '<div class="pagespeed">Churned out in '.($pagespeed_after-$pagespeed_before). " secs.</div>\n";
+	echo '<div class="pagespeed">Churned out in '.($pagespeed_after-$pagespeed_before). " secs. Total tasks: ".$tasks_total."</div>\n";
 	?>
 		</div>
 	</div><!-- end sheet -->

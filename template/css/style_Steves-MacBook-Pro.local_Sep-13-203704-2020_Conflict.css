@@ -106,7 +106,7 @@ th:not([align]) {
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
-  padding: 10px;
+  padding: 5px;
 }
 .columns.is-mobile > .column.is-narrow {
   flex: none;
@@ -1249,15 +1249,15 @@ th:not([align]) {
 }
 
 .columns {
-  margin-left: -10px;
-  margin-right: -10px;
-  margin-top: -10px;
+  margin-left: -5px;
+  margin-right: -5px;
+  margin-top: -5px;
 }
 .columns:last-child {
-  margin-bottom: -10px;
+  margin-bottom: -5px;
 }
 .columns:not(:last-child) {
-  margin-bottom: calc(1.5rem - 10px);
+  margin-bottom: calc(1.5rem - 5px);
 }
 .columns.is-centered {
   justify-content: center;
@@ -2197,10 +2197,9 @@ th:not([align]) {
 }
 
 html {
-  background: #edf2f7;
+  background: linear-gradient(180deg, #1a202c 0%, #1a202c 200px, #f2f0f5 200px);
   padding: 0;
   margin: 0;
-  font-size: 16px;
   overflow: -moz-scrollbars-vertical;
   overflow-y: scroll;
   text-rendering: optimizeLegibility;
@@ -2209,15 +2208,15 @@ html {
 body {
   font-family: Heebo, sans-serif;
   color: #2d3748;
-  font-size: 0.8rem;
-  line-height: 1.2rem;
+  line-height: 1.6em;
+  font-size: 0.75em;
   font-weight: 400;
   margin-top: 80px;
 }
 
 textarea, input, button, select {
-  font-size: inherit;
   font-family: inherit;
+  font-size: inherit;
 }
 
 a {
@@ -2246,9 +2245,9 @@ img {
 }
 
 h1, h2, h3, h4, .day_header {
+  line-height: 1.6em;
   font-weight: 300;
   color: #cbd5e0;
-  margin: 1.5rem 0 1rem 0;
 }
 
 ion-icon {
@@ -2256,22 +2255,22 @@ ion-icon {
 }
 
 h1, .day_header {
-  font-size: 2.5rem;
+  font-size: 300%;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 250%;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 200%;
   font-weight: 400;
   border-top: 2px solid #e9d8fd;
   padding: 15px 0px 13px 0px;
 }
 
 h4 {
-  font-size: 1.25rem;
+  font-size: 150%;
 }
 
 .container {
@@ -2293,21 +2292,19 @@ h4 {
 
 .box {
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 2px;
+  outline: 1px solid #e9d8fd;
 }
 
 .box_alt {
-  background-color: #f4f7fa;
-  border-radius: 5px;
+  background-color: #fdfaff;
+  outline: 1px solid #e9d8fd;
+  border-radius: 2px;
 }
 
 .sheet, .filters_form, .quick_add_form {
   margin: 0px 0px 10px 0px;
-  padding: 30px 40px 30px 40px;
-}
-
-.filters_form, .quick_add_form {
-  padding: 30px 20px 30px 20px;
+  padding: 30px 30px 30px 30px;
 }
 
 .table {
@@ -2341,14 +2338,14 @@ h4 {
   width: 10px;
 }
 .table_col.task_col_graph div {
-  display: block;
+  display: inline-block;
   width: 5px;
-  height: 38px;
+  height: 50px;
   border-radius: 5px;
   margin-left: -5px;
   margin-right: 5px;
   border: 1px solid white;
-  vertical-align: baseline;
+  vertical-align: middle;
 }
 .table_col.task_col_graph div.heat_0 {
   background-color: #caefff;
@@ -2367,7 +2364,7 @@ h4 {
 }
 
 .task_duration, .task_project, .task_value, .task_client {
-  font-size: 1.25rem;
+  font-size: 150%;
   font-weight: 500;
   margin-left: -0.05em;
 }
@@ -2386,7 +2383,7 @@ h4 {
 }
 
 .task_value_currency {
-  font-size: 0.75rem;
+  font-size: 75%;
   vertical-align: 6%;
   margin-right: 1px;
 }
@@ -2441,7 +2438,7 @@ h4 {
   color: #d6bcfa;
   border-bottom: 1px solid #e9d8fd;
   padding: 20px 0px;
-  font-size: 2rem;
+  font-size: 150%;
   z-index: 2;
   position: fixed;
   top: 0;
@@ -2479,7 +2476,7 @@ label {
   color: #a0aec0;
   font-weight: 400;
   text-transform: uppercase;
-  font-size: 0.5rem;
+  font-size: 75%;
 }
 
 input, textarea {
@@ -2512,6 +2509,7 @@ textarea {
 
 select {
   border: 1px solid #cbd5e0;
+  font-size: 100%;
   border-radius: 3px;
   background-color: transparent;
 }

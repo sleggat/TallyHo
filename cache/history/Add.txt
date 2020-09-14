@@ -1,4 +1,16 @@
-2020-09-10 22:45:03
+2020-09-13 23:37:38
+# NEW RECORD
+Date: '2020-09-13 11:37 PM'
+DateUpdated: '2020-09-13 11:37 PM'
+Duration: 15
+Description: "Wee!"
+Client: CampingTaiwan
+Project: Website Design
+
+# OLD RECORD
+
+----
+2020-09-10 22:45:03
 # NEW RECORD
 Date: '2020-09-10 10:45 PM'
 DateUpdated: '2020-09-10 10:45 PM'
