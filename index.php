@@ -189,7 +189,7 @@ var project_options = {
 					data-client="<?= $task_array['Client'] ?>" 
 					data-project="<?= $task_array['Project'] ?>" 
 					data-description="<?= $task_array['Description'] ?>" >
-					<div class="table_col task_col_graph"><div class="heat_<?= timeheat($task_array['Duration']) ?>"></div></div>
+					<div class="table_col task_col_0"><div class="heat_<?= timeheat($task_array['Duration']) ?>"></div></div>
 					<div class="table_col task_col_1">
 						<span class="task_duration"><?= $task_array['Duration'] ?></span> <span>mins</span><br>
 						<span class="task_time"><?= format_time($task_array['Date']) ?></span>
@@ -204,7 +204,11 @@ var project_options = {
 						<span class="task_description"><?= $task_array['Description'] ?></span>
 					</div>
 					<div class="table_col  task_col_4 action_icons">
-						<a href="/?FilterClient=<?= $task_array['Client'] ?>&FilterProject=<?= $task_array['Project'] ?>&Submit=filter">~</a>
+						<span class="icon_svg">
+							<a href="/?FilterClient=<?= $task_array['Client'] ?>&FilterProject=<?= $task_array['Project'] ?>&Submit=filter">
+								<img src="template/ionicons-5.1.2.designerpack/filter-outline.svg" />
+							</a>
+						</span>
 						<span class="icon_svg">
 							<a href="#" class="modal_update">
 								<img src="template/ionicons-5.1.2.designerpack/create-outline.svg" />

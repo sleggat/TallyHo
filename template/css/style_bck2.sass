@@ -11,7 +11,7 @@ $family-sans-serif: Heebo, sans-serif
 /* Main styles */
 
 html
-  background: $gray-200
+  background: $gray-300
   padding: 0
   margin: 0
   overflow: -moz-scrollbars-vertical
@@ -51,7 +51,7 @@ h1,h2, .day_header
   text-transform: uppercase
 
 h1, .day_header
-  font-size: 2.25rem
+  font-size: 2.5rem
   margin: 1.5rem 0 1rem 0
 h2
   font-size: 1.5rem
@@ -92,28 +92,38 @@ h2
   padding: 30px 20px 30px 20px
 
 .filters_form
-  padding: 0px 0px 30px 0px
-  margin: 10px 0px 40px 0px
-  border-bottom: 1px solid $gray-300
+  padding: 0px 0px 40px 0px
+  margin: 20px 0px 50px 0px
+  border-bottom: 1px solid $gray-400
+
+.table
+  display: table
+  width: 100%
 
 .table_row
-  display: flex
-  flex-direction: row
-  flex-grow: 1
+  display: table-row
+
 .table_col
+  display: table-cell
   border-top: 1px solid $gray-300
-  border-: 1px solid $gray-200
   padding: 15px 5px 13px 5px
   vertical-align: top
-  &.task_col_0
-    width: 25px
+  &.task_col_1
+    width: 100px
+  &.task_col_2
+    width: 200px
+  &.task_col_3
+    width: auto
+  &.task_col_4
+    width: 160px
+  &.task_col_graph
+    width: 10px
     div
-      width: 100%
-      height: 1.75rem
+      width: 18px
+      height: 18px
       border-radius: 50px
       margin-left: 0px
       margin-right: 5px
-      margin-top: -5px
       border: 2px solid white
       vertical-align: baseline
       &.heat_0
@@ -126,18 +136,9 @@ h2
         background-color: #ff6a38
       &.heat_4
         background-color: #ff1d16
-  &.task_col_1
-    width: 200px
-  &.task_col_2
-    width: 300px
-  &.task_col_3
-    width: 100%
-  &.task_col_4
-    width: 260px
-  
 
 .task_duration, .task_project, .task_value, .task_client
-  font-size: 1.1rem
+  font-size: 1.25rem
   font-weight: 500
   margin-left: -.05em // pedantic nudging so the larger text lines up a little nicer with text underneath
 
@@ -169,11 +170,11 @@ h2
     background: $white
 
 .action_icons
-  display: flex
-  justify-content: flex-end
+  text-align: right
+
 .icon_svg
   img
-    width: 12px
+    width: 15px
     height: auto
     filter: invert(40%) sepia(50%) hue-rotate(226deg) saturate(900%) // hehe
   a
@@ -181,7 +182,7 @@ h2
     background: $purple-100
     vertical-align: middle
     align: center
-    padding: 5px 6px 4px 6px
+    padding: 10px 11px 7px 11px
     border-radius: 5px
     line-height: 1
     display: inline-block
@@ -191,7 +192,7 @@ h2
       transition: color .2s, border-radius .2s, background-color .2s
       border-radius: 10px
     &.modal_update // this icon looks off-centre, so let's correct that.
-      padding: 5px 5px 4px 7px
+      padding: 9px 9px 8px 13px
 
 ion-icon
   vertical-align: -10%
@@ -329,26 +330,25 @@ button
 @media (max-width: 1200px)
   .task_project
     white-space: normal
+  .table_col
+    &.task_col_1
+      width: 15%
+    &.task_col_2
+      width: 20%
+    &.task_col_3
+      width: 50%
 
-@media (max-width: 800px)
-  body
-    font-size: .7rem
-    line-height: 1.4
-  .container
-    padding: 0 5px
-  .sheet, .quick_add_form
-    margin: 0px 0px 10px 0px
-    padding: 15px 10px 15px 10px
-
-  .quick_add_form
-    padding: 15px 10px 15px 10px
-
-  .filters_form
-    padding: 0px 0px 20px 0px
-    margin: 10px 0px 20px 0px
-  .action_icons
-    max-width: 60px
-    max-height: 60px
-    flex-wrap: wrap
-    //flex-basis: auto
-    gap: 1px
+@media (max-width: 900px)
+  .logo
+    max-width: 120px
+    margin: 0 auto
+  .table_col
+    &.task_col_1
+      width: 15%
+    &.task_col_2
+      width: 20%
+    &.task_col_3
+      width: 45%
+    .icon_svg
+      a
+        padding: 5px 6px 5px 6px
