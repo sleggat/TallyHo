@@ -1,4 +1,4 @@
-Date: '2020-09-15 03:17 PM'
-DateUpdated: '2020-09-15 03:17 PM'
+DateAdded: '2020-09-15 03:15 PM'
+DateUpdated: '2020-09-16 08:57 PM'
 Duration: 15
-Description: "Tidy up logo PDFs and save off PNGs for Scott."
+Description: "Tidy up logo PDFs and save off PNGs for Scott Elliott."

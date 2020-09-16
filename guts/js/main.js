@@ -1,7 +1,7 @@
 $(document).ready(function() {
     initpicker('#form_add');
-    $("#add_client").easyAutocomplete(client_options);
-    $("#add_project").easyAutocomplete(project_options);
+    $(".modal_client").easyAutocomplete(client_options);
+    $(".modal_project").easyAutocomplete(project_options);
 })
 $('.toggle_filters .icon_svg').click(function(event) {
     event.preventDefault();
@@ -42,6 +42,30 @@ $('.modal_duplicate').click(function(event) {
     var project = current.attr("data-project");
     var description = current.attr("data-description");
     $("#modal_update .modal_header").html("Duplicate Task");
+    $("#modal_update .modal_datetime").val(datetime);
+    $("#modal_update .modal_duration").val(duration);
+    $("#modal_update .modal_client").val(client);
+    $("#modal_update .modal_project").val(project);
+    $("#modal_update .modal_description").val(description);
+    $("#modal_update .modal_path").val('');
+    $("#modal_update").modal({
+        fadeDuration: 300,
+        fadeDelay: 0.5
+    });
+    initpicker('#modal_update');
+});
+
+$('.modal_add').click(function(event) {
+    event.preventDefault();
+    var dt = new Date();
+    var client = $('.task_client').first().html();
+    var project = $('.task_project').first().html();
+    var description = $('.task_description').first().html();
+    var datetime = dt.getFullYear() + ("0" + (dt.getMonth() + 1)).slice(-2) + ("0" + dt.getDate()).slice(-2) + ("00" + dt.getHours()).slice(-2) + ("00" + dt.getMinutes()).slice(-2);
+    // it's quite lucky daterangepicker converts this from 2300 to 11:00 PM
+    var duration = 15;
+
+    $("#modal_update .modal_header").html("Add Task");
     $("#modal_update .modal_datetime").val(datetime);
     $("#modal_update .modal_duration").val(duration);
     $("#modal_update .modal_client").val(client);
@@ -118,9 +142,9 @@ function recalculate_costs() {
     total_cost = total_cost.toFixed(2);
     $("#total_cost").text(total_cost);
     if (total_cost == 0) {
-        $("#floating_bar").fadeOut('fast');
+        $("#tally").fadeOut('fast');
     } else {
-        $("#floating_bar").fadeIn('fast');
+        $("#tally").fadeIn('fast');
     }
 }
 $('.day_header').click(function(event) {

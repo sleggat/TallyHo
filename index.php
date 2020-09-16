@@ -74,29 +74,25 @@ var project_options = {
 ?>
 <nav class="nav">
 	<div class="container">
-		<div class="columns">
+		<div class="columns is-mobile">
 			<div class="column is-6">
 				TallyHo!
 			</div>
 			<div class="column is-2">
 				<span class="icon_svg">
-					<a href="#">
+					<a href="#" class="modal_add">
 						<img src="template/ionicons-5.1.2.designerpack/add-outline.svg" />
 					</a>
 				</span>
 			</div>
 			<div class="column is-4">
-				empty
+				<div id="tally">Total $<span id="total_cost"></span></div>
 			</div>
 		</div>
 	</div>
 </nav>
-<div id="floating_bar">
-	<div class="container">
-		<div><ion-icon name="close-circle-outline"></ion-icon> Total $<span id="total_cost"></span></div>
-	</div>
-</div>
-<div class="box_filters hide">
+
+<!-- <div class="box_filters hide">
 	<form class="" method="get">
 		<div class="columns is-mobile is-multiline is-variable is-1">
 			<div class="column is-4-tablet is-offset-0-mobile">
@@ -120,8 +116,8 @@ var project_options = {
 			</div>
 		</div>
 	</form>
-</div>
-<div class="container hide">
+</div> -->
+<!-- <div class="container hide">
 	<div class="box_alt quick_add_form">
 		<form method="post" action="" id="form_add">
 			<div class="columns is-multiline is-variable is-1">
@@ -167,7 +163,7 @@ var project_options = {
 			</div>
 		</form>
 	</div>
-</div>
+</div> -->
 <div class="container">
 	<div class="columns is-multiline">
 		<div class="column is-12-tablet is-12-desktop">
@@ -190,7 +186,7 @@ var project_options = {
 
 
 				if ($previous_day != format_date($task_array['Date'],'Ymd')) {
-					$pretty_date = '<span class="pretty_date">'.format_date($task_array['Date'],'d M Y').'</span> <span class="pretty_day">'.format_date($task_array['Date'],'D').'</span>';
+					$pretty_date = '<span class="pretty_date">'.format_date($task_array['Date'],'j F Y').'</span> <span class="pretty_day">'.format_date($task_array['Date'],'l').'</span>';
 					echo '<div class="day_header" data-date="'.format_date($task_array['Date'],'Ymd').'">'.$pretty_date.'</div>';
 				}
 
@@ -213,9 +209,8 @@ var project_options = {
 					data-client="<?= $task_array['Client'] ?>" 
 					data-project="<?= $task_array['Project'] ?>" 
 					data-description="<?= $task_array['Description'] ?>" >
-					<div class="table_col task_col_0"><div class="heat_<?= timeheat($task_array['Duration']) ?>"></div></div>
-					<div class="table_col task_col_1">
-						<span class="task_duration"><?= $task_array['Duration'] ?></span> <span>mins</span><br>
+					<div class="table_col task_col_1 heat_<?= timeheat($task_array['Duration']) ?>">
+						<span class="task_duration"><?= $task_array['Duration'] ?></span> <span class="task_duration_label">mins</span><br>
 						<span class="task_time"><?= format_time($task_array['Date']) ?></span>
 					</div>
 					<div class="table_col task_col_2">

@@ -93,14 +93,6 @@ th:not([align]) {
 /** Purple **/
 /** Pink **/
 /*! bulma.io v0.9.0 | MIT License | github.com/jgthms/bulma */
-@-webkit-keyframes spinAround {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
 @keyframes spinAround {
   from {
     transform: rotate(0deg);
@@ -1791,8 +1783,6 @@ th:not([align]) {
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
-  min-height: -webkit-min-content;
-  min-height: -moz-min-content;
   min-height: min-content;
 }
 .tile.is-ancestor {
@@ -2335,8 +2325,7 @@ h4 {
 .box {
   background-color: #fff;
   border-radius: 2px;
-  -webkit-filter: drop-shadow(0px 0px 2px rgba(214, 188, 250, 0.6));
-          filter: drop-shadow(0px 0px 2px rgba(214, 188, 250, 0.6));
+  filter: drop-shadow(0px 0px 2px rgba(214, 188, 250, 0.6));
 }
 
 .sheet, .filters_form, .quick_add_form {
@@ -2448,8 +2437,7 @@ h4 {
 .icon_svg img {
   width: 15px;
   height: auto;
-  -webkit-filter: invert(40%) sepia(50%) hue-rotate(226deg) saturate(900%);
-          filter: invert(40%) sepia(50%) hue-rotate(226deg) saturate(900%);
+  filter: invert(40%) sepia(50%) hue-rotate(226deg) saturate(900%);
 }
 .icon_svg a {
   transition: color 0.5s, border-radius 0.5s, background-color 0.5s;
@@ -2579,8 +2567,7 @@ button:hover {
 .pagination a {
   padding: 10px 15px 9px 15px;
   background-color: #fff;
-  -webkit-filter: drop-shadow(0px 0px 2px rgba(214, 188, 250, 0.6));
-          filter: drop-shadow(0px 0px 2px rgba(214, 188, 250, 0.6));
+  filter: drop-shadow(0px 0px 2px rgba(214, 188, 250, 0.6));
 }
 .pagination a.page_current {
   color: #9f7aea;
