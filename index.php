@@ -72,83 +72,106 @@ var project_options = {
 // zip_backup('data/', './backups/'.date("Ymd-His").'.zip')
 
 ?>
+<nav class="nav">
+	<div class="container">
+		<div class="columns">
+			<div class="column is-6">
+				TallyHo!
+			</div>
+			<div class="column is-2">
+				<span class="icon_svg">
+					<a href="#">
+						<img src="template/ionicons-5.1.2.designerpack/add-outline.svg" />
+					</a>
+				</span>
+			</div>
+			<div class="column is-4">
+				empty
+			</div>
+		</div>
+	</div>
+</nav>
 <div id="floating_bar">
 	<div class="container">
 		<div><ion-icon name="close-circle-outline"></ion-icon> Total $<span id="total_cost"></span></div>
 	</div>
 </div>
-<div class="container">
-	<div class="hide"><div class="logo"><img src="template/images/logo2.png"></div></div>
-	<div class="columns is-multiline">
-		<div class="column is-12-tablet is-4-desktop">
-			<div class="sticky">
-				<div class="box_alt quick_add_form">
-					<form method="post" class="columns is-mobile is-multiline is-variable is-1" action="" id="form_add">
-						<div class="column is-6-mobile is-9-tablet">
-							<label class="label">Started</label>
-							<div class="control">
-								<input id="add_datetime" name="DateTime" class="modal_datetime input" type="text" value="<?= date('Y-m-d h:i A') ?>" required>
-							</div>
-						</div>
-						<div class="column is-6-mobile is-3-tablet">
-							<label class="label">Duration</label>
-							<div class="control">
-								<input id="add_duration" name="Duration" class="input" type="text" min="5" value="15" required>
-							</div>
-						</div>
-						<div class="column is-6-mobile">
-							<label class="label">Client</label>
-							<div class="control">
-								<input id="add_client" name="Client" class="input" type="text" value="<?= get_task_array($array[0])["Client"] ?>" required>
-							</div>
-						</div>
-						<div class="column is-6-mobile">
-							<label class="label">Project</label>
-							<div class="control">
-								<input id="add_project" name="Project" class="input" type="text" value="<?= get_task_array($array[0])["Project"] ?>" required>
-							</div>
-						</div>
-						<div class="column is-12">
-							<label class="label">Description</label>
-							<div class="control">
-								<textarea id="add_description" name="Description" class="textarea" type="text" value="" oninput="auto_grow(this)"></textarea>
-							</div>
-						</div>
-
-						<input id="add_path" name="Path" value="" type="hidden"/>
-
-						<div class="column is-6-mobile is-6-tablet">
-							<div class="control">
-								<button class="button is-link" type="submit" name="Submit" value="add">Add Task</button>
-							</div>
-						</div>
-					</form>
+<div class="box_filters hide">
+	<form class="" method="get">
+		<div class="columns is-mobile is-multiline is-variable is-1">
+			<div class="column is-4-tablet is-offset-0-mobile">
+				<div class="control">
+					<input id="filter_client" name="FilterClient" class="input" type="text" value="<?= $filter_client ?>" placeholder="Client" >
+				</div>
+			</div>
+			<div class="column is-4-tablet">
+				<div class="control">
+					<input id="filter_project" name="FilterProject" class="input" type="text" value="<?= $filter_project ?>" placeholder="Project">
+				</div>
+			</div>
+			<div class="column is-4-tablet">
+				<div class="control">
+					<button class="button is-link" type="submit" name="Submit" value="filter">
+						<span class="icon_svg">
+							<img src="template/ionicons-5.1.2.designerpack/filter-outline.svg" />
+						</span>
+					</button>
 				</div>
 			</div>
 		</div>
-		<div class="column is-12-tablet is-8-desktop">
-			<div class="box sheet">
-				<div class="filters_form">
-					<form class="" method="get">
-						<div class="columns is-mobile is-multiline is-variable is-1">
-							<div class="column is-offset-6-tablet is-2-tablet is-offset-0-mobile">
-								<div class="control">
-									<input id="filter_client" name="FilterClient" class="input" type="text" value="<?= $filter_client ?>" placeholder="Client" >
-								</div>
-							</div>
-							<div class="column is-2-tablet">
-								<div class="control">
-									<input id="filter_project" name="FilterProject" class="input" type="text" value="<?= $filter_project ?>" placeholder="Project">
-								</div>
-							</div>
-							<div class="column is-2-tablet">
-								<div class="control">
-									<button class="button is-link" type="submit" name="Submit" value="filter">Filter</button>
-								</div>
-							</div>
-						</div>
-					</form>
+	</form>
+</div>
+<div class="container hide">
+	<div class="box_alt quick_add_form">
+		<form method="post" action="" id="form_add">
+			<div class="columns is-multiline is-variable is-1">
+				<div class="column is-3">
+					<label class="label">Started</label>
+					<div class="control">
+						<input id="add_datetime" name="DateTime" class="modal_datetime input" type="text" value="<?= date('Y-m-d h:i A') ?>" required>
+					</div>
 				</div>
+				<div class="column is-1">
+					<label class="label">Duration</label>
+					<div class="control">
+						<input id="add_duration" name="Duration" class="input" type="text" min="5" value="15" required>
+					</div>
+				</div>
+				<div class="column is-4">
+					<label class="label">Client</label>
+					<div class="control">
+						<input id="add_client" name="Client" class="input" type="text" value="<?= get_task_array($array[0])["Client"] ?>" required>
+					</div>
+				</div>
+				<div class="column is-4">
+					<label class="label">Project</label>
+					<div class="control">
+						<input id="add_project" name="Project" class="input" type="text" value="<?= get_task_array($array[0])["Project"] ?>" required>
+					</div>
+				</div>
+				<div class="column is-10">
+					<label class="label">Description</label>
+					<div class="control">
+						<textarea id="add_description" name="Description" class="textarea" type="text" value="" oninput="auto_grow(this)"></textarea>
+					</div>
+				</div>
+
+				<input id="add_path" name="Path" value="" type="hidden"/>
+
+				<div class="column is-2">
+					<label class="label">&nbsp;</label>
+					<div class="control">
+						<button class="button is-link" type="submit" name="Submit" value="add">Add Task</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<div class="container">
+	<div class="columns is-multiline">
+		<div class="column is-12-tablet is-12-desktop">
+			<div class="box_sheet">
 
 				<?php
 				foreach ($array as $task) {
@@ -167,7 +190,8 @@ var project_options = {
 
 
 				if ($previous_day != format_date($task_array['Date'],'Ymd')) {
-					echo '<div class="day_header" data-date="'.format_date($task_array['Date'],'Ymd').'">'.format_date($task_array['Date'],'D d M Y').'</div>';
+					$pretty_date = '<span class="pretty_date">'.format_date($task_array['Date'],'d M Y').'</span> <span class="pretty_day">'.format_date($task_array['Date'],'D').'</span>';
+					echo '<div class="day_header" data-date="'.format_date($task_array['Date'],'Ymd').'">'.$pretty_date.'</div>';
 				}
 
 				if ($task_array['Path'] == $newname) {
@@ -206,7 +230,7 @@ var project_options = {
 					<div class="table_col  task_col_4 action_icons">
 						<span class="icon_svg">
 							<a href="/?FilterClient=<?= $task_array['Client'] ?>&FilterProject=<?= $task_array['Project'] ?>&Submit=filter">
-								<img src="template/ionicons-5.1.2.designerpack/filter-outline.svg" />
+								<img src="template/ionicons-5.1.2.designerpack/skull-outline.svg" />
 							</a>
 						</span>
 						<span class="icon_svg">
