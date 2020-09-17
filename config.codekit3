@@ -16679,6 +16679,14 @@
 		"oA": 0,
 		"oAP": "/tools/import_tasks.php",
 		"oF": 0
+		},
+	"/tools/kimai-export.csv": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tools/kimai-export.csv",
+		"oF": 0
 		}
 	},
 "hooks": [
