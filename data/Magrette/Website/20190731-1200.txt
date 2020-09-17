@@ -1,4 +1,0 @@
-DateAdded: '2019-07-31 12:00 PM'
-DateUpdated: '2019-07-31 12:00 PM'
-Duration: 30
-Description: 'Emailing about CDN and other minor stuff'

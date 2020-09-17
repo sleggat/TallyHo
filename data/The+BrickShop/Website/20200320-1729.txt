@@ -1,4 +1,0 @@
-DateAdded: '2020-03-20 05:29 PM'
-DateUpdated: '2020-03-20 05:29 PM'
-Duration: 15
-Description: 'Setting up website'

@@ -1,4 +1,0 @@
-DateAdded: '2019-11-04 09:39 PM'
-DateUpdated: '2019-11-04 09:39 PM'
-Duration: 30
-Description: 'A few more things for FB Pixel.. (product/ addtocart)'

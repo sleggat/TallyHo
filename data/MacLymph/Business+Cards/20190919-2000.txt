@@ -1,4 +1,0 @@
-DateAdded: '2019-09-19 08:00 PM'
-DateUpdated: '2019-09-19 08:00 PM'
-Duration: 15
-Description: 'Finished up card and sent through'

@@ -1,4 +1,0 @@
-DateAdded: '2020-06-25 12:30 AM'
-DateUpdated: '2020-06-25 12:30 AM'
-Duration: 60
-Description: 'Add Migrante page and to homepage'

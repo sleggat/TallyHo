@@ -1,4 +1,0 @@
-DateAdded: '2019-09-09 11:00 PM'
-DateUpdated: '2019-09-09 11:00 PM'
-Duration: 75
-Description: 'Finishing up some final stuff with Bubba including adding Bad News to sleeve and insert'

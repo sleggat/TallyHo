@@ -1,4 +1,0 @@
-DateAdded: '2020-07-29 07:24 PM'
-DateUpdated: '2020-07-29 07:24 PM'
-Duration: 45
-Description: 'Add photos to blog posts, add shows to homepage. Update latest single on homepage.'

@@ -1,4 +1,0 @@
-DateAdded: '2019-12-03 12:08 PM'
-DateUpdated: '2019-12-03 12:08 PM'
-Duration: 30
-Description: 'Prepare issue 01 (the second one)'

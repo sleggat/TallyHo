@@ -1,4 +1,0 @@
-DateAdded: '2020-05-25 08:24 PM'
-DateUpdated: '2020-05-25 08:24 PM'
-Duration: 10
-Description: 'Quick mockup of WAKA with white dial'

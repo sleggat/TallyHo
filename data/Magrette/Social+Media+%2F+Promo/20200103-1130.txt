@@ -1,4 +1,0 @@
-DateAdded: '2020-01-03 11:30 AM'
-DateUpdated: '2020-01-03 11:30 AM'
-Duration: 15
-Description: 'Sent Newsletter for Kaha.'

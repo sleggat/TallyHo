@@ -1,4 +1,0 @@
-DateAdded: '2020-03-17 09:21 PM'
-DateUpdated: '2020-03-17 09:21 PM'
-Duration: 10
-Description: 'Updated booking and fixed caching (time wasn\'t checked correctly)'

@@ -1,4 +1,0 @@
-DateAdded: '2020-03-08 03:45 PM'
-DateUpdated: '2020-03-08 03:45 PM'
-Duration: 60
-Description: 'Uploaded and testing on beta.magrette.com'

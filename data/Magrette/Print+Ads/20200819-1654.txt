@@ -1,4 +1,0 @@
-DateAdded: '2020-08-19 04:54 PM'
-DateUpdated: '2020-08-19 04:54 PM'
-Duration: 45
-Description: 'Create a mockup of the DLE for a 10% discount.'

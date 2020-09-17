@@ -1,4 +1,0 @@
-DateAdded: '2020-06-13 10:36 AM'
-DateUpdated: '2020-06-13 10:36 AM'
-Duration: 20
-Description: 'Creating the galaxy 1.5 course and updating website'

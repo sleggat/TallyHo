@@ -1,4 +1,0 @@
-DateAdded: '2020-08-11 02:30 PM'
-DateUpdated: '2020-08-11 02:30 PM'
-Duration: 20
-Description: 'Add 3 new wallpapers'

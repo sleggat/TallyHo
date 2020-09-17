@@ -1,4 +1,0 @@
-DateAdded: '2020-05-26 07:47 PM'
-DateUpdated: '2020-05-26 07:47 PM'
-Duration: 20
-Description: 'Send email and update the Welcome email'

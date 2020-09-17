@@ -1,4 +1,0 @@
-DateAdded: '2020-07-02 06:23 PM'
-DateUpdated: '2020-07-02 06:23 PM'
-Duration: 60
-Description: 'Add PDFs - finished and uploaded (pending Grant\'s feedback)'

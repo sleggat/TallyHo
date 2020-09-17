@@ -1,4 +1,0 @@
-DateAdded: '2019-12-17 07:43 PM'
-DateUpdated: '2019-12-17 07:43 PM'
-Duration: 45
-Description: 'Prepare and send out issue 02 (the third one)'

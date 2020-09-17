@@ -75,10 +75,10 @@ var project_options = {
 <nav class="nav">
 	<div class="container">
 		<div class="columns is-mobile">
-			<div class="column is-6">
-				TallyHo!
-			</div>
 			<div class="column is-2">
+				<img src="template/images/logo.png" alt="TallyHo!" class="logo">
+			</div>
+			<div class="column is-offset-5 is-1">
 				<span class="icon_svg">
 					<a href="#" class="modal_add">
 						<img src="template/ionicons-5.1.2.designerpack/add-outline.svg" />
@@ -117,57 +117,12 @@ var project_options = {
 		</div>
 	</form>
 </div> -->
-<!-- <div class="container hide">
-	<div class="box_alt quick_add_form">
-		<form method="post" action="" id="form_add">
-			<div class="columns is-multiline is-variable is-1">
-				<div class="column is-3">
-					<label class="label">Started</label>
-					<div class="control">
-						<input id="add_datetime" name="DateTime" class="modal_datetime input" type="text" value="<?= date('Y-m-d h:i A') ?>" required>
-					</div>
-				</div>
-				<div class="column is-1">
-					<label class="label">Duration</label>
-					<div class="control">
-						<input id="add_duration" name="Duration" class="input" type="text" min="5" value="15" required>
-					</div>
-				</div>
-				<div class="column is-4">
-					<label class="label">Client</label>
-					<div class="control">
-						<input id="add_client" name="Client" class="input" type="text" value="<?= get_task_array($array[0])["Client"] ?>" required>
-					</div>
-				</div>
-				<div class="column is-4">
-					<label class="label">Project</label>
-					<div class="control">
-						<input id="add_project" name="Project" class="input" type="text" value="<?= get_task_array($array[0])["Project"] ?>" required>
-					</div>
-				</div>
-				<div class="column is-10">
-					<label class="label">Description</label>
-					<div class="control">
-						<textarea id="add_description" name="Description" class="textarea" type="text" value="" oninput="auto_grow(this)"></textarea>
-					</div>
-				</div>
 
-				<input id="add_path" name="Path" value="" type="hidden"/>
-
-				<div class="column is-2">
-					<label class="label">&nbsp;</label>
-					<div class="control">
-						<button class="button is-link" type="submit" name="Submit" value="add">Add Task</button>
-					</div>
-				</div>
-			</div>
-		</form>
-	</div>
-</div> -->
 <div class="container">
 	<div class="columns is-multiline">
 		<div class="column is-12-tablet is-12-desktop">
 			<div class="box_sheet">
+				<div class="page_number">Page <?= $current_page+1 ?></div>
 
 				<?php
 				foreach ($array as $task) {
@@ -186,7 +141,7 @@ var project_options = {
 
 
 				if ($previous_day != format_date($task_array['Date'],'Ymd')) {
-					$pretty_date = '<span class="pretty_date">'.format_date($task_array['Date'],'j F Y').'</span> <span class="pretty_day">'.format_date($task_array['Date'],'l').'</span>';
+					$pretty_date = '<span class="pretty_date">'.format_date($task_array['Date'],'j M Y').'</span> <span class="pretty_day">'.format_date($task_array['Date'],'l').'</span>';
 					echo '<div class="day_header" data-date="'.format_date($task_array['Date'],'Ymd').'">'.$pretty_date.'</div>';
 				}
 

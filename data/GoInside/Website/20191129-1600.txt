@@ -1,4 +1,0 @@
-DateAdded: '2019-11-29 04:00 PM'
-DateUpdated: '2019-11-29 04:00 PM'
-Duration: 120
-Description: 'More faffing about'

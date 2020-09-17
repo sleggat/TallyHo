@@ -1,4 +1,0 @@
-DateAdded: '2020-09-07 03:16 PM'
-DateUpdated: '2020-09-07 03:16 PM'
-Duration: 45
-Description: 'Changed out Press photos, updated plugins/WP .. made photos square, added a download link'

@@ -1,4 +1,0 @@
-DateAdded: '2020-08-15 05:12 PM'
-DateUpdated: '2020-08-15 05:12 PM'
-Duration: 5
-Description: 'Emailed Jay about Insta shoppable updates'

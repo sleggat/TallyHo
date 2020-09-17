@@ -1,4 +1,0 @@
-DateAdded: '2020-02-10 04:34 PM'
-DateUpdated: '2020-02-10 04:34 PM'
-Duration: 60
-Description: 'Added GA tracking to wallpaper downloads'

@@ -1,4 +1,0 @@
-DateAdded: '2020-03-02 08:13 PM'
-DateUpdated: '2020-03-02 08:13 PM'
-Duration: 45
-Description: 'Work work on migrating Shopify to newer API'

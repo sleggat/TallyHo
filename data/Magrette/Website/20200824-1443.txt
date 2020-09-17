@@ -1,4 +1,0 @@
-DateAdded: '2020-08-24 02:43 PM'
-DateUpdated: '2020-08-24 02:43 PM'
-Duration: 30
-Description: 'Uploaded tweaked site onto beta.magrette.com'

@@ -1,4 +1,0 @@
-DateAdded: '2019-10-18 12:38 PM'
-DateUpdated: '2019-10-18 12:38 PM'
-Duration: 135
-Description: 'Update logos and bylines (images and main text) on website. Also resolved SSL error which stopped FB finding images (had to reinstall SSL, including CA Bundle)'

@@ -1,4 +1,0 @@
-DateAdded: '2020-08-19 11:34 AM'
-DateUpdated: '2020-08-19 11:34 AM'
-Duration: 30
-Description: 'Adjustments to Insta shoppable products'

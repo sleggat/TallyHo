@@ -1,4 +1,0 @@
-DateAdded: '2020-01-13 12:13 PM'
-DateUpdated: '2020-01-13 12:13 PM'
-Duration: 15
-Description: 'Uploaded and tested new booking schedule. Sent out email.'

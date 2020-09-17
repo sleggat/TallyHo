@@ -1,4 +1,0 @@
-DateAdded: '2020-06-25 10:51 AM'
-DateUpdated: '2020-06-25 10:51 AM'
-Duration: 15
-Description: 'Mockup of the new byline (tricolour)'

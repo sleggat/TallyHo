@@ -1,4 +1,0 @@
-DateAdded: '2020-02-11 10:29 PM'
-DateUpdated: '2020-02-11 10:29 PM'
-Duration: 90
-Description: 'After looking around at Automatic Discounts and seeing its limitations I instead Added % discount is and css to Product Page, using Compare As. Free Shipping has also been set up (in Shipping admin)  for those 4 Belmoto products'

@@ -1,4 +1,0 @@
-DateAdded: '2020-03-28 01:58 PM'
-DateUpdated: '2020-03-28 01:58 PM'
-Duration: 45
-Description: 'Work on plan/ideas for website'

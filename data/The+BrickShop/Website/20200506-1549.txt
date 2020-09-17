@@ -1,4 +1,0 @@
-DateAdded: '2020-05-06 03:49 PM'
-DateUpdated: '2020-05-06 03:49 PM'
-Duration: 45
-Description: 'Changes to css, making it work on mobile'

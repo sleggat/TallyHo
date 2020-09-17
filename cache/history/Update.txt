@@ -1,4 +1,60 @@
-2020-09-16 20:57:59
+2020-09-16 21:13:38
+# NEW RECORD
+DateAdded: '2020-09-16 09:15 PM'
+DateUpdated: '2020-09-16 09:13 PM'
+Duration: 15
+Description: "Delete this one!"
+Client: Magrette
+Project: Misc
+
+# OLD RECORD
+Client: ""
+Project: ""
+
+----
+2020-09-16 21:12:50
+# NEW RECORD
+DateAdded: '2020-09-16 09:10 PM'
+DateUpdated: '2020-09-16 09:12 PM'
+Duration: 15
+Description: "Delete this one!"
+Client: Magrette
+Project: Misc
+
+# OLD RECORD
+Client: ""
+Project: ""
+
+----
+2020-09-16 21:11:33
+# NEW RECORD
+DateAdded: '2020-09-16 09:10 PM'
+DateUpdated: '2020-09-16 09:11 PM'
+Duration: 30
+Description: "Delete this one plz"
+Client: Magrette
+Project: Misc
+
+# OLD RECORD
+Client: ""
+Project: ""
+
+----
+2020-09-16 21:11:33
+# NEW RECORD
+DateAdded: '2020-09-16 09:10 PM'
+DateUpdated: '2020-09-16 09:11 PM'
+Duration: 30
+Description: "Delete this one plz"
+Client: Magrette
+Project: Print Design
+
+# OLD RECORD
+Client: ""
+Project: ""
+
+----
+2020-09-16 20:57:59
 # NEW RECORD
 DateAdded: '2020-09-15 03:15 PM'
 DateUpdated: '2020-09-16 08:57 PM'

@@ -1,4 +1,0 @@
-DateAdded: '2020-02-06 11:01 PM'
-DateUpdated: '2020-02-06 11:01 PM'
-Duration: 10
-Description: 'Added another article to home/music'

@@ -1,4 +1,0 @@
-DateAdded: '2020-02-21 05:43 PM'
-DateUpdated: '2020-02-21 05:43 PM'
-Duration: 120
-Description: 'OMFG Shopify just died and it took me a while to figure out.'

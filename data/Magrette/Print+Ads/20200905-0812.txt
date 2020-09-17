@@ -1,4 +1,0 @@
-DateAdded: '2020-09-05 08:12 AM'
-DateUpdated: '2020-09-05 08:12 AM'
-Duration: 15
-Description: 'Contacted a few print companies'

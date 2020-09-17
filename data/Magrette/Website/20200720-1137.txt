@@ -1,4 +1,0 @@
-DateAdded: '2020-07-20 11:37 AM'
-DateUpdated: '2020-07-20 11:37 AM'
-Duration: 10
-Description: 'Added note to Vault collection desc that they\'re sold out (easier than updating JS)'

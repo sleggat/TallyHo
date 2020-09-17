@@ -1,4 +1,0 @@
-DateAdded: '2019-10-07 12:14 PM'
-DateUpdated: '2019-10-07 12:14 PM'
-Duration: 75
-Description: 'Facebook header'

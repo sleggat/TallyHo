@@ -1,4 +1,0 @@
-DateAdded: '2020-05-07 04:38 PM'
-DateUpdated: '2020-05-07 04:38 PM'
-Duration: 180
-Description: 'Fixing up mortar colours, creating json to spit out products'

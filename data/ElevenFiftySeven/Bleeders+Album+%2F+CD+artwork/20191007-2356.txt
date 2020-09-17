@@ -1,4 +1,0 @@
-DateAdded: '2019-10-07 11:56 PM'
-DateUpdated: '2019-10-07 11:56 PM'
-Duration: 60
-Description: 'More changes to BigCartel, added vinyl mock-ups'

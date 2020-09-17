@@ -1,4 +1,0 @@
-DateAdded: '2020-07-29 08:56 PM'
-DateUpdated: '2020-07-29 08:56 PM'
-Duration: 85
-Description: 'Create Kia Atawhai email, sent out tests and scheduled'

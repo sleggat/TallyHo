@@ -1,4 +1,0 @@
-DateAdded: '2020-01-20 10:25 AM'
-DateUpdated: '2020-01-20 10:25 AM'
-Duration: 15
-Description: 'Modified IG link, made changes to CSS so it\'s more obvious'

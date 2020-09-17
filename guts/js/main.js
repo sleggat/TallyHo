@@ -1,4 +1,11 @@
 $(document).ready(function() {
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > 20) {
+          $('.nav').addClass('nav_shrink');
+        } else {
+          $('.nav').removeClass('nav_shrink');
+        }
+      }, false);
     initpicker('#form_add');
     $(".modal_client").easyAutocomplete(client_options);
     $(".modal_project").easyAutocomplete(project_options);

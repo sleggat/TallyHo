@@ -1,4 +1,0 @@
-DateAdded: '2019-07-18 10:00 AM'
-DateUpdated: '2019-07-18 10:00 AM'
-Duration: 30
-Description: 'Sorting out chaniing Shop to a top level'

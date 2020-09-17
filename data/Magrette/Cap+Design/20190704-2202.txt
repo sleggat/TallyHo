@@ -1,4 +1,0 @@
-DateAdded: '2019-07-04 10:02 PM'
-DateUpdated: '2019-07-04 10:02 PM'
-Duration: 45
-Description: 'Make final artwork and save off files'

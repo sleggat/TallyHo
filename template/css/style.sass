@@ -1,18 +1,29 @@
 @import "reset.sass"
 @import "tailwind_colors.sass"
 
-$link: $purple-300
-$link-hover: $purple-400
+$steve-blue-600: #0087ff
+$steve-blue-500: lighten($steve-blue-600, 12%)
+$steve-blue-400: lighten($steve-blue-600, 24%)
+$steve-blue-300: lighten($steve-blue-600, 35%)
+$steve-blue-200: lighten($steve-blue-600, 46%)
+$steve-blue-100: lighten($steve-blue-600, 48%)
+
+$link: $steve-blue-400
+$link-hover: $steve-blue-600
 $column-gap: 10px
 $family-sans-serif: 'Heebo', sans-serif
 
 @import "_bulma.sass"
 
+
+
+
+
 /* Main styles */
 
 html
   //background: linear-gradient(180deg, darken($indigo-900, 20%) 0, darken($purple-900, 40%) 40%, darken($pink-900, 20%) 100%)
-  background-color: lighten($gray-200, 0%)
+  background-color: $steve-blue-200
   background-attachment: fixed
   padding: 0
   margin: 0
@@ -52,9 +63,9 @@ img
 
 h1, h2, .day_header
   font-size: 1.5rem
-  font-weight: 600
-  color: $gray-500
-  //text-transform: uppercase
+  font-weight: 400
+  color: $steve-blue-600
+  text-transform: uppercase
 
 h2
   //font-size: 1.5rem
@@ -64,10 +75,16 @@ h2
 
 .nav
   margin: 0px 0px 20px 0px
-  padding: 20px 20px 10px 20px
+  padding: 40px 20px 30px 20px
   background: $white
   position: sticky
   top: 0
+  z-index: 20
+  box-shadow: 0px 1px 3px rgba($steve-blue-600, .1), 0px 1px 1px rgba($gray-900, .05)
+  transition: padding .2s
+
+.nav_shrink
+  padding: 20px 20px 10px 20px
 
 .day_header
   width: 100%
@@ -79,7 +96,7 @@ h2
     padding-right: .5rem 
   .pretty_day
     color: $gray-400
-    font-weight: 400
+
 .sheet > .day_header:nth-child(2)
   padding-top: 0
 
@@ -93,17 +110,16 @@ h2
   border-bottom-left-radius: 5px
   border-bottom-right-radius: 5px
   margin: 0px 0px 10px 0px
-  padding: 20px 0px 20px 0px
-
-.quick_add_form
-  //margin: 0px 0px 10px 0px
-  //padding: 30px 20px 30px 20px
-
+  padding: 20px 0px 0px 0px
+  box-shadow: 0px 0px 5px rgba($steve-blue-600, .1), 0px 0px 1px rgba($gray-900, .1)
 
 .table_row
   display: flex
   flex-direction: row
   flex-grow: 1
+  &:hover
+    background-color: lighten($steve-blue-100, 1%)
+
 .table_col
   border-bottom: 1px solid $gray-300
   border-: 1px solid $gray-200
@@ -176,7 +192,7 @@ h2
     display: none
 
 .highlighted
-  background-color: $gray-100
+  background-color: $steve-blue-100
   .action_icons .icon a
     background: $white
 
@@ -184,22 +200,24 @@ h2
   display: flex
   justify-content: flex-end
 .icon_svg
+  position: relative
   img
     width: 18px
     height: auto
     //filter: invert(40%) sepia(50%) hue-rotate(226deg) saturate(900%) // hehe
   a
     transition: color .5s, border-radius .5s, background-color .5s
-    background: $gray-100
+    background: $steve-blue-200
     vertical-align: middle
     align: center
     padding: 5px 6px 4px 6px
+    margin: 1px
     border-radius: 5px
     line-height: 1
     display: inline-block
     &:hover
-      color: $purple-900
-      background: $purple-200
+      color: $steve-blue-300
+      background: $steve-blue-600
       transition: color .2s, border-radius .2s, background-color .2s
       border-radius: 10px
     &.modal_update // this icon looks off-centre, so let's correct that.
@@ -207,6 +225,12 @@ h2
 
 ion-icon
   vertical-align: -10%
+
+/* Logo */
+
+.logo
+  max-width: 80px
+  margin-left: 55px
 
 /* Floating bar where the tally goes */
 
@@ -263,7 +287,7 @@ label
 input, textarea
   width: 100%
   padding: 10px 10px
-  background-color: darken($gray-100, 2%)
+  background-color: $steve-blue-200
   border: 0
   //border: 1px solid $gray-400
   border-radius: 5px
@@ -292,20 +316,25 @@ select
   border-radius: 3px
   background-color: transparent
 button
-  background-color: $gray-100
+  background-color: $steve-blue-200
+  font-weight: 500
+  font-size: 1rem
   width: 100%
+  max-width: 12ch
   vertical-align: middle
   padding: 2px 20px
   height: 35px
   margin: 0
-  border: 1px solid $gray-300
-  border-radius: 10px
-  color: $gray-700
+  //border: 1px solid $steve-blue-600
+  border: 0
+  border-radius: 5px
+  color: $steve-blue-600
+  transition: all .2s
   &:hover, &:focus
     outline: 0
-    background-color: $purple-100
-    border: 1px solid $purple-400
-    color: $purple-500
+    background-color: $steve-blue-100
+    //border: 1px solid $steve-blue-500
+    color: $steve-blue-500
     cursor: pointer
 .is-alert
   background-color: $red-600
@@ -319,7 +348,10 @@ button
   background-color: $yellow-100
 
 /* Pagination */
-
+.page_number
+  text-align: right
+  padding: 0 20px
+  color: $steve-blue-300
 .pagination
   margin: 20px 0 40px 0px
   display: flex
@@ -327,15 +359,21 @@ button
     padding: 10px 15px 9px 15px
     // margin: 5px
     background-color: $white
-    filter: drop-shadow(0px 0px 2px rgba($purple-300, .6))
+    box-shadow: 0px 0px 5px rgba($steve-blue-600, .1), 0px 0px 1px rgba($gray-900, .1)
     &.page_current
-      color: $purple-500
+      color: $steve-blue-600
 
 @media (max-width: 1200px)
   .task_project
     white-space: normal
 
 @media (max-width: 800px)
+  html
+    margin: 0
+
+  body
+    font-size: .8rem
+    line-height: 1.3rem
   input, select, textarea
     font-size: 1rem // stops ios safari zooming in on inputs and not zooming out when done
   .day_header
@@ -350,12 +388,7 @@ button
       //width: 100%
     &.task_col_4
       padding-right: 10px
-  html
-    margin: 0
 
-  body
-    font-size: .8rem
-    line-height: 1.3
     //background-color: white
 
   .box_sheet, .box_filters, .quick_add_form

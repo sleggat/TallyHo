@@ -1,4 +1,0 @@
-DateAdded: '2020-05-12 10:57 AM'
-DateUpdated: '2020-05-12 10:57 AM'
-Duration: 20
-Description: 'Create email 3, Well Well Well'

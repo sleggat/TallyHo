@@ -1,4 +1,0 @@
-DateAdded: '2019-09-19 11:00 AM'
-DateUpdated: '2019-09-19 11:00 AM'
-Duration: 30
-Description: 'Emailing Jay about IG and results of The Vault campaign'

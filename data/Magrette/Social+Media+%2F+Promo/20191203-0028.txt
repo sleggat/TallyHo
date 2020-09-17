@@ -1,4 +1,0 @@
-DateAdded: '2019-12-03 12:28 AM'
-DateUpdated: '2019-12-03 12:28 AM'
-Duration: 45
-Description: 'Remove all Black Friday stuff.'

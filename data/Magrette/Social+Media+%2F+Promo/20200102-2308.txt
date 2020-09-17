@@ -1,4 +1,0 @@
-DateAdded: '2020-01-02 11:08 PM'
-DateUpdated: '2020-01-02 11:08 PM'
-Duration: 60
-Description: 'Prepare Newsletter for Kaha. also had to create Email Notification Form/page for Waterman Bronze'

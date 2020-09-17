@@ -1,4 +1,0 @@
-DateAdded: '2020-06-12 04:03 PM'
-DateUpdated: '2020-06-12 04:03 PM'
-Duration: 15
-Description: 'Doing the galaxy half/half and emailing Grant about stuff'

@@ -1,4 +1,0 @@
-DateAdded: '2020-07-16 12:34 PM'
-DateUpdated: '2020-07-16 12:34 PM'
-Duration: 10
-Description: 'Updated logo on website, fixed up formatting (ULs)'

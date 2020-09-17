@@ -1,4 +1,0 @@
-DateAdded: '2019-11-08 05:20 PM'
-DateUpdated: '2019-11-08 05:20 PM'
-Duration: 75
-Description: 'Create sticky label design sheets'

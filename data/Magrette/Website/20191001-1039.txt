@@ -1,4 +1,0 @@
-DateAdded: '2019-10-01 10:39 AM'
-DateUpdated: '2019-10-01 10:39 AM'
-Duration: 15
-Description: 'Update text on homepage (sport brand)'

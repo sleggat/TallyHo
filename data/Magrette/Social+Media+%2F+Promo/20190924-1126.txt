@@ -1,4 +1,0 @@
-DateAdded: '2019-09-24 11:26 AM'
-DateUpdated: '2019-09-24 11:26 AM'
-Duration: 35
-Description: 'Sent out GMT email, put GMT online and checked things going smoothly.'

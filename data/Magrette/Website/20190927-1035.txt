@@ -1,4 +1,0 @@
-DateAdded: '2019-09-27 10:35 AM'
-DateUpdated: '2019-09-27 10:35 AM'
-Duration: 45
-Description: 'Updating desc on GMT page. Adding GMT to slider'

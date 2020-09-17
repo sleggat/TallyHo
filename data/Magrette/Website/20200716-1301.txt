@@ -1,4 +1,0 @@
-DateAdded: '2020-07-16 01:01 PM'
-DateUpdated: '2020-07-16 01:01 PM'
-Duration: 40
-Description: 'Duplicating products, updating content for Steel and Black'

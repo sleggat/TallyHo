@@ -1,4 +1,0 @@
-DateAdded: '2019-07-15 11:10 AM'
-DateUpdated: '2019-07-15 11:10 AM'
-Duration: 35
-Description: 'Removed preorder Bronze and added Instock one'

@@ -1,4 +1,0 @@
-DateAdded: '2020-03-23 12:09 AM'
-DateUpdated: '2020-03-23 12:09 AM'
-Duration: 105
-Description: 'Setting up website.. bulma stuff'

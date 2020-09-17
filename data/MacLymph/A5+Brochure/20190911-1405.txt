@@ -1,4 +1,0 @@
-DateAdded: '2019-09-11 02:05 PM'
-DateUpdated: '2019-09-11 02:05 PM'
-Duration: 15
-Description: 'Started working on Brochure'

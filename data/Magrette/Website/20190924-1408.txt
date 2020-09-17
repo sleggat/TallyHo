@@ -1,4 +1,0 @@
-DateAdded: '2019-09-24 02:08 PM'
-DateUpdated: '2019-09-24 02:08 PM'
-Duration: 60
-Description: 'More attempts to change cart.js'

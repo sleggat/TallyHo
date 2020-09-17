@@ -1,4 +1,0 @@
-DateAdded: '2019-09-16 11:29 AM'
-DateUpdated: '2019-09-16 11:29 AM'
-Duration: 60
-Description: 'New by-line and slogan'

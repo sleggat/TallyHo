@@ -1,4 +1,0 @@
-DateAdded: '2020-07-30 04:14 PM'
-DateUpdated: '2020-07-30 04:14 PM'
-Duration: 15
-Description: 'Fix up a couple of things and email with Kat a couple of times'

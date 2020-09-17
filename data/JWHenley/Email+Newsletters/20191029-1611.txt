@@ -1,4 +1,0 @@
-DateAdded: '2019-10-29 04:11 PM'
-DateUpdated: '2019-10-29 04:11 PM'
-Duration: 90
-Description: 'Set up MailChimp, started designing template'

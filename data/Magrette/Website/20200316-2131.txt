@@ -1,4 +1,0 @@
-DateAdded: '2020-03-16 09:31 PM'
-DateUpdated: '2020-03-16 09:31 PM'
-Duration: 15
-Description: 'Minor mobile style changes to cart'

@@ -1,4 +1,0 @@
-DateAdded: '2020-08-13 09:36 PM'
-DateUpdated: '2020-08-13 09:36 PM'
-Duration: 20
-Description: 'Add two new Migrante articles to website'

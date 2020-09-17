@@ -1,4 +1,0 @@
-DateAdded: '2019-08-15 04:00 PM'
-DateUpdated: '2019-08-15 04:00 PM'
-Duration: 45
-Description: 'Emailign about shopify and campaignmonitor stuff'

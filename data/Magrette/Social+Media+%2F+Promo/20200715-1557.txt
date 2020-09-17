@@ -1,4 +1,0 @@
-DateAdded: '2020-07-15 03:57 PM'
-DateUpdated: '2020-07-15 03:57 PM'
-Duration: 25
-Description: 'Email/planning on the updating of News section, adding to homepage and possibly emailing subscribers when there\'s new News.'

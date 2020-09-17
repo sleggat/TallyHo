@@ -1,4 +1,0 @@
-DateAdded: '2020-07-14 03:05 PM'
-DateUpdated: '2020-07-14 03:05 PM'
-Duration: 15
-Description: 'Create printable mockup of postcard'

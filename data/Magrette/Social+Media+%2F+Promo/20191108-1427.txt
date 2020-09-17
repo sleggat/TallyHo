@@ -1,4 +1,0 @@
-DateAdded: '2019-11-08 02:27 PM'
-DateUpdated: '2019-11-08 02:27 PM'
-Duration: 30
-Description: 'Added a few more products to FB catalogue'

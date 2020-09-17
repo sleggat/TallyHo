@@ -1,4 +1,0 @@
-DateAdded: '2020-01-22 04:36 PM'
-DateUpdated: '2020-01-22 04:36 PM'
-Duration: 30
-Description: 'Updated ALA logo'

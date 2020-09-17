@@ -1,4 +1,0 @@
-DateAdded: '2020-05-21 09:46 PM'
-DateUpdated: '2020-05-21 09:46 PM'
-Duration: 300
-Description: 'Building site template for WP'

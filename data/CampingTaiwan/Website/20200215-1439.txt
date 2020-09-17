@@ -1,4 +1,0 @@
-DateAdded: '2020-02-15 02:39 PM'
-DateUpdated: '2020-02-15 02:39 PM'
-Duration: 10
-Description: 'Updated booked-out dates'

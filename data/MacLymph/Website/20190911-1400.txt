@@ -1,4 +1,0 @@
-DateAdded: '2019-09-11 02:00 PM'
-DateUpdated: '2019-09-11 02:00 PM'
-Duration: 15
-Description: 'Add in Book Now button for wellness (phasing out Timely)'

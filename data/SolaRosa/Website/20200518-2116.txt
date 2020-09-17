@@ -1,4 +1,0 @@
-DateAdded: '2020-05-18 09:16 PM'
-DateUpdated: '2020-05-18 09:16 PM'
-Duration: 60
-Description: 'Probably a lot more time tinkering, but not worth charging for'

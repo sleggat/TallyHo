@@ -1,4 +1,0 @@
-DateAdded: '2019-09-27 12:16 PM'
-DateUpdated: '2019-09-27 12:16 PM'
-Duration: 45
-Description: 'Create sticker'

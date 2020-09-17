@@ -1,4 +1,0 @@
-DateAdded: '2020-02-12 06:01 PM'
-DateUpdated: '2020-02-12 06:01 PM'
-Duration: 60
-Description: 'Writing down ideas, looking through footage and photos'

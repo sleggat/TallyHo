@@ -1,4 +1,0 @@
-DateAdded: '2020-08-07 05:20 PM'
-DateUpdated: '2020-08-07 05:20 PM'
-Duration: 15
-Description: 'Add Kia Atawhai to Insta shoppable'
