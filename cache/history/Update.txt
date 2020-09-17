@@ -1,4 +1,18 @@
-2020-09-16 21:13:38
+2020-09-17 21:33:07
+# NEW RECORD
+DateAdded: '2020-09-17 09:30 PM'
+DateUpdated: '2020-09-17 09:33 PM'
+Duration: 15
+Description: "kljsdfljas dfsadfasfd"
+Client: Magrette
+Project: Pants
+
+# OLD RECORD
+Client: ""
+Project: ""
+
+----
+2020-09-16 21:13:38
 # NEW RECORD
 DateAdded: '2020-09-16 09:15 PM'
 DateUpdated: '2020-09-16 09:13 PM'

@@ -1,14 +1,13 @@
 <?php
 
+// import Projects and Clients from Kimai CSV Export (filename kimai-export.csv in the current folder)
+
 $br ="
 ";
 
-// import Projects (and Clients) from Kimai CSV
+
 $source = file_get_contents('./kimai-export.csv');
-// $array = array_map("str_getcsv", preg_split('/\r*\n+|\r+/', $source));
-$array = array_map("str_getcsv", preg_split('/\r*\n+\"+|\r+/', $source)); // slightly modified to allow fields with linebreaks
-// print_r($array);
-// die;
+$array = array_map("str_getcsv", preg_split('/\r*\n+\"+|\r+/', $source));
 foreach ($array as $part) {
 
 	$duration = trim($part[3]); // get duration. If not a number then skip adding.
@@ -38,8 +37,6 @@ foreach ($array as $part) {
 		$content .= "DateUpdated: '".$formatteddate."'".$br;
 		$content .= "Duration: ".$duration.$br;
 		$content .= "Description: '".$description."'";
-	// consider making the above a function as it's also used in the update code
-
 
 		echo $content;
 
