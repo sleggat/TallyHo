@@ -71,7 +71,7 @@ h2
 
 .nav
   margin: 0px 0px #{($column-gap * 1)} 0px
-  padding: #{($column-gap * 4)} #{($column-gap * 2)} #{($column-gap * 3)} #{($column-gap * 2)}
+  padding: #{($column-gap * 4)} 0 #{($column-gap * 3)} 0
   background: $white
   position: sticky
   top: 0
@@ -80,7 +80,7 @@ h2
   transition: padding .2s
 
 .nav_shrink
-  padding: #{($column-gap * 2)} #{($column-gap * 2)} #{($column-gap * 1)} #{($column-gap * 2)}
+  padding: #{($column-gap * 1)} 0 #{($column-gap * 0)} 0
 
 .day_header
   width: 100%
@@ -96,10 +96,8 @@ h2
 .sheet > .day_header:nth-child(2)
   padding-top: 0
 
-.box_alt
-  background-color: lighten($indigo-100, 5%)
+.box_nav
   padding: #{($column-gap * 1)} #{($column-gap * 2)} #{($column-gap * 2)} #{($column-gap * 2)}
-  border-radius: #{($column-gap / 2)}
 
 .box_sheet
   background-color: $white
@@ -246,11 +244,16 @@ ion-icon
 
 /* Floating bar where the tally goes */
 
-#tally
-  color: $gray-500
+.tally
+  color: $steve-blue-600
   font-size: 1.25rem
-  display: none
+  height: 100%
+  //display: none
+  display: grid
+  justify-items: center
+  align-items: center
 
+  background-color: $steve-blue-100
 /* Modal custom styles */
 
 .modal
@@ -401,8 +404,9 @@ button
 
     //background-color: white
 
-  .box_sheet, .box_filters, .quick_add_form
+  .box_sheet, .box_filters, .box_nav
     padding: #{($column-gap * 1)} #{($column-gap * 1)} #{($column-gap * 1)} #{($column-gap * 1)}
+    margin: 0 10px
 
   .action_icons
     max-width: 80px

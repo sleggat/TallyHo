@@ -74,21 +74,25 @@ var project_options = {
 ?>
 <nav class="nav">
 	<div class="container">
-		<div class="columns is-mobile">
-			<div class="column is-2">
-				<img src="template/images/logo.png" alt="TallyHo!" class="logo">
-			</div>
+		<div class="box_nav">
+			<div class="columns">
+				<div class="column is-8">
+					<img src="template/images/logo.png" alt="TallyHo!" class="logo">
+				</div>
 
-			<div class="column is-4">
-				<div id="tally">Total $<span id="total_cost"></span></div>
-			</div>
+				<div class="column is-2">
+					<div class="tally">
+						<div id="tally">Total $<span id="total_cost"></span></div>
+					</div>
+				</div>
 
-			<div class="column is-offset-4 is-2">
-				<span class="icon_svg">
-					<a href="#" class="modal_add">
-						<img src="template/ionicons-5.1.2.designerpack/add-outline.svg" /> New
-					</a>
-				</span>
+				<div class="column is-2">
+					<span class="icon_svg">
+						<a href="#" class="modal_add">
+							<img src="template/ionicons-5.1.2.designerpack/add-outline.svg" /> New
+						</a>
+					</span>
+				</div>
 			</div>
 		</div>
 	</div>
