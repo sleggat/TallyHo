@@ -9,13 +9,15 @@
 - Quick add (pre-fills previous client/project)
 - Edit tasks
 - Duplicate / Restart tasks
-- Filters (half-arsed implementation)
-- Select rows/days and calculate total costs.
-- Visual cue (colour bar) showing time spent on each task
+- Filter by Client and/or Project
+- Select rows/days and calculate total costs
+- Different hourly rates; Default Rate / Client Rate / Project Rate
+- Visual cue showing time spent on each task (blue = meh / red = good effort)
 
 
 File structure example;
-```/data/ClientO/ProjectX/20191009-1230.txt
+```
+/data/ClientO/ProjectX/20191009-1230.txt
 /data/SupertouchX/Website2020/20201010-1645.txt
 ```
 
@@ -23,10 +25,12 @@ If you'd like varying hourly rates for each client and project, just add a \_inf
 
 E.g.
 
-```/data/ClientO/ProjectX/\_info.yaml
+```
+/data/ClientO/ProjectX/_info.yaml
 ```
 and add the hourly rate like so:
-```Rate: 75
+```
+Rate: 75
 ```
 
 
