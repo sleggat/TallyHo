@@ -5,7 +5,7 @@
 
 
 ## Features:
-- Flat file (text/Yaml) ‘database’ (no need for MYSQL)
+- Flat file (text/Yaml) ‘database’.
 - Quick add (pre-fills previous client/project)
 - Edit tasks
 - Duplicate / Restart tasks
@@ -14,31 +14,42 @@
 - Different hourly rates; Default Rate / Client Rate / Project Rate
 - Visual cue showing time spent on each task (blue = meh / red = good effort)
 
+
 TallyHo is simple by design and I have no intention of adding the following;
 - Invoicing
 - Multi-users
 - Login/Pass
 
-I may add these features later;
-- General expenses
+
+Features I'd like to add at some point;
+- Adding of one-off expenses (e.g. printing costs, client's domain name)
 - Filtering by date range.
-- Charts (Historical and Projection)
+- Basic Reports/Charts (Historical and Projection)
+- Basic exporting
+
 
 ## Installation:
 
 I recommend putting it on your localhost, but you could also upload it to your webserver.
 Configure default hourly rate, timezone and base-path here: guts/config.php
 
+
 ## Usage:
 
-When installed just open 'http://localhost/tallyho' up in your webbrowser. Upon initiation it will create one task which you can edit/duplicate/delete.
+Once installed just open 'http://localhost/tallyho' up in your web browser. Upon initiation it will create one task which you can edit/duplicate/delete.
 
 
-TallyHo uses flat-files (.txt/.yaml) instead of a database. A typical file structure;
+TallyHo uses flat-files (.txt/.yaml) instead of a database.
+
+Why flat-files instead of a MySQL database? I much prefer being able to copy/backup and manually edit a bunch of text files rather than having to deal with a MySQL database. Keeps things simple.
+
+
+A typical file structure;
 ```
 /tallyho/data/ClientO/ProjectX/20191009-1230.txt
 /tallyho/data/SupertouchX/Website2020/20201010-1645.txt
 ```
+
 
 If you'd like varying hourly rates for each client and project, just add a \_info.yaml in the folder. 
 
@@ -54,4 +65,5 @@ Rate: 75
 The heirarchy is Project>Client>Default
 
 
-Note: This is still very basic and the code is super-raw - no objects, classes or fancy coding.
+
+Note: TallyHo is still very basic and the code is not very robust or elegant. Help out! :)
