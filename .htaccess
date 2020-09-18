@@ -3,26 +3,14 @@
 
 RewriteEngine on
 
-# make sure to set the RewriteBase correctly
-# if you are running the site in a subfolder;
-# otherwise links or the entire site will break.
-#
-# If your homepage is http://yourdomain.com/mysite,
-# set the RewriteBase to:
-#
-RewriteBase /timesheet
-
-# In some environments it's necessary to
-# set the RewriteBase to:
-#
-# RewriteBase /
-
 # block files and folders beginning with a dot, such as .git
 # except for the .well-known folder, which is used for Let's Encrypt and security.txt
 RewriteRule (^|/)\.(?!well-known\/) index.php [L]
 
 # block all files in the content folder from being accessed directly
 RewriteRule ^data/(.*) index.php [L]
+RewriteRule ^backups/(.*) index.php [L]
+RewriteRule ^cache/(.*) index.php [L]
 
 # block all files in the site folder from being accessed directly, except js and css folders
 RewriteRule ^guts/(js|css|forms)/ - [L]

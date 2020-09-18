@@ -15,10 +15,6 @@ $family-sans-serif: 'Heebo', sans-serif
 
 @import "_bulma.sass"
 
-
-
-
-
 /* Main styles */
 
 html
@@ -74,22 +70,22 @@ h2
 /* Layout */
 
 .nav
-  margin: 0px 0px 20px 0px
-  padding: 40px 20px 30px 20px
+  margin: 0px 0px #{($column-gap * 1)} 0px
+  padding: #{($column-gap * 4)} #{($column-gap * 2)} #{($column-gap * 3)} #{($column-gap * 2)}
   background: $white
   position: sticky
   top: 0
-  z-index: 20
+  z-index: 2
   box-shadow: 0px 1px 3px rgba($steve-blue-600, .1), 0px 1px 1px rgba($gray-900, .05)
   transition: padding .2s
 
 .nav_shrink
-  padding: 20px 20px 10px 20px
+  padding: #{($column-gap * 2)} #{($column-gap * 2)} #{($column-gap * 1)} #{($column-gap * 2)}
 
 .day_header
   width: 100%
-  padding: 20px 0 15px 58px
-  margin: 40px 0 0 0
+  padding: #{($column-gap * 2)} 0 #{($column-gap * 1.5)} 58px
+  margin: #{($column-gap * 4)} 0 0 0
   cursor: pointer
   border-bottom: 1px solid $gray-300
   .pretty_date
@@ -102,16 +98,25 @@ h2
 
 .box_alt
   background-color: lighten($indigo-100, 5%)
-  padding: 10px 20px 20px 20px
-  border-radius: 5px
+  padding: #{($column-gap * 1)} #{($column-gap * 2)} #{($column-gap * 2)} #{($column-gap * 2)}
+  border-radius: #{($column-gap / 2)}
 
 .box_sheet
   background-color: $white
-  border-bottom-left-radius: 5px
-  border-bottom-right-radius: 5px
-  margin: 0px 0px 10px 0px
-  padding: 20px 0px 0px 0px
-  box-shadow: 0px 0px 5px rgba($steve-blue-600, .1), 0px 0px 1px rgba($gray-900, .1)
+  border-bottom-left-radius: #{($column-gap / 2)}
+  border-bottom-right-radius: #{($column-gap / 2)}
+  margin: 0px 0px #{($column-gap * 1)} 0px
+  padding: #{($column-gap * 2)} 0px 0px 0px
+  box-shadow: 0px 0px #{($column-gap / 2)} rgba($steve-blue-600, .1), 0px 0px 1px rgba($gray-900, .1)
+
+.box_filters
+  background-color: $white
+  border-bottom-left-radius: #{($column-gap / 2)}
+  border-bottom-right-radius: #{($column-gap / 2)}
+  margin: 0px 0px #{($column-gap * 1)} 0px
+  padding: #{($column-gap * 1)} #{($column-gap * 2)} 0px #{($column-gap * 2)}
+  box-shadow: 0px 0px #{($column-gap / 2)} rgba($steve-blue-600, .1), 0px 0px 1px rgba($gray-900, .1)
+  //outline: 1px solid red
 
 .table_row
   display: flex
@@ -123,7 +128,7 @@ h2
 .table_col
   border-bottom: 1px solid $gray-300
   border-: 1px solid $gray-200
-  padding: 15px 2px 13px 2px
+  padding: #{($column-gap * 1.5)} 2px 13px 2px
   vertical-align: top
   &.task_col_1
     padding-left: 60px
@@ -134,10 +139,10 @@ h2
       content: ''
       display: block
       position: absolute
-      width: 5px
+      width: #{($column-gap / 2)}
       height: 2.5rem
-      border-radius: 20px
-      left: 10px
+      border-radius: #{($column-gap * 2)}
+      left: #{($column-gap * 1)}
       outline: 2px solid white
     &.heat_0
       &::before
@@ -160,7 +165,7 @@ h2
     width: 100%
   &.task_col_4
     width: 300px
-    padding-right: 40px
+    padding-right: #{($column-gap * 4)}
   
 .task_duration, .task_value, .task_duration_label
   letter-spacing: -.03em
@@ -173,7 +178,7 @@ h2
   color: $gray-500
 
 .task_client
-  margin-right: 5px
+  margin-right: #{($column-gap / 2)}
 
 .task_project
   color: $gray-600
@@ -210,19 +215,26 @@ h2
     background: $steve-blue-200
     vertical-align: middle
     align: center
-    padding: 5px 6px 4px 6px
+    padding: #{($column-gap / 2)} 6px 4px 6px
     margin: 1px
-    border-radius: 5px
+    border-radius: #{($column-gap / 2)}
     line-height: 1
     display: inline-block
     &:hover
       color: $steve-blue-300
       background: $steve-blue-600
       transition: color .2s, border-radius .2s, background-color .2s
-      border-radius: 10px
-    &.modal_update // this icon looks off-centre, so let's correct that.
-      padding: 5px 5px 4px 7px
-
+      border-radius: #{($column-gap * 1)}
+  .modal_update // this icon looks off-centre, so let's correct that.
+    padding: #{($column-gap / 2)} #{($column-gap / 2)} 4px 7px
+  .modal_add
+    display: grid
+    justify-items: center
+    align-items: center
+    width: 100%
+    height: 100%
+    img
+      width: 2rem
 ion-icon
   vertical-align: -10%
 
@@ -230,7 +242,7 @@ ion-icon
 
 .logo
   max-width: 80px
-  margin-left: 55px
+  margin-left: 5#{($column-gap / 2)}
 
 /* Floating bar where the tally goes */
 
@@ -242,11 +254,11 @@ ion-icon
 /* Modal custom styles */
 
 .modal
-  padding: 20px 20px 40px 20px
+  padding: #{($column-gap * 2)} #{($column-gap * 2)} #{($column-gap * 4)} #{($column-gap * 2)}
   background-color: $white
   a.close-modal
-    top: 2.5px !important
-    right: 2.5px !important
+    top: 15px !important
+    right: 15px !important
 .jquery-modal
   z-index: 2 !important
 
@@ -268,7 +280,7 @@ ion-icon
 .daterangepicker select.ampmselect
   outline: 0
   border: 1px solid $gray-400
-  padding: 5px 10px
+  padding: #{($column-gap / 2)} #{($column-gap * 1)}
   box-shadow: none !important
   -webkit-appearance: none
   background-color: #fff
@@ -277,21 +289,21 @@ ion-icon
 /* form elements */
 
 label
-  padding: 0 0 0 5px
+  padding: 0 0 0 #{($column-gap / 2)}
   color: $gray-500
   font-weight: 400
   text-transform: uppercase
   font-size: .5rem
   display: inline-block
-  min-height: 20px
+  min-height: #{($column-gap * 2)}
 input, textarea
   width: 100%
-  padding: 10px 10px
+  padding: #{($column-gap * 1)} #{($column-gap * 1)}
   background-color: $steve-blue-200
   border: 0
   //border: 1px solid $gray-400
-  border-radius: 5px
-  height: 35px
+  border-radius: #{($column-gap / 2)}
+  height: #{($column-gap  * 3.5)}
   vertical-align: top
   color: $gray-700
   &:not([type=checkbox]):not([type=radio])
@@ -304,7 +316,7 @@ textarea
   max-width: 100%
   min-height: 4rem
   max-height: 500px
-  padding: 8px 10px
+  padding: 8px #{($column-gap * 1)}
   resize: none
   overflow: hidden
 .easy-autocomplete 
@@ -320,20 +332,18 @@ button
   font-weight: 500
   font-size: 1rem
   width: 100%
-  max-width: 12ch
+  max-width: 20ch
   vertical-align: middle
-  padding: 2px 20px
-  height: 35px
+  padding: 2px #{($column-gap * 2)}
+  height: #{($column-gap * 3.5)}
   margin: 0
-  //border: 1px solid $steve-blue-600
   border: 0
-  border-radius: 5px
+  border-radius: #{($column-gap / 2)}
   color: $steve-blue-600
   transition: all .2s
   &:hover, &:focus
     outline: 0
     background-color: $steve-blue-100
-    //border: 1px solid $steve-blue-500
     color: $steve-blue-500
     cursor: pointer
 .is-alert
@@ -350,16 +360,16 @@ button
 /* Pagination */
 .page_number
   text-align: right
-  padding: 0 20px
+  padding: 0 #{($column-gap * 2)}
   color: $steve-blue-300
 .pagination
-  margin: 20px 0 40px 0px
+  margin: #{($column-gap * 2)} 0 #{($column-gap * 4)} 0px
   display: flex
   a
-    padding: 10px 15px 9px 15px
-    // margin: 5px
+    padding: #{($column-gap * 1)} #{($column-gap * 1.5)} 9px #{($column-gap * 1.5)}
+    // margin: #{($column-gap / 2)}
     background-color: $white
-    box-shadow: 0px 0px 5px rgba($steve-blue-600, .1), 0px 0px 1px rgba($gray-900, .1)
+    box-shadow: 0px 0px #{($column-gap / 2)} rgba($steve-blue-600, .1), 0px 0px 1px rgba($gray-900, .1)
     &.page_current
       color: $steve-blue-600
 
@@ -377,22 +387,22 @@ button
   input, select, textarea
     font-size: 1rem // stops ios safari zooming in on inputs and not zooming out when done
   .day_header
-    padding-left: 30px
+    padding-left: #{($column-gap * 3)}
   .table_col
     &.task_col_1
-      width: 220px
-      padding-left: 30px
+      width: #{($column-gap * 2.5)}
+      padding-left: #{($column-gap * 3)}
     &.task_col_2
       width: 280px
     &.task_col_3
       //width: 100%
     &.task_col_4
-      padding-right: 10px
+      padding-right: #{($column-gap * 1)}
 
     //background-color: white
 
   .box_sheet, .box_filters, .quick_add_form
-    padding: 10px 10px 10px 10px
+    padding: #{($column-gap * 1)} #{($column-gap * 1)} #{($column-gap * 1)} #{($column-gap * 1)}
 
   .action_icons
     max-width: 80px

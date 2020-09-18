@@ -93,6 +93,14 @@ th:not([align]) {
 /** Purple **/
 /** Pink **/
 /*! bulma.io v0.9.0 | MIT License | github.com/jgthms/bulma */
+@-webkit-keyframes spinAround {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
 @keyframes spinAround {
   from {
     transform: rotate(0deg);
@@ -1783,6 +1791,8 @@ th:not([align]) {
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
+  min-height: -webkit-min-content;
+  min-height: -moz-min-content;
   min-height: min-content;
 }
 .tile.is-ancestor {
@@ -2290,12 +2300,13 @@ h2 {
 
 /* Layout */
 .nav {
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 10px 0px;
   padding: 40px 20px 30px 20px;
   background: #fff;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 2;
   box-shadow: 0px 1px 3px rgba(0, 135, 255, 0.1), 0px 1px 1px rgba(26, 32, 44, 0.05);
   transition: padding 0.2s;
 }
@@ -2334,6 +2345,15 @@ h2 {
   border-bottom-right-radius: 5px;
   margin: 0px 0px 10px 0px;
   padding: 20px 0px 0px 0px;
+  box-shadow: 0px 0px 5px rgba(0, 135, 255, 0.1), 0px 0px 1px rgba(26, 32, 44, 0.1);
+}
+
+.box_filters {
+  background-color: #fff;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin: 0px 0px 10px 0px;
+  padding: 10px 20px 0px 20px;
   box-shadow: 0px 0px 5px rgba(0, 135, 255, 0.1), 0px 0px 1px rgba(26, 32, 44, 0.1);
 }
 
@@ -2466,8 +2486,18 @@ h2 {
   transition: color 0.2s, border-radius 0.2s, background-color 0.2s;
   border-radius: 10px;
 }
-.icon_svg a.modal_update {
+.icon_svg .modal_update {
   padding: 5px 5px 4px 7px;
+}
+.icon_svg .modal_add {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.icon_svg .modal_add img {
+  width: 2rem;
 }
 
 ion-icon {
@@ -2477,7 +2507,7 @@ ion-icon {
 /* Logo */
 .logo {
   max-width: 80px;
-  margin-left: 55px;
+  margin-left: 5 5px;
 }
 
 /* Floating bar where the tally goes */
@@ -2493,8 +2523,8 @@ ion-icon {
   background-color: #fff;
 }
 .modal a.close-modal {
-  top: 2.5px !important;
-  right: 2.5px !important;
+  top: 15px !important;
+  right: 15px !important;
 }
 
 .jquery-modal {
@@ -2585,7 +2615,7 @@ button {
   font-weight: 500;
   font-size: 1rem;
   width: 100%;
-  max-width: 12ch;
+  max-width: 20ch;
   vertical-align: middle;
   padding: 2px 20px;
   height: 35px;
@@ -2661,7 +2691,7 @@ button:hover, button:focus {
   }
 
   .table_col.task_col_1 {
-    width: 220px;
+    width: 25px;
     padding-left: 30px;
   }
   .table_col.task_col_2 {
@@ -2682,3 +2712,5 @@ button:hover, button:focus {
     gap: 1px;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
