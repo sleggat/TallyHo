@@ -82,7 +82,7 @@ var project_options = {
 
 				<div class="column is-2">
 					<div class="tally">
-						<div id="tally">Total $<span id="total_cost"></span></div>
+						<div id="tally">Total <?= CURRENCY_SYMBOL ?><span id="total_cost"></span></div>
 					</div>
 				</div>
 
@@ -175,7 +175,7 @@ var project_options = {
 						<span class="task_time"><?= format_time($task_array['Date']) ?></span>
 					</div>
 					<div class="table_col task_col_2">
-						<span class="task_value" data-costraw="<?= $cost['raw']; ?>"><span class="task_value_currency">$</span><?= $cost['formatted']; ?></span>
+						<span class="task_value" data-costraw="<?= $cost['raw']; ?>"><span class="task_value_currency"><?= CURRENCY_SYMBOL ?></span><?= $cost['formatted']; ?></span>
 						<br><span class="task_value_source"><?= $cost['source']; ?></span>
 					</div>
 					<div class="table_col task_col_3">

@@ -19,7 +19,7 @@
 <h2 id="features:">Features:</h2>
 
 <ul>
-<li>Flat file (text/Yaml) ‘database’ (no need for MYSQL)</li>
+<li>Flat file (text/Yaml) ‘database’.</li>
 <li>Quick add (pre-fills previous client/project)</li>
 <li>Edit tasks</li>
 <li>Duplicate / Restart tasks</li>
@@ -37,12 +37,13 @@
 <li>Login/Pass</li>
 </ul>
 
-<p>I may add these features later;</p>
+<p>Features I&#8217;d like to add at some point;</p>
 
 <ul>
-<li>General expenses</li>
+<li>Adding of one-off expenses (e.g. printing costs, client&#8217;s domain name)</li>
 <li>Filtering by date range.</li>
-<li>Charts (Historical and Projection)</li>
+<li>Basic Reports/Charts (Historical and Projection)</li>
+<li>Basic exporting</li>
 </ul>
 
 <h2 id="installation:">Installation:</h2>
@@ -52,9 +53,13 @@ Configure default hourly rate, timezone and base-path here: guts/config.php</p>
 
 <h2 id="usage:">Usage:</h2>
 
-<p>When installed just open &#8216;http://localhost/tallyho&#8217; up in your webbrowser. Upon initiation it will create one task which you can edit/duplicate/delete.</p>
+<p>Once installed just open &#8216;http://localhost/tallyho&#8217; up in your web browser. Upon initiation it will create one task which you can edit/duplicate/delete.</p>
 
-<p>TallyHo uses flat-files (.txt/.yaml) instead of a database. A typical file structure;</p>
+<p>TallyHo uses flat-files (.txt/.yaml) instead of a database.</p>
+
+<p>Why flat-files instead of a MySQL database? I much prefer being able to copy/backup and manually edit a bunch of text files rather than having to deal with a MySQL database. Keeps things simple.</p>
+
+<p>A typical file structure;</p>
 
 <pre><code>/tallyho/data/ClientO/ProjectX/20191009-1230.txt
 /tallyho/data/SupertouchX/Website2020/20201010-1645.txt
@@ -74,7 +79,7 @@ Configure default hourly rate, timezone and base-path here: guts/config.php</p>
 
 <p>The heirarchy is Project&gt;Client&gt;Default</p>
 
-<p>Note: This is still very basic and the code is super-raw - no objects, classes or fancy coding.</p>
+<p>Note: TallyHo is still very basic and the code is not very robust or elegant. Help out! :)</p>
 
 </body>
 </html>

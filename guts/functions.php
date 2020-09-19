@@ -99,16 +99,16 @@ function calculate_cost($mins, $path) {
 	if (is_file($project_yaml)) {
 		$yaml = spyc_load_file($project_yaml);
 		$rate = $yaml['Rate'];
-		$cost['source'] = "$".$rate.'/hr (Project Rate)';
+		$cost['source'] = CURRENCY_SYMBOL.$rate.'/hr (Project Rate)';
 	}
 	elseif (is_file($client_yaml)) {
 		$yaml = spyc_load_file($client_yaml);
 		$rate = $yaml['Rate'];
-		$cost['source'] = "$".$rate.'/hr (Client Rate)';
+		$cost['source'] = CURRENCY_SYMBOL.$rate.'/hr (Client Rate)';
 	}
 	else {
 		$rate = $default_rate;
-		$cost['source'] = "$".$rate.'/hr (Default Rate)';
+		$cost['source'] = CURRENCY_SYMBOL.$rate.'/hr (Default Rate)';
 	}
 
 	$cost['raw'] = $rate * ($mins / 60);

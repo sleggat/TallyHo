@@ -1,8 +1,10 @@
 <?php
+// for consistency this should be a yaml config
 
 date_default_timezone_set('Pacific/Auckland');
-define('BASE_PATH', '/tallyho/');
+define('BASE_PATH', '/tallyho/'); // currently not necessary, works as-is
 define('DATE_FORMAT', 'Y-m-d h:i A');
+define('CURRENCY_SYMBOL', '$'); // This is just a string, so could be EUR or €, USD or US$ or just $
 $default_rate = 100; // dollar per hour
 
 if (!file_exists('./data')) {
