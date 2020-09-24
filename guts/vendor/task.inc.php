@@ -1,5 +1,7 @@
 <?php
 
+// making the slow move to OOP
+
 class Task {
 	private $client;
 	private $project;

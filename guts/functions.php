@@ -10,19 +10,24 @@ function scandir_clean($dir) {
 }
 
 function find_all_files($dir, &$results = array()) {
-	$files = scandir($dir);
-	foreach ($files as $key => $value) {
-		$path = $dir . DIRECTORY_SEPARATOR . $value;
-		if (!is_dir($path)) {
-			if(substr($value, -4, 4) == '.txt') {
-				$results[] = $path;
+	if (is_dir($dir)) {
+		$files = scandir($dir);
+		foreach ($files as $key => $value) {
+			$path = $dir . DIRECTORY_SEPARATOR . $value;
+			if (!is_dir($path)) {
+				if(substr($value, -4, 4) == '.txt') {
+					$results[] = $path;
+				}
+			} else if ($value != "." && $value != "..") {
+				find_all_files($path, $results);
+				// $results[] = $path; // don't show empty folders in results
 			}
-		} else if ($value != "." && $value != "..") {
-			find_all_files($path, $results);
-			// $results[] = $path; // don't show empty folders in results
 		}
+		return $results;
 	}
-	return $results;
+	else {
+		die('Data folder missing. Quitting.');
+	}
 }
 
 
@@ -90,7 +95,13 @@ function format_datetime($date, $format='Y-m-d h:i A') {
 	$datetime = date_format($formatted, $format);
 	return $datetime;
 }
-function calculate_cost($mins, $path) {
+function calculate_cost($mins, $path, $is_expense = "") {
+	if ($is_expense) {
+		$cost['raw'] = $mins;
+		$cost['formatted'] = number_format($cost['raw'], 2, '.', ',');
+		$cost['source'] = 'Expense';
+		return $cost;
+	}
 	global $default_rate;
 	// search for yaml in project folder first, then client folder, else use default
 	$pieces = explode("/", $path);

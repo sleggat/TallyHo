@@ -2,7 +2,7 @@
 
 $pagespeed_before = microtime(true);
 
-$page_limit = 50;
+$page_limit = 100;
 $page_start = 0;
 $page_end = 50;
 $current_page = 0;
@@ -15,7 +15,7 @@ $previous_day = "";
 require_once __DIR__."/guts/config.php";
 require_once __DIR__."/guts/vendor/mustangostang/spyc/Spyc.php";
 require_once __DIR__."/guts/functions.php";
-require_once __DIR__."/guts/vendor/task.inc.php";
+// require_once __DIR__."/guts/vendor/task.inc.php";
 require_once __DIR__."/template/header.php";
 
 $newname = ""; // used for .highlight class
@@ -143,35 +143,53 @@ var project_options = {
 						if (stristr($task_array['Client'],$filter_client) === false) { $skipped++; continue; }
 					}
 
-				$task_number ++; // work on pagination
-				if ($task_number < $page_start || $task_number > $page_end) { continue; }
+					$task_number ++; // work on pagination
+					if ($task_number < $page_start || $task_number > $page_end) { continue; }
 
 
-				if ($previous_day != format_date($task_array['Date'],'Ymd')) {
-					$pretty_date = '<span class="pretty_date">'.format_date($task_array['Date'],'j M Y').'</span> <span class="pretty_day">'.format_date($task_array['Date'],'l').'</span>';
-					echo '<div class="day_header" data-date="'.format_date($task_array['Date'],'Ymd').'">'.$pretty_date.'</div>';
-				}
+					if ($previous_day != format_date($task_array['Date'],'Ymd')) {
+						$pretty_date = '<span class="pretty_date">'.format_date($task_array['Date'],'j M Y').'</span> <span class="pretty_day">'.format_date($task_array['Date'],'l').'</span>';
+						echo '<div class="day_header" data-date="'.format_date($task_array['Date'],'Ymd').'">'.$pretty_date.'</div>';
+					}
 
-				if ($task_array['Path'] == $newname) {
-					$highlight = " highlight ";
-				}
-				else {
-					$highlight = " ";
-				}
+					if ($task_array['Path'] == $newname) {
+						$highlight = " highlight ";
+					}
+					else {
+						$highlight = " ";
+					}
 
-				$cost = calculate_cost($task_array['Duration'],$task_array['Path']);
-				?>
+					if (!empty($task_array['Expense'])) {
+						$cost = calculate_cost($task_array['Expense'],'', true);
+						$task_array['Duration'] = false;
+					}
+					else {
+						$cost = calculate_cost($task_array['Duration'],$task_array['Path'],false);
+						$task_array['Expense'] = false;
+					}
+
+					
+
+					?>
 				<div class="table<?= $highlight . format_date($task_array['Date'],'Ymd') ?>">
 					<div class="table_row task_container" 
 					data-path="<?= $task_array['Path'] ?>" 
 					data-datetime="<?= $task_array['Date'] ?>" 
 					data-date="<?= $task_array['Date'] ?>"
 					data-duration="<?= $task_array['Duration'] ?>" 
+					data-expense="<?= $task_array['Expense'] ?>" 
 					data-client="<?= $task_array['Client'] ?>" 
 					data-project="<?= $task_array['Project'] ?>" 
 					data-description="<?= $task_array['Description'] ?>" >
 					<div class="table_col task_col_1 heat_<?= timeheat($task_array['Duration']) ?>">
-						<span class="task_duration"><?= $task_array['Duration'] ?></span> <span class="task_duration_label">mins</span><br>
+						<span class="task_duration">
+							<?php if (!empty($task_array['Expense'])) {
+								echo 'N/A</span>';
+							} 
+							else {
+								echo $task_array['Duration'].' </span><span class="task_duration_label">mins</span>';
+							}
+							?><br>
 						<span class="task_time"><?= format_time($task_array['Date']) ?></span>
 					</div>
 					<div class="table_col task_col_2">

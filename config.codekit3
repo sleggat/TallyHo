@@ -783,6 +783,14 @@
 		"oAP": "/data/JWHenley/Email+Newsletters/20200908-1330.txt",
 		"oF": 0
 		},
+	"/data/JWHenley/Email+Newsletters/20200923-2020.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/JWHenley/Email+Newsletters/20200923-2020.txt",
+		"oF": 0
+		},
 	"/data/JWHenley/Website/20190726-1245.txt": {
 		"cB": 0,
 		"ft": 8192,
@@ -965,6 +973,22 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/data/MacLymph/Business+Cards/20200828-1628.txt",
+		"oF": 0
+		},
+	"/data/MacLymph/Expense/20200924-1535.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/MacLymph/Expense/20200924-1535.txt",
+		"oF": 0
+		},
+	"/data/MacLymph/IT%2FServer+Maintenance/20200924-1545.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/MacLymph/IT%2FServer+Maintenance/20200924-1545.txt",
 		"oF": 0
 		},
 	"/data/MacLymph/Logo/20190916-1129.txt": {
@@ -1221,6 +1245,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/data/Magrette/GMT+Instruction+PDF/20200406-2119.txt",
+		"oF": 0
+		},
+	"/data/Magrette/Mailout/20200923-1720.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/Magrette/Mailout/20200923-1720.txt",
 		"oF": 0
 		},
 	"/data/Magrette/Misc/20200915-1515.txt": {
@@ -2511,6 +2543,14 @@
 		"oAP": "/data/Magrette/Website/20200911-0910.txt",
 		"oF": 0
 		},
+	"/data/Magrette/Website/20200923-1420.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/Magrette/Website/20200923-1420.txt",
+		"oF": 0
+		},
 	"/data/Mighty+Mighty/Labels/20190706-0100.txt": {
 		"cB": 0,
 		"ft": 8192,
@@ -2605,6 +2645,22 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/data/Notable/Glossy+Six60+brochure/_info.yaml",
+		"oF": 0
+		},
+	"/data/Notable/Glossy+SIX60+NZ+Updates/20200921-2145.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/Notable/Glossy+SIX60+NZ+Updates/20200921-2145.txt",
+		"oF": 0
+		},
+	"/data/Notable/Glossy+Six60+NZ+Updates/20200922-2050.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/Notable/Glossy+Six60+NZ+Updates/20200922-2050.txt",
 		"oF": 0
 		},
 	"/data/Notable/Loading+Docs+prop/20200804-1514.txt": {
@@ -2919,6 +2975,14 @@
 		"oAP": "/data/SolaRosa/Website/20200907-1516.txt",
 		"oF": 0
 		},
+	"/data/SolaRosa/Website/20200921-1430.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/SolaRosa/Website/20200921-1430.txt",
+		"oF": 0
+		},
 	"/data/The+BrickShop/Website/20200314-1525.txt": {
 		"cB": 0,
 		"ft": 8192,
@@ -3127,20 +3191,52 @@
 		"oAP": "/data/The+BrickShop/Website/20200707-2037.txt",
 		"oF": 0
 		},
-	"/data_example/ClientO/_info.yaml": {
+	"/data_example/King+Kong+Feet/_info.yaml": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/data_example/ClientO/_info.yaml",
+		"oAP": "/data_example/King+Kong+Feet/_info.yaml",
 		"oF": 0
 		},
-	"/data_example/ClientO/ProjectX/20191009-1230.txt": {
+	"/data_example/King+Kong+Feet/Super+Project+X/20191009-1230.txt": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/data_example/ClientO/ProjectX/20191009-1230.txt",
+		"oAP": "/data_example/King+Kong+Feet/Super+Project+X/20191009-1230.txt",
+		"oF": 0
+		},
+	"/data_example/King+Kong+Feet/Super+Project+X/_info.yaml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/data_example/King+Kong+Feet/Super+Project+X/_info.yaml",
+		"oF": 0
+		},
+	"/data_example/Mighty+Great+Beer/Labels/20190706-0100.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data_example/Mighty+Great+Beer/Labels/20190706-0100.txt",
+		"oF": 0
+		},
+	"/data_example/Taiwan+Camping/_info.yaml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/data_example/Taiwan+Camping/_info.yaml",
+		"oF": 0
+		},
+	"/data_example/Taiwan+Camping/Website+Development/20201215-0930.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data_example/Taiwan+Camping/Website+Development/20201215-0930.txt",
 		"oF": 0
 		},
 	"/guts/add_task.php": {
@@ -3324,14 +3420,6 @@
 		"oA": 0,
 		"oAP": "/index.php",
 		"oF": 0
-		},
-	"/package-lock.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/package-lock-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
 		},
 	"/README.html": {
 		"cB": 0,
