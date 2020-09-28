@@ -887,6 +887,14 @@
 		"oAP": "/data/JWHenley/Website/20200901-2012.txt",
 		"oF": 0
 		},
+	"/data/JWHenley/Website/20200929-1015.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/JWHenley/Website/20200929-1015.txt",
+		"oF": 0
+		},
 	"/data/MacLymph/A5+Brochure/20190911-1405.txt": {
 		"cB": 0,
 		"ft": 8192,
@@ -2551,6 +2559,30 @@
 		"oAP": "/data/Magrette/Website/20200923-1420.txt",
 		"oF": 0
 		},
+	"/data/Magrette/Website/20200928-2050.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/Magrette/Website/20200928-2050.txt",
+		"oF": 0
+		},
+	"/data/Magrette/Website/20200928-2205.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/Magrette/Website/20200928-2205.txt",
+		"oF": 0
+		},
+	"/data/Magrette/Website/20200928-2245.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/Magrette/Website/20200928-2245.txt",
+		"oF": 0
+		},
 	"/data/Mighty+Mighty/Labels/20190706-0100.txt": {
 		"cB": 0,
 		"ft": 8192,
@@ -2661,6 +2693,38 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/data/Notable/Glossy+Six60+NZ+Updates/20200922-2050.txt",
+		"oF": 0
+		},
+	"/data/Notable/Glossy+Six60+NZ+Updates/20200925-2215.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/Notable/Glossy+Six60+NZ+Updates/20200925-2215.txt",
+		"oF": 0
+		},
+	"/data/Notable/Glossy+Six60+NZ+Updates/20200925-2315.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/Notable/Glossy+Six60+NZ+Updates/20200925-2315.txt",
+		"oF": 0
+		},
+	"/data/Notable/Glossy+Six60+NZ+Updates/20200927-2030.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/Notable/Glossy+Six60+NZ+Updates/20200927-2030.txt",
+		"oF": 0
+		},
+	"/data/Notable/Glossy+Six60+NZ+Updates/_info.yaml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/data/Notable/Glossy+Six60+NZ+Updates/_info.yaml",
 		"oF": 0
 		},
 	"/data/Notable/Loading+Docs+prop/20200804-1514.txt": {
@@ -2981,6 +3045,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/data/SolaRosa/Website/20200921-1430.txt",
+		"oF": 0
+		},
+	"/data/SolaRosa/Website/20200925-0000.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/SolaRosa/Website/20200925-0000.txt",
 		"oF": 0
 		},
 	"/data/The+BrickShop/Website/20200314-1525.txt": {

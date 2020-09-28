@@ -9,6 +9,8 @@ $(document).ready(function() {
     initpicker('#form_add');
     $(".modal_client").easyAutocomplete(client_options);
     $(".modal_project").easyAutocomplete(project_options);
+    $("#filter_client").easyAutocomplete(client_options);
+    $("#filter_project").easyAutocomplete(project_options);
 })
 $('.toggle_filters .icon_svg').click(function(event) {
     event.preventDefault();

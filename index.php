@@ -50,6 +50,7 @@ $array = sort_tasks_by_time($all_records);
 $clients_and_projects = clients_and_projects($all_records);
 $tasks_total = count($array);
 $client_options = '"'.implode('","',array_keys($clients_and_projects)).'"';
+$project_options = '"'.implode('","',array_unique(call_user_func_array('array_merge', ($clients_and_projects)))).'"';
 $additional_js = '
 var client_options = {
 	data: ['.$client_options.'],
@@ -60,7 +61,7 @@ var client_options = {
 	}
 }
 var project_options = {
-	data: ["Email Newsletters", "Planning/Quoting", "Print Design", "IT/Server Maintenance", "Social Media/Promo", "Website Design", "Website Updates"],
+	data: ['.$project_options.'],
 	list: {
 		match: {
 			enabled: true

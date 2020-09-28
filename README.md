@@ -70,7 +70,7 @@ The heirarchy is Project>Client>Default
 
 Over the course of my 17 years as a freelance designer/developer I've tried out a decent number of time-trackers, from native apps, browser-based and even just using MacOS' Notes app. For the last year I have been using Kimai and have for the most part been pretty happy with it. Trouble is, it occupies over 2.5GB of my server space, and with over 21,000 files it's no surprise that it's quite slooooow and easy to break ...
 
-... so I created TallyHo, with a 'simple by design' philosphy.
+... so I created TallyHo, with a 'simple by design' philosophy.
 
 
 ## Disclaimer:

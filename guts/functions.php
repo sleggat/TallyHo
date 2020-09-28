@@ -102,7 +102,7 @@ function calculate_cost($mins, $path, $is_expense = "") {
 		$cost['source'] = 'Expense';
 		return $cost;
 	}
-	global $default_rate;
+	global $default_hourlyrate;
 	// search for yaml in project folder first, then client folder, else use default
 	$pieces = explode("/", $path);
 	$project_yaml = $pieces[0].'/'.$pieces[1].'/'.$pieces[2].'/_info.yaml';
@@ -118,7 +118,7 @@ function calculate_cost($mins, $path, $is_expense = "") {
 		$cost['source'] = CURRENCY_SYMBOL.$rate.'/hr (Client Rate)';
 	}
 	else {
-		$rate = $default_rate;
+		$rate = $default_hourlyrate;
 		$cost['source'] = CURRENCY_SYMBOL.$rate.'/hr (Default Rate)';
 	}
 
