@@ -2583,6 +2583,14 @@
 		"oAP": "/data/Magrette/Website/20200928-2245.txt",
 		"oF": 0
 		},
+	"/data/Magrette/Website/20200929-1205.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/data/Magrette/Website/20200929-1205.txt",
+		"oF": 0
+		},
 	"/data/Mighty+Mighty/Labels/20190706-0100.txt": {
 		"cB": 0,
 		"ft": 8192,
@@ -3544,42 +3552,6 @@
 		"oS": 0,
 		"sct": 0
 		},
-	"/template/css/bulmacolumns.sass": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"ec": 1,
-		"ft": 2,
-		"ma": 1,
-		"oA": 0,
-		"oAP": "/template/css/bulmacolumns.css",
-		"oF": 0,
-		"oS": 0,
-		"sct": 0
-		},
-	"/template/css/reset.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "/template/css/reset.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"/template/css/reset.sass": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"ec": 1,
-		"ft": 2,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "/template/css/reset.css",
-		"oF": 0,
-		"oS": 0,
-		"sct": 0
-		},
 	"/template/css/sass/base/_all.sass": {
 		"aP": 1,
 		"bl": 0,
@@ -4139,6 +4111,19 @@
 		"oS": 0,
 		"sct": 0
 		},
+	"/template/css/sass/helpers/flexbox.sass": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 2,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/template/css/sass/helpers/flexbox.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
 	"/template/css/sass/helpers/float.sass": {
 		"aP": 1,
 		"bl": 0,
@@ -4321,12 +4306,12 @@
 		"oS": 0,
 		"sct": 0
 		},
-	"/template/css/sass/utilities/derived-variables.scss": {
+	"/template/css/sass/utilities/derived-variables.sass": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"ec": 1,
-		"ft": 4,
+		"ft": 2,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/template/css/sass/utilities/derived-variables.css",
@@ -4404,6 +4389,16 @@
 		"oS": 0,
 		"sct": 0
 		},
+	"/template/css/style_Steves-iMac5k.local_Sep-29-203450-2020_Conflict.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/template/css/style_Steves-iMac5k.local_Sep-29-203450-2020_Conflict.css",
+		"oF": 0,
+		"oS": 0
+		},
 	"/template/css/tailwind_colors.sass": {
 		"aP": 1,
 		"bl": 0,
@@ -4411,7 +4406,7 @@
 		"ec": 1,
 		"ft": 2,
 		"ma": 1,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/template/css/tailwind_colors.css",
 		"oF": 0,
 		"oS": 0,
@@ -4432,6 +4427,17 @@
 		"oA": 0,
 		"oAP": "/template/header.php",
 		"oF": 0
+		},
+	"/template/images/logo-white.png": {
+		"ft": 32768,
+		"iS": 163244,
+		"oA": 0,
+		"oAP": "/template/images/logo-white.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
 		},
 	"/template/images/logo.png": {
 		"ft": 32768,

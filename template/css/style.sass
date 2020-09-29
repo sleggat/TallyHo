@@ -1,25 +1,65 @@
-@import "reset.sass"
-@import "tailwind_colors.sass"
 
-$steve-blue-600: #0087ff
-$steve-blue-500: lighten($steve-blue-600, 12%)
-$steve-blue-400: lighten($steve-blue-600, 24%)
-$steve-blue-300: lighten($steve-blue-600, 35%)
-$steve-blue-200: lighten($steve-blue-600, 46%)
-$steve-blue-100: lighten($steve-blue-600, 48%)
+$dk-blue-900: #00305c // 00417d
+$dk-blue-800: saturate(lighten($dk-blue-900, 05%), 10%)
+$dk-blue-700: saturate(lighten($dk-blue-900, 10%), 20%)
+$dk-blue-600: saturate(lighten($dk-blue-900, 15%), 30%)
+$dk-blue-500: saturate(lighten($dk-blue-900, 20%), 40%)
+$dk-blue-400: saturate(lighten($dk-blue-900, 25%), 50%)
+$dk-blue-300: saturate(lighten($dk-blue-900, 30%), 60%)
+$dk-blue-200: saturate(lighten($dk-blue-900, 35%), 70%)
+$dk-blue-100: saturate(lighten($dk-blue-900, 40%), 80%)
 
-$link: $steve-blue-400
-$link-hover: $steve-blue-600
+$lt-blue-900: $dk-blue-100
+$lt-blue-800: saturate(lighten($lt-blue-900, 05%), 10%)
+$lt-blue-700: saturate(lighten($lt-blue-900, 10%), 20%)
+$lt-blue-600: saturate(lighten($lt-blue-900, 15%), 30%)
+$lt-blue-500: saturate(lighten($lt-blue-900, 20%), 40%)
+$lt-blue-400: saturate(lighten($lt-blue-900, 25%), 50%)
+$lt-blue-300: saturate(lighten($lt-blue-900, 30%), 60%)
+$lt-blue-200: saturate(lighten($lt-blue-900, 35%), 70%)
+$lt-blue-100: saturate(lighten($lt-blue-900, 40%), 80%)
+
+$dk-gray-900: #262a2f
+$dk-gray-800: saturate(lighten($dk-gray-900, 05%), 2%)
+$dk-gray-700: saturate(lighten($dk-gray-900, 10%), 4%)
+$dk-gray-600: saturate(lighten($dk-gray-900, 15%), 6%)
+$dk-gray-500: saturate(lighten($dk-gray-900, 20%), 8%)
+$dk-gray-400: saturate(lighten($dk-gray-900, 25%), 10%)
+$dk-gray-300: saturate(lighten($dk-gray-900, 30%), 12%)
+$dk-gray-200: saturate(lighten($dk-gray-900, 35%), 14%)
+$dk-gray-100: saturate(lighten($dk-gray-900, 40%), 16%)
+
+$lt-gray-900: $dk-gray-100
+$lt-gray-800: saturate(lighten($lt-gray-900, 05%), 2%)
+$lt-gray-700: saturate(lighten($lt-gray-900, 10%), 4%)
+$lt-gray-600: saturate(lighten($lt-gray-900, 15%), 6%)
+$lt-gray-500: saturate(lighten($lt-gray-900, 20%), 8%)
+$lt-gray-400: saturate(lighten($lt-gray-900, 25%), 10%)
+$lt-gray-300: saturate(lighten($lt-gray-900, 30%), 12%)
+$lt-gray-200: saturate(lighten($lt-gray-900, 35%), 14%)
+$lt-gray-100: saturate(lighten($lt-gray-900, 40%), 16%)
+
+$lt-red-900: #d02010
+$lt-red-800: saturate(lighten($lt-red-900, 05%), 10%)
+$lt-red-700: saturate(lighten($lt-red-900, 10%), 15%)
+$lt-red-600: saturate(lighten($lt-red-900, 15%), 20%)
+$lt-red-500: saturate(lighten($lt-red-900, 20%), 25%)
+$lt-red-400: saturate(lighten($lt-red-900, 25%), 30%)
+$lt-red-300: saturate(lighten($lt-red-900, 30%), 35%)
+$lt-red-200: saturate(lighten($lt-red-900, 35%), 40%)
+$lt-red-100: saturate(lighten($lt-red-900, 40%), 45%)
+
+$link: $lt-blue-400
+$link-hover: $lt-blue-600
 $column-gap: 10px
 $family-sans-serif: 'Heebo', sans-serif
 
-@import "_bulma.sass"
+@import "_bulma.sass" 
 
 /* Main styles */
 
 html
-  //background: linear-gradient(180deg, darken($indigo-900, 20%) 0, darken($purple-900, 40%) 40%, darken($pink-900, 20%) 100%)
-  background-color: $steve-blue-200
+  background-color: $lt-blue-100
   background-attachment: fixed
   padding: 0
   margin: 0
@@ -29,7 +69,7 @@ html
 
 body
   font-family: $family-sans-serif
-  color: $gray-800
+  color: $dk-gray-800
   font-size: .9rem
   line-height: 1.4rem
   font-weight: 400
@@ -60,38 +100,38 @@ img
 h1, h2, .day_header
   font-size: 1.5rem
   font-weight: 400
-  color: $steve-blue-600
+  color: $dk-blue-400
   text-transform: uppercase
 
 h2
   //font-size: 1.5rem
   margin: 2rem 0
 
+
+/* Navbar */
+
+.navbar
+  background: $dk-blue-700
+
+.navbar-brand
+  margin-top: 5px
+  img
+    height: auto
+    max-width: 100px
+
 /* Layout */
 
-.nav
-  margin: 0px 0px #{($column-gap * 1)} 0px
-  padding: #{($column-gap * 4)} 0 #{($column-gap * 3)} 0
-  background: $white
-  position: sticky
-  top: 0
-  z-index: 2
-  box-shadow: 0px 1px 3px rgba($steve-blue-600, .1), 0px 1px 1px rgba($gray-900, .05)
-  transition: padding .2s
-
-.nav_shrink
-  padding: #{($column-gap * 1)} 0 #{($column-gap * 0)} 0
 
 .day_header
   width: 100%
   padding: #{($column-gap * 2)} 0 #{($column-gap * 1.5)} 58px
   margin: #{($column-gap * 4)} 0 0 0
   cursor: pointer
-  border-bottom: 1px solid $gray-300
+  border-bottom: 1px solid $lt-gray-300
   .pretty_date
     padding-right: .5rem 
   .pretty_day
-    color: $gray-400
+    color: $lt-gray-400
 
 .sheet > .day_header:nth-child(2)
   padding-top: 0
@@ -105,7 +145,7 @@ h2
   border-bottom-right-radius: #{($column-gap / 2)}
   margin: 0px 0px #{($column-gap * 1)} 0px
   padding: #{($column-gap * 2)} 0px 0px 0px
-  box-shadow: 0px 0px #{($column-gap / 2)} rgba($steve-blue-600, .1), 0px 0px 1px rgba($gray-900, .1)
+  box-shadow: 0px 0px #{($column-gap / 2)} rgba($lt-blue-600, .3), 0px 0px 1px rgba($dk-gray-500, .1)
 
 .box_filters
   background-color: $white
@@ -113,7 +153,7 @@ h2
   border-bottom-right-radius: #{($column-gap / 2)}
   margin: 0px 0px #{($column-gap * 1)} 0px
   padding: #{($column-gap * 1)} #{($column-gap * 2)} 0px #{($column-gap * 2)}
-  box-shadow: 0px 0px #{($column-gap / 2)} rgba($steve-blue-600, .1), 0px 0px 1px rgba($gray-900, .1)
+  box-shadow: 0px 0px #{($column-gap / 2)} rgba($lt-blue-600, .3), 0px 0px 1px rgba($dk-gray-500, .1)
   //outline: 1px solid red
 
 .table_row
@@ -121,11 +161,11 @@ h2
   flex-direction: row
   flex-grow: 1
   &:hover
-    background-color: lighten($steve-blue-100, 1%)
+    background-color: $lt-gray-100
 
 .table_col
-  border-bottom: 1px solid $gray-300
-  border-: 1px solid $gray-200
+  border-bottom: 1px solid $lt-gray-300
+  border-: 1px solid $lt-gray-200
   padding: #{($column-gap * 1.5)} 2px 13px 2px
   vertical-align: top
   &.task_col_1
@@ -173,13 +213,13 @@ h2
   margin-left: -.05em // pedantic nudging so the larger text lines up a little nicer with text underneath
 
 .task_description, .task_time, .task_value_source
-  color: $gray-500
+  color: $lt-gray-800
 
 .task_client
   margin-right: #{($column-gap / 2)}
 
 .task_project
-  color: $gray-600
+  color: $dk-gray-200
   white-space: nowrap
 
 .task_value_currency
@@ -195,7 +235,7 @@ h2
     display: none
 
 .highlighted
-  background-color: $steve-blue-100
+  background-color: $lt-blue-200
   .action_icons .icon a
     background: $white
 
@@ -210,7 +250,7 @@ h2
     //filter: invert(40%) sepia(50%) hue-rotate(226deg) saturate(900%) // hehe
   a
     transition: color .5s, border-radius .5s, background-color .5s
-    background: $steve-blue-200
+    background: $lt-blue-100
     vertical-align: middle
     align: center
     padding: #{($column-gap / 2)} 6px 4px 6px
@@ -219,8 +259,8 @@ h2
     line-height: 1
     display: inline-block
     &:hover
-      color: $steve-blue-300
-      background: $steve-blue-600
+      color: $lt-blue-100
+      background: $lt-blue-200
       transition: color .2s, border-radius .2s, background-color .2s
       border-radius: #{($column-gap * 1)}
   .modal_update // this icon looks off-centre, so let's correct that.
@@ -231,40 +271,25 @@ h2
     align-items: center
     width: 100%
     height: 100%
+    background-color: transparent
     img
-      width: 2rem
+      width: 1.2rem
 ion-icon
   vertical-align: -10%
 
-/* Logo */
-
-.logo
-  max-width: 80px
-  margin-left: 5#{($column-gap / 2)}
 
 /* Floating bar where the tally goes */
 
 .tally
-  color: $steve-blue-600
-  font-size: 1.25rem
-  height: 100%
-  //display: none
-  display: grid
-  justify-items: center
-  align-items: center
+  color: $lt-blue-100
 
-  background-color: $steve-blue-100
 /* Modal custom styles */
 
-.modal
+.modal-content
   padding: #{($column-gap * 2)} #{($column-gap * 2)} #{($column-gap * 4)} #{($column-gap * 2)}
   background-color: $white
-  a.close-modal
-    top: 15px !important
-    right: 15px !important
-.jquery-modal
-  z-index: 2 !important
-
+  border-radius: 6px
+ 
 /* DateRangePicker custom styles */
 
 .drp-buttons
@@ -276,13 +301,13 @@ ion-icon
     margin: 2px 9px
     font-weight: inherit !important
   .cancelBtn
-    background-color: $gray-200
+    background-color: $dk-gray-200
 .daterangepicker select.hourselect,
 .daterangepicker select.minuteselect,
 .daterangepicker select.secondselect,
 .daterangepicker select.ampmselect
   outline: 0
-  border: 1px solid $gray-400
+  border: 1px solid $dk-gray-400
   padding: #{($column-gap / 2)} #{($column-gap * 1)}
   box-shadow: none !important
   -webkit-appearance: none
@@ -293,28 +318,25 @@ ion-icon
 
 label
   padding: 0 0 0 #{($column-gap / 2)}
-  color: $gray-500
+  color: $dk-gray-300
   font-weight: 400
   text-transform: uppercase
-  font-size: .5rem
+  font-size: .75rem
   display: inline-block
   min-height: #{($column-gap * 2)}
 input, textarea
   width: 100%
   padding: #{($column-gap * 1)} #{($column-gap * 1)}
-  background-color: $steve-blue-200
+  background-color: $lt-gray-100
   border: 0
-  //border: 1px solid $gray-400
-  border-radius: #{($column-gap / 2)}
-  height: #{($column-gap  * 3.5)}
-  vertical-align: top
-  color: $gray-700
+  outline: 1px solid $lt-gray-200
+  color: $dk-gray-600
   &:not([type=checkbox]):not([type=radio])
     -webkit-appearance: none // remove shadow on mobile safari
   &:focus, &:hover
-    outline: 0
-    //border: 1px solid $gray-500
-    color: $gray-900
+    background-color: $lt-blue-100
+    outline: 1px solid $lt-blue-500
+    color: $dk-gray-900
 textarea
   max-width: 100%
   min-height: 4rem
@@ -327,44 +349,25 @@ textarea
 .easy-autocomplete input
   width: 100%
 select
-  border: 1px solid $gray-400
+  border: 1px solid $dk-gray-400
   border-radius: 3px
   background-color: transparent
-button
-  background-color: $steve-blue-200
-  font-weight: 500
-  font-size: 1rem
-  width: 100%
-  max-width: 20ch
-  vertical-align: middle
-  padding: 2px #{($column-gap * 2)}
-  height: #{($column-gap * 3.5)}
-  margin: 0
-  border: 0
-  border-radius: #{($column-gap / 2)}
-  color: $steve-blue-600
-  transition: all .2s
-  &:hover, &:focus
-    outline: 0
-    background-color: $steve-blue-100
-    color: $steve-blue-500
-    cursor: pointer
 .is-alert
-  background-color: $red-600
+  background-color: $lt-red-600
   border: 0
-  color: $red-100
+  color: $lt-red-100
   &:hover
-    background-color: $red-500
+    background-color: $lt-red-500
     border: 0
     color: $white
 .highlight
-  background-color: $yellow-100
+  background-color: $lt-red-100
 
 /* Pagination */
 .page_number
   text-align: right
   padding: 0 #{($column-gap * 2)}
-  color: $steve-blue-300
+  color: $lt-blue-300
 .pagination
   margin: #{($column-gap * 2)} 0 #{($column-gap * 4)} 0px
   display: flex
@@ -372,9 +375,9 @@ button
     padding: #{($column-gap * 1)} #{($column-gap * 1.5)} 9px #{($column-gap * 1.5)}
     // margin: #{($column-gap / 2)}
     background-color: $white
-    box-shadow: 0px 0px #{($column-gap / 2)} rgba($steve-blue-600, .1), 0px 0px 1px rgba($gray-900, .1)
+    box-shadow: 0px 0px #{($column-gap / 2)} rgba($lt-blue-600, .1), 0px 0px 1px rgba($dk-gray-900, .1)
     &.page_current
-      color: $steve-blue-600
+      color: $lt-blue-600
 
 @media (max-width: 1200px)
   .task_project
@@ -393,20 +396,18 @@ button
     padding-left: #{($column-gap * 3)}
   .table_col
     &.task_col_1
-      width: #{($column-gap * 2.5)}
+      width: 20ch
       padding-left: #{($column-gap * 3)}
     &.task_col_2
-      width: 280px
+      width: 30ch
     &.task_col_3
       //width: 100%
     &.task_col_4
       padding-right: #{($column-gap * 1)}
 
-    //background-color: white
-
   .box_sheet, .box_filters, .box_nav
     padding: #{($column-gap * 1)} #{($column-gap * 1)} #{($column-gap * 1)} #{($column-gap * 1)}
-    margin: 0 10px
+    // margin: 0 10px
 
   .action_icons
     max-width: 80px

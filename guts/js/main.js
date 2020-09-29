@@ -1,11 +1,10 @@
 $(document).ready(function() {
-    window.addEventListener("scroll", function() {
-        if (window.scrollY > 20) {
-          $('.nav').addClass('nav_shrink');
-        } else {
-          $('.nav').removeClass('nav_shrink');
-        }
-      }, false);
+    $(document).keyup(function(e) {
+      if (e.keyCode === 27) $(".modal").removeClass("is-active");   // esc
+    });
+    $(".modal-close, .modal-background").click(function() {
+       $(".modal").removeClass("is-active");
+    });
     initpicker('#form_add');
     $(".modal_client").easyAutocomplete(client_options);
     $(".modal_project").easyAutocomplete(project_options);
@@ -33,10 +32,7 @@ $('.modal_update').click(function(event) {
     $("#modal_update .modal_project").val(project);
     $("#modal_update .modal_description").val(description);
     $("#modal_update .modal_path").val(path);
-    $("#modal_update").modal({
-        fadeDuration: 300,
-        fadeDelay: 0.5
-    });
+    $("#modal_update").addClass("is-active");
     initpicker('#modal_update');
 });
 
@@ -57,10 +53,7 @@ $('.modal_duplicate').click(function(event) {
     $("#modal_update .modal_project").val(project);
     $("#modal_update .modal_description").val(description);
     $("#modal_update .modal_path").val('');
-    $("#modal_update").modal({
-        fadeDuration: 300,
-        fadeDelay: 0.5
-    });
+    $("#modal_update").addClass("is-active");
     initpicker('#modal_update');
 });
 
@@ -81,10 +74,7 @@ $('.modal_add').click(function(event) {
     $("#modal_update .modal_project").val(project);
     $("#modal_update .modal_description").val(description);
     $("#modal_update .modal_path").val('');
-    $("#modal_update").modal({
-        fadeDuration: 300,
-        fadeDelay: 0.5
-    });
+    $("#modal_update").addClass("is-active");
     initpicker('#modal_update');
 });
 
@@ -95,10 +85,7 @@ $('.modal_delete').click(function(event) {
     $("#modal_delete .modal_header").html("Delete Task");
     $("#modal_delete .modal_path").val(path);
     $("#modal_delete .modal_delete_path").html(path);
-    $("#modal_delete").modal({
-        fadeDuration: 300,
-        fadeDelay: 0.5
-    });
+    $("#modal_delete").addClass("is-active");
 });
 
 function initpicker(element) {
@@ -144,11 +131,18 @@ function auto_grow(element) {
 //$('.task_container >:not(span)').css("background-color", "rgba(200,1,1,.5)");
 function recalculate_costs() {
     var total_cost = 0;
+    var total_mins = 0;
+    var total_selected =0;
     $(".highlighted").each(function(index) {
-        var current = $(this).children().find('.task_value').attr("data-costraw");
-        total_cost = total_cost + parseFloat(current);
+        var costraw = $(this).children().find('.task_value').attr("data-costraw");
+        var mins = $(this).children().find('.task_duration').text();
+        total_cost = total_cost + parseFloat(costraw);
+        total_mins = total_mins + parseFloat(mins);
+        total_selected = index + 1;
     });
     total_cost = total_cost.toFixed(2);
+    $("#total_selected").text(total_selected);
+    $("#total_mins").text(total_mins);
     $("#total_cost").text(total_cost);
     if (total_cost == 0) {
         $("#tally").fadeOut('fast');

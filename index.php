@@ -73,26 +73,32 @@ var project_options = {
 // zip_backup('data/', './backups/'.date("Ymd-His").'.zip')
 
 ?>
-<nav class="nav">
+<nav class="navbar is-fixed-top is-transparent" role="navigation" aria-label="dropdown navigation">
 	<div class="container">
-		<div class="box_nav">
-			<div class="columns">
-				<div class="column is-8">
-					<img src="template/images/logo.png" alt="TallyHo!" class="logo">
-				</div>
-
-				<div class="column is-2">
-					<div class="tally">
-						<div id="tally">Total <?= CURRENCY_SYMBOL ?><span id="total_cost"></span></div>
+		<div class="navbar-brand">
+			<a href="/" class="navbar-item"><img src="template/images/logo-white.png" alt="TallyHo!"></a>
+		</div>
+		<div class="navbar-menu">
+			<div class="navbar-end">
+				<div class="navbar-item tally">
+					<div id="tally" class="hide">
+						Selected: <span id="total_selected"></span> / 
+						Mins: <span id="total_mins"></span> / 
+						Total: <?= CURRENCY_SYMBOL ?><span id="total_cost"></span>
 					</div>
 				</div>
-
-				<div class="column is-2">
-					<span class="icon_svg">
-						<a href="#" class="modal_add">
-							<img src="template/ionicons-5.1.2.designerpack/add-outline.svg" /> New
+				<div class="navbar-item has-dropdown is-hoverable">
+					<a href="#" class="navbar-item has-text-white">
+						<span class="icon">
+							<img src="template/ionicons-5.1.2.designerpack/add-outline.svg" alt="">
+						</span>
+						<span>Add</span>
+					</a>
+					<div class="navbar-dropdown is-right">
+						<a class="navbar-item modal_add">
+							Add to last task
 						</a>
-					</span>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -104,23 +110,26 @@ var project_options = {
 		<div class="column is-12-tablet is-12-desktop">
 			<form method="get">
 				<div class="box_filters">
-					<div class="columns">
-						<div class="column is-5-tablet">
-							<div class="control">
-								<input id="filter_client" name="FilterClient" class="input" type="text" value="<?= $filter_client ?>" placeholder="Client" >
-							</div>
+					<div class="field has-addons">
+						<p class="control">
+							<span class="select">
+								<select>
+									<option>Magrette</option>
+									<option>MacLymph</option>
+									<option>Notable</option>
+								</select>
+							</span>
+						</p>
+						<div class="control">
+							<input id="filter_client" name="FilterClient" class="input" type="text" value="<?= $filter_client ?>" placeholder="Client" >
 						</div>
-						<div class="column is-5-tablet">
-							<div class="control">
-								<input id="filter_project" name="FilterProject" class="input" type="text" value="<?= $filter_project ?>" placeholder="Project">
-							</div>
+						<div class="control">
+							<input id="filter_project" name="FilterProject" class="input" type="text" value="<?= $filter_project ?>" placeholder="Project">
 						</div>
-						<div class="column is-2-tablet">
-							<div class="control">
-								<button class="button is-link" type="submit" name="Submit" value="filter">
-									Filter
-								</button>
-							</div>
+						<div class="control">
+							<button class="button" type="submit" name="Submit" value="filter">
+								Filter
+							</button>
 						</div>
 					</div>
 				</div>
@@ -172,7 +181,7 @@ var project_options = {
 					
 
 					?>
-				<div class="table<?= $highlight . format_date($task_array['Date'],'Ymd') ?>">
+				<div class="<?= $highlight . format_date($task_array['Date'],'Ymd') ?>">
 					<div class="table_row task_container" 
 					data-path="<?= $task_array['Path'] ?>" 
 					data-datetime="<?= $task_array['Date'] ?>" 
