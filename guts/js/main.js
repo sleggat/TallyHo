@@ -88,6 +88,10 @@ $('.modal_delete').click(function(event) {
     $("#modal_delete").addClass("is-active");
 });
 
+
+/* Functions */
+
+
 function initpicker(element) {
     $(element+' .modal_datetime').daterangepicker({
         "singleDatePicker": true,
@@ -128,7 +132,16 @@ function auto_grow(element) {
     element.style.height = "5px";
     element.style.height = (element.scrollHeight)+"px";
 }
-//$('.task_container >:not(span)').css("background-color", "rgba(200,1,1,.5)");
+
+function timeConvert(n) {
+    var num = n;
+    var hours = (num / 60);
+    var rhours = Math.floor(hours);
+    var minutes = (hours - rhours) * 60;
+    var rminutes = Math.round(minutes);
+    return rhours + "h " + rminutes + "m";
+}
+
 function recalculate_costs() {
     var total_cost = 0;
     var total_mins = 0;
@@ -142,7 +155,7 @@ function recalculate_costs() {
     });
     total_cost = total_cost.toFixed(2);
     $("#total_selected").text(total_selected);
-    $("#total_mins").text(total_mins);
+    $("#total_mins").text(timeConvert(total_mins));
     $("#total_cost").text(total_cost);
     if (total_cost == 0) {
         $("#tally").fadeOut('fast');
@@ -156,7 +169,7 @@ $('.day_header').click(function(event) {
     $('.' + toggledate + " > .task_container").toggleClass("highlighted");
     recalculate_costs();
 });
-$('.table_col:not(.action_icons)').click(function(event) {
+$('.table_col:not(.task_col_4)').click(function(event) {
     event.preventDefault();
     $(this).parents(".task_container").toggleClass("highlighted");
     recalculate_costs();

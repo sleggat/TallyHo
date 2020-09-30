@@ -77,28 +77,17 @@ var project_options = {
 	<div class="container">
 		<div class="navbar-brand">
 			<a href="/" class="navbar-item"><img src="template/images/logo-white.png" alt="TallyHo!"></a>
-		</div>
-		<div class="navbar-menu">
-			<div class="navbar-end">
-				<div class="navbar-item tally">
-					<div id="tally" class="hide">
-						Selected: <span id="total_selected"></span> / 
-						Mins: <span id="total_mins"></span> / 
-						Total: <?= CURRENCY_SYMBOL ?><span id="total_cost"></span>
-					</div>
-				</div>
-				<div class="navbar-item has-dropdown is-hoverable">
-					<a href="#" class="navbar-item has-text-white">
-						<span class="icon">
-							<img src="template/ionicons-5.1.2.designerpack/add-outline.svg" alt="">
-						</span>
-						<span>Add</span>
-					</a>
-					<div class="navbar-dropdown is-right">
-						<a class="navbar-item modal_add">
-							Add to last task
-						</a>
-					</div>
+			<div class="navbar-item">
+				<a href="#" class="modal_add has-text-white">
+					<span class="icon"><i class="fas fa-plus"></i></span>
+					<span>Add</span>
+				</a>
+			</div>
+			<div class="tally navbar-item has-text-primary">
+				<div id="tally" class="hide">
+					Rows: <span id="total_selected"></span> / 
+					Time: <span id="total_mins"></span> / 
+					Total: <?= CURRENCY_SYMBOL ?><span id="total_cost"></span>
 				</div>
 			</div>
 		</div>
@@ -107,19 +96,10 @@ var project_options = {
 
 <div class="container">
 	<div class="columns is-multiline">
-		<div class="column is-12-tablet is-12-desktop">
+		<div class="column">
 			<form method="get">
 				<div class="box_filters">
-					<div class="field has-addons">
-						<p class="control">
-							<span class="select">
-								<select>
-									<option>Magrette</option>
-									<option>MacLymph</option>
-									<option>Notable</option>
-								</select>
-							</span>
-						</p>
+					<div class="field has-addons has-addons-right">
 						<div class="control">
 							<input id="filter_client" name="FilterClient" class="input" type="text" value="<?= $filter_client ?>" placeholder="Client" >
 						</div>
@@ -181,89 +161,98 @@ var project_options = {
 					
 
 					?>
-				<div class="<?= $highlight . format_date($task_array['Date'],'Ymd') ?>">
-					<div class="table_row task_container" 
-					data-path="<?= $task_array['Path'] ?>" 
-					data-datetime="<?= $task_array['Date'] ?>" 
-					data-date="<?= $task_array['Date'] ?>"
-					data-duration="<?= $task_array['Duration'] ?>" 
-					data-expense="<?= $task_array['Expense'] ?>" 
-					data-client="<?= $task_array['Client'] ?>" 
-					data-project="<?= $task_array['Project'] ?>" 
-					data-description="<?= $task_array['Description'] ?>" >
-					<div class="table_col task_col_1 heat_<?= timeheat($task_array['Duration']) ?>">
-						<span class="task_duration">
-							<?php if (!empty($task_array['Expense'])) {
-								echo 'N/A</span>';
-							} 
-							else {
-								echo $task_array['Duration'].' </span><span class="task_duration_label">mins</span>';
-							}
-							?><br>
-						<span class="task_time"><?= format_time($task_array['Date']) ?></span>
+					<div class="<?= $highlight . format_date($task_array['Date'],'Ymd') ?>">
+						<div class="table_row task_container" 
+						data-path="<?= $task_array['Path'] ?>" 
+						data-datetime="<?= $task_array['Date'] ?>" 
+						data-date="<?= $task_array['Date'] ?>"
+						data-duration="<?= $task_array['Duration'] ?>" 
+						data-expense="<?= $task_array['Expense'] ?>" 
+						data-client="<?= $task_array['Client'] ?>" 
+						data-project="<?= $task_array['Project'] ?>" 
+						data-description="<?= $task_array['Description'] ?>" >
+						<div class="table_col task_col_1 heat_<?= timeheat($task_array['Duration']) ?>">
+							<span class="task_duration">
+								<?php if (!empty($task_array['Expense'])) {
+									echo 'N/A</span>';
+								} 
+								else {
+									echo $task_array['Duration'].' </span><span class="task_duration_label">mins</span>';
+								}
+								?><br>
+								<span class="task_time"><?= format_time($task_array['Date']) ?></span>
+							</div>
+							<div class="table_col task_col_2">
+								<span class="task_value" data-costraw="<?= $cost['raw']; ?>"><span class="task_value_currency"><?= CURRENCY_SYMBOL ?></span><?= $cost['formatted']; ?></span>
+								<br><span class="task_value_source"><?= $cost['source']; ?></span>
+							</div>
+							<div class="table_col task_col_3">
+								<span class="task_client"><?= $task_array['Client'] ?></span>
+								<span class="task_project"><?= $task_array['Project'] ?></span><br>
+								<span class="task_description"><?= $task_array['Description'] ?></span>
+							</div>
+							<div class="table_col task_col_4">
+								<div class="dropdown is-right is-hoverable">
+									<div class="dropdown-trigger">
+										<button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+											<span class="icon is-small">
+												<i class="fas fa-angle-down" aria-hidden="true"></i>
+											</span>
+										</button>
+									</div>
+									<div class="dropdown-menu" id="dropdown-menu" role="menu">
+										<div class="dropdown-content">
+											<a href="#" class="dropdown-item modal_duplicate">
+												<span class="icon"><i class="fas fa-copy"></i></span>Duplicate
+											</a>
+											<a href="#" class="dropdown-item modal_update">
+												<span class="icon"><i class="fas fa-edit"></i></span>Edit
+											</a>
+											<hr class="dropdown-divider">
+											<a href="/?FilterClient=<?= $task_array['Client'] ?>&FilterProject=<?= $task_array['Project'] ?>&Submit=filter" class="dropdown-item" alt="Filter this Client/Project">
+												<span class="icon"><i class="fas fa-filter"></i></span>Filter
+											</a>
+											
+											<hr class="dropdown-divider">
+											<a href="#" class="dropdown-item modal_delete">
+												<span class="icon has-text-danger"><i class="fas fa-trash"></i></span>Delete
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="table_col task_col_2">
-						<span class="task_value" data-costraw="<?= $cost['raw']; ?>"><span class="task_value_currency"><?= CURRENCY_SYMBOL ?></span><?= $cost['formatted']; ?></span>
-						<br><span class="task_value_source"><?= $cost['source']; ?></span>
-					</div>
-					<div class="table_col task_col_3">
-						<span class="task_client"><?= $task_array['Client'] ?></span>
-						<span class="task_project"><?= $task_array['Project'] ?></span><br>
-						<span class="task_description"><?= $task_array['Description'] ?></span>
-					</div>
-					<div class="table_col  task_col_4 action_icons">
-						<span class="icon_svg">
-							<a href="/?FilterClient=<?= $task_array['Client'] ?>&FilterProject=<?= $task_array['Project'] ?>&Submit=filter" alt="Filter this Client/Project">
-								<img src="template/ionicons-5.1.2.designerpack/filter-outline.svg" />
-							</a>
-						</span>
-						<span class="icon_svg">
-							<a href="#" class="modal_update">
-								<img src="template/ionicons-5.1.2.designerpack/create-outline.svg" alt="Edit Task" />
-							</a>
-						</span>
-						<span class="icon_svg">
-							<a href="#" class="modal_duplicate">
-								<img src="template/ionicons-5.1.2.designerpack/duplicate-outline.svg" alt="Duplicate Task" />
-							</a>
-						</span>
-						<span class="icon_svg">
-							<a href="#" class="modal_delete">
-								<img src="template/ionicons-5.1.2.designerpack/trash-outline.svg" alt="Delete Task" />
-							</a>
-						</span>
+					<?php
+					$previous_day = format_date($task_array['Date'],'Ymd');
+				}
 
-					</div>
-				</div>
-			</div>
-			<?php
-			$previous_day = format_date($task_array['Date'],'Ymd');
-		}
+				$pagespeed_after = microtime(true);
 
-		$pagespeed_after = microtime(true);
-
-		?>
-	</div><!-- end table -->
-	<?php 
-	$total_pages = count($array) / $page_limit;
-	$query = "";
-	if ($filter_client || $filter_project) {
-		$query = "&FilterClient=".$filter_client."&FilterProject=".$filter_project."&Submit=filter";
-	}
-	echo '<div class="pagination">';
-	for ($i=0; $i < $total_pages; $i++) { 
-		if ($i == ($current_page)) {
-			echo '<a href="?p='.$i.$query.'" class="page_current">'.($i+1).'</a>';
-		}
-		else {
-			echo '<a href="?p='.$i.$query.'">'.($i+1).'</a>';
-		}
-	}
-	echo '</div>';
-	echo '<div class="pagespeed">Churned out in '.($pagespeed_after-$pagespeed_before). " secs. Total tasks: ".$tasks_total."</div>\n";
-	?>
-</div>
-</div><!-- end sheet -->
+				?>
+			</div><!-- end table -->
+			<?php 
+			$total_pages = count($array) / $page_limit;
+			$query = "";
+			if ($filter_client || $filter_project) {
+				$query = "&FilterClient=".$filter_client."&FilterProject=".$filter_project."&Submit=filter";
+			}
+			echo '<nav class="pagination" role="navigation" aria-label="pagination">
+			<ul class="pagination-list">';
+			for ($i=0; $i < $total_pages; $i++) { 
+				if ($i == ($current_page)) {
+					echo '<li><a href="?p='.$i.$query.'" class="pagination-link is-current" aria-label="Goto page '.($i+1).'">'.($i+1).'</a></li>';
+				}
+				else {
+					echo '<li><a href="?p='.$i.$query.'" class="pagination-link" aria-label="Goto page '.($i+1).'">'.($i+1).'</a></li>';
+				}
+			}
+			echo '</ul>
+			</nav>';
+			echo '<div class="pagespeed">Churned out in '.($pagespeed_after-$pagespeed_before). " secs. Total tasks: ".$tasks_total."</div>\n";
+			?>
+		</div>
+	</div><!-- end sheet -->
 </div><!-- end container -->
 
 <?php

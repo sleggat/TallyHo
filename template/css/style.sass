@@ -49,10 +49,18 @@ $lt-red-300: saturate(lighten($lt-red-900, 30%), 35%)
 $lt-red-200: saturate(lighten($lt-red-900, 35%), 40%)
 $lt-red-100: saturate(lighten($lt-red-900, 40%), 45%)
 
-$link: $lt-blue-400
-$link-hover: $lt-blue-600
+$primary: $lt-blue-300
+$link: $dk-blue-400
+$link-hover: $dk-blue-100
+$link-active: $dk-gray-100
+$link-focus: $dk-gray-100
 $column-gap: 10px
 $family-sans-serif: 'Heebo', sans-serif
+$pagination-color: $link
+$pagination-border-color: $lt-blue-300
+$pagination-hover-border-color: $lt-blue-500
+$pagination-active-border-color: $dk-gray-100
+$dropdown-menu-min-width: 4rem
 
 @import "_bulma.sass" 
 
@@ -60,11 +68,8 @@ $family-sans-serif: 'Heebo', sans-serif
 
 html
   background-color: $lt-blue-100
-  background-attachment: fixed
   padding: 0
-  margin: 0
-  overflow: -moz-scrollbars-vertical
-  overflow-y: scroll // these fix the modal issue where it removes scrollbar and bungs layout
+  margin: #{($column-gap * 2)} 0 0 0 // offset for navbar
   text-rendering: optimizeLegibility
 
 body
@@ -111,7 +116,7 @@ h2
 /* Navbar */
 
 .navbar
-  background: $dk-blue-700
+  background: rgba($dk-blue-900, .95)
 
 .navbar-brand
   margin-top: 5px
@@ -119,12 +124,14 @@ h2
     height: auto
     max-width: 100px
 
+.dropdown button
+  transition: all .3s
 /* Layout */
 
 
 .day_header
   width: 100%
-  padding: #{($column-gap * 2)} 0 #{($column-gap * 1.5)} 58px
+  padding: #{($column-gap * 2)} 0 #{($column-gap * 1.5)} #{($column-gap * 5.8)}
   margin: #{($column-gap * 4)} 0 0 0
   cursor: pointer
   border-bottom: 1px solid $lt-gray-300
@@ -148,13 +155,8 @@ h2
   box-shadow: 0px 0px #{($column-gap / 2)} rgba($lt-blue-600, .3), 0px 0px 1px rgba($dk-gray-500, .1)
 
 .box_filters
-  background-color: $white
-  border-bottom-left-radius: #{($column-gap / 2)}
-  border-bottom-right-radius: #{($column-gap / 2)}
-  margin: 0px 0px #{($column-gap * 1)} 0px
-  padding: #{($column-gap * 1)} #{($column-gap * 2)} 0px #{($column-gap * 2)}
-  box-shadow: 0px 0px #{($column-gap / 2)} rgba($lt-blue-600, .3), 0px 0px 1px rgba($dk-gray-500, .1)
-  //outline: 1px solid red
+  margin: 0 0 #{($column-gap * 1)} 0px
+  padding: #{($column-gap * 1)} #{($column-gap * 0)} 0px #{($column-gap * 0)}
 
 .table_row
   display: flex
@@ -162,6 +164,9 @@ h2
   flex-grow: 1
   &:hover
     background-color: $lt-gray-100
+  &.highlighted
+    &:hover
+      background-color: darken($lt-blue-200, 2%)
 
 .table_col
   border-bottom: 1px solid $lt-gray-300
@@ -202,8 +207,8 @@ h2
   &.task_col_3
     width: 100%
   &.task_col_4
-    width: 300px
-    padding-right: #{($column-gap * 4)}
+    width: auto
+    padding-right: #{($column-gap * 2)}
   
 .task_duration, .task_value, .task_duration_label
   letter-spacing: -.03em
@@ -233,50 +238,6 @@ h2
 .task_container
   &:nth-of-type(n + 50)
     display: none
-
-.highlighted
-  background-color: $lt-blue-200
-  .action_icons .icon a
-    background: $white
-
-.action_icons
-  display: flex
-  justify-content: flex-end
-.icon_svg
-  position: relative
-  img
-    width: 18px
-    height: auto
-    //filter: invert(40%) sepia(50%) hue-rotate(226deg) saturate(900%) // hehe
-  a
-    transition: color .5s, border-radius .5s, background-color .5s
-    background: $lt-blue-100
-    vertical-align: middle
-    align: center
-    padding: #{($column-gap / 2)} 6px 4px 6px
-    margin: 1px
-    border-radius: #{($column-gap / 2)}
-    line-height: 1
-    display: inline-block
-    &:hover
-      color: $lt-blue-100
-      background: $lt-blue-200
-      transition: color .2s, border-radius .2s, background-color .2s
-      border-radius: #{($column-gap * 1)}
-  .modal_update // this icon looks off-centre, so let's correct that.
-    padding: #{($column-gap / 2)} #{($column-gap / 2)} 4px 7px
-  .modal_add
-    display: grid
-    justify-items: center
-    align-items: center
-    width: 100%
-    height: 100%
-    background-color: transparent
-    img
-      width: 1.2rem
-ion-icon
-  vertical-align: -10%
-
 
 /* Floating bar where the tally goes */
 
@@ -328,14 +289,15 @@ input, textarea
   width: 100%
   padding: #{($column-gap * 1)} #{($column-gap * 1)}
   background-color: $lt-gray-100
-  border: 0
-  outline: 1px solid $lt-gray-200
+  border: 1px solid $lt-gray-200
+  box-shadow: none
+  outline: 0
   color: $dk-gray-600
   &:not([type=checkbox]):not([type=radio])
     -webkit-appearance: none // remove shadow on mobile safari
   &:focus, &:hover
     background-color: $lt-blue-100
-    outline: 1px solid $lt-blue-500
+    border: 1px solid $lt-blue-500
     color: $dk-gray-900
 textarea
   max-width: 100%
@@ -360,24 +322,18 @@ select
     background-color: $lt-red-500
     border: 0
     color: $white
-.highlight
+
+.highlight // when a task has been added/updated
   background-color: $lt-red-100
+
+.highlighted
+  background-color: $lt-blue-200
 
 /* Pagination */
 .page_number
   text-align: right
   padding: 0 #{($column-gap * 2)}
   color: $lt-blue-300
-.pagination
-  margin: #{($column-gap * 2)} 0 #{($column-gap * 4)} 0px
-  display: flex
-  a
-    padding: #{($column-gap * 1)} #{($column-gap * 1.5)} 9px #{($column-gap * 1.5)}
-    // margin: #{($column-gap / 2)}
-    background-color: $white
-    box-shadow: 0px 0px #{($column-gap / 2)} rgba($lt-blue-600, .1), 0px 0px 1px rgba($dk-gray-900, .1)
-    &.page_current
-      color: $lt-blue-600
 
 @media (max-width: 1200px)
   .task_project
@@ -385,7 +341,7 @@ select
 
 @media (max-width: 800px)
   html
-    margin: 0
+    //margin: 0
 
   body
     font-size: .8rem
@@ -404,13 +360,8 @@ select
       //width: 100%
     &.task_col_4
       padding-right: #{($column-gap * 1)}
-
-  .box_sheet, .box_filters, .box_nav
-    padding: #{($column-gap * 1)} #{($column-gap * 1)} #{($column-gap * 1)} #{($column-gap * 1)}
-    // margin: 0 10px
-
-  .action_icons
-    max-width: 80px
-    max-height: 80px
-    flex-wrap: wrap
-    gap: 1px
+  .box_filters
+    margin: 0 #{($column-gap * 1)} 0 0
+    padding: 0
+  .box_sheet, .box_nav
+    padding: #{($column-gap * 1)} #{($column-gap * 0)} #{($column-gap * 1)} #{($column-gap * 0)}
