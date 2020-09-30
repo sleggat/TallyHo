@@ -1,5 +1,5 @@
 
-$dk-blue-900: #00203c
+$dk-blue-900: #00305c
 $dk-blue-800: saturate(lighten($dk-blue-900, 05%), 10%)
 $dk-blue-700: saturate(lighten($dk-blue-900, 10%), 20%)
 $dk-blue-600: saturate(lighten($dk-blue-900, 15%), 30%)
@@ -15,11 +15,11 @@ $lt-blue-700: saturate(lighten($dk-blue-900, 55%), 60%)
 $lt-blue-600: saturate(lighten($dk-blue-900, 60%), 50%)
 $lt-blue-500: saturate(lighten($dk-blue-900, 65%), 40%)
 $lt-blue-400: saturate(lighten($dk-blue-900, 70%), 30%)
-$lt-blue-300: saturate(lighten($dk-blue-900, 75%), 20%)
-$lt-blue-200: saturate(lighten($dk-blue-900, 80%), 10%)
-$lt-blue-100: saturate(lighten($dk-blue-900, 85%), 00%)
+$lt-blue-300: saturate(lighten($dk-blue-900, 72%), 20%)
+$lt-blue-200: saturate(lighten($dk-blue-900, 74%), 10%)
+$lt-blue-100: saturate(lighten($dk-blue-900, 76%), 00%)
 
-$dk-gray-900: #26292a
+$dk-gray-900: #283133
 $dk-gray-800: saturate(lighten($dk-gray-900, 05%), 2%)
 $dk-gray-700: saturate(lighten($dk-gray-900, 10%), 4%)
 $dk-gray-600: saturate(lighten($dk-gray-900, 15%), 6%)
@@ -35,9 +35,9 @@ $lt-gray-700: saturate(lighten($dk-gray-900, 55%), 12%)
 $lt-gray-600: saturate(lighten($dk-gray-900, 60%), 10%)
 $lt-gray-500: saturate(lighten($dk-gray-900, 65%), 8%)
 $lt-gray-400: saturate(lighten($dk-gray-900, 70%), 6%)
-$lt-gray-300: saturate(lighten($dk-gray-900, 75%), 4%)
-$lt-gray-200: saturate(lighten($dk-gray-900, 80%), 2%)
-$lt-gray-100: saturate(lighten($dk-gray-900, 85%), 0%)
+$lt-gray-300: saturate(lighten($dk-gray-900, 74%), 4%)
+$lt-gray-200: saturate(lighten($dk-gray-900, 77%), 2%)
+$lt-gray-100: saturate(lighten($dk-gray-900, 80%), 0%)
 
 $lt-red-900: #f03f39
 $lt-red-800: saturate(lighten($lt-red-900, 05%), 10%)
@@ -54,7 +54,8 @@ $link: $dk-blue-200
 $link-hover: $dk-blue-100
 $link-active: $dk-gray-100
 $link-focus: $dk-gray-100
-$scheme-invert: $dk-blue-700
+$scheme: $lt-blue-200
+$scheme-invert: $dk-blue-900
 $navbar-background-color: $dk-blue-300
 $column-gap: .5rem
 $family-sans-serif: 'Heebo', sans-serif
@@ -68,6 +69,9 @@ $dropdown-content-padding-bottom: 0
 $dropdown-content-padding-top: 0
 $button-border-color: $lt-blue-300
 $button-hover-border-color: $lt-blue-500
+$modal-background-background-color: rgba($lt-blue-100, .9)
+$modal-card-head-background-color: $dk-blue-300
+$modal-card-title-color: #fff
 
 
 @import "_bulma.sass" 
@@ -155,9 +159,12 @@ h1, h2, .day_header
   color: $dk-blue-100
   text-transform: uppercase
 
-h2
-  //font-size: 1.5rem
-  margin: 2rem 0
+.modal-card-title
+  margin: .25em 0 0 0
+  vertical-align: middle
+  .icon
+    vertical-align: 5%
+    color: $lt-blue-700
 
 
 /* Navbar, Dropdowns and Buttons */
@@ -187,11 +194,11 @@ button
   padding: #{($column-gap * 2)} 0 #{($column-gap * 1.5)} #{($column-gap * 5)}
   margin: #{($column-gap * 4)} 0 0 0
   cursor: pointer
-  border-bottom: 1px solid $lt-gray-200
+  border-bottom: 1px solid $lt-gray-400
   .pretty_date
     padding-right: .5rem 
   .pretty_day
-    color: $lt-gray-400
+    color: $lt-gray-800
 
 .sheet > .day_header:nth-child(2)
   padding-top: 0
@@ -301,7 +308,8 @@ button
   padding: #{($column-gap * 2)} #{($column-gap * 2)} #{($column-gap * 4)} #{($column-gap * 2)}
   background-color: $white
   border-radius: 6px
- 
+.modal-card
+  box-shadow: 0px 0px #{($column-gap / 1)} rgba($lt-blue-900, .3), 0px 0px 2px rgba($dk-gray-500, .1)
 /* DateRangePicker custom styles */
 
 .drp-buttons
@@ -387,7 +395,7 @@ select
   color: $lt-blue-300
 
 
-@media (min-width: 1200px)
+@media (min-width: 1400px)
   :root
     font-size: 1.1rem
 
