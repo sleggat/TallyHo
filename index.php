@@ -73,15 +73,25 @@ var project_options = {
 // zip_backup('data/', './backups/'.date("Ymd-His").'.zip')
 
 ?>
-<nav class="navbar is-fixed-top is-transparent" role="navigation" aria-label="dropdown navigation">
+<nav class="navbar is-fixed-top" role="navigation" aria-label="dropdown navigation">
 	<div class="container">
 		<div class="navbar-brand">
 			<a href="/" class="navbar-item"><img src="template/images/logo-white.png" alt="TallyHo!"></a>
-			<div class="navbar-item">
-				<a href="#" class="modal_add is-uppercase has-text-weight-bold">
-					<span class="icon"><i class="fas fa-plus"></i></span>
-					<span>Add</span>
-				</a>
+			<div class="navbar-item dropdown-container">
+				<div class="dropdown is-hoverable">
+					<div class="dropdown-trigger">
+						<button class="button modal_add is-small" aria-haspopup="true" aria-controls="dropdown-menu">
+							<span class="icon is-small has-text-link">
+								<i class="fas fa-plus" aria-hidden="true"></i>
+							</span>
+						</button>
+					</div>
+					<div class="dropdown-menu" id="dropdown-menu" role="menu">
+						<div class="dropdown-content">
+							<a href="#" class="dropdown-item">Hello</a>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="tally navbar-item has-text-primary">
 				<div id="tally" class="hide">

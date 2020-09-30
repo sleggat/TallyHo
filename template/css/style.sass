@@ -1,5 +1,5 @@
 
-$dk-blue-900: #00305c // 00417d
+$dk-blue-900: #00203c
 $dk-blue-800: saturate(lighten($dk-blue-900, 05%), 10%)
 $dk-blue-700: saturate(lighten($dk-blue-900, 10%), 20%)
 $dk-blue-600: saturate(lighten($dk-blue-900, 15%), 30%)
@@ -9,15 +9,15 @@ $dk-blue-300: saturate(lighten($dk-blue-900, 30%), 60%)
 $dk-blue-200: saturate(lighten($dk-blue-900, 35%), 70%)
 $dk-blue-100: saturate(lighten($dk-blue-900, 40%), 80%)
 
-$lt-blue-900: $dk-blue-100
-$lt-blue-800: saturate(lighten($lt-blue-900, 05%), 10%)
-$lt-blue-700: saturate(lighten($lt-blue-900, 10%), 20%)
-$lt-blue-600: saturate(lighten($lt-blue-900, 15%), 30%)
-$lt-blue-500: saturate(lighten($lt-blue-900, 20%), 40%)
-$lt-blue-400: saturate(lighten($lt-blue-900, 25%), 50%)
-$lt-blue-300: saturate(lighten($lt-blue-900, 30%), 60%)
-$lt-blue-200: saturate(lighten($lt-blue-900, 35%), 70%)
-$lt-blue-100: saturate(lighten($lt-blue-900, 40%), 80%)
+$lt-blue-900: saturate(lighten($dk-blue-900, 45%), 80%)
+$lt-blue-800: saturate(lighten($dk-blue-900, 50%), 70%)
+$lt-blue-700: saturate(lighten($dk-blue-900, 55%), 60%)
+$lt-blue-600: saturate(lighten($dk-blue-900, 60%), 50%)
+$lt-blue-500: saturate(lighten($dk-blue-900, 65%), 40%)
+$lt-blue-400: saturate(lighten($dk-blue-900, 70%), 30%)
+$lt-blue-300: saturate(lighten($dk-blue-900, 75%), 20%)
+$lt-blue-200: saturate(lighten($dk-blue-900, 80%), 10%)
+$lt-blue-100: saturate(lighten($dk-blue-900, 85%), 00%)
 
 $dk-gray-900: #26292a
 $dk-gray-800: saturate(lighten($dk-gray-900, 05%), 2%)
@@ -29,15 +29,15 @@ $dk-gray-300: saturate(lighten($dk-gray-900, 30%), 12%)
 $dk-gray-200: saturate(lighten($dk-gray-900, 35%), 14%)
 $dk-gray-100: saturate(lighten($dk-gray-900, 40%), 16%)
 
-$lt-gray-900: $dk-gray-100
-$lt-gray-800: saturate(lighten($lt-gray-900, 05%), 2%)
-$lt-gray-700: saturate(lighten($lt-gray-900, 10%), 4%)
-$lt-gray-600: saturate(lighten($lt-gray-900, 15%), 6%)
-$lt-gray-500: saturate(lighten($lt-gray-900, 20%), 8%)
-$lt-gray-400: saturate(lighten($lt-gray-900, 25%), 10%)
-$lt-gray-300: saturate(lighten($lt-gray-900, 30%), 12%)
-$lt-gray-200: saturate(lighten($lt-gray-900, 35%), 14%)
-$lt-gray-100: saturate(lighten($lt-gray-900, 40%), 16%)
+$lt-gray-900: saturate(lighten($dk-gray-900, 45%), 16%)
+$lt-gray-800: saturate(lighten($dk-gray-900, 50%), 14%)
+$lt-gray-700: saturate(lighten($dk-gray-900, 55%), 12%)
+$lt-gray-600: saturate(lighten($dk-gray-900, 60%), 10%)
+$lt-gray-500: saturate(lighten($dk-gray-900, 65%), 8%)
+$lt-gray-400: saturate(lighten($dk-gray-900, 70%), 6%)
+$lt-gray-300: saturate(lighten($dk-gray-900, 75%), 4%)
+$lt-gray-200: saturate(lighten($dk-gray-900, 80%), 2%)
+$lt-gray-100: saturate(lighten($dk-gray-900, 85%), 0%)
 
 $lt-red-900: #f03f39
 $lt-red-800: saturate(lighten($lt-red-900, 05%), 10%)
@@ -55,7 +55,8 @@ $link-hover: $dk-blue-100
 $link-active: $dk-gray-100
 $link-focus: $dk-gray-100
 $scheme-invert: $dk-blue-700
-$column-gap: 10px
+$navbar-background-color: $dk-blue-300
+$column-gap: .5rem
 $family-sans-serif: 'Heebo', sans-serif
 $pagination-color: $link
 $pagination-border-color: $lt-blue-300
@@ -73,6 +74,48 @@ $button-hover-border-color: $lt-blue-500
 
 /* Main styles */
 
+.color_test
+  border: 20px solid #fff
+  div
+    display: inline-block
+    width: 40px
+    height: 40px
+    &:nth-of-type(1)
+      background-color: $lt-blue-100
+    &:nth-of-type(2)
+      background-color: $lt-blue-200
+    &:nth-of-type(3)
+      background-color: $lt-blue-300
+    &:nth-of-type(4)
+      background-color: $lt-blue-400
+    &:nth-of-type(5)
+      background-color: $lt-blue-500
+    &:nth-of-type(6)
+      background-color: $lt-blue-600
+    &:nth-of-type(7)
+      background-color: $lt-blue-700
+    &:nth-of-type(8)
+      background-color: $lt-blue-800
+    &:nth-of-type(9)
+      background-color: $lt-blue-900
+    &:nth-of-type(10)
+      background-color: $dk-blue-100
+    &:nth-of-type(11)
+      background-color: $dk-blue-200
+    &:nth-of-type(12)
+      background-color: $dk-blue-300
+    &:nth-of-type(13)
+      background-color: $dk-blue-400
+    &:nth-of-type(14)
+      background-color: $dk-blue-500
+    &:nth-of-type(15)
+      background-color: $dk-blue-600
+    &:nth-of-type(16)
+      background-color: $dk-blue-700
+    &:nth-of-type(17)
+      background-color: $dk-blue-800
+    &:nth-of-type(18)
+      background-color: $dk-blue-900
 html
   background-color: $lt-blue-100
   padding: 0
@@ -84,7 +127,6 @@ body
   font-size: .9rem
   line-height: 1.5
   font-weight: 400
-  //overflow-x: hidden
 
 textarea, input, button, select
   font-size: inherit
@@ -110,7 +152,7 @@ img
 h1, h2, .day_header
   font-size: 1.5rem
   font-weight: 400
-  color: $dk-blue-400
+  color: $dk-blue-100
   text-transform: uppercase
 
 h2
@@ -120,11 +162,10 @@ h2
 
 /* Navbar, Dropdowns and Buttons */
 
-.navbar
-  background: rgba($dk-blue-900, .95)
-
 .navbar-brand
   margin-top: 5px
+  flex-grow: 1
+  align-content: stretch
   img
     height: auto
     max-width: 100px
@@ -135,12 +176,15 @@ button
 .dropdown-divider
   margin: 0
 
+.dropdown-container
+  //align-content: flex-end
+
 /* Layout */
 
 
 .day_header
   width: 100%
-  padding: #{($column-gap * 2)} 0 #{($column-gap * 1.5)} #{($column-gap * 5.8)}
+  padding: #{($column-gap * 2)} 0 #{($column-gap * 1.5)} #{($column-gap * 5)}
   margin: #{($column-gap * 4)} 0 0 0
   cursor: pointer
   border-bottom: 1px solid $lt-gray-200
@@ -178,8 +222,8 @@ button
   border-bottom: 1px solid $lt-blue-200
   padding: #{($column-gap * 1.5)} 2px 13px 2px
   &.task_col_1
-    padding-left: 60px
-    width: 200px
+    padding-left: #{($column-gap * 5)}
+    width: 22ch
     position: relative
   &.heat_0, &.heat_1, &.heat_2, &.heat_3, &.heat_4
     &::before
@@ -187,10 +231,13 @@ button
       display: block
       position: absolute
       width: #{($column-gap / 2)}
-      height: 2.5rem
+      height: calc(100% - #{($column-gap * 3.5)})
       border-radius: #{($column-gap * 2)}
       left: #{($column-gap * 1)}
-      outline: 2px solid white
+      top: 50%
+      bottom: 50%
+      outline: 1px solid white
+      margin: auto 0
     &.heat_0
       &::before
         background-color: #caefff
@@ -207,7 +254,7 @@ button
       &::before
         background-color: #ff1d16
   &.task_col_2
-    width: 300px
+    width: 30ch
   &.task_col_3
     width: 100%
   &.task_col_4
@@ -339,6 +386,11 @@ select
   padding: 0 #{($column-gap * 2)}
   color: $lt-blue-300
 
+
+@media (min-width: 1200px)
+  :root
+    font-size: 1.1rem
+
 @media (max-width: 1200px)
   .task_project
     white-space: normal
@@ -347,9 +399,9 @@ select
   html
     //margin: 0
 
-  body
+  :root
     font-size: .8rem
-    line-height: 1.3
+    // line-height: 1.3
   input, select, textarea
     font-size: 1rem // stops ios safari zooming in on inputs and not zooming out when done
   .day_header
