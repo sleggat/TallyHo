@@ -10268,7 +10268,7 @@ h1, h2, .day_header {
   vertical-align: middle;
 }
 .modal-card-title .icon {
-  vertical-align: 5%;
+  vertical-align: 15%;
   color: #76bdff;
 }
 
@@ -10438,17 +10438,30 @@ button {
 }
 
 /* DateRangePicker custom styles */
-.drp-buttons span {
-  display: none;
+.daterangepicker .drp-buttons .btn {
+  margin-left: 0;
+  padding: 6px 10px;
 }
-.drp-buttons button {
-  width: 42%;
-  padding: 2px 9px;
-  margin: 2px 9px;
+
+.daterangepicker.show-calendar .drp-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.daterangepicker.show-calendar .drp-buttons button {
+  flex-grow: 1;
+  border: 0;
+  outline: 0;
   font-weight: inherit !important;
+  border-radius: 2px;
 }
-.drp-buttons .cancelBtn {
-  background-color: #679ba6;
+.daterangepicker.show-calendar .drp-buttons .cancelBtn {
+  background-color: #e7ecee;
+  color: #5d8d97;
+}
+.daterangepicker.show-calendar .drp-buttons .applyBtn {
+  background-color: #108cff;
+  color: white;
 }
 
 .daterangepicker select.hourselect,
@@ -10456,12 +10469,16 @@ button {
 .daterangepicker select.secondselect,
 .daterangepicker select.ampmselect {
   outline: 0;
-  border: 1px solid #557d85;
+  border: 1px solid #dae4e6;
   padding: 0.25rem 0.5rem;
   box-shadow: none !important;
   -webkit-appearance: none;
   background-color: #fff;
   width: auto;
+}
+
+.daterangepicker td.active, .daterangepicker td.active:hover {
+  background-color: #108cff;
 }
 
 /* form elements */

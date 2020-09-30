@@ -163,9 +163,8 @@ h1, h2, .day_header
   margin: .25em 0 0 0
   vertical-align: middle
   .icon
-    vertical-align: 5%
+    vertical-align: 15%
     color: $lt-blue-700
-
 
 /* Navbar, Dropdowns and Buttons */
 
@@ -312,27 +311,38 @@ button
   box-shadow: 0px 0px #{($column-gap / 1)} rgba($lt-blue-900, .3), 0px 0px 2px rgba($dk-gray-500, .1)
 /* DateRangePicker custom styles */
 
-.drp-buttons
-  span
-    display: none
+.daterangepicker .drp-buttons .btn
+  margin-left: 0
+  padding: 6px 10px
+.daterangepicker.show-calendar .drp-buttons
+  display: flex
+  flex-direction: row
+  gap: 8px
   button
-    width: 42%
-    padding: 2px 9px
-    margin: 2px 9px
+    flex-grow: 1
+    border: 0
+    outline: 0
     font-weight: inherit !important
+    border-radius: 2px
   .cancelBtn
-    background-color: $dk-gray-200
+    background-color: $lt-gray-300
+    color: $dk-gray-300
+  .applyBtn
+    background-color: $link
+    color: $white
 .daterangepicker select.hourselect,
 .daterangepicker select.minuteselect,
 .daterangepicker select.secondselect,
 .daterangepicker select.ampmselect
   outline: 0
-  border: 1px solid $dk-gray-400
+  border: 1px solid $lt-gray-400
   padding: #{($column-gap / 2)} #{($column-gap * 1)}
   box-shadow: none !important
   -webkit-appearance: none
   background-color: #fff
   width: auto
+.daterangepicker td.active, .daterangepicker td.active:hover
+    background-color: $dk-blue-200
 
 /* form elements */
 
