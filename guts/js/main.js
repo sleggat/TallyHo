@@ -25,7 +25,7 @@ $('.modal_update').click(function(event) {
     var client = current.attr("data-client");
     var project = current.attr("data-project");
     var description = current.attr("data-description");
-    $("#modal_update .modal_header").html("Update Task");
+    $("#modal_update .modal_header").html("<span class=\"icon is-size-5\"><i class=\"fas fa-edit\"></i></span> Edit Task");
     $("#modal_update .modal_datetime").val(datetime);
     $("#modal_update .modal_duration").val(duration);
     $("#modal_update .modal_client").val(client);
@@ -46,7 +46,7 @@ $('.modal_duplicate').click(function(event) {
     var client = current.attr("data-client");
     var project = current.attr("data-project");
     var description = current.attr("data-description");
-    $("#modal_update .modal_header").html("Duplicate Task");
+    $("#modal_update .modal_header").html("<span class=\"icon is-size-5\"><i class=\"fas fa-copy\"></i></span> Duplicate Task");
     $("#modal_update .modal_datetime").val(datetime);
     $("#modal_update .modal_duration").val(duration);
     $("#modal_update .modal_client").val(client);
@@ -67,7 +67,7 @@ $('.modal_add').click(function(event) {
     // it's quite lucky daterangepicker converts this from 2300 to 11:00 PM
     var duration = 15;
 
-    $("#modal_update .modal_header").html("Add Task");
+    $("#modal_update .modal_header").html("<span class=\"icon is-size-5\"><i class=\"fas fa-plus\"></i></span> Add Task");
     $("#modal_update .modal_datetime").val(datetime);
     $("#modal_update .modal_duration").val(duration);
     $("#modal_update .modal_client").val(client);
@@ -82,7 +82,7 @@ $('.modal_delete').click(function(event) {
     event.preventDefault();
     var current = $(this).parents(".task_container");
     var path = current.attr('data-path');
-    $("#modal_delete .modal_header").html("Delete Task");
+    $("#modal_delete .modal_header").html("<span class=\"icon is-size-5\"><i class=\"fas fa-trash\"></i></span> Delete Task");
     $("#modal_delete .modal_path").val(path);
     $("#modal_delete .modal_delete_path").html(path);
     $("#modal_delete").addClass("is-active");

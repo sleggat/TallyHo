@@ -78,7 +78,7 @@ var project_options = {
 		<div class="navbar-brand">
 			<a href="/" class="navbar-item"><img src="template/images/logo-white.png" alt="TallyHo!"></a>
 			<div class="navbar-item">
-				<a href="#" class="modal_add has-text-white">
+				<a href="#" class="modal_add is-uppercase has-text-weight-bold">
 					<span class="icon"><i class="fas fa-plus"></i></span>
 					<span>Add</span>
 				</a>
@@ -95,7 +95,7 @@ var project_options = {
 </nav>
 
 <div class="container">
-	<div class="columns is-multiline">
+	<div class="columns">
 		<div class="column">
 			<form method="get">
 				<div class="box_filters">
@@ -115,9 +115,11 @@ var project_options = {
 				</div>
 			</form>
 		</div>
-
-
-		<div class="column is-12-tablet is-12-desktop">
+	</div>
+</div>
+<div class="container">
+	<div class="columns">
+		<div class="column">
 			<div class="box_sheet">
 				<div class="page_number">Page <?= $current_page+1 ?></div>
 
@@ -194,8 +196,8 @@ var project_options = {
 							<div class="table_col task_col_4">
 								<div class="dropdown is-right is-hoverable">
 									<div class="dropdown-trigger">
-										<button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-											<span class="icon is-small">
+										<button class="button is-small" aria-haspopup="true" aria-controls="dropdown-menu">
+											<span class="icon is-small has-text-link">
 												<i class="fas fa-angle-down" aria-hidden="true"></i>
 											</span>
 										</button>
@@ -203,14 +205,14 @@ var project_options = {
 									<div class="dropdown-menu" id="dropdown-menu" role="menu">
 										<div class="dropdown-content">
 											<a href="#" class="dropdown-item modal_duplicate">
-												<span class="icon"><i class="fas fa-copy"></i></span>Duplicate
+												<span class="icon has-text-link"><i class="fas fa-copy"></i></span>Duplicate
 											</a>
 											<a href="#" class="dropdown-item modal_update">
-												<span class="icon"><i class="fas fa-edit"></i></span>Edit
+												<span class="icon has-text-link"><i class="fas fa-edit"></i></span>Edit
 											</a>
 											<hr class="dropdown-divider">
 											<a href="/?FilterClient=<?= $task_array['Client'] ?>&FilterProject=<?= $task_array['Project'] ?>&Submit=filter" class="dropdown-item" alt="Filter this Client/Project">
-												<span class="icon"><i class="fas fa-filter"></i></span>Filter
+												<span class="icon has-text-link"><i class="fas fa-filter"></i></span>Filter
 											</a>
 											
 											<hr class="dropdown-divider">
