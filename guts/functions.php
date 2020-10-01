@@ -71,6 +71,25 @@ function clients_and_projects($array) {
 	return $new;
 }
 
+function get_last_tasks($arr, $max) {
+	//returns just clients and projects, stripping dupes
+	$new = array();
+	$i=0;
+	$prev = array();
+	foreach ($arr as $task) {
+		$task_parts = explode("/", $task);
+		$client = urldecode($task_parts[1]);
+		$project = urldecode($task_parts[2]);
+		$new[$i]=array($client, $project);
+		$new = super_unique($new);
+		$i++;
+		if (sizeof($new) >= $max) {
+			break;
+		}
+	}
+	return $new;
+}
+
 function log_change($type,$new,$old) {
 	$filename = 'cache/history/'.$type.'.txt';
 	$fileContents = @file_get_contents($filename);
@@ -160,4 +179,18 @@ function zip_backup($source, $destination){
 		}
 	}
 	return false;
+}
+function super_unique($array)
+{
+  $result = array_map("unserialize", array_unique(array_map("serialize", $array)));
+
+  foreach ($result as $key => $value)
+  {
+    if ( is_array($value) )
+    {
+      $result[$key] = super_unique($value);
+    }
+  }
+
+  return $result;
 }

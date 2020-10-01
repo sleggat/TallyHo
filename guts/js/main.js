@@ -11,12 +11,8 @@ $(document).ready(function() {
     $("#filter_client").easyAutocomplete(client_options);
     $("#filter_project").easyAutocomplete(project_options);
 })
-$('.toggle_filters .icon_svg').click(function(event) {
-    event.preventDefault();
-    $('.filters_form').toggle();
-});
 
-$('.modal_update').click(function(event) {
+$('.modal_edit').click(function(event) {
     event.preventDefault();
     var current = $(this).parents(".task_container");
     var path = current.attr('data-path');
@@ -25,57 +21,17 @@ $('.modal_update').click(function(event) {
     var client = current.attr("data-client");
     var project = current.attr("data-project");
     var description = current.attr("data-description");
-    $("#modal_update .modal-card-title").html("<span class=\"icon is-size-6\"><i class=\"fas fa-edit\"></i></span> Edit Task");
-    $("#modal_update .modal_datetime").val(datetime);
-    $("#modal_update .modal_duration").val(duration);
-    $("#modal_update .modal_client").val(client);
-    $("#modal_update .modal_project").val(project);
-    $("#modal_update .modal_description").val(description);
-    $("#modal_update .modal_path").val(path);
-    $("#modal_update").addClass("is-active");
-    initpicker('#modal_update');
+    task_handler('edit', client, project, description, datetime, duration, path);
 });
 
 $('.modal_duplicate').click(function(event) {
     event.preventDefault();
-    var dt = new Date();
     var current = $(this).parents(".task_container");
-    var datetime = dt.getFullYear() + ("0" + (dt.getMonth() + 1)).slice(-2) + ("0" + dt.getDate()).slice(-2) + ("00" + dt.getHours()).slice(-2) + ("00" + dt.getMinutes()).slice(-2);
-    // it's quite lucky daterangepicker converts this from 2300 to 11:00 PM
     var duration = current.attr("data-duration");
     var client = current.attr("data-client");
     var project = current.attr("data-project");
     var description = current.attr("data-description");
-    $("#modal_update .modal-card-title").html("<span class=\"icon is-size-6\"><i class=\"fas fa-copy\"></i></span> Duplicate Task");
-    $("#modal_update .modal_datetime").val(datetime);
-    $("#modal_update .modal_duration").val(duration);
-    $("#modal_update .modal_client").val(client);
-    $("#modal_update .modal_project").val(project);
-    $("#modal_update .modal_description").val(description);
-    $("#modal_update .modal_path").val('');
-    $("#modal_update").addClass("is-active");
-    initpicker('#modal_update');
-});
-
-$('.modal_add').click(function(event) {
-    event.preventDefault();
-    var dt = new Date();
-    var client = $('.task_client').first().html();
-    var project = $('.task_project').first().html();
-    var description = $('.task_description').first().html();
-    var datetime = dt.getFullYear() + ("0" + (dt.getMonth() + 1)).slice(-2) + ("0" + dt.getDate()).slice(-2) + ("00" + dt.getHours()).slice(-2) + ("00" + dt.getMinutes()).slice(-2);
-    // it's quite lucky daterangepicker converts this from 2300 to 11:00 PM
-    var duration = 15;
-
-    $("#modal_update .modal-card-title").html("<span class=\"icon is-size-6\"><i class=\"fas fa-plus\"></i></span> Add Task");
-    $("#modal_update .modal_datetime").val(datetime);
-    $("#modal_update .modal_duration").val(duration);
-    $("#modal_update .modal_client").val(client);
-    $("#modal_update .modal_project").val(project);
-    $("#modal_update .modal_description").val(description);
-    $("#modal_update .modal_path").val('');
-    $("#modal_update").addClass("is-active");
-    initpicker('#modal_update');
+    task_handler('duplicate', client, project, description, null, duration, null);
 });
 
 $('.modal_delete').click(function(event) {
@@ -91,12 +47,52 @@ $('.modal_delete').click(function(event) {
 
 /* Functions */
 
+function task_handler(type, client, project, description, datetime, duration, path) {
+    // will combine all add/duplicate/restart/edit
 
+    event.preventDefault();
+    autofocus = 'client';
+    duration = parseFloat(duration) ? duration : 15;
+    switch (type) {
+        case 'continue':
+            header = "<span class=\"icon is-size-6\"><i class=\"far fa-clone\"></i></span> Continue Task";
+            autofocus = 'description';
+            break;
+        case 'duplicate':
+            header = "<span class=\"icon is-size-6\"><i class=\"fas fa-copy\"></i></span> Duplicate Task";
+            datetime = get_current_datetime();
+            // it's quite lucky daterangepicker converts this from 2300 to 11:00 PM
+            break;
+        case 'add':
+            header = "<span class=\"icon is-size-6\"><i class=\"fas fa-plus\"></i></span> Add Task";
+            datetime = get_current_datetime();
+            break;
+        case 'edit':
+            header = "<span class=\"icon is-size-6\"><i class=\"fas fa-edit\"></i></span> Edit Task";
+            break;
+    }
+    $("#modal_update .modal-card-title").html(header);
+    $("#modal_update .modal_datetime").val(datetime);
+    $("#modal_update .modal_duration").val(duration);
+    $("#modal_update .modal_client").val(client);
+    $("#modal_update .modal_project").val(project);
+    $("#modal_update .modal_description").val(description);
+    $("#modal_update .modal_path").val(path);
+    $("#modal_update .modal_"+autofocus).attr("autofocus","autofocus").focus(); // doesnt seem that reliable
+    $("#modal_update").addClass("is-active");
+    initpicker('#modal_update');
+}
+function get_current_datetime() {
+    // returns date in this format: YYYYMMDDHHMM e.g 202010011616
+    var dt = new Date();
+    var datetime = dt.getFullYear() + ("0" + (dt.getMonth() + 1)).slice(-2) + ("0" + dt.getDate()).slice(-2) + ("00" + dt.getHours()).slice(-2) + ("00" + dt.getMinutes()).slice(-2);
+    return datetime
+}
 function initpicker(element) {
     $(element+' .modal_datetime').daterangepicker({
         "singleDatePicker": true,
         "timePicker": true,
-        "timePickerIncrement": 5,
+        "timePickerIncrement": 1,
         "locale": {
             "format": "YYYY-MM-DD hh:mm A",
             "applyLabel": "Apply",

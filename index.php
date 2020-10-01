@@ -46,11 +46,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['Submit'])) {
 }
 
 $all_records = find_all_files('data');
-$array = sort_tasks_by_time($all_records);
+$task_array = sort_tasks_by_time($all_records);
 $clients_and_projects = clients_and_projects($all_records);
-$tasks_total = count($array);
+$tasks_total = count($task_array);
 $client_options = '"'.implode('","',array_keys($clients_and_projects)).'"';
 $project_options = '"'.implode('","',array_unique(call_user_func_array('array_merge', ($clients_and_projects)))).'"';
+$last_tasks = get_last_tasks($task_array, 5);
 $additional_js = '
 var client_options = {
 	data: ['.$client_options.'],
@@ -80,15 +81,19 @@ var project_options = {
 			<div class="navbar-item dropdown-container">
 				<div class="dropdown is-hoverable">
 					<div class="dropdown-trigger">
-						<button class="button modal_add is-small" aria-haspopup="true" aria-controls="dropdown-menu">
+						<button class="button modal_add is-small" aria-haspopup="true" aria-controls="add-dropdown-menu" onClick="task_handler('add',null,null,null,null,null,null)">
 							<span class="icon is-small has-text-link">
 								<i class="fas fa-plus" aria-hidden="true"></i>
 							</span>
 						</button>
 					</div>
-					<div class="dropdown-menu" id="dropdown-menu" role="menu">
+					<div class="dropdown-menu" id="add-dropdown-menu" role="menu">
 						<div class="dropdown-content">
-							<a href="#" class="dropdown-item">Hello</a>
+							<?php
+							foreach ($last_tasks as $task) {
+								echo '<a href="#" class="dropdown-item" onClick="task_handler(\'continue\',\''.$task[0].'\',\''.$task[1].'\',null,null,null,null);"><span class="icon"><i class="far fa-clone" aria-hidden="true"></i></span><span>'.$task[0].' / '.$task[1].'</span></a>';
+							}
+							?>
 						</div>
 					</div>
 				</div>
@@ -134,7 +139,7 @@ var project_options = {
 				<div class="page_number">Page <?= $current_page+1 ?></div>
 
 				<?php
-				foreach ($array as $task) {
+				foreach ($task_array as $task) {
 
 					$task_array = get_task_array($task);
 
@@ -155,7 +160,7 @@ var project_options = {
 					}
 
 					if ($task_array['Path'] == $newname) {
-						$highlight = " highlight ";
+						$highlight = " updated_highlight ";
 					}
 					else {
 						$highlight = " ";
@@ -217,7 +222,7 @@ var project_options = {
 											<a href="#" class="dropdown-item modal_duplicate">
 												<span class="icon has-text-link"><i class="fas fa-copy"></i></span>Duplicate
 											</a>
-											<a href="#" class="dropdown-item modal_update">
+											<a href="#" class="dropdown-item modal_edit">
 												<span class="icon has-text-link"><i class="fas fa-edit"></i></span>Edit
 											</a>
 											<hr class="dropdown-divider">
@@ -244,7 +249,7 @@ var project_options = {
 				?>
 			</div><!-- end table -->
 			<?php 
-			$total_pages = count($array) / $page_limit;
+			$total_pages = count($task_array) / $page_limit;
 			$query = "";
 			if ($filter_client || $filter_project) {
 				$query = "&FilterClient=".$filter_client."&FilterProject=".$filter_project."&Submit=filter";

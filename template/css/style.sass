@@ -19,7 +19,7 @@ $lt-blue-300: saturate(lighten($dk-blue-900, 72%), 20%)
 $lt-blue-200: saturate(lighten($dk-blue-900, 74%), 10%)
 $lt-blue-100: saturate(lighten($dk-blue-900, 76%), 00%)
 
-$dk-gray-900: #283133
+$dk-gray-900: #2b2f30
 $dk-gray-800: saturate(lighten($dk-gray-900, 05%), 2%)
 $dk-gray-700: saturate(lighten($dk-gray-900, 10%), 4%)
 $dk-gray-600: saturate(lighten($dk-gray-900, 15%), 6%)
@@ -151,7 +151,8 @@ img
 .hide
   display: none
 
-/* Typography */
+
+/* Headings */
 
 h1, h2, .day_header
   font-size: 1.5rem
@@ -166,13 +167,14 @@ h1, h2, .day_header
     vertical-align: 15%
     color: $lt-blue-700
 
+
 /* Navbar, Dropdowns and Buttons */
 
 .navbar-brand
-  margin-top: 5px
   flex-grow: 1
   align-content: stretch
   img
+    margin-top: 5px
     height: auto
     max-width: 100px
 
@@ -182,8 +184,6 @@ button
 .dropdown-divider
   margin: 0
 
-.dropdown-container
-  //align-content: flex-end
 
 /* Layout */
 
@@ -296,10 +296,12 @@ button
   &:nth-of-type(n + 50)
     display: none
 
+
 /* Floating bar where the tally goes */
 
 .tally
   color: $lt-blue-100
+
 
 /* Modal custom styles */
 
@@ -317,6 +319,7 @@ button
 .daterangepicker.show-calendar .drp-buttons
   display: flex
   flex-direction: row
+  flex-gap: 8px
   gap: 8px
   button
     flex-grow: 1
@@ -343,6 +346,7 @@ button
   width: auto
 .daterangepicker td.active, .daterangepicker td.active:hover
     background-color: $dk-blue-200
+
 
 /* form elements */
 
@@ -392,13 +396,15 @@ select
     border: 0
     color: $white
 
-.highlight // when a task has been added/updated
+.updated_highlight  // row highlight: when a task has been added/updated
   background-color: $lt-red-100
 
-.highlighted
+.highlighted        // row highlight: when selected
   background-color: $lt-blue-200
 
+
 /* Pagination */
+
 .page_number
   text-align: right
   padding: 0 #{($column-gap * 2)}

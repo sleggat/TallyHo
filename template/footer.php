@@ -23,7 +23,7 @@
 							<div class="column is-6 is-6-mobile">
 								<label class="label">Client</label>
 								<div class="control">
-									<input class="modal_client" name="Client" class="input" type="text" value="" >
+									<input class="modal_client" name="Client" class="input" type="text" value="" autofocus >
 								</div>
 							</div>
 							<div class="column is-6 is-6-mobile">
@@ -50,7 +50,7 @@
 					</div>
 				</section>
 		</div>
-		<div class="modal" id="modal_update" aria-hidden="true">
+		<div class="modal" id="modal_delete" aria-hidden="true">
 			<div class="modal-background"></div>
 			<div class="modal-card">
 				<header class="modal-card-head">

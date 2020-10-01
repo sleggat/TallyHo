@@ -484,14 +484,14 @@ a.box:active {
 }
 .button:focus, .button.is-focused {
   border-color: #3273dc;
-  color: #75a7b2;
+  color: #7ca1ab;
 }
 .button:focus:not(:active), .button.is-focused:not(:active) {
   box-shadow: 0 0 0 0.125em rgba(16, 140, 255, 0.25);
 }
 .button:active, .button.is-active {
   border-color: #4a4a4a;
-  color: #75a7b2;
+  color: #7ca1ab;
 }
 .button.is-text {
   background-color: transparent;
@@ -5671,7 +5671,7 @@ body.has-spaced-navbar-fixed-bottom {
 }
 .panel-tabs a.is-active {
   border-bottom-color: #4a4a4a;
-  color: #75a7b2;
+  color: #7ca1ab;
 }
 
 .panel-list a {
@@ -5701,7 +5701,7 @@ body.has-spaced-navbar-fixed-bottom {
 }
 .panel-block.is-active {
   border-left-color: #108cff;
-  color: #75a7b2;
+  color: #7ca1ab;
 }
 .panel-block.is-active .panel-icon {
   color: #108cff;
@@ -10225,7 +10225,7 @@ html {
 
 body {
   font-family: "Heebo", sans-serif;
-  color: #3c4e52;
+  color: #404b4e;
   font-size: 0.9rem;
   line-height: 1.5;
   font-weight: 400;
@@ -10255,7 +10255,7 @@ img {
   display: none;
 }
 
-/* Typography */
+/* Headings */
 h1, h2, .day_header {
   font-size: 1.5rem;
   font-weight: 400;
@@ -10274,11 +10274,11 @@ h1, h2, .day_header {
 
 /* Navbar, Dropdowns and Buttons */
 .navbar-brand {
-  margin-top: 5px;
   flex-grow: 1;
   align-content: stretch;
 }
 .navbar-brand img {
+  margin-top: 5px;
   height: auto;
   max-width: 100px;
 }
@@ -10297,13 +10297,13 @@ button {
   padding: 1rem 0 0.75rem 2.5rem;
   margin: 2rem 0 0 0;
   cursor: pointer;
-  border-bottom: 1px solid #dae4e6;
+  border-bottom: 1px solid #dce2e4;
 }
 .day_header .pretty_date {
   padding-right: 0.5rem;
 }
 .day_header .pretty_day {
-  color: #98bbc2;
+  color: #9db7bd;
 }
 
 .sheet > .day_header:nth-child(2) {
@@ -10316,7 +10316,7 @@ button {
   border-bottom-right-radius: 0.25rem;
   margin: 0px 0px 0.5rem 0px;
   padding: 1rem 0px 0px 0px;
-  box-shadow: 0px 0px 0.25rem rgba(143, 201, 255, 0.3), 0px 0px 1px rgba(77, 109, 116, 0.1);
+  box-shadow: 0px 0px 0.25rem rgba(143, 201, 255, 0.3), 0px 0px 1px rgba(83, 104, 110, 0.1);
 }
 
 .box_filters {
@@ -10395,7 +10395,7 @@ button {
 }
 
 .task_description, .task_time, .task_value_source {
-  color: #98bbc2;
+  color: #9db7bd;
 }
 
 .task_client {
@@ -10403,7 +10403,7 @@ button {
 }
 
 .task_project {
-  color: #679ba6;
+  color: #6f959e;
   white-space: nowrap;
 }
 
@@ -10434,7 +10434,7 @@ button {
 }
 
 .modal-card {
-  box-shadow: 0px 0px 0.5rem rgba(67, 165, 255, 0.3), 0px 0px 2px rgba(77, 109, 116, 0.1);
+  box-shadow: 0px 0px 0.5rem rgba(67, 165, 255, 0.3), 0px 0px 2px rgba(83, 104, 110, 0.1);
 }
 
 /* DateRangePicker custom styles */
@@ -10446,6 +10446,7 @@ button {
 .daterangepicker.show-calendar .drp-buttons {
   display: flex;
   flex-direction: row;
+  flex-gap: 8px;
   gap: 8px;
 }
 .daterangepicker.show-calendar .drp-buttons button {
@@ -10456,8 +10457,8 @@ button {
   border-radius: 2px;
 }
 .daterangepicker.show-calendar .drp-buttons .cancelBtn {
-  background-color: #e7ecee;
-  color: #5d8d97;
+  background-color: #e8ebec;
+  color: #65878f;
 }
 .daterangepicker.show-calendar .drp-buttons .applyBtn {
   background-color: #108cff;
@@ -10469,7 +10470,7 @@ button {
 .daterangepicker select.secondselect,
 .daterangepicker select.ampmselect {
   outline: 0;
-  border: 1px solid #dae4e6;
+  border: 1px solid #dce2e4;
   padding: 0.25rem 0.5rem;
   box-shadow: none !important;
   -webkit-appearance: none;
@@ -10484,7 +10485,7 @@ button {
 /* form elements */
 label {
   padding: 0 0 0 0.25rem;
-  color: #5d8d97;
+  color: #65878f;
   font-weight: 400;
   text-transform: uppercase;
   font-size: 0.75rem;
@@ -10496,10 +10497,10 @@ input, textarea {
   width: 100%;
   padding: 0.5rem 0.5rem;
   background-color: #f9fafa;
-  border: 1px solid #f0f3f4;
+  border: 1px solid #f1f2f3;
   box-shadow: none;
   outline: 0;
-  color: #455d63;
+  color: #4a5a5d;
 }
 input:not([type=checkbox]):not([type=radio]), textarea:not([type=checkbox]):not([type=radio]) {
   -webkit-appearance: none;
@@ -10507,7 +10508,7 @@ input:not([type=checkbox]):not([type=radio]), textarea:not([type=checkbox]):not(
 input:focus, input:hover, textarea:focus, textarea:hover {
   background-color: #e1f0ff;
   border: 1px solid #a9d6ff;
-  color: #283133;
+  color: #2b2f30;
 }
 
 textarea {
@@ -10528,7 +10529,7 @@ textarea {
 }
 
 select {
-  border: 1px solid #557d85;
+  border: 1px solid #5c777e;
   border-radius: 3px;
   background-color: transparent;
 }
@@ -10544,7 +10545,7 @@ select {
   color: white;
 }
 
-.highlight {
+.updated_highlight {
   background-color: #fff6f6;
 }
 
