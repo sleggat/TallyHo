@@ -6,13 +6,23 @@
 
 ## Features:
 - Flat file (text/Yaml) ‘database’.
-- Quick add (pre-fills previous client/project)
+- Add a New task
 - Edit tasks
 - Duplicate / Restart tasks
 - Filter by Client and/or Project
+- Delete tasks
 - Select rows/days and calculate total costs
 - Different hourly rates; Default Rate / Client Rate / Project Rate
 - Visual cue showing time spent on each task (blue = meh / red = good effort)
+- Selecting multiple rows gives a tally of Rows / Hours / Cost
+
+Partially Implemented
+- Reimbursable expenses (e.g. printing costs, client's domain name, 'research' trip to Bali)
+
+Features I'd like to add at some point;
+- Filtering by date range
+- Basic Reports/Charts (Historical and Projection)
+- Basic exporting
 
 
 TallyHo is simple by design and I have no intention of adding the following;
@@ -20,13 +30,6 @@ TallyHo is simple by design and I have no intention of adding the following;
 - Multi-users
 - Multi-currency
 - Login/Pass
-
-
-Features I'd like to add at some point;
-- Adding of reimbursable expenses (e.g. printing costs, client's domain name, 'research' trip to Bali)
-- Filtering by date range
-- Basic Reports/Charts (Historical and Projection)
-- Basic exporting
 
 
 ## Installation:
@@ -75,4 +78,4 @@ Over the course of my 17 years as a freelance designer/developer I've tried out 
 
 ## Disclaimer:
 
-TallyHo is not very robust or elegant (yay procedural hacking!). Give it time, and please feel free to contribute!
+TallyHo's code is not particularly elegant yet (yay procedural hacking!), yet. Please feel free to contribute!
