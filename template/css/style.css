@@ -2658,7 +2658,7 @@ a.tag:hover {
 /* Bulma Form */
 .select select, .textarea, .input {
   background-color: white;
-  border-color: #dbdbdb;
+  border-color: #cce7ff;
   border-radius: 4px;
   color: #363636;
 }
@@ -2675,7 +2675,7 @@ a.tag:hover {
   color: rgba(54, 54, 54, 0.3);
 }
 .select select:hover, .textarea:hover, .input:hover, .select select.is-hovered, .is-hovered.textarea, .is-hovered.input {
-  border-color: #b5b5b5;
+  border-color: #a9d6ff;
 }
 .select select:focus, .textarea:focus, .input:focus, .select select.is-focused, .is-focused.textarea, .is-focused.input, .select select:active, .textarea:active, .input:active, .select select.is-active, .is-active.textarea, .is-active.input {
   border-color: #108cff;
@@ -3854,7 +3854,7 @@ a.tag:hover {
 .dropdown-menu {
   display: none;
   left: 0;
-  min-width: 4rem;
+  min-width: 6rem;
   padding-top: 0;
   position: absolute;
   top: 100%;
@@ -10291,6 +10291,19 @@ button {
   margin: 0;
 }
 
+.modal-card, .modal-card-body {
+  overflow: visible;
+}
+
+.dropdown-container .dropdown-content {
+  max-height: 40vh;
+  overflow-y: scroll;
+}
+.dropdown-container .dropdown-item {
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+}
+
 /* Layout */
 .day_header {
   width: 100%;
@@ -10320,7 +10333,13 @@ button {
 }
 
 .box_filters {
-  margin: 0 0 0.5rem 0px;
+  display: grid;
+  width: 33.3%;
+  grid-template-columns: minmax(200px, 2fr) minmax(200px, 2fr) minmax(100px, 1fr);
+  grid-gap: 0.25rem;
+  margin-top: 0.25rem;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0.5rem 0rem 0px 0rem;
 }
 
@@ -10595,8 +10614,7 @@ select {
   }
 
   .box_filters {
-    margin: 0;
-    padding: 0;
+    grid-template-columns: minmax(100px, 2fr) minmax(100px, 2fr) minmax(50px, 1fr);
   }
 
   .box_sheet {

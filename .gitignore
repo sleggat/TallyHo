@@ -1,5 +1,6 @@
 .DS_Store
 config.codekit3
+README.html
 data
 backups
 cache

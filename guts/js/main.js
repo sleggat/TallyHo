@@ -1,9 +1,14 @@
 $(document).ready(function() {
+
     $(document).keyup(function(e) {
-      if (e.keyCode === 27) $(".modal").removeClass("is-active");   // esc
+      if (e.keyCode === 27) {
+        $(".modal").removeClass("is-active");   // esc
+        $("html").removeClass('is-clipped');
+      }
     });
     $(".delete, .modal-background").click(function() {
        $(".modal").removeClass("is-active");
+       $("html").removeClass('is-clipped');
     });
     initpicker('#form_add');
     $(".modal_client").easyAutocomplete(client_options);
@@ -45,6 +50,25 @@ $('.modal_delete').click(function(event) {
 });
 
 
+
+$(".dropdown .button").click(function (){
+    event.preventDefault();
+    var dropdown = $(this).parents('.dropdown');
+    dropdown.toggleClass('is-active');
+    dropdown.focusout(function() {
+    $(this).removeClass('is-active');
+    });
+});
+
+$('.dropdown-client').click(function(event) {
+    event.preventDefault();
+    var value = $(this).attr("data-value");
+    var current = $(this).parents(".dropdown-container").find(".input");
+    $(current).val(value);
+    $(".dropdown").removeClass('is-active');
+});
+
+
 /* Functions */
 
 function task_handler(type, client, project, description, datetime, duration, path) {
@@ -80,14 +104,17 @@ function task_handler(type, client, project, description, datetime, duration, pa
     $("#modal_update .modal_path").val(path);
     $("#modal_update .modal_"+autofocus).attr("autofocus","autofocus").focus(); // doesnt seem that reliable
     $("#modal_update").addClass("is-active");
+    $("html").addClass('is-clipped');
     initpicker('#modal_update');
 }
+
 function get_current_datetime() {
     // returns date in this format: YYYYMMDDHHMM e.g 202010011616
     var dt = new Date();
     var datetime = dt.getFullYear() + ("0" + (dt.getMonth() + 1)).slice(-2) + ("0" + dt.getDate()).slice(-2) + ("00" + dt.getHours()).slice(-2) + ("00" + dt.getMinutes()).slice(-2);
     return datetime
 }
+
 function initpicker(element) {
     $(element+' .modal_datetime').daterangepicker({
         "singleDatePicker": true,
@@ -124,10 +151,7 @@ function initpicker(element) {
         "autoUpdateInput": true
     });
 }
-function auto_grow(element) {
-    element.style.height = "5px";
-    element.style.height = (element.scrollHeight)+"px";
-}
+
 
 function timeConvert(n) {
     var num = n;
@@ -175,3 +199,4 @@ $('#floating_bar').click(function(event) {
     $('.task_container').removeClass("highlighted");
     recalculate_costs();
 });
+

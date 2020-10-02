@@ -152,6 +152,34 @@ function timeheat($time) {
 	return $val;
 }
 
+function output_dropdown($array, $inputname, $class, $initialvalue, $placeholder) {
+	sort($array);
+	$output = '<div class="field has-addons dropdown-container">
+		<div class="control">
+			<div class="dropdown is-hoverable">
+				<div class="dropdown-trigger">
+					<button class="button '.$class.'" aria-haspopup="true" aria-controls="add-dropdown-menu">
+						<span class="icon has-text-link">
+							<i class="fas fa-angle-down" aria-hidden="true"></i>
+						</span>
+					</button>
+				</div>
+				<div class="dropdown-menu" id="add-dropdown-menu" role="menu">
+					<div class="dropdown-content">';
+						foreach ($array as $field) {
+							$output .= '<a href="#" class="dropdown-item dropdown-client" data-value="'.$field.'">'.$field.'</a>';
+						}
+					$output .= '</div>
+				</div>
+			</div>
+		</div>
+		<div class="control is-expanded">
+			<input name="'.$inputname.'" class="input '.$class.'" type="text" value="'.$initialvalue.'" placeholder="'.$placeholder.'" >
+		</div>
+	</div>';
+	return $output;
+}
+
 function zip_backup($source, $destination){
 	if (extension_loaded('zip') === true) {
 		if (file_exists($source) === true) {

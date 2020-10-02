@@ -63,12 +63,14 @@ $pagination-color: $link
 $pagination-border-color: $lt-blue-300
 $pagination-hover-border-color: $lt-blue-500
 $pagination-active-border-color: $dk-gray-100
-$dropdown-menu-min-width: 4rem
+$dropdown-menu-min-width: 6rem
 $dropdown-content-offset: 0
 $dropdown-content-padding-bottom: 0
 $dropdown-content-padding-top: 0
 $button-border-color: $lt-blue-300
 $button-hover-border-color: $lt-blue-500
+$input-border-color: $lt-blue-300
+$input-hover-border-color: $lt-blue-500
 $modal-background-background-color: rgba($lt-blue-100, .9)
 $modal-card-head-background-color: $dk-blue-300
 $modal-card-title-color: #fff
@@ -184,6 +186,16 @@ button
 .dropdown-divider
   margin: 0
 
+.modal-card, .modal-card-body
+  overflow: visible
+
+.dropdown-container 
+  .dropdown-content
+    max-height: 40vh
+    overflow-y: scroll
+  .dropdown-item
+    padding-top: 0.1em
+    padding-bottom: 0.1em
 
 /* Layout */
 
@@ -211,7 +223,13 @@ button
   box-shadow: 0px 0px #{($column-gap / 2)} rgba($lt-blue-600, .3), 0px 0px 1px rgba($dk-gray-500, .1)
 
 .box_filters
-  margin: 0 0 #{($column-gap * 1)} 0px
+  display: grid
+  width: 33.3%
+  grid-template-columns: minmax(200px, 2fr) minmax(200px, 2fr) minmax(100px, 1fr)
+  grid-gap: #{($column-gap * .5)}
+  margin-top: #{($column-gap * .5)}
+  margin-left: auto
+  margin-right: auto
   padding: #{($column-gap * 1)} #{($column-gap * 0)} 0px #{($column-gap * 0)}
 
 .table_row
@@ -420,9 +438,6 @@ select
     white-space: normal
 
 @media (max-width: 800px)
-  html
-    //margin: 0
-
   :root
     font-size: .8rem
     // line-height: 1.3
@@ -441,8 +456,7 @@ select
     &.task_col_4
       padding-right: #{($column-gap * 1)}
   .box_filters
-    margin: 0
-    padding: 0
+    grid-template-columns: minmax(100px, 2fr) minmax(100px, 2fr) minmax(50px, 1fr)
   .box_sheet
     padding: #{($column-gap * 1)} #{($column-gap * 0)} #{($column-gap * 1)} #{($column-gap * 0)}
 

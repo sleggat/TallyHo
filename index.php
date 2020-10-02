@@ -51,6 +51,10 @@ $clients_and_projects = clients_and_projects($all_records);
 $tasks_total = count($task_array);
 $client_options = '"'.implode('","',array_keys($clients_and_projects)).'"';
 $project_options = '"'.implode('","',array_unique(call_user_func_array('array_merge', ($clients_and_projects)))).'"';
+
+$client_array = array_keys($clients_and_projects);
+$project_array = array_unique(call_user_func_array('array_merge', ($clients_and_projects)));
+
 $last_tasks = get_last_tasks($task_array, 5);
 $additional_js = '
 var client_options = {
@@ -78,7 +82,7 @@ var project_options = {
 	<div class="container">
 		<div class="navbar-brand">
 			<a href="/" class="navbar-item"><img src="template/images/logo-white.png" alt="TallyHo!"></a>
-			<div class="navbar-item dropdown-container">
+			<div class="navbar-item">
 				<div class="dropdown is-hoverable">
 					<div class="dropdown-trigger">
 						<button class="button modal_add is-small" aria-haspopup="true" aria-controls="add-dropdown-menu" onClick="task_handler('add',null,null,null,null,null,null)">
@@ -98,6 +102,17 @@ var project_options = {
 					</div>
 				</div>
 			</div>
+			<form method="get">
+				<div class="box_filters">
+					<?= output_dropdown($client_array, 'FilterClient', 'is-small', $filter_client, 'Client'); ?>
+					<?= output_dropdown($project_array, 'FilterProject', 'is-small', $filter_project, 'Project'); ?>
+					<div class="control">
+						<button class="button is-small " type="submit" name="Submit" value="filter">
+							Filter
+						</button>
+					</div>
+				</div>
+			</form>
 			<div class="tally navbar-item has-text-primary">
 				<div id="tally" class="hide">
 					Rows: <span id="total_selected"></span> / 
@@ -109,29 +124,6 @@ var project_options = {
 	</div>
 </nav>
 
-<div class="container">
-	<div class="columns">
-		<div class="column">
-			<form method="get">
-				<div class="box_filters">
-					<div class="field has-addons has-addons-right">
-						<div class="control">
-							<input id="filter_client" name="FilterClient" class="input" type="text" value="<?= $filter_client ?>" placeholder="Client" >
-						</div>
-						<div class="control">
-							<input id="filter_project" name="FilterProject" class="input" type="text" value="<?= $filter_project ?>" placeholder="Project">
-						</div>
-						<div class="control">
-							<button class="button" type="submit" name="Submit" value="filter">
-								Filter
-							</button>
-						</div>
-					</div>
-				</div>
-			</form>
-		</div>
-	</div>
-</div>
 <div class="container">
 	<div class="columns">
 		<div class="column">
@@ -249,7 +241,7 @@ var project_options = {
 				?>
 			</div><!-- end table -->
 			<?php 
-			$total_pages = count($task_array) / $page_limit;
+			$total_pages = $tasks_total / $page_limit;
 			$query = "";
 			if ($filter_client || $filter_project) {
 				$query = "&FilterClient=".$filter_client."&FilterProject=".$filter_project."&Submit=filter";
