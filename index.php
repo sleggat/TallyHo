@@ -43,6 +43,7 @@ if (isset($_GET['p'])) {
 if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['Submit'])) {
 	$filter_client = isset($_GET['FilterClient']) ? $_GET['FilterClient'] : '';
 	$filter_project = isset($_GET['FilterProject']) ? $_GET['FilterProject'] : '';
+	$page_limit = 99999999; // don't bother with pagination when there are filters
 }
 
 $all_records = find_all_files('data');
@@ -56,24 +57,7 @@ $client_array = array_keys($clients_and_projects);
 $project_array = array_unique(call_user_func_array('array_merge', ($clients_and_projects)));
 
 $last_tasks = get_last_tasks($task_array, 5);
-$additional_js = '
-var client_options = {
-	data: ['.$client_options.'],
-	list: {
-		match: {
-			enabled: true
-		}
-	}
-}
-var project_options = {
-	data: ['.$project_options.'],
-	list: {
-		match: {
-			enabled: true
-		}
-	}
-};
-';
+$additional_js = ''; // extra JS to go in footer
 
 // zip_backup('data/', './backups/'.date("Ymd-His").'.zip')
 
