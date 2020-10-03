@@ -10220,7 +10220,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 html {
   background-color: #e1f0ff;
   padding: 0;
-  margin: 0.5rem 0 0 0;
+  margin: 0;
 }
 
 body {
@@ -10273,11 +10273,17 @@ h1, h2, .day_header {
 }
 
 /* Navbar, Dropdowns and Buttons */
-.navbar-brand {
-  flex-grow: 1;
-  align-content: stretch;
+.nav {
+  background-color: #0080f5;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  min-height: 70px;
 }
-.navbar-brand img {
+.nav .logo {
   margin-top: 5px;
   height: auto;
   max-width: 100px;
@@ -10334,13 +10340,14 @@ button {
 
 .box_filters {
   display: grid;
-  width: 33.3%;
-  grid-template-columns: minmax(200px, 2fr) minmax(200px, 2fr) minmax(100px, 1fr);
+  width: 100%;
+  margin: auto 0;
+  grid-template-columns: 1fr 1fr -webkit-min-content;
+  grid-template-columns: 1fr 1fr min-content;
   grid-gap: 0.25rem;
-  margin-top: 0.25rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0.5rem 0rem 0px 0rem;
+}
+.box_filters .field:not(:last-child) {
+  margin-bottom: 0;
 }
 
 .table_row {
@@ -10443,6 +10450,7 @@ button {
 /* Floating bar where the tally goes */
 .tally {
   color: #e1f0ff;
+  min-width: 15ch;
 }
 
 /* Modal custom styles */
@@ -10594,6 +10602,10 @@ select {
     font-size: 0.8rem;
   }
 
+  .nav .logo {
+    max-width: 70px;
+  }
+
   input, select, textarea {
     font-size: 1rem;
   }
@@ -10613,12 +10625,12 @@ select {
     padding-right: 0.5rem;
   }
 
-  .box_filters {
-    grid-template-columns: minmax(100px, 2fr) minmax(100px, 2fr) minmax(50px, 1fr);
-  }
-
   .box_sheet {
     padding: 0.5rem 0rem 0.5rem 0rem;
+  }
+
+  .box_filters {
+    width: 200px;
   }
 
   .columns {

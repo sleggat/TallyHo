@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js has-navbar-fixed-top" lang="">
+<html class="no-js" lang="">
 
 <head>
 	<meta charset="utf-8">
