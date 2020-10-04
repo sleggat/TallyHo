@@ -63,49 +63,58 @@ $additional_js = ''; // extra JS to go in footer
 
 ?>
 
-<nav class="nav level is-mobile" role="navigation" aria-label="dropdown navigation">
-	<div class="level-item">
-		<a href="/" class="logo"><img src="template/images/logo-white.png" alt="TallyHo!"></a>
-	</div>
-	<div class="level-item has-text-primary tally">
-		<div id="tally" class="hi_de">
-			<div class="hide">Rows: <span id="total_selected"></span></div>
-			<div>Time: <span id="total_mins"></span></div>
-			<div>Total: <?= CURRENCY_SYMBOL ?><span id="total_cost"></span></div>
-		</div>
-	</div>
-	<div class="level-item">
-		<div class="dropdown is-hoverable">
-			<div class="dropdown-trigger">
-				<button class="button modal_add is-small" aria-haspopup="true" aria-controls="add-dropdown-menu" onClick="task_handler('add',null,null,null,null,null,null)">
-					<span class="icon is-small has-text-link">
-						<i class="fas fa-plus" aria-hidden="true"></i>
-					</span>
-				</button>
+<nav class="nav" role="navigation" aria-label="dropdown navigation">
+	<div class="container">
+		<div class="level is-mobile">
+			<div class="level-left">
+				<div class="level-item">
+					<a href="/" class="logo"><img src="template/images/logo-white.png" alt="TallyHo!"></a>
+				</div>
+
+				<div class="level-item">
+					<div class="dropdown is-hoverable">
+						<div class="dropdown-trigger">
+							<button class="button modal_add is-small" aria-haspopup="true" aria-controls="add-dropdown-menu" onClick="task_handler('add',null,null,null,null,null,null)">
+								<span class="icon is-small has-text-link">
+									<i class="fas fa-plus" aria-hidden="true"></i>
+								</span>
+							</button>
+						</div>
+						<div class="dropdown-menu" id="add-dropdown-menu" role="menu">
+							<div class="dropdown-content">
+								<?php
+								foreach ($last_tasks as $task) {
+									echo '<a href="#" class="dropdown-item" onClick="task_handler(\'continue\',\''.$task[0].'\',\''.$task[1].'\',null,null,null,null);"><span>'.$task[0].' / '.$task[1].'</span></a>';
+								}
+								?>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="level-item has-text-primary tally">
+					<div id="tally" class="hide">
+						<div class="hide">Rows: <span id="total_selected"></span></div>
+						<div>Time: <span id="total_mins"></span></div>
+						<div>Total: <?= CURRENCY_SYMBOL ?><span id="total_cost"></span></div>
+					</div>
+				</div>
+
 			</div>
-			<div class="dropdown-menu" id="add-dropdown-menu" role="menu">
-				<div class="dropdown-content">
-					<?php
-					foreach ($last_tasks as $task) {
-						echo '<a href="#" class="dropdown-item" onClick="task_handler(\'continue\',\''.$task[0].'\',\''.$task[1].'\',null,null,null,null);"><span class="icon"><i class="far fa-clone" aria-hidden="true"></i></span><span>'.$task[0].' / '.$task[1].'</span></a>';
-					}
-					?>
+			<div class="level-right">
+				<div class="level-item">
+					<form method="get">
+						<div class="box_filters">
+							<?= output_dropdown($client_array, 'FilterClient', 'is-small', $filter_client, 'Client'); ?>
+							<?= output_dropdown($project_array, 'FilterProject', 'is-small', $filter_project, 'Project'); ?>
+							<div class="control">
+								<button class="button is-small is-link" type="submit" name="Submit" value="filter"><i class="fas fa-search" aria-hidden="true"></i></span></button>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="level-item">
-		<form method="get">
-			<div class="box_filters">
-				<?= output_dropdown($client_array, 'FilterClient', 'is-small', $filter_client, 'Client'); ?>
-				<?= output_dropdown($project_array, 'FilterProject', 'is-small', $filter_project, 'Project'); ?>
-				<div class="control">
-					<button class="button is-small " type="submit" name="Submit" value="filter">
-						Filter
-					</button>
-				</div>
-			</div>
-		</form>
 	</div>
 </nav>
 

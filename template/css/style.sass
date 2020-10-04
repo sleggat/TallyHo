@@ -49,12 +49,10 @@ $lt-red-300: saturate(lighten($lt-red-900, 30%), 35%)
 $lt-red-200: saturate(lighten($lt-red-900, 35%), 40%)
 $lt-red-100: saturate(lighten($lt-red-900, 40%), 45%)
 
-$primary: $lt-blue-300
-$link: $dk-blue-200
-$link-hover: $dk-blue-100
-$link-active: $dk-gray-100
-$link-focus: $dk-gray-100
-$scheme: $lt-blue-200
+$primary: $dk-blue-300
+$primary-invert: $lt-blue-100
+$link: $dk-blue-100
+$scheme: $lt-blue-100
 $scheme-invert: $dk-blue-900
 $navbar-background-color: $dk-blue-300
 $column-gap: .5rem
@@ -63,17 +61,19 @@ $pagination-color: $link
 $pagination-border-color: $lt-blue-300
 $pagination-hover-border-color: $lt-blue-500
 $pagination-active-border-color: $dk-gray-100
-$dropdown-menu-min-width: 6rem
+$dropdown-menu-min-width: 4rem
 $dropdown-content-offset: 0
 $dropdown-content-padding-bottom: 0
 $dropdown-content-padding-top: 0
+$dropdown-content-shadow:  0 2px 5px rgba($dk-blue-500, 0.1), 0 0 0 1px rgba($dk-gray-400, 0.1)
 $button-border-color: $lt-blue-300
 $button-hover-border-color: $lt-blue-500
-$input-border-color: $lt-blue-300
-$input-hover-border-color: $lt-blue-500
+$input-border-color: $lt-blue-200
+$input-hover-border-color: $lt-blue-300
 $modal-background-background-color: rgba($lt-blue-100, .9)
 $modal-card-head-background-color: $dk-blue-300
 $modal-card-title-color: #fff
+$background: $lt-blue-100
 
 
 @import "_bulma.sass" 
@@ -153,7 +153,6 @@ img
 .hide
   display: none
 
-
 /* Headings */
 
 h1, h2, .day_header
@@ -179,7 +178,10 @@ h1, h2, .day_header
   left: 0
   width: 100%
   z-index: 5
-  min-height: 70px
+  padding-top: 1vh
+  padding-bottom: 1vh
+  padding-left: #{($column-gap * 2)}
+  padding-right: #{($column-gap * 2)}
   .logo
     margin-top: 5px
     height: auto
@@ -194,13 +196,19 @@ button
 .modal-card, .modal-card-body
   overflow: visible
 
-.dropdown-container 
+.dropdown-container
   .dropdown-content
     max-height: 40vh
-    overflow-y: scroll
+    overflow-y: auto
   .dropdown-item
     padding-top: 0.1em
     padding-bottom: 0.1em
+
+a.dropdown-item, button.dropdown-item
+  padding-right: 1.5rem
+
+.dropdown-content
+  overflow: hidden
 
 /* Layout */
 
@@ -325,6 +333,10 @@ button
 .tally
   color: $lt-blue-100
   min-width: 15ch
+  line-height: 1.3
+  font-size: .7rem
+  font-weight: 600
+  text-align: left
 
 /* Modal custom styles */
 
@@ -465,7 +477,7 @@ select
   .box_sheet
     padding: #{($column-gap * 1)} #{($column-gap * 0)} #{($column-gap * 1)} #{($column-gap * 0)}
   .box_filters
-    width: 200px
+    max-width: 400px
   .columns
     margin: 0
     overflow-x: hidden

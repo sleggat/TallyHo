@@ -18,9 +18,10 @@
 							</div>
 							<div class="column is-3-mobile is-4">
 								<div class="field">
-									<label class="label">Duration</label>
+									<label class="label">Duration (mins)</label>
 									<div class="control">
-										<input class="input modal_duration" name="Duration" class="input" value="" >
+										<?= output_dropdown(range(0,720,$default_timeincrement), 'Duration', 'modal_duration', $default_timeincrement, ''); ?>
+										<!-- <input class="input modal_duration" name="Duration" class="input" value="<?= $default_timeincrement; ?>" > -->
 									</div>
 								</div>
 							</div>
@@ -49,7 +50,7 @@
 
 							<div class="column is-6">
 								<div class="control">
-									<button class="button" type="submit" name="Submit" value="update">Submit</button>
+									<button class="button is-primary" type="submit" name="Submit" value="update">Submit</button>
 								</div>
 							</div>
 						</form>
