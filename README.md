@@ -1,7 +1,7 @@
 # TallyHo
-> A single-user time tracker, built using flat-files for speed and portability.
+> A single-user time tracker, built for simplicity, speed and portability.
 
-![Preview](https://raw.githubusercontent.com/sleggat/TallyHo/master/screenshot01.jpg)
+![Preview](https://raw.githubusercontent.com/sleggat/TallyHo/master/screenshot.jpg)
 
 
 ## Features:
@@ -17,17 +17,17 @@
 - Selecting multiple rows gives a tally of Rows / Hours / Cost
 
 
-####Partially Implemented
+#### Partially Implemented
 - Reimbursable expenses (e.g. printing costs, client's domain name, 'research' trip to Bali)
 
 
-####Features I'd like to add at some point;
+#### Features I'd like to add at some point;
 - Filtering by date range
 - Basic Reports/Charts (Historical and Projection)
 - Basic exporting
 
 
-####TallyHo is simple by design and I have no intention of adding the following;
+#### TallyHo is simple by design and I have no intention of adding the following;
 - Invoicing
 - Multi-users
 - Multi-currency

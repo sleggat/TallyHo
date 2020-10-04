@@ -21,7 +21,6 @@
 									<label class="label">Duration (mins)</label>
 									<div class="control">
 										<?= output_dropdown(range(0,720,$default_timeincrement), 'Duration', 'modal_duration', $default_timeincrement, ''); ?>
-										<!-- <input class="input modal_duration" name="Duration" class="input" value="<?= $default_timeincrement; ?>" > -->
 									</div>
 								</div>
 							</div>
@@ -82,6 +81,6 @@
 		<script>
 			<?php echo $additional_js; ?>
 		</script>
-		<script src="guts/js/main.js"></script>
+		<script src="template/js/main.js"></script>
 	</body>
 </html>

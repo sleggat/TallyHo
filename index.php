@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		include __DIR__."/guts/update_task.php"; // update and duplicate
 	}
 	if ($_POST['Submit'] == 'add') {
-		include __DIR__."/guts/add_task.php"; // update and duplicate
+		include __DIR__."/guts/add_task.php"; // add (plan to merge with update_task)
 	}
 	if ($_POST['Submit'] == 'delete') {
 		include __DIR__."/guts/delete_task.php"; // delete

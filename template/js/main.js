@@ -11,10 +11,6 @@ $(document).ready(function() {
        $("html").removeClass('is-clipped');
     });
     initpicker('#form_add');
-    $(".modal_client").easyAutocomplete(client_options);
-    $(".modal_project").easyAutocomplete(project_options);
-    $("#filter_client").easyAutocomplete(client_options);
-    $("#filter_project").easyAutocomplete(project_options);
 })
 
 $('.modal_edit').click(function(event) {
