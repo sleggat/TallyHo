@@ -16,16 +16,18 @@
 - Visual cue showing time spent on each task (blue = meh / red = good effort)
 - Selecting multiple rows gives a tally of Rows / Hours / Cost
 
-Partially Implemented
+
+####Partially Implemented
 - Reimbursable expenses (e.g. printing costs, client's domain name, 'research' trip to Bali)
 
-Features I'd like to add at some point;
+
+####Features I'd like to add at some point;
 - Filtering by date range
 - Basic Reports/Charts (Historical and Projection)
 - Basic exporting
 
 
-TallyHo is simple by design and I have no intention of adding the following;
+####TallyHo is simple by design and I have no intention of adding the following;
 - Invoicing
 - Multi-users
 - Multi-currency
@@ -71,11 +73,11 @@ The heirarchy is Project>Client>Default
 
 ## The Backstory:
 
-Over the course of my 17 years as a freelance designer/developer I've tried out a decent number of time-trackers, from native apps, browser-based and even just using MacOS' Notes app. For the last year I have been using Kimai and have for the most part been pretty happy with it. Trouble is, it occupies over 2.5GB of my server space, and with over 21,000 files it's no surprise that it's quite slooooow and easy to break ...
+Over the course of my 17 years as [a freelance designer/developer](https://steveleggat.com "Steve Leggat has been a freelance graphic designer and coder in New Zealand and Taiwan since 2006") I've tried out a decent number of time-trackers, from native apps, browser-based and even just using MacOS' Notes app. For the last year I have been using Kimai and have for the most part been pretty happy with it. Trouble is, it occupies over 2.5GB of my server space, and with over 21,000 files it's no surprise that it's quite slooooow and easy to break ...
 
 ... so I created TallyHo, with a 'simple by design' philosophy.
 
 
 ## Disclaimer:
 
-TallyHo's code is not particularly elegant yet (yay procedural hacking!), yet. Please feel free to contribute!
+TallyHo's code is not particularly elegant, yet. Please feel free to contribute!
