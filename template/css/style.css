@@ -10296,6 +10296,11 @@ button {
   transition: color 0.3s, border 0.6s, background-color 0.5s;
 }
 
+.button.is-link:hover, .button.is-link.is-hovered {
+  background: white;
+  color: #2999ff;
+}
+
 .dropdown-divider {
   margin: 0;
 }
@@ -10304,6 +10309,9 @@ button {
   overflow: visible;
 }
 
+.dropdown-container .dropdown button:active {
+  background: #c2e2ff;
+}
 .dropdown-container .dropdown-content {
   max-height: 40vh;
   overflow-y: auto;
@@ -10645,7 +10653,7 @@ select {
   }
 
   .box_filters {
-    max-width: 400px;
+    max-width: 200px;
   }
 
   .columns {

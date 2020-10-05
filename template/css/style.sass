@@ -189,7 +189,9 @@ h1, h2, .day_header
 
 button
   transition: color .3s, border .6s, background-color .5s
-
+.button.is-link:hover, .button.is-link.is-hovered
+  background: $white
+  color: $link
 .dropdown-divider
   margin: 0
 
@@ -197,6 +199,8 @@ button
   overflow: visible
 
 .dropdown-container
+  .dropdown button:active
+    background: $lt-blue-400
   .dropdown-content
     max-height: 40vh
     overflow-y: auto
@@ -480,7 +484,7 @@ select
   .box_sheet
     padding: #{($column-gap * 1)} #{($column-gap * 0)} #{($column-gap * 1)} #{($column-gap * 0)}
   .box_filters
-    max-width: 400px
+    max-width: 200px
   .columns
     margin: 0
     overflow-x: hidden

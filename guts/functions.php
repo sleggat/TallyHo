@@ -20,7 +20,6 @@ function find_all_files($dir, &$results = array()) {
 				}
 			} else if ($value != "." && $value != "..") {
 				find_all_files($path, $results);
-				// $results[] = $path; // don't show empty folders in results
 			}
 		}
 		return $results;
@@ -156,7 +155,7 @@ function output_dropdown($array, $inputname, $class, $initialvalue, $placeholder
 	sort($array);
 	$output = '<div class="field has-addons dropdown-container">
 		<div class="control">
-			<div class="dropdown is-hoverable">
+			<div class="dropdown">
 				<div class="dropdown-trigger">
 					<button class="button '.$class.'" aria-haspopup="true" aria-controls="add-dropdown-menu">
 						<span class="icon has-text-link">
@@ -167,7 +166,7 @@ function output_dropdown($array, $inputname, $class, $initialvalue, $placeholder
 				<div class="dropdown-menu" id="add-dropdown-menu" role="menu">
 					<div class="dropdown-content">';
 						foreach ($array as $field) {
-							$output .= '<a href="#" class="dropdown-item dropdown-selection" data-value="'.$field.'">'.$field.'</a>';
+							$output .= '<a href="" class="dropdown-item dropdown-selection" data-value="'.$field.'">'.$field.'</a>';
 						}
 					$output .= '</div>
 				</div>

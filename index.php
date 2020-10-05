@@ -92,7 +92,7 @@ $additional_js = ''; // extra JS to go in footer
 					</div>
 				</div>
 
-				<div class="level-item has-text-primary tally">
+				<div class="level-item has-text-white tally">
 					<div id="tally" class="hide">
 						<div class="hide">Rows: <span id="total_selected"></span></div>
 						<div>Time: <span id="total_mins"></span></div>

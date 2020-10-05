@@ -44,8 +44,12 @@ $('.modal_delete').click(function(event) {
     $("#modal_delete .modal_delete_path").html(path);
     $("#modal_delete").addClass("is-active");
 });
-
-
+$('.dropdown button').click(function(event) {
+    event.preventDefault();
+    dropdown = $(this).parents('.dropdown');
+    $(".dropdown").not(dropdown).removeClass('is-active');
+    dropdown.toggleClass('is-active');
+});
 $('.dropdown-selection').click(function(event) {
     event.preventDefault();
     var value = $(this).attr("data-value");
@@ -66,19 +70,22 @@ function task_handler(type, client, project, description, datetime, duration, pa
     switch (type) {
         case 'continue':
             header = "<span class=\"icon is-size-6\"><i class=\"far fa-clone\"></i></span> Continue Task";
+            datetime = get_current_datetime();
             autofocus = 'description';
             break;
         case 'duplicate':
             header = "<span class=\"icon is-size-6\"><i class=\"fas fa-copy\"></i></span> Duplicate Task";
             datetime = get_current_datetime();
-            // it's quite lucky daterangepicker converts this from 2300 to 11:00 PM
+            autofocus = 'description';
             break;
         case 'add':
             header = "<span class=\"icon is-size-6\"><i class=\"fas fa-plus\"></i></span> Add Task";
             datetime = get_current_datetime();
+            autofocus = 'client';
             break;
         case 'edit':
             header = "<span class=\"icon is-size-6\"><i class=\"fas fa-edit\"></i></span> Edit Task";
+            autofocus = 'description';
             break;
     }
     $("#modal_update .modal-card-title").html(header);
