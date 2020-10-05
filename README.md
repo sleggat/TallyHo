@@ -12,19 +12,15 @@
 - Filter by Client and/or Project
 - Delete tasks
 - Select rows/days and calculate total costs
+- Add Reimbursable expenses (e.g. printing costs, client's domain name, 'research' trip to Bali)
 - Different hourly rates; Default Rate / Client Rate / Project Rate
 - Visual cue showing time spent on each task (blue = meh / red = good effort)
 - Selecting multiple rows gives a tally of Rows / Hours / Cost
 
-
-#### Partially Implemented
-- Reimbursable expenses (e.g. printing costs, client's domain name, 'research' trip to Bali)
-
-
 #### Features I'd like to add at some point;
 - Filtering by date range
 - Basic Reports/Charts (Historical and Projection)
-- Basic exporting
+- Basic exporting to CSV
 
 
 #### TallyHo is simple by design and I have no intention of adding the following;
