@@ -46,17 +46,7 @@ $('.modal_delete').click(function(event) {
 });
 
 
-
-$(".dropdown .button").click(function (){
-    event.preventDefault();
-    var dropdown = $(this).parents('.dropdown');
-    dropdown.toggleClass('is-active');
-    dropdown.focusout(function() {
-    $(this).removeClass('is-active');
-    });
-});
-
-$('.dropdown-client').click(function(event) {
+$('.dropdown-selection').click(function(event) {
     event.preventDefault();
     var value = $(this).attr("data-value");
     var current = $(this).parents(".dropdown-container").find(".input");

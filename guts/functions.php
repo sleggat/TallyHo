@@ -167,7 +167,7 @@ function output_dropdown($array, $inputname, $class, $initialvalue, $placeholder
 				<div class="dropdown-menu" id="add-dropdown-menu" role="menu">
 					<div class="dropdown-content">';
 						foreach ($array as $field) {
-							$output .= '<a href="#" class="dropdown-item dropdown-client" data-value="'.$field.'">'.$field.'</a>';
+							$output .= '<a href="#" class="dropdown-item dropdown-selection" data-value="'.$field.'">'.$field.'</a>';
 						}
 					$output .= '</div>
 				</div>
