@@ -163,10 +163,13 @@ h1, h2, .day_header
 
 .modal-card-title
   margin: .25em 0 0 0
-  vertical-align: middle
+  // vertical-align: middle
   .icon
     vertical-align: 15%
     color: $lt-blue-700
+.modal-card-head
+  .buttons
+    margin: .5em 1em 0 .5em
 
 
 /* Navbar, Dropdowns and Buttons */
@@ -207,15 +210,20 @@ button
   .dropdown-item
     padding-top: 0.1em
     padding-bottom: 0.1em
+    text-overflow: ellipsis
+    white-space: nowrap
+    overflow: hidden
 
 
 a.dropdown-item, button.dropdown-item
-  padding-right: 1.5rem
+  padding-right: 1rem
+  padding-left: .75rem
 
 .dropdown-content
   overflow: hidden
 
-
+.field:not(:last-child)
+  margin-bottom: 0rem
 
 /* Layout */
 

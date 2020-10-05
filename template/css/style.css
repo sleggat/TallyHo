@@ -10265,11 +10265,14 @@ h1, h2, .day_header {
 
 .modal-card-title {
   margin: 0.25em 0 0 0;
-  vertical-align: middle;
 }
 .modal-card-title .icon {
   vertical-align: 15%;
   color: #76bdff;
+}
+
+.modal-card-head .buttons {
+  margin: 0.5em 1em 0 0.5em;
 }
 
 /* Navbar, Dropdowns and Buttons */
@@ -10319,14 +10322,22 @@ button {
 .dropdown-container .dropdown-item {
   padding-top: 0.1em;
   padding-bottom: 0.1em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 a.dropdown-item, button.dropdown-item {
-  padding-right: 1.5rem;
+  padding-right: 1rem;
+  padding-left: 0.75rem;
 }
 
 .dropdown-content {
   overflow: hidden;
+}
+
+.field:not(:last-child) {
+  margin-bottom: 0rem;
 }
 
 /* Layout */

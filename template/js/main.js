@@ -47,6 +47,8 @@ $('.modal_delete').click(function(event) {
 $('.dropdown button').click(function(event) {
     event.preventDefault();
     dropdown = $(this).parents('.dropdown');
+    width = $(this).parents('.dropdown-container').width();
+    $(this).parents('.dropdown-container').find('.dropdown-content').width(width);
     $(".dropdown").not(dropdown).removeClass('is-active');
     dropdown.toggleClass('is-active');
 });
@@ -58,6 +60,30 @@ $('.dropdown-selection').click(function(event) {
     $(".dropdown").removeClass('is-active');
 });
 
+$('.set_duration').click(function(event) {
+    event.preventDefault();
+    $('.set_duration').removeClass('is-link');
+    $('.set_duration').addClass('is-white');
+    $('.set_expense').removeClass('is-white');
+    $('.set_expense').addClass('is-link');
+    $('.modal_tasktype').val('duration');
+    if ($('.field_duration').is(":hidden")) {
+        $('.field_expense').hide();
+        $('.field_duration').show();
+    }
+});
+$('.set_expense').click(function(event) {
+    event.preventDefault();
+    $('.set_expense').removeClass('is-link');
+    $('.set_expense').addClass('is-white');
+    $('.set_duration').removeClass('is-white');
+    $('.set_duration').addClass('is-link');
+    $('.modal_tasktype').val('expense');
+    if ($('.field_expense').is(":hidden")) {
+        $('.field_duration').hide();
+        $('.field_expense').show();
+    }
+});
 
 /* Functions */
 
@@ -65,6 +91,8 @@ function task_handler(type, client, project, description, datetime, duration, pa
     // will combine all add/duplicate/restart/edit
 
     event.preventDefault();
+    $(".dropdown").removeClass('is-active');
+    //$(".dropdown-menu").css('display','none');
     autofocus = 'client';
     duration = parseFloat(duration) ? duration : 15;
     switch (type) {
@@ -79,7 +107,7 @@ function task_handler(type, client, project, description, datetime, duration, pa
             autofocus = 'description';
             break;
         case 'add':
-            header = "<span class=\"icon is-size-6\"><i class=\"fas fa-plus\"></i></span> Add Task";
+            header = "<span class=\"icon is-size-6\"><i class=\"fas fa-plus\"></i></span> Add New Task";
             datetime = get_current_datetime();
             autofocus = 'client';
             break;

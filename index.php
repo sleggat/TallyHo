@@ -72,9 +72,9 @@ $additional_js = ''; // extra JS to go in footer
 				</div>
 
 				<div class="level-item">
-					<div class="dropdown is-hoverable">
+					<div class="dropdown">
 						<div class="dropdown-trigger">
-							<button class="button modal_add is-small" aria-haspopup="true" aria-controls="add-dropdown-menu" onClick="task_handler('add',null,null,null,null,null,null)">
+							<button class="button is-small" aria-haspopup="true" aria-controls="add-dropdown-menu">
 								<span class="icon is-small has-text-link">
 									<i class="fas fa-plus" aria-hidden="true"></i>
 								</span>
@@ -82,6 +82,8 @@ $additional_js = ''; // extra JS to go in footer
 						</div>
 						<div class="dropdown-menu" id="add-dropdown-menu" role="menu">
 							<div class="dropdown-content">
+								<a href="#" class="dropdown-item" onClick="task_handler('add',null,null,null,null,null,null)">Add New Task</a>
+								<hr class="dropdown-divider">
 								<?php
 								foreach ($last_tasks as $task) {
 									echo '<a href="#" class="dropdown-item" onClick="task_handler(\'continue\',\''.$task[0].'\',\''.$task[1].'\',null,null,null,null);"><span>'.$task[0].' / '.$task[1].'</span></a>';
