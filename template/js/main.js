@@ -19,20 +19,22 @@ $('.modal_edit').click(function(event) {
     var path = current.attr('data-path');
     var datetime = current.attr("data-datetime");
     var duration = current.attr("data-duration");
+    var expense = current.attr("data-expense");
     var client = current.attr("data-client");
     var project = current.attr("data-project");
     var description = current.attr("data-description");
-    task_handler('edit', client, project, description, datetime, duration, path);
+    task_handler('edit', client, project, description, datetime, duration, expense, path);
 });
 
 $('.modal_duplicate').click(function(event) {
     event.preventDefault();
     var current = $(this).parents(".task_container");
     var duration = current.attr("data-duration");
+    var expense = current.attr("data-expense");
     var client = current.attr("data-client");
     var project = current.attr("data-project");
     var description = current.attr("data-description");
-    task_handler('duplicate', client, project, description, null, duration, null);
+    task_handler('duplicate', client, project, description, null, duration, expense, null);
 });
 
 $('.modal_delete').click(function(event) {
@@ -87,12 +89,11 @@ $('.set_expense').click(function(event) {
 
 /* Functions */
 
-function task_handler(type, client, project, description, datetime, duration, path) {
+function task_handler(type, client, project, description, datetime, duration, expense, path) {
     // will combine all add/duplicate/restart/edit
 
     event.preventDefault();
     $(".dropdown").removeClass('is-active');
-    //$(".dropdown-menu").css('display','none');
     autofocus = 'client';
     duration = parseFloat(duration) ? duration : 15;
     switch (type) {
@@ -119,6 +120,7 @@ function task_handler(type, client, project, description, datetime, duration, pa
     $("#modal_update .modal-card-title").html(header);
     $("#modal_update .modal_datetime").val(datetime);
     $("#modal_update .modal_duration").val(duration);
+    $("#modal_update .modal_expense").val(expense);
     $("#modal_update .modal_client").val(client);
     $("#modal_update .modal_project").val(project);
     $("#modal_update .modal_description").val(description);
@@ -126,6 +128,12 @@ function task_handler(type, client, project, description, datetime, duration, pa
     $("#modal_update .modal_"+autofocus).attr("autofocus","autofocus").focus(); // doesnt seem that reliable
     $("#modal_update").addClass("is-active");
     $("html").addClass('is-clipped');
+    if (expense > 0) {
+        $('.set_expense').trigger( "click" );
+    }
+    else {
+        $('.set_duration').trigger( "click" );
+    }
     initpicker('#modal_update');
 }
 

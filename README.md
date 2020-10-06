@@ -36,9 +36,9 @@ I recommend putting it on your localhost, but you could also upload it to your w
 Configure default hourly rate, timezone and base-path here: guts/config.php
 
 
-## Usage:
+## Usage (assuming you have a server running PHP):
 
-Once installed just open 'http://localhost/tallyho' up in your web browser. Upon initiation it will create some demo tasks which you can edit/duplicate/delete.
+Unzip and put the 'tallyho' in your '~/Sites' folder or wherever localhost points to, then just open 'http://localhost/tallyho' up in your web browser. Upon initiation it will create some demo tasks which you can edit/duplicate/delete.
 
 
 TallyHo uses flat-files (.txt/.yaml) instead of a database.
