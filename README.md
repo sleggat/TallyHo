@@ -5,9 +5,9 @@
 
 
 ## Features:
-- Flat file (text/Yaml) ‘database’.
-- Add a New task
-- Edit tasks
+- Flat file (text/Yaml) ‘database’. Makes backups/syncing data super easy.
+- Add a New task, or continue a previous task. New Clients/Projects created on-the-fly.
+- Edit tasks (double-click, or select via dropdown)
 - Duplicate / Restart tasks
 - Filter by Client and/or Project
 - Delete tasks
@@ -15,7 +15,7 @@
 - Add Reimbursable expenses (e.g. printing costs, client's domain name, 'research' trip to Bali)
 - Different hourly rates; Default Rate / Client Rate / Project Rate
 - Visual cue showing time spent on each task (blue = meh / red = good effort)
-- Selecting multiple rows gives a tally of Rows / Hours / Cost
+- Selecting individual rows and/or click the date headers to get a tally of Hours / Cost
 
 #### Features I'd like to add at some point;
 - Filtering by date range
@@ -33,13 +33,15 @@
 ## Installation:
 
 I recommend putting it on your localhost, but you could also upload it to your webserver.
-Configure default hourly rate, timezone and base-path here: guts/config.php
+Configure default hourly rate, timezone and other stuff here: guts/config.php
 
 
 ## Usage (assuming you have a server running PHP):
 
 Unzip and put the 'tallyho' in your '~/Sites' folder or wherever localhost points to, then just open 'http://localhost/tallyho' up in your web browser. Upon initiation it will create some demo tasks which you can edit/duplicate/delete.
 
+
+## Flat-file structure
 
 TallyHo uses flat-files (.txt/.yaml) instead of a database.
 

@@ -13,7 +13,20 @@ $(document).ready(function() {
     initpicker('#form_add');
 })
 
-$('.modal_edit').click(function(event) {
+// how do I combine these click/dblclick events? (.modal_edit is a child of .table_col)
+$(".modal_edit").bind("click", function(){
+    event.preventDefault();
+    var current = $(this).parents(".task_container");
+    var path = current.attr('data-path');
+    var datetime = current.attr("data-datetime");
+    var duration = current.attr("data-duration");
+    var expense = current.attr("data-expense");
+    var client = current.attr("data-client");
+    var project = current.attr("data-project");
+    var description = current.attr("data-description");
+    task_handler('edit', client, project, description, datetime, duration, expense, path);
+});
+$(".table_col").bind("dblclick", function(){
     event.preventDefault();
     var current = $(this).parents(".task_container");
     var path = current.attr('data-path');
