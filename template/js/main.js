@@ -13,52 +13,12 @@ $(document).ready(function() {
     initpicker('#form_add');
 })
 
-// how do I combine these click/dblclick events? (.modal_edit is a child of .table_col)
-$(".modal_edit").bind("click", function(){
-    event.preventDefault();
-    var current = $(this).parents(".task_container");
-    var path = current.attr('data-path');
-    var datetime = current.attr("data-datetime");
-    var duration = current.attr("data-duration");
-    var expense = current.attr("data-expense");
-    var client = current.attr("data-client");
-    var project = current.attr("data-project");
-    var description = current.attr("data-description");
-    task_handler('edit', client, project, description, datetime, duration, expense, path);
-});
-$(".table_col").bind("dblclick", function(){
-    event.preventDefault();
-    var current = $(this).parents(".task_container");
-    var path = current.attr('data-path');
-    var datetime = current.attr("data-datetime");
-    var duration = current.attr("data-duration");
-    var expense = current.attr("data-expense");
-    var client = current.attr("data-client");
-    var project = current.attr("data-project");
-    var description = current.attr("data-description");
-    task_handler('edit', client, project, description, datetime, duration, expense, path);
-});
 
-$('.modal_duplicate').click(function(event) {
-    event.preventDefault();
-    var current = $(this).parents(".task_container");
-    var duration = current.attr("data-duration");
-    var expense = current.attr("data-expense");
-    var client = current.attr("data-client");
-    var project = current.attr("data-project");
-    var description = current.attr("data-description");
-    task_handler('duplicate', client, project, description, null, duration, expense, null);
-});
+$(".modal_edit").bind("click", edit_task);
+$(".table_col").bind("dblclick", edit_task);
+$('.modal_duplicate').bind("click", duplicate_task);
+$('.modal_delete').bind("click", delete_task);
 
-$('.modal_delete').click(function(event) {
-    event.preventDefault();
-    var current = $(this).parents(".task_container");
-    var path = current.attr('data-path');
-    $("#modal_delete .modal-card-title").html("<span class=\"icon is-size-6\"><i class=\"fas fa-trash\"></i></span> Delete Task");
-    $("#modal_delete .modal_path").val(path);
-    $("#modal_delete .modal_delete_path").html(path);
-    $("#modal_delete").addClass("is-active");
-});
 $('.dropdown button').click(function(event) {
     event.preventDefault();
     dropdown = $(this).parents('.dropdown');
@@ -101,6 +61,39 @@ $('.set_expense').click(function(event) {
 });
 
 /* Functions */
+
+
+function edit_task() {
+    event.preventDefault();
+    var current = $(this).parents(".task_container");
+    var path = current.attr('data-path');
+    var datetime = current.attr("data-datetime");
+    var duration = current.attr("data-duration");
+    var expense = current.attr("data-expense");
+    var client = current.attr("data-client");
+    var project = current.attr("data-project");
+    var description = current.attr("data-description");
+    task_handler('edit', client, project, description, datetime, duration, expense, path);
+};
+function duplicate_task() {
+    event.preventDefault();
+    var current = $(this).parents(".task_container");
+    var duration = current.attr("data-duration");
+    var expense = current.attr("data-expense");
+    var client = current.attr("data-client");
+    var project = current.attr("data-project");
+    var description = current.attr("data-description");
+    task_handler('duplicate', client, project, description, null, duration, expense, null);
+};
+function delete_task() {
+    event.preventDefault();
+    var current = $(this).parents(".task_container");
+    var path = current.attr('data-path');
+    $("#modal_delete .modal-card-title").html("<span class=\"icon is-size-6\"><i class=\"fas fa-trash\"></i></span> Delete Task");
+    $("#modal_delete .modal_path").val(path);
+    $("#modal_delete .modal_delete_path").html(path);
+    $("#modal_delete").addClass("is-active");
+};
 
 function task_handler(type, client, project, description, datetime, duration, expense, path) {
     // will combine all add/duplicate/restart/edit
