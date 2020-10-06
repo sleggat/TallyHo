@@ -21,8 +21,8 @@ $('.modal_delete').bind("click", delete_task);
 
 $('.dropdown button').click(function(event) {
     event.preventDefault();
-    dropdown = $(this).parents('.dropdown');
-    width = $(this).parents('.dropdown-container').width();
+    var dropdown = $(this).parents('.dropdown');
+    var width = $(this).parents('.dropdown-container').width();
     $(this).parents('.dropdown-container').find('.dropdown-content').width(width);
     $(".dropdown").not(dropdown).removeClass('is-active');
     dropdown.toggleClass('is-active');
@@ -60,8 +60,25 @@ $('.set_expense').click(function(event) {
     }
 });
 
-/* Functions */
+$('.day_header').click(function(event) {
+    event.preventDefault();
+    var toggledate = $(this).attr("data-date");
+    $('.' + toggledate + " > .task_container").toggleClass("highlighted");
+    recalculate_costs();
+});
+$('.table_col:not(.task_col_4)').click(function(event) {
+    event.preventDefault();
+    $(this).parents(".task_container").toggleClass("highlighted");
+    recalculate_costs();
+});
+$('#tally').click(function(event) {
+    event.preventDefault();
+    $('.task_container').removeClass("highlighted");
+    recalculate_costs();
+});
 
+
+/* Functions */
 
 function edit_task() {
     event.preventDefault();
@@ -96,31 +113,31 @@ function delete_task() {
 };
 
 function task_handler(type, client, project, description, datetime, duration, expense, path) {
-    // will combine all add/duplicate/restart/edit
+    // currently handles add /restart (via onClick), duplicate, and edit
 
     event.preventDefault();
     $(".dropdown").removeClass('is-active');
-    autofocus = 'client';
-    duration = parseFloat(duration) ? duration : 15;
+    var autofocus = 'client';
+    var duration = parseFloat(duration) ? duration : 15;
     switch (type) {
         case 'continue':
-            header = "<span class=\"icon is-size-6\"><i class=\"far fa-clone\"></i></span> Continue Task";
-            datetime = get_current_datetime();
-            autofocus = 'description';
+            var header = "<span class=\"icon is-size-6\"><i class=\"far fa-clone\"></i></span> Continue Task";
+            var datetime = get_current_datetime();
+            var autofocus = 'description';
             break;
         case 'duplicate':
-            header = "<span class=\"icon is-size-6\"><i class=\"fas fa-copy\"></i></span> Duplicate Task";
-            datetime = get_current_datetime();
-            autofocus = 'description';
+            var header = "<span class=\"icon is-size-6\"><i class=\"fas fa-copy\"></i></span> Duplicate Task";
+            var datetime = get_current_datetime();
+            var autofocus = 'description';
             break;
         case 'add':
-            header = "<span class=\"icon is-size-6\"><i class=\"fas fa-plus\"></i></span> Add New Task";
-            datetime = get_current_datetime();
-            autofocus = 'client';
+            var header = "<span class=\"icon is-size-6\"><i class=\"fas fa-plus\"></i></span> Add New Task";
+            var datetime = get_current_datetime();
+            var autofocus = 'client';
             break;
         case 'edit':
-            header = "<span class=\"icon is-size-6\"><i class=\"fas fa-edit\"></i></span> Edit Task";
-            autofocus = 'description';
+            var header = "<span class=\"icon is-size-6\"><i class=\"fas fa-edit\"></i></span> Edit Task";
+            var autofocus = 'description';
             break;
     }
     $("#modal_update .modal-card-title").html(header);
@@ -218,20 +235,5 @@ function recalculate_costs() {
         $("#tally").fadeIn('fast');
     }
 }
-$('.day_header').click(function(event) {
-    event.preventDefault();
-    toggledate = $(this).attr("data-date");
-    $('.' + toggledate + " > .task_container").toggleClass("highlighted");
-    recalculate_costs();
-});
-$('.table_col:not(.task_col_4)').click(function(event) {
-    event.preventDefault();
-    $(this).parents(".task_container").toggleClass("highlighted");
-    recalculate_costs();
-});
-$('#floating_bar').click(function(event) {
-    event.preventDefault();
-    $('.task_container').removeClass("highlighted");
-    recalculate_costs();
-});
+
 
