@@ -11,12 +11,12 @@
 						<button class="delete" aria-label="close"></button>
 					</header>
 					<section class="modal-card-body">
-						<form method="post" class="columns is-mobile is-multiline is-variable is-1">
+						<form method="post" name="main_form" id="main_form" onsubmit="return validateForm()" class="columns is-mobile is-multiline is-variable is-1">
 							<div class="column is-6-mobile is-6">
 								<div class="field">
 									<label class="label">Date &amp; Time</label>
 									<div class="control">
-										<input class="input modal_datetime" name="DateTime" value="" >
+										<input class="input modal_datetime" name="DateTime" value="" required>
 									</div>
 								</div>
 							</div>
@@ -58,10 +58,13 @@
 							<input class="modal_path" name="Path" value="" type="hidden"/>
 							<input class="modal_tasktype" name="TaskType" value="duration" type="hidden"/>
 
-							<div class="column is-6">
+							<div class="column is-3">
 								<div class="control">
 									<button class="button is-primary" type="submit" name="Submit" value="update">Submit</button>
 								</div>
+							</div>
+							<div class="column is-9">
+								<div class="form_error notification is-danger is-hidden"></div>
 							</div>
 						</form>
 					</div>

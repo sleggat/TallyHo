@@ -11,6 +11,8 @@ $filter_project = "";
 $skipped = 0;
 $task_number = 0;
 $previous_day = "";
+$tally['cost'] = 0;
+$tally['time'] = 0;
 
 require_once __DIR__."/guts/config.php";
 require_once __DIR__."/guts/vendor/mustangostang/spyc/Spyc.php";
@@ -163,7 +165,9 @@ $additional_js = ''; // extra JS to go in footer
 						$task_array['Expense'] = false;
 					}
 
-					
+					// add up totals
+					$tally['cost'] = $tally['cost'] + $cost['raw'];
+					$tally['time'] = $tally['time'] + $task_array['Duration'];
 
 					?>
 					<div class="<?= $highlight . format_date($task_array['Date'],'Ymd') ?>">
@@ -254,6 +258,7 @@ $additional_js = ''; // extra JS to go in footer
 			}
 			echo '</ul>
 			</nav>';
+			echo '<div class="page_tally">Page Tally - Cost: '.CURRENCY_SYMBOL.' '.$tally['cost'].' / Time: '.$tally['time'].' mins</div>';
 			echo '<div class="pagespeed">Churned out in '.($pagespeed_after-$pagespeed_before). " secs. Total tasks: ".$tasks_total."</div>\n";
 			?>
 		</div>

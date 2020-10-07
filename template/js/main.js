@@ -5,80 +5,110 @@ $(document).ready(function() {
         $(".modal").removeClass("is-active");   // esc
         $("html").removeClass('is-clipped');
       }
-    });
+    })
     $(".delete, .modal-background").click(function() {
        $(".modal").removeClass("is-active");
        $("html").removeClass('is-clipped');
-    });
+    })
     initpicker('#form_add');
+
+    $(".modal_edit").bind("click", edit_task);
+    $(".table_col").bind("dblclick", edit_task);
+    $('.modal_duplicate').bind("click", duplicate_task);
+    $('.modal_delete').bind("click", delete_task);
+
+    $('.dropdown button').click(function(event) {
+        event.preventDefault();
+        var dropdown = $(this).parents('.dropdown');
+        var width = $(this).parents('.dropdown-container').width();
+        $(this).parents('.dropdown-container').find('.dropdown-content').width(width);
+        $(".dropdown").not(dropdown).removeClass('is-active');
+        dropdown.toggleClass('is-active');
+    })
+    $('.dropdown-selection').click(function(event) {
+        event.preventDefault();
+        var value = $(this).attr("data-value");
+        var current = $(this).parents(".dropdown-container").find(".input");
+        $(current).val(value);
+        $(".dropdown").removeClass('is-active');
+    })
+
+    $('.set_duration').click(function(event) {
+        event.preventDefault();
+        $('.set_duration').removeClass('is-link').addClass('is-white');
+        $('.set_expense').removeClass('is-white').addClass('is-link');
+        $('.modal_tasktype').val('duration');
+        if ($('.field_duration').is(":hidden")) {
+            $('.field_expense').hide();
+            $('.field_duration').show();
+        }
+    });
+    $('.set_expense').click(function(event) {
+        event.preventDefault();
+        $('.set_expense').removeClass('is-link').addClass('is-white');
+        $('.set_duration').removeClass('is-white').addClass('is-link');
+        $('.modal_tasktype').val('expense');
+        if ($('.field_expense').is(":hidden")) {
+            $('.field_duration').hide();
+            $('.field_expense').show();
+        }
+    })
+
+    $('.day_header').click(function(event) {
+        event.preventDefault();
+        var toggledate = $(this).attr("data-date");
+        $('.' + toggledate + " > .task_container").toggleClass("highlighted");
+        recalculate_costs();
+    })
+    $('.table_col:not(.task_col_4)').click(function(event) {
+        event.preventDefault();
+        $(this).parents(".task_container").toggleClass("highlighted");
+        recalculate_costs();
+    })
+    $('#tally').click(function(event) {
+        event.preventDefault();
+        $('.task_container').removeClass("highlighted");
+        recalculate_costs();
+    })
 })
 
-
-$(".modal_edit").bind("click", edit_task);
-$(".table_col").bind("dblclick", edit_task);
-$('.modal_duplicate').bind("click", duplicate_task);
-$('.modal_delete').bind("click", delete_task);
-
-$('.dropdown button').click(function(event) {
-    event.preventDefault();
-    var dropdown = $(this).parents('.dropdown');
-    var width = $(this).parents('.dropdown-container').width();
-    $(this).parents('.dropdown-container').find('.dropdown-content').width(width);
-    $(".dropdown").not(dropdown).removeClass('is-active');
-    dropdown.toggleClass('is-active');
-});
-$('.dropdown-selection').click(function(event) {
-    event.preventDefault();
-    var value = $(this).attr("data-value");
-    var current = $(this).parents(".dropdown-container").find(".input");
-    $(current).val(value);
-    $(".dropdown").removeClass('is-active');
-});
-
-$('.set_duration').click(function(event) {
-    event.preventDefault();
-    $('.set_duration').removeClass('is-link');
-    $('.set_duration').addClass('is-white');
-    $('.set_expense').removeClass('is-white');
-    $('.set_expense').addClass('is-link');
-    $('.modal_tasktype').val('duration');
-    if ($('.field_duration').is(":hidden")) {
-        $('.field_expense').hide();
-        $('.field_duration').show();
-    }
-});
-$('.set_expense').click(function(event) {
-    event.preventDefault();
-    $('.set_expense').removeClass('is-link');
-    $('.set_expense').addClass('is-white');
-    $('.set_duration').removeClass('is-white');
-    $('.set_duration').addClass('is-link');
-    $('.modal_tasktype').val('expense');
-    if ($('.field_expense').is(":hidden")) {
-        $('.field_duration').hide();
-        $('.field_expense').show();
-    }
-});
-
-$('.day_header').click(function(event) {
-    event.preventDefault();
-    var toggledate = $(this).attr("data-date");
-    $('.' + toggledate + " > .task_container").toggleClass("highlighted");
-    recalculate_costs();
-});
-$('.table_col:not(.task_col_4)').click(function(event) {
-    event.preventDefault();
-    $(this).parents(".task_container").toggleClass("highlighted");
-    recalculate_costs();
-});
-$('#tally').click(function(event) {
-    event.preventDefault();
-    $('.task_container').removeClass("highlighted");
-    recalculate_costs();
-});
-
-
 /* Functions */
+
+function validateForm() {
+
+    var form = $('form[name="main_form"]');
+    var validates = true;
+
+    // strip out '.' from client and project as they cause problems when creating folders
+    $(form).find('input[name="Client"]').val($(form).find('input[name="Client"]').val().replaceAll(".",""));
+    $(form).find('input[name="Project"]').val($(form).find('input[name="Project"]').val().replaceAll(".",""));
+
+    if ($(form).find('input[name="Client"]').val() == "") {
+        display_error('Client', 'Invalid Client name');
+    }
+    if ($(form).find('input[name="Project"]').val() == "") {
+        display_error('Project', 'Invalid Project name');
+    }
+    if ($(form).find('input[name="DateTime"]').val() == "") {
+        display_error('DateTime', 'Invalid date/time');
+    }
+    if ($(form).find('input[name="TaskType"]').val() == "duration") {
+        if (isNaN($(form).find('input[name="Duration"]').val()) || $(form).find('input[name="Duration"]').val() < 1 ) {
+            display_error('Duration', 'Invalid Duration');
+        }
+    }
+    if ($(form).find('input[name="TaskType"]').val() == "expense") {
+        if (isNaN($(form).find('input[name="Expense"]').val()) || $(form).find('input[name="Expense"]').val() < 1 ) {
+            display_error('Expense', 'Invalid Expense');
+        }
+    }
+    function display_error(field, error) {
+        validates = false;
+        $(form).find('.form_error').html('<p>' + error + '</p>').removeClass("is-hidden");
+        $(form).find('input[name="' + field + '"]').focus();
+    }
+    if (validates == false ) { return false; }
+}
 
 function edit_task() {
     event.preventDefault();
@@ -91,7 +121,7 @@ function edit_task() {
     var project = current.attr("data-project");
     var description = current.attr("data-description");
     task_handler('edit', client, project, description, datetime, duration, expense, path);
-};
+}
 function duplicate_task() {
     event.preventDefault();
     var current = $(this).parents(".task_container");
@@ -101,7 +131,7 @@ function duplicate_task() {
     var project = current.attr("data-project");
     var description = current.attr("data-description");
     task_handler('duplicate', client, project, description, null, duration, expense, null);
-};
+}
 function delete_task() {
     event.preventDefault();
     var current = $(this).parents(".task_container");
@@ -110,7 +140,7 @@ function delete_task() {
     $("#modal_delete .modal_path").val(path);
     $("#modal_delete .modal_delete_path").html(path);
     $("#modal_delete").addClass("is-active");
-};
+}
 
 function task_handler(type, client, project, description, datetime, duration, expense, path) {
     // currently handles add /restart (via onClick), duplicate, and edit

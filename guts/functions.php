@@ -173,7 +173,7 @@ function output_dropdown($array, $inputname, $class, $initialvalue, $placeholder
 			</div>
 		</div>
 		<div class="control is-expanded">
-			<input name="'.$inputname.'" class="input '.$class.'" type="text" value="'.$initialvalue.'" placeholder="'.$placeholder.'" >
+			<input name="'.$inputname.'" class="input '.$class.'" type="text" value="'.$initialvalue.'" placeholder="'.$placeholder.'">
 		</div>
 	</div>';
 	return $output;
