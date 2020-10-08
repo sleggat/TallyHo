@@ -70,7 +70,7 @@ $additional_js = ''; // extra JS to go in footer
 		<div class="level is-mobile">
 			<div class="level-left">
 				<div class="level-item">
-					<a href="/" class="logo"><img src="template/images/logo-white.png" alt="TallyHo!"></a>
+					<a href="./" class="logo"><img src="template/images/logo-white.png" alt="TallyHo!"></a>
 				</div>
 
 				<div class="level-item">

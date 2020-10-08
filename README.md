@@ -36,9 +36,11 @@ I recommend putting it on your localhost, but you could also upload it to your w
 Configure default hourly rate, timezone and other stuff here: guts/config.php
 
 
-## Usage (assuming you have a server running PHP):
+## Usage:
 
 Unzip and put the 'tallyho' in your '~/Sites' folder or wherever localhost points to, then just open 'http://localhost/tallyho' up in your web browser. Upon initiation it will create some demo tasks which you can edit/duplicate/delete.
+
+Note: Tested and working on PHP v5.6 and PHP v7.2
 
 
 ## Flat-file structure
