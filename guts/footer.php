@@ -95,6 +95,6 @@
 		<script>
 			<?php echo $additional_js; ?>
 		</script>
-		<script src="template/js/main.js"></script>
+		<script src="guts/js/main.js"></script>
 	</body>
 </html>

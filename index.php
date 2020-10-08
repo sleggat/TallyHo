@@ -17,8 +17,7 @@ $tally['time'] = 0;
 require_once __DIR__."/guts/config.php";
 require_once __DIR__."/guts/vendor/mustangostang/spyc/Spyc.php";
 require_once __DIR__."/guts/functions.php";
-// require_once __DIR__."/guts/vendor/task.inc.php";
-require_once __DIR__."/template/header.php";
+require_once __DIR__."/guts/header.php";
 
 $newname = ""; // used for .highlight class
 
@@ -70,7 +69,7 @@ $additional_js = ''; // extra JS to go in footer
 		<div class="level is-mobile">
 			<div class="level-left">
 				<div class="level-item">
-					<a href="./" class="logo"><img src="template/images/logo-white.png" alt="TallyHo!"></a>
+					<a href="./" class="logo"><img src="guts/images/logo-white.png" alt="TallyHo!"></a>
 				</div>
 
 				<div class="level-item">
@@ -273,6 +272,6 @@ $additional_js = ''; // extra JS to go in footer
 </div><!-- end container -->
 
 <?php
-include __DIR__."/template/footer.php";
+include __DIR__."/guts/footer.php";
 ?>
 
