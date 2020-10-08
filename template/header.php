@@ -7,7 +7,7 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1.0, user-scalable=no">
 
-	<meta property="og:title" content="TallyHo - A single-user time tracker, built for simplicity, speed and portability.">
+	<meta property="og:title" content="TallyHo - A time tracker for the uncomplicated freelancer.">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://github.com/sleggat/TallyHo">
 	<meta property="og:image" content="screenshot.jpg">

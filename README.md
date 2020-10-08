@@ -1,5 +1,5 @@
 # TallyHo
-> A single-user time tracker, built for simplicity, speed and portability.
+> A time tracker for the uncomplicated freelancer.
 
 ![Preview](https://raw.githubusercontent.com/sleggat/TallyHo/master/screenshot.jpg)
 

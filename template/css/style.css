@@ -3887,7 +3887,7 @@ button.dropdown-item {
 }
 a.dropdown-item:hover,
 button.dropdown-item:hover {
-  background-color: #e1f0ff;
+  background-color: #f1f2f3;
   color: #00305c;
 }
 a.dropdown-item.is-active,
@@ -10332,6 +10332,20 @@ a.dropdown-item, button.dropdown-item {
   padding-left: 0.75rem;
 }
 
+.box_sheet a.dropdown-item {
+  padding-right: 1.5rem;
+  padding-left: 1.25rem;
+}
+.box_sheet a.dropdown-item .icon {
+  padding-right: 1.5rem;
+  padding-left: 0.5rem;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+.box_sheet a.dropdown-item:hover .icon {
+  opacity: 1;
+}
+
 .dropdown-content {
   overflow: hidden;
 }
@@ -10398,7 +10412,7 @@ a.dropdown-item, button.dropdown-item {
 }
 .table_col.task_col_1 {
   padding-left: 2.5rem;
-  width: 29ch;
+  width: 30ch;
   position: relative;
 }
 .table_col.heat_0::before, .table_col.heat_1::before, .table_col.heat_2::before, .table_col.heat_3::before, .table_col.heat_4::before {

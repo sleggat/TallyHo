@@ -189,7 +189,11 @@ $additional_js = ''; // extra JS to go in footer
 									echo $task_array['Duration'].' </span><span class="task_duration_label">mins</span>';
 								}
 								?><br>
-								<span class="task_time"><?php if (empty($task_array['Expense'])) { echo get_starttime($task_array['Date'],$task_array['Duration']).'-'; } echo format_time($task_array['Date']); ?></span>
+								<span class="task_time"><?php
+								if (empty($task_array['Expense'])) {
+									echo get_starttime($task_array['Date'],$task_array['Duration']).'-';
+								}
+								echo format_time($task_array['Date']); ?></span>
 							</div>
 							<div class="table_col task_col_2">
 								<span class="task_value" data-costraw="<?= $cost['raw']; ?>"><span class="task_value_currency"><?= CURRENCY_SYMBOL ?></span><?= $cost['formatted']; ?></span>
@@ -212,19 +216,19 @@ $additional_js = ''; // extra JS to go in footer
 									<div class="dropdown-menu" id="dropdown-menu" role="menu">
 										<div class="dropdown-content">
 											<a href="#" class="dropdown-item modal_duplicate">
-												<span class="icon has-text-link"><i class="fas fa-copy"></i></span>Duplicate
+												<span class="icon has-text-link"><i class="far fa-copy"></i></span>Duplicate
 											</a>
 											<a href="#" class="dropdown-item modal_edit">
-												<span class="icon has-text-link"><i class="fas fa-edit"></i></span>Edit
+												<span class="icon has-text-link"><i class="far fa-edit"></i></span>Edit
 											</a>
 											<hr class="dropdown-divider">
 											<a href="/?FilterClient=<?= $task_array['Client'] ?>&FilterProject=<?= $task_array['Project'] ?>&Submit=filter" class="dropdown-item" alt="Filter this Client/Project">
-												<span class="icon has-text-link"><i class="fas fa-filter"></i></span>Filter
+												<span class="icon has-text-link"><i class="fas fa-search"></i></span>Filter
 											</a>
 											
 											<hr class="dropdown-divider">
 											<a href="#" class="dropdown-item modal_delete">
-												<span class="icon has-text-danger"><i class="fas fa-trash"></i></span>Delete
+												<span class="icon has-text-danger"><i class="far fa-trash-alt"></i></span>Delete
 											</a>
 										</div>
 									</div>

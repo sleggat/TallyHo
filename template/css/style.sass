@@ -63,6 +63,7 @@ $pagination-hover-border-color: $lt-blue-500
 $pagination-active-border-color: $dk-gray-100
 $dropdown-menu-min-width: 4rem
 $dropdown-content-offset: 0
+$dropdown-item-hover-background-color: $lt-gray-200
 $dropdown-content-padding-bottom: 0
 $dropdown-content-padding-top: 0
 $dropdown-content-shadow:  0 2px 5px rgba($dk-blue-500, 0.1), 0 0 0 1px rgba($dk-gray-400, 0.1)
@@ -219,6 +220,17 @@ a.dropdown-item, button.dropdown-item
   padding-right: 1rem
   padding-left: .75rem
 
+.box_sheet a.dropdown-item
+  padding-right: 1.5rem
+  padding-left: 1.25rem
+  .icon
+    padding-right: 1.5rem
+    padding-left: .5rem
+    opacity: .5
+    transition: opacity .3s
+  &:hover
+    .icon
+      opacity: 1
 .dropdown-content
   overflow: hidden
 
