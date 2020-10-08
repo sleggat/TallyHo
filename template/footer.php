@@ -14,7 +14,7 @@
 						<form method="post" name="main_form" id="main_form" onsubmit="return validateForm()" class="columns is-mobile is-multiline is-variable is-1">
 							<div class="column is-6-mobile is-6">
 								<div class="field">
-									<label class="label">Date &amp; Time</label>
+									<label class="label">End Date &amp; Time</label>
 									<div class="control">
 										<input class="input modal_datetime" name="DateTime" value="" required>
 									</div>

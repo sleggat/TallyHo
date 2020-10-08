@@ -108,6 +108,13 @@ function format_time($date, $format='g:ia') {
 	$time_out = date_format($formatted, $format);
 	return $time_out;
 }
+
+function get_starttime($date, $duration, $format='g:ia')
+{
+	$formatted = DateTime::createFromFormat(DATE_FORMAT, $date);
+	$time_out = date_format($formatted->modify("-".$duration." minutes"), $format);
+	return $time_out;
+}
 function format_datetime($date, $format='Y-m-d h:i A') {
 	$formatted = DateTime::createFromFormat(DATE_FORMAT, $date);
 	$datetime = date_format($formatted, $format);

@@ -4,7 +4,7 @@ $pagespeed_before = microtime(true);
 
 $page_limit = 100;
 $page_start = 0;
-$page_end = 50;
+$page_end = 100;
 $current_page = 0;
 $filter_client = "";
 $filter_project = "";
@@ -45,7 +45,7 @@ if (isset($_GET['p'])) {
 if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['Submit'])) {
 	$filter_client = isset($_GET['FilterClient']) ? $_GET['FilterClient'] : '';
 	$filter_project = isset($_GET['FilterProject']) ? $_GET['FilterProject'] : '';
-	$page_limit = 99999999; // don't bother with pagination when there are filters
+	$page_limit = 9999999; // don't bother with pagination when there are filters
 }
 
 $all_records = find_all_files('data');
@@ -189,7 +189,7 @@ $additional_js = ''; // extra JS to go in footer
 									echo $task_array['Duration'].' </span><span class="task_duration_label">mins</span>';
 								}
 								?><br>
-								<span class="task_time"><?= format_time($task_array['Date']) ?></span>
+								<span class="task_time"><?php if (empty($task_array['Expense'])) { echo get_starttime($task_array['Date'],$task_array['Duration']).'-'; } echo format_time($task_array['Date']); ?></span>
 							</div>
 							<div class="table_col task_col_2">
 								<span class="task_value" data-costraw="<?= $cost['raw']; ?>"><span class="task_value_currency"><?= CURRENCY_SYMBOL ?></span><?= $cost['formatted']; ?></span>
@@ -241,10 +241,13 @@ $additional_js = ''; // extra JS to go in footer
 				?>
 			</div><!-- end table -->
 			<?php 
-			$total_pages = $tasks_total / $page_limit;
 			$query = "";
 			if ($filter_client || $filter_project) {
 				$query = "&FilterClient=".$filter_client."&FilterProject=".$filter_project."&Submit=filter";
+				$total_pages = 1;
+			}
+			else {
+				$total_pages = $tasks_total / $page_limit;
 			}
 			echo '<nav class="pagination" role="navigation" aria-label="pagination">
 			<ul class="pagination-list">';
