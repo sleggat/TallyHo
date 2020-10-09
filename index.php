@@ -111,7 +111,7 @@ $additional_js = ''; // extra JS to go in footer
 							<?= output_dropdown($client_array, 'FilterClient', 'is-small', $filter_client, 'Client'); ?>
 							<?= output_dropdown($project_array, 'FilterProject', 'is-small', $filter_project, 'Project'); ?>
 							<div class="control">
-								<button class="button is-small is-link" type="submit" name="Submit" value="filter"><i class="fas fa-search" aria-hidden="true"></i></span></button>
+								<button class="button is-small is-link" type="submit" name="Submit" value="filter"><span class="icon is-small"><i class="fas fa-search" aria-hidden="true"></i></span></button>
 							</div>
 						</div>
 					</form>

@@ -17,7 +17,7 @@ $(document).ready(function() {
     $('.modal_duplicate').bind("click", duplicate_task);
     $('.modal_delete').bind("click", delete_task);
 
-    $('.dropdown button').click(function(event) {
+    $('.dropdown-trigger').on('click',function(){
         event.preventDefault();
         var dropdown = $(this).parents('.dropdown');
         var width = $(this).parents('.dropdown-container').width();
@@ -25,7 +25,7 @@ $(document).ready(function() {
         $(".dropdown").not(dropdown).removeClass('is-active');
         dropdown.toggleClass('is-active');
     })
-    $('.dropdown-selection').click(function(event) {
+    $('.dropdown-selection').on('click',function(){
         event.preventDefault();
         var value = $(this).attr("data-value");
         var current = $(this).parents(".dropdown-container").find(".input");
@@ -33,7 +33,7 @@ $(document).ready(function() {
         $(".dropdown").removeClass('is-active');
     })
 
-    $('.set_duration').click(function(event) {
+    $('.set_duration').on('click',function(){
         event.preventDefault();
         $('.set_duration').removeClass('is-link').addClass('is-white');
         $('.set_expense').removeClass('is-white').addClass('is-link');
@@ -43,7 +43,7 @@ $(document).ready(function() {
             $('.field_duration').show();
         }
     });
-    $('.set_expense').click(function(event) {
+    $('.set_expense').on('click',function(){
         event.preventDefault();
         $('.set_expense').removeClass('is-link').addClass('is-white');
         $('.set_duration').removeClass('is-white').addClass('is-link');
@@ -54,18 +54,18 @@ $(document).ready(function() {
         }
     })
 
-    $('.day_header').click(function(event) {
+    $('.day_header').on('click',function(){
         event.preventDefault();
         var toggledate = $(this).attr("data-date");
         $('.' + toggledate + " > .task_container").toggleClass("highlighted");
         recalculate_costs();
     })
-    $('.table_col:not(.task_col_4)').click(function(event) {
+    $('.table_col:not(.task_col_4)').on('click',function(){
         event.preventDefault();
         $(this).parents(".task_container").toggleClass("highlighted");
         recalculate_costs();
     })
-    $('#tally').click(function(event) {
+    $('#tally').on('click',function(){
         event.preventDefault();
         $('.task_container').removeClass("highlighted");
         recalculate_costs();
@@ -76,8 +76,8 @@ $(document).ready(function() {
 
 function validateForm() {
 
-    var form = $('form[name="main_form"]');
-    var validates = true;
+    var form = $('form[name="main_form"]'),
+        validates = true;
 
     // strip out '.' from client and project as they cause problems when creating folders
     $(form).find('input[name="Client"]').val($(form).find('input[name="Client"]').val().replaceAll(".",""));
@@ -112,30 +112,30 @@ function validateForm() {
 
 function edit_task() {
     event.preventDefault();
-    var current = $(this).parents(".task_container");
-    var path = current.attr('data-path');
-    var datetime = current.attr("data-datetime");
-    var duration = current.attr("data-duration");
-    var expense = current.attr("data-expense");
-    var client = current.attr("data-client");
-    var project = current.attr("data-project");
-    var description = current.attr("data-description");
+    var current = $(this).parents(".task_container"),
+        path = current.attr('data-path'),
+        datetime = current.attr("data-datetime"),
+        duration = current.attr("data-duration"),
+        expense = current.attr("data-expense"),
+        client = current.attr("data-client"),
+        project = current.attr("data-project"),
+        description = current.attr("data-description");
     task_handler('edit', client, project, description, datetime, duration, expense, path);
 }
 function duplicate_task() {
     event.preventDefault();
-    var current = $(this).parents(".task_container");
-    var duration = current.attr("data-duration");
-    var expense = current.attr("data-expense");
-    var client = current.attr("data-client");
-    var project = current.attr("data-project");
-    var description = current.attr("data-description");
+    var current = $(this).parents(".task_container"),
+        duration = current.attr("data-duration"),
+        expense = current.attr("data-expense"),
+        client = current.attr("data-client"),
+        project = current.attr("data-project"),
+        description = current.attr("data-description");
     task_handler('duplicate', client, project, description, null, duration, expense, null);
 }
 function delete_task() {
     event.preventDefault();
-    var current = $(this).parents(".task_container");
-    var path = current.attr('data-path');
+    var current = $(this).parents(".task_container"),
+        path = current.attr('data-path');
     $("#modal_delete .modal-card-title").html("<span class=\"icon is-size-6\"><i class=\"fas fa-trash\"></i></span> Delete Task");
     $("#modal_delete .modal_path").val(path);
     $("#modal_delete .modal_delete_path").html(path);
@@ -147,8 +147,8 @@ function task_handler(type, client, project, description, datetime, duration, ex
 
     event.preventDefault();
     $(".dropdown").removeClass('is-active');
-    var autofocus = 'client';
-    var duration = parseFloat(duration) ? duration : 15;
+    var autofocus = 'client',
+        duration = parseFloat(duration) ? duration : 15;
     switch (type) {
         case 'continue':
             var header = "<span class=\"icon is-size-6\"><i class=\"far fa-clone\"></i></span> Continue Task";
@@ -192,8 +192,8 @@ function task_handler(type, client, project, description, datetime, duration, ex
 
 function get_current_datetime() {
     // returns date in this format: YYYYMMDDHHMM e.g 202010011616
-    var dt = new Date();
-    var datetime = dt.getFullYear() + ("0" + (dt.getMonth() + 1)).slice(-2) + ("0" + dt.getDate()).slice(-2) + ("00" + dt.getHours()).slice(-2) + ("00" + dt.getMinutes()).slice(-2);
+    var dt = new Date(),
+        datetime = dt.getFullYear() + ("0" + (dt.getMonth() + 1)).slice(-2) + ("0" + dt.getDate()).slice(-2) + ("00" + dt.getHours()).slice(-2) + ("00" + dt.getMinutes()).slice(-2);
     return datetime
 }
 
@@ -236,21 +236,21 @@ function initpicker(element) {
 
 
 function timeConvert(n) {
-    var num = n;
-    var hours = (num / 60);
-    var rhours = Math.floor(hours);
-    var minutes = (hours - rhours) * 60;
-    var rminutes = Math.round(minutes);
+    var num = n,
+        hours = (num / 60),
+        rhours = Math.floor(hours),
+        minutes = (hours - rhours) * 60,
+        rminutes = Math.round(minutes);
     return rhours + "h " + rminutes + "m";
 }
 
 function recalculate_costs() {
-    var total_cost = 0;
-    var total_mins = 0;
-    var total_selected =0;
+    var total_cost = 0,
+        total_mins = 0,
+        total_selected =0;
     $(".highlighted").each(function(index) {
-        var costraw = $(this).children().find('.task_value').attr("data-costraw");
-        var mins = $(this).children().find('.task_duration').text();
+        var costraw = $(this).children().find('.task_value').attr("data-costraw"),
+            mins = $(this).children().find('.task_duration').text();
         total_cost = total_cost + parseFloat(costraw);
         total_mins = total_mins + parseFloat(mins);
         total_selected = index + 1;
