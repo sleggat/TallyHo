@@ -127,6 +127,8 @@ html
   background-color: $lt-blue-100
   padding: 0
   margin: 0 // offset for navbar
+  scroll-snap-type: y mandatory
+  scroll-behavior: smooth
 
 body
   font-family: $family-sans-serif
@@ -153,12 +155,6 @@ img
 
 .hide
   display: none
-
-html
-  scroll-snap-type: y mandatory
-
-.day_header
-  scroll-snap-align: start
 
 .nav + .container
   margin-top: 1rem
@@ -255,6 +251,7 @@ a.dropdown-item, button.dropdown-item
   margin: #{($column-gap * 0)} 0 0 0
   cursor: pointer
   border-bottom: 1px solid $lt-gray-400
+  scroll-snap-align: start
   .pretty_date
     padding-right: .5rem 
   .pretty_day

@@ -20,8 +20,9 @@ $(document).ready(function() {
     $('.dropdown-trigger').on('click',function(){
         event.preventDefault();
         var dropdown = $(this).parents('.dropdown');
-        var width = $(this).parents('.dropdown-container').width();
-        $(this).parents('.dropdown-container').find('.dropdown-content').width(width);
+        var dropdowncontainer = dropdown.parents('.dropdown-container')
+        var width = dropdowncontainer.width();
+        dropdowncontainer.find('.dropdown-content').width(width);
         $(".dropdown").not(dropdown).removeClass('is-active');
         dropdown.toggleClass('is-active');
     })
@@ -151,35 +152,35 @@ function task_handler(type, client, project, description, datetime, duration, ex
         duration = parseFloat(duration) ? duration : 15;
     switch (type) {
         case 'continue':
-            var header = "<span class=\"icon is-size-6\"><i class=\"far fa-clone\"></i></span> Continue Task";
+            var header = "<span class=\"icon is-size-6\"><i class=\"far fa-clone\"></i></span> Continue";
             var datetime = get_current_datetime();
             var autofocus = 'description';
             break;
         case 'duplicate':
-            var header = "<span class=\"icon is-size-6\"><i class=\"fas fa-copy\"></i></span> Duplicate Task";
+            var header = "<span class=\"icon is-size-6\"><i class=\"far fa-clone\"></i></span> Duplicate";
             var datetime = get_current_datetime();
             var autofocus = 'description';
             break;
         case 'add':
-            var header = "<span class=\"icon is-size-6\"><i class=\"fas fa-plus\"></i></span> Add New Task";
+            var header = "<span class=\"icon is-size-6\"><i class=\"far fa-plus\"></i></span> Add New";
             var datetime = get_current_datetime();
             var autofocus = 'client';
             break;
         case 'edit':
-            var header = "<span class=\"icon is-size-6\"><i class=\"fas fa-edit\"></i></span> Edit Task";
+            var header = "<span class=\"icon is-size-6\"><i class=\"far fa-edit\"></i></span> Edit";
             var autofocus = 'description';
             break;
     }
-    $("#modal_update .modal-card-title").html(header);
-    $("#modal_update .modal_datetime").val(datetime);
-    $("#modal_update .modal_duration").val(duration);
-    $("#modal_update .modal_expense").val(expense);
-    $("#modal_update .modal_client").val(client);
-    $("#modal_update .modal_project").val(project);
-    $("#modal_update .modal_description").val(description);
-    $("#modal_update .modal_path").val(path);
-    $("#modal_update .modal_"+autofocus).attr("autofocus","autofocus").focus(); // doesnt seem that reliable
-    $("#modal_update").addClass("is-active");
+    $("#modal_form .modal-card-title").html(header);
+    $("#modal_form .modal_datetime").val(datetime);
+    $("#modal_form .modal_duration").val(duration);
+    $("#modal_form .modal_expense").val(expense);
+    $("#modal_form .modal_client").val(client);
+    $("#modal_form .modal_project").val(project);
+    $("#modal_form .modal_description").val(description);
+    $("#modal_form .modal_path").val(path);
+    $("#modal_form .modal_"+autofocus).attr("autofocus","autofocus").focus(); // doesnt seem that reliable
+    $("#modal_form").addClass("is-active");
     $("html").addClass('is-clipped');
     if (expense > 0) {
         $('.set_expense').trigger( "click" );
@@ -187,7 +188,7 @@ function task_handler(type, client, project, description, datetime, duration, ex
     else {
         $('.set_duration').trigger( "click" );
     }
-    initpicker('#modal_update');
+    initpicker('#modal_form');
 }
 
 function get_current_datetime() {

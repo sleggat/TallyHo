@@ -11,11 +11,10 @@
 - Duplicate / Restart tasks
 - Filter by Client and/or Project
 - Delete tasks
-- Select rows/days and calculate total costs
+- Select rows/days to show a tally of costs and hours
 - Add Reimbursable expenses (e.g. printing costs, client's domain name, 'research' trip to Bali)
 - Different hourly rates; Default Rate / Client Rate / Project Rate
 - Visual cue showing time spent on each task (blue = meh / red = good effort)
-- Selecting individual rows and/or click the date headers to get a tally of Hours / Cost
 
 #### Features I'd like to add at some point;
 - Filtering by date range
@@ -32,15 +31,9 @@
 
 ## Installation:
 
-I recommend putting it on your localhost, but you could also upload it to your webserver.
-Configure default hourly rate, timezone and other stuff here: guts/config.php
+Unzip and put the 'tallyho' in your '~/Sites' folder or wherever localhost points to. You'll want to configure default hourly rate, timezone and other stuff first. Just open up and edit guts/config.php
 
-
-## Usage:
-
-Unzip and put the 'tallyho' in your '~/Sites' folder or wherever localhost points to, then just open 'http://localhost/tallyho' up in your web browser. Upon initiation it will create some demo tasks which you can edit/duplicate/delete.
-
-Note: Tested and working on PHP v5.6 and PHP v7.2
+Once installed, just open 'http://localhost/tallyho' up in your web browser. Upon first-run TallyHo will create some demo tasks which you can edit/duplicate/delete until you're ready to start adding your own.
 
 
 ## Flat-file structure
@@ -81,3 +74,5 @@ Over the course of my 17 years as [a freelance designer/developer](https://steve
 ## Disclaimer:
 
 TallyHo's code is not particularly elegant, yet. Please feel free to contribute!
+
+TallyHo has been tested and works sweet on PHP v5.6 and PHP v7.2

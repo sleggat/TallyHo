@@ -1,5 +1,5 @@
 
-		<div class="modal" id="modal_update" aria-hidden="true">
+		<div class="modal" id="modal_form" aria-hidden="true">
 			<div class="modal-background"></div>
 			<div class="modal-card">
 					<header class="modal-card-head">
