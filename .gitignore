@@ -2,5 +2,7 @@
 config.codekit3
 README.html
 data
-backups
+backups/*
+!backups/.htaccess
 cache/*
+!cache/.htaccess
