@@ -3,6 +3,8 @@
 
 ![Preview](https://raw.githubusercontent.com/sleggat/TallyHo/master/screenshot.jpg)
 
+Demo at: [tallyho.steveleggat.com](http://tallyho.steveleggat.com)
+
 
 ## Features:
 - Flat file (text/Yaml) ‘database’. Makes backups/syncing data super easy.
@@ -74,5 +76,7 @@ Over the course of my 17 years as [a freelance designer/developer](https://steve
 ## Disclaimer:
 
 TallyHo's code is not particularly elegant, yet. Please feel free to contribute!
+
+Don't put TallyHo where malicious users might mess with your data. Put it in a password-protected folder if you have to.
 
 TallyHo has been tested and works sweet on PHP v5.6 and PHP v7.2
