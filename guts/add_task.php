@@ -25,19 +25,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$description = addslashes(trim($_POST['Description']));
 
 	$content = "";
-	$content .= "Date: '".date('Y-m-d h:i A')."'".NL;
-	$content .= "DateUpdated: '".date('Y-m-d h:i A')."'".NL;
+	$content .= "Date: '" . date('Y-m-d h:i A') . "'" . NL;
+	$content .= "DateUpdated: '" . date('Y-m-d h:i A') . "'" . NL;
 	if ($tasktype == 'expense') {
-		$content .= "Expense: ".$expense.NL;
+		$content .= "Expense: " . $expense . NL;
+	} else {
+		$content .= "Duration: " . $duration . NL;
 	}
-	else {
-		$content .= "Duration: ".$duration.NL;
-	}
-	$content .= "Description: \"".$description."\"";
+	$content .= "Description: \"" . $description . "\"";
 
 
-	$newfolder = 'data/'.$client.'/'.$project;
-	$newname = $newfolder.'/'.$date.'-'.$time.'.txt';
+	$newfolder = DATA_PATH . '/' . $client . '/' . $project;
+	$newname = $newfolder . '/' . $date . '-' . $time . '.txt';
 
 	if (($client != $current['Client']) || ($project != $current['Project'])) {
 		@mkdir($newfolder, 0777, true);
@@ -47,8 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$path = $_POST['Path'];
 		$current = get_task_array($path);
 		rename($path, $newname);
-	}
-	else {
+	} else {
 		// must be duplicating a task so let's create a new path
 		$current['Client'] = "";
 		$current['Project'] = "";
@@ -58,10 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	fwrite($fp, $content);
 	fclose($fp);
 
-	log_change("Add",'',$content.NL.'Client: '.urldecode($client).NL.'Project: '.urldecode($project));
-
-
-}
-else {
+	log_change("Add", '', $content . NL . 'Client: ' . urldecode($client) . NL . 'Project: ' . urldecode($project));
+} else {
 	//echo "nothing submitted yet";
 }

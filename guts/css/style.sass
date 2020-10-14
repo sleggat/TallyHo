@@ -39,6 +39,26 @@ $lt-gray-300: saturate(lighten($dk-gray-900, 74%), 4%)
 $lt-gray-200: saturate(lighten($dk-gray-900, 77%), 2%)
 $lt-gray-100: saturate(lighten($dk-gray-900, 80%), 0%)
 
+$dk-green-900: #184c28
+$dk-green-800: saturate(lighten($dk-green-900, 05%), 2%)
+$dk-green-700: saturate(lighten($dk-green-900, 10%), 4%)
+$dk-green-600: saturate(lighten($dk-green-900, 15%), 6%)
+$dk-green-500: saturate(lighten($dk-green-900, 20%), 8%)
+$dk-green-400: saturate(lighten($dk-green-900, 25%), 10%)
+$dk-green-300: saturate(lighten($dk-green-900, 30%), 12%)
+$dk-green-200: saturate(lighten($dk-green-900, 35%), 14%)
+$dk-green-100: saturate(lighten($dk-green-900, 40%), 16%)
+
+$lt-green-900: saturate(lighten($dk-green-900, 45%), 16%)
+$lt-green-800: saturate(lighten($dk-green-900, 50%), 14%)
+$lt-green-700: saturate(lighten($dk-green-900, 55%), 12%)
+$lt-green-600: saturate(lighten($dk-green-900, 60%), 10%)
+$lt-green-500: saturate(lighten($dk-green-900, 65%), 8%)
+$lt-green-400: saturate(lighten($dk-green-900, 70%), 6%)
+$lt-green-300: saturate(lighten($dk-green-900, 74%), 4%)
+$lt-green-200: saturate(lighten($dk-green-900, 77%), 2%)
+$lt-green-100: saturate(lighten($dk-green-900, 80%), 0%)
+
 $lt-red-900: #f03f39
 $lt-red-800: saturate(lighten($lt-red-900, 05%), 10%)
 $lt-red-700: saturate(lighten($lt-red-900, 10%), 15%)
@@ -76,10 +96,11 @@ $modal-card-head-background-color: $dk-blue-300
 $modal-card-title-color: #fff
 $background: $lt-blue-100
 
-
 @import "_bulma.sass" 
 
-/* Main styles */
+
+/* == Main styles == */
+
 
 .color_test
   border: 20px solid #fff
@@ -159,7 +180,9 @@ img
 .nav + .container
   margin-top: 1rem
 
-/* Headings */
+
+/* == Headings == */
+
 
 h1, h2, .day_header
   font-size: 1.5rem
@@ -178,7 +201,8 @@ h1, h2, .day_header
     margin: .5em 1em 0 .5em
 
 
-/* Navbar, Dropdowns and Buttons */
+/* == Navbar, Dropdowns and Buttons == */
+
 
 .nav
   background-color: $navbar-background-color
@@ -242,7 +266,8 @@ a.dropdown-item, button.dropdown-item
 .field:not(:last-child)
   margin-bottom: 0rem
 
-/* Layout */
+
+/* == Layout == */
 
 
 .day_header
@@ -291,45 +316,62 @@ a.dropdown-item, button.dropdown-item
 .table_col
   border-bottom: 1px solid $lt-blue-200
   padding: #{($column-gap * 1.5)} 2px 13px 2px
-  &.task_col_1
-    padding-left: #{($column-gap * 5)}
-    width: 30ch
-    position: relative
-  &.heat_0, &.heat_1, &.heat_2, &.heat_3, &.heat_4
-    &::before
-      content: ''
-      display: block
-      position: absolute
-      width: #{($column-gap / 2)}
-      height: calc(100% - #{($column-gap * 3.5)})
-      border-radius: #{($column-gap * 2)}
-      left: #{($column-gap * 1)}
-      top: 50%
-      bottom: 50%
-      outline: 1px solid white
-      margin: auto 0
-    &.heat_0
-      &::before
-        background-color: #caefff
-    &.heat_1
-      &::before
-        background-color: #e9ef9c
-    &.heat_2
-      &::before
-        background-color: #ffc33b
-    &.heat_3
-      &::before
-        background-color: #ff6a38
-    &.heat_4
-      &::before
-        background-color: #ff1d16
-  &.task_col_2
-    width: 30ch
-  &.task_col_3
-    width: 100%
-  &.task_col_4
-    width: auto
-    padding-right: #{($column-gap * 2)}
+.task_col_1
+  padding-left: #{($column-gap * 5)}
+  width: 30ch
+  position: relative
+  &::before
+    content: ''
+    display: block
+    position: absolute
+
+.show_invoiced .task_col_1::after
+    content: '\f058'
+    display: block
+    position: absolute
+    left: #{($column-gap * 1.8)}
+    top: 1rem
+    font-family: 'Font Awesome 5 Free'
+    font-weight: 900
+    color: $lt-green-800
+    background-color: white
+    border-radius: 50%
+    border: 1px solid white
+    line-height: 1
+// .heat_0, .heat_1, .heat_2, .heat_3, .heat_4
+//   &::before
+//     width: #{($column-gap / 1)}
+//     height: #{($column-gap / 1)}
+//     border-radius: #{($column-gap * 2)}
+//     left: #{($column-gap * 1)}
+//     top: 50%
+//     bottom: 50%
+//     border: 1px solid white
+//     margin: auto 0
+//   &.heat_0
+//     &::before
+//       background-color: #caefff
+//   &.heat_1
+//     &::before
+//       background-color: #e9ef9c
+//   &.heat_2
+//     &::before
+//       background-color: #ffc33b
+//   &.heat_3
+//     &::before
+//       background-color: #ff6a38
+//   &.heat_4
+//     &::before
+//       background-color: #ff1d16
+.task_col_2
+  width: 30ch
+.task_col_3
+  width: 100%
+  text-overflow: ellipsis // make sure long words and URLs don't stretch columns out
+  overflow: hidden
+.task_col_4
+  width: auto
+  padding-right: #{($column-gap * 2)}
 
 .task_duration, .task_value, .task_duration_label
   letter-spacing: -.03em
@@ -361,7 +403,8 @@ a.dropdown-item, button.dropdown-item
     display: none
 
 
-/* Floating bar where the tally goes */
+/* == Floating bar where the tally goes == */
+
 
 .tally
   color: $lt-blue-100
@@ -371,7 +414,9 @@ a.dropdown-item, button.dropdown-item
   font-weight: 600
   text-align: left
 
-/* Modal custom styles */
+
+/* == Modal custom styles == */
+
 
 .modal-content
   padding: #{($column-gap * 2)} #{($column-gap * 2)} #{($column-gap * 4)} #{($column-gap * 2)}
@@ -389,7 +434,8 @@ a.dropdown-item, button.dropdown-item
     margin: auto 0
 
 
-/* DateRangePicker custom styles */
+/* == DateRangePicker custom styles == */
+
 
 .daterangepicker .drp-buttons .btn
   margin-left: 0
@@ -426,7 +472,8 @@ a.dropdown-item, button.dropdown-item
     background-color: $dk-blue-200
 
 
-/* form elements */
+/* == form elements == */
+
 
 label
   padding: 0 0 0 #{($column-gap / 2)}
@@ -447,9 +494,12 @@ input, textarea
   &:not([type=checkbox]):not([type=radio])
     -webkit-appearance: none // remove shadow on mobile safari
   &:focus, &:hover
-    background-color: $lt-blue-100
+    background-color: lighten($lt-blue-100, 2%)
     border: 1px solid $lt-blue-500
     color: $dk-gray-900
+  &:focus-within
+    background-color: lighten($lt-blue-100, 4%)
+    border: 1px solid $lt-blue-200
 textarea
   max-width: 100%
   min-height: 4rem
@@ -474,14 +524,14 @@ select
     border: 0
     color: $white
 
-.updated_highlight  // row highlight: when a task has been added/updated
+.show_justupdated  // row highlight: when a task has been added/updated
   background-color: $lt-red-100
-
 .highlighted        // row highlight: when selected
   background-color: $lt-blue-200
+ 
+ 
+/* == Pagination == */
 
-
-/* Pagination */
 
 .page_number
   text-align: right
@@ -496,24 +546,24 @@ select
 
 @media (max-width: 1200px)
   .task_project
-    white-space: normal
+    //white-space: normal
 
 @media (max-width: 800px)
   :root
-    font-size: .8rem
-    // line-height: 1.3
+    font-size: .75rem
   .nav .logo
     max-width: 70px
   input, select, textarea
     font-size: 1rem // stops ios safari zooming in on inputs and not zooming out when done
   .day_header
-    padding-left: #{($column-gap * 3)}
+    padding-left: #{($column-gap * 5)}
   .table_col
+    padding: #{($column-gap * .75)} 2px #{($column-gap * 1)} 2px
     &.task_col_1
-      width: 20ch
-      padding-left: #{($column-gap * 3)}
+      width: 22ch
+      padding-left: #{($column-gap * 5)}
     &.task_col_2
-      width: 30ch
+      width: 22ch
     &.task_col_3
       //width: 100%
     &.task_col_4

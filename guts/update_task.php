@@ -22,26 +22,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$tasktype = $_POST['TaskType'];
 	$client = urlencode(trim($_POST['Client']));
 	$project = urlencode(trim($_POST['Project']));
-	$description = addslashes(trim($_POST['Description']));
+	$description = str_replace(PHP_EOL, '\n', addslashes(trim($_POST['Description'])));
 	if ($_POST['Path'] != "") {
 		$path = $_POST['Path'];
 		$current = get_task_array($path);
 	}
 
 	$content = "";
-	$content .= "DateAdded: '".$datetime."'".NL;
-	$content .= "DateUpdated: '".date('Y-m-d h:i A')."'".NL;
+	$content .= "DateAdded: '" . $datetime . "'" . NL;
+	$content .= "DateUpdated: '" . date('Y-m-d h:i A') . "'" . NL;
 	if ($tasktype == 'expense') {
-		$content .= "Expense: ".$expense.NL;
+		$content .= "Expense: " . $expense . NL;
+	} else {
+		$content .= "Duration: " . $duration . NL;
 	}
-	else {
-		$content .= "Duration: ".$duration.NL;
-	}
-	$content .= "Description: \"".$description."\"";
+	$content .= "Description: \"" . $description . "\"";
 
 
-	$newfolder = 'data/'.$client.'/'.$project;
-	$newname = $newfolder.'/'.$date.'-'.$time.'.txt'; // also used to add '.highlight class'
+	$newfolder = DATA_PATH . '/' . $client . '/' . $project;
+	$newname = $newfolder . '/' . $date . '-' . $time . '.txt'; // also used to add '.highlight class'
 
 	if (($client != $current['Client']) || ($project != $current['Project'])) {
 		@mkdir($newfolder, 0777, true);
@@ -51,8 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$path = $_POST['Path'];
 		$current = get_task_array($path);
 		rename($path, $newname);
-	}
-	else {
+	} else {
 		// must be duplicating a task so let's create a new path
 		$current['Client'] = "";
 		$current['Project'] = "";
@@ -62,9 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	fwrite($fp, $content);
 	fclose($fp);
 
-	log_change("Update",spyc_dump($current),$content.NL.'Client: '.urldecode($client).NL.'Project: '.urldecode($project));
-
-}
-else {
+	log_change("Update", spyc_dump($current), $content . NL . 'Client: ' . urldecode($client) . NL . 'Project: ' . urldecode($project));
+} else {
 	//echo "nothing submitted yet";
 }

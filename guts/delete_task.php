@@ -13,5 +13,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		@unlink($path);
 		// log_change("Delete",spyc_dump($current),$content.NL.'Client: '.urldecode($client).NL.'Project: '.urldecode($project));
 	}
-
 }
