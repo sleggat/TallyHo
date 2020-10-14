@@ -1,12 +1,13 @@
 # TallyHo
+
 > A time tracker for the uncomplicated freelancer.
 
 ![Preview](https://raw.githubusercontent.com/sleggat/TallyHo/master/screenshot.jpg)
 
 Demo at: [tallyho.steveleggat.com](http://tallyho.steveleggat.com)
 
-
 ## Features:
+
 - Flat file (text/Yaml) ‘database’. Makes backups/syncing data super easy.
 - Add a New task, or continue a previous task. New Clients/Projects created on-the-fly.
 - Edit tasks (double-click, or select via dropdown)
@@ -16,20 +17,20 @@ Demo at: [tallyho.steveleggat.com](http://tallyho.steveleggat.com)
 - Select rows/days to show a tally of costs and hours
 - Add Reimbursable expenses (e.g. printing costs, client's domain name, 'research' trip to Bali)
 - Different hourly rates; Default Rate / Client Rate / Project Rate
-- Visual cue showing time spent on each task (blue = meh / red = good effort)
+- Easily see which tasks have been invoiced
 
 #### Features I'd like to add at some point;
+
 - Filtering by date range
 - Basic Reports/Charts (Historical and Projection)
 - Basic exporting to CSV
 
-
 #### TallyHo is simple by design and I have no intention of adding the following;
+
 - Invoicing
 - Multi-users
 - Multi-currency
 - Login/Pass
-
 
 ## Installation:
 
@@ -37,41 +38,57 @@ Unzip and put the 'tallyho' in your '~/Sites' folder or wherever localhost point
 
 Once installed, just open 'http://localhost/tallyho' up in your web browser. Upon first-run TallyHo will create some demo tasks which you can edit/duplicate/delete until you're ready to start adding your own.
 
-
 ## Flat-file structure
 
 TallyHo uses flat-files (.txt/.yaml) instead of a database.
 
 Why flat-files instead of a MySQL database? I much prefer being able to copy/backup and manually edit a bunch of text files rather than having to deal with a MySQL database. Keeps things simple.
 
-
 A typical file structure;
+
 ```
 /tallyho/data/ClientO/ProjectX/20191009-1230.txt
 /tallyho/data/SupertouchX/Website2020/20201010-1645.txt
 ```
 
+## Additional info.
 
-If you'd like varying hourly rates for each client and project, just add a \_info.yaml in the folder. 
+Hourly rates and invoicing info can be entered into a \_info.yaml file in a client or project folder.
+In the future, this will be available from the frontend.
+
+### Hourly Rates
+
+Varying hourly rates can be set up per client and project.
 
 E.g.
 
 ```
 /tallyho/data/ClientO/ProjectX/_info.yaml
 ```
-and add an hourly rate like so:
+
+Add an hourly rate like so:
+
 ```
 Rate: 75
 ```
+
 The heirarchy is Project>Client>Default
 
+### Marking Invoiced
+
+I have implemented some basic invoice marking. Again this can go in the client or project folder.
+
+Adding this line will mark everything on or before Christmas 2020 as invoiced (represented by the check/tick icon)
+
+```
+Invoiced: '20201225'
+```
 
 ## The Backstory:
 
 Over the course of my 17 years as [a freelance designer/developer](https://steveleggat.com "Steve Leggat has been a freelance graphic designer and coder in New Zealand and Taiwan since 2006") I've tried out a decent number of time-trackers, from native apps, browser-based and even just using MacOS' Notes app. For the last year I have been using Kimai and have for the most part been pretty happy with it. Trouble is, it occupies over 2.5GB of my server space, and with over 21,000 files it's no surprise that it's quite slooooow and easy to break ...
 
 ... so I created TallyHo, with a 'simple by design' philosophy.
-
 
 ## Disclaimer:
 
