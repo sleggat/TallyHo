@@ -1,4 +1,5 @@
 .DS_Store
+.vscode/
 config.codekit3
 README.html
 data

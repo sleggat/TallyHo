@@ -14,12 +14,13 @@ $previous_day = "";
 $tally['cost'] = 0;
 $tally['time'] = 0;
 
+
 require_once __DIR__ . "/guts/config.php";
 require_once __DIR__ . "/guts/vendor/mustangostang/spyc/Spyc.php";
 require_once __DIR__ . "/guts/functions.php";
 require_once __DIR__ . "/guts/header.php";
 
-$newname = ""; // used for .highlight class
+$just_updated = ""; // used for .highlight class
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	// var_dump($_POST);
@@ -141,7 +142,7 @@ $additional_js = ''; // extra JS to go in footer
 					$add_classes = "";
 
 					$current_task = get_task_array($task);
-					// echo "wee".$info_array[$current_task['Project']];
+
 					if (!empty($info_array[$current_task['Client']]['Invoiced'])) {
 						if ($info_array[$current_task['Client']]['Invoiced'] >= format_date($current_task['Date'], 'Ymd')) {
 							$add_classes .= "show_invoiced ";
@@ -176,7 +177,7 @@ $additional_js = ''; // extra JS to go in footer
 						echo '<div class="day_header" data-date="' . format_date($current_task['Date'], 'Ymd') . '">' . $pretty_date . '</div>';
 					}
 
-					if ($current_task['Path'] == $newname) {
+					if ($current_task['Path'] == $just_updated) {
 						$add_classes .= "show_justupdated ";
 					}
 

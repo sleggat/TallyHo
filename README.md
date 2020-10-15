@@ -38,7 +38,7 @@ Unzip and put the 'tallyho' in your '~/Sites' folder or wherever localhost point
 
 Once installed, just open 'http://localhost/tallyho' up in your web browser. Upon first-run TallyHo will create some demo tasks which you can edit/duplicate/delete until you're ready to start adding your own.
 
-## Flat-file structure
+## Flat-file Structure:
 
 TallyHo uses flat-files (.txt/.yaml) instead of a database.
 
@@ -51,7 +51,7 @@ A typical file structure;
 /tallyho/data/SupertouchX/Website2020/20201010-1645.txt
 ```
 
-## Additional info.
+## Additional info:
 
 Hourly rates and invoicing info can be entered into a \_info.yaml file in a client or project folder.
 In the future, this will be available from the frontend.
@@ -59,8 +59,6 @@ In the future, this will be available from the frontend.
 ### Hourly Rates
 
 Varying hourly rates can be set up per client and project.
-
-E.g.
 
 ```
 /tallyho/data/ClientO/ProjectX/_info.yaml
@@ -74,9 +72,9 @@ Rate: 75
 
 The heirarchy is Project>Client>Default
 
-### Marking Invoiced
+### Marking Tasks as Invoiced
 
-I have implemented some basic invoice marking. Again this can go in the client or project folder.
+I have implemented some basic invoice marking. Again this goes in a \_info.yaml file in the client or project folder.
 
 Adding this line will mark everything on or before Christmas 2020 as invoiced (represented by the check/tick icon)
 
