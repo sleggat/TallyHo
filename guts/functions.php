@@ -4,11 +4,6 @@ define("BR", "<br>");
 define("NL", '
 ');
 
-function scandir_clean($dir)
-{
-	$contents = array_diff(scandir($dir), array('..', '.'));
-	return $contents;
-}
 
 function find_all_files($dir, &$results = array(), &$info_arr = array())
 {
@@ -31,6 +26,36 @@ function find_all_files($dir, &$results = array(), &$info_arr = array())
 	} else {
 		die('Data folder missing. Quitting.');
 	}
+}
+
+function find_all_files_cached()
+{
+	// Folder scan caching
+	// I haven't tested this with a large data folder, but it should still be beneficial even with smaller numbers.
+	// I set this to just 30 seconds (60 * .5) but you might want to set it to longer
+	function get_cached_tasks($cache_file)
+	{
+		$string_data = file_get_contents($cache_file);
+		$array = unserialize($string_data);
+		return $array;
+	}
+
+	function set_cached_tasks($array, $cache_file)
+	{
+		$string_data = serialize($array);
+		file_put_contents($cache_file, $string_data);
+	}
+
+	$cache_file = "cache/tasks.txt";
+
+	if ((file_exists($cache_file)) && (filesize($cache_file) > 1) && (time() - filemtime($cache_file) < 60 * .5)) {
+		return get_cached_tasks($cache_file);
+	} else {
+		// no cache or too , grab from web
+		$array = find_all_files(DATA_PATH);
+		set_cached_tasks($array, $cache_file);
+	}
+	return $array;
 }
 
 

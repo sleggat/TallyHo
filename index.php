@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['Submit'])) {
 	$page_limit = 9999999; // don't bother with pagination when there are filters
 }
 
-$file_structure = find_all_files(DATA_PATH);
+$file_structure = find_all_files_cached(DATA_PATH); // returns an array with [0] tasks, [1] _info.yaml
 $all_records_array = $file_structure[0];
 $info_array = get_info_array($file_structure[1]);
 
