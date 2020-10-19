@@ -17,7 +17,7 @@ Demo at: [tallyho.steveleggat.com](http://tallyho.steveleggat.com)
 - Select rows/days to show a tally of costs and hours
 - Add Reimbursable expenses (e.g. printing costs, client's domain name, 'research' trip to Bali)
 - Different hourly rates; Default Rate / Client Rate / Project Rate
-- Easily see which tasks have been invoiced
+- Easily see which tasks have been invoiced and which need to be
 
 #### Features I'd like to add at some point;
 
@@ -27,10 +27,9 @@ Demo at: [tallyho.steveleggat.com](http://tallyho.steveleggat.com)
 
 #### TallyHo is simple by design and I have no intention of adding the following;
 
-- Invoicing
-- Multi-users
-- Multi-currency
-- Login/Pass
+- Invoice Creation
+- Multi-user Support
+- Multi-currencies (e.g per client)
 
 ## Installation:
 
