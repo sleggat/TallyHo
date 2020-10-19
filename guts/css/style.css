@@ -13051,7 +13051,7 @@ button.dropdown-item {
   position: absolute;
 }
 
-.show_invoiced .task_col_1::after {
+.show_invoiced .task_col_1::after, .show_invoicereminder .task_col_1::after {
   content: "";
   display: block;
   position: absolute;
@@ -13064,6 +13064,11 @@ button.dropdown-item {
   border-radius: 50%;
   border: 1px solid white;
   line-height: 1;
+}
+
+.show_invoicereminder .task_col_1::after {
+  color: #ffd942;
+  content: "";
 }
 
 .task_col_2 {
@@ -13167,7 +13172,6 @@ button.dropdown-item {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  flex-gap: 8px;
   gap: 8px;
 }
 
@@ -13298,11 +13302,15 @@ select {
 }
 
 @media (min-width: 1400px) {
-  root-font-size: 1.1rem;
+  :root {
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 800px) {
-  root-font-size: 0.75rem;
+  :root {
+    font-size: 0.75rem;
+  }
   .nav .logo {
     max-width: 70px;
   }

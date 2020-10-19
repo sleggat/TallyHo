@@ -140,17 +140,23 @@ $additional_js = ''; // extra JS to go in footer
 
 				foreach ($all_records_sorted_array as $task) {
 					$add_classes = "";
+					$has_invoiced = false;
 
 					$current_task = get_task_array($task);
 
 					if (!empty($info_array[$current_task['Client']]['Invoiced'])) {
 						if ($info_array[$current_task['Client']]['Invoiced'] >= format_date($current_task['Date'], 'Ymd')) {
 							$add_classes .= "show_invoiced ";
+							$has_invoiced = true;
 						}
 					} elseif (!empty($info_array[$current_task['Client']][$current_task['Project']]['Invoiced'])) {
 						if ($info_array[$current_task['Client']][$current_task['Project']]['Invoiced'] >= format_date($current_task['Date'], 'Ymd')) {
 							$add_classes .= "show_invoiced ";
+							$has_invoiced = true;
 						}
+					}
+					if (!$has_invoiced && format_date($current_task['Date'], 'Ymd') < $defaultInvoiceReminderDate) {
+						$add_classes .= "show_invoicereminder ";
 					}
 
 					if ($filter_project != "") {

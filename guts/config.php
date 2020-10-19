@@ -8,8 +8,8 @@ class Config
 	public static $defaultDataPath = 'data';
 	public static $defaultHourlyRate = 75;
 	public static $defaultTimeIncrement = 15;
+	public static $defaultInvoiceReminderDays = 30; // days
 }
-
 
 date_default_timezone_set(Config::$defaultTimezone);
 define('DATE_FORMAT', Config::$defaultDateFormat);
@@ -17,6 +17,11 @@ define('CURRENCY_SYMBOL', Config::$defaultCurrencySymbol);
 define('DATA_PATH', Config::$defaultDataPath);
 $default_hourlyrate = Config::$defaultHourlyRate; // dollar per hour
 $default_timeincrement = Config::$defaultTimeIncrement; // dollar per hour
+$defaultInvoiceReminderDays = Config::$defaultInvoiceReminderDays;
+
+$date_now = date_create();
+$defaultInvoiceReminderDate =  date_modify($date_now, '-' . $defaultInvoiceReminderDays . ' days')->format('Ymd');
+
 
 if (!file_exists('./data')) {
 	// no data folder, let's just rename the example folder
