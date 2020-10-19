@@ -28,8 +28,8 @@ Demo at: [tallyho.steveleggat.com](http://tallyho.steveleggat.com)
 #### TallyHo is simple by design and I have no intention of adding the following;
 
 - Invoice Creation
-- Multi-user Support
-- Multi-currencies (e.g per client)
+- Multiple User/Team Support, including authentication
+- Multiple currencies (e.g per client)
 
 ## Installation:
 
