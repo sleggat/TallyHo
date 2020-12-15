@@ -34,20 +34,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		include __DIR__ . "/guts/delete_task.php"; // delete
 	}
 }
+if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+	if (isset($_GET['p'])) {
+		$current_page = $_GET['p'];
+		$page_start = (($current_page) * $page_limit);
+		$page_end = (($current_page + 1) * $page_limit);
+	}
+	if (isset($_GET['timerstart']) || isset($_GET['timerstop'])) {
+		include __DIR__ . "/guts/update_timer.php"; // update timer
+	}
 
-if (isset($_GET['p'])) {
-	$current_page = $_GET['p'];
-	$page_start = (($current_page) * $page_limit);
-	$page_end = (($current_page + 1) * $page_limit);
+	if (isset($_GET['Submit'])) {
+		$filter_client = isset($_GET['FilterClient']) ? $_GET['FilterClient'] : '';
+		$filter_project = isset($_GET['FilterProject']) ? $_GET['FilterProject'] : '';
+		$page_limit = 9999999; // don't bother with pagination when there are filters
+	}
 }
-
-
-if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['Submit'])) {
-	$filter_client = isset($_GET['FilterClient']) ? $_GET['FilterClient'] : '';
-	$filter_project = isset($_GET['FilterProject']) ? $_GET['FilterProject'] : '';
-	$page_limit = 9999999; // don't bother with pagination when there are filters
-}
-
 $file_structure = find_all_files_cached(DATA_PATH); // returns an array with [0] tasks, [1] _info.yaml
 $all_records_array = $file_structure[0];
 $info_array = get_info_array($file_structure[1]);
@@ -212,9 +214,9 @@ $additional_js = ''; // extra JS to go in footer
 									?><br>
 									<span class="task_time"><?php
 															if (empty($current_task['Expense'])) {
-																echo get_starttime($current_task['Date'], $current_task['Duration']) . '-';
+																echo get_starttime($current_task['Date'], $current_task['Duration'], TIME_FORMAT) . '-';
 															}
-															echo format_time($current_task['Date']); ?></span>
+															echo format_time($current_task['Date'], TIME_FORMAT); ?></span>
 							</div>
 							<div class="table_col task_col_2">
 								<span class="task_value" data-costraw="<?= $cost['raw']; ?>"><span class="task_value_currency"><?= CURRENCY_SYMBOL ?></span><?= $cost['formatted']; ?></span>
