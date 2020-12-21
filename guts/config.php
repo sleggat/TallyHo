@@ -12,7 +12,6 @@ class Config
 	public static $defaultInvoiceReminderDays = 30; // days
 }
 
-
 date_default_timezone_set(Config::$defaultTimezone);
 define('DATE_FORMAT', Config::$defaultDateFormat);
 define('TIME_FORMAT', Config::$defaultTimeFormat);
