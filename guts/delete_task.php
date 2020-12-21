@@ -11,6 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if (!empty($dump['Project']) && !empty($dump['Client'])) {
 		// we can assume it's legit and proceed with unlinking the file
 		@unlink($path);
+		@unlink(CACHE_FILE);
 		// log_change("Delete",spyc_dump($current),$content.NL.'Client: '.urldecode($client).NL.'Project: '.urldecode($project));
 	}
 }

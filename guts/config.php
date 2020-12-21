@@ -4,7 +4,7 @@ class Config
 {
 	public static $defaultTimezone = 'Pacific/Auckland';
 	public static $defaultDateFormat = 'Y-m-d h:i A';
-	public static $defaultTimeFormat = 'H:i'; // 'h:i A' returns 01:23 PM, 'H:i' returns 13:23
+	public static $defaultTimeFormat = 'g:ia'; // 'g:ia' returns 01:23pm, 'H:i' returns 13:23
 	public static $defaultCurrencySymbol = '$'; // This is just a string, so could be EUR or €, USD or US$ or just $
 	public static $defaultDataPath = 'data';
 	public static $defaultHourlyRate = 75;
@@ -13,12 +13,13 @@ class Config
 }
 
 
-
 date_default_timezone_set(Config::$defaultTimezone);
 define('DATE_FORMAT', Config::$defaultDateFormat);
 define('TIME_FORMAT', Config::$defaultTimeFormat);
 define('CURRENCY_SYMBOL', Config::$defaultCurrencySymbol);
 define('DATA_PATH', Config::$defaultDataPath);
+define('CACHE_FILE', "cache/tasks.txt");
+
 $default_hourlyrate = Config::$defaultHourlyRate; // dollar per hour
 $default_timeincrement = Config::$defaultTimeIncrement; // dollar per hour
 $defaultInvoiceReminderDays = Config::$defaultInvoiceReminderDays;

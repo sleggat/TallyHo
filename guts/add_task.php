@@ -55,6 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$fp = fopen($newname, 'w');
 	fwrite($fp, $content);
 	fclose($fp);
+	@unlink(CACHE_FILE);
 
 	log_change("Add", '', $content . NL . 'Client: ' . urldecode($client) . NL . 'Project: ' . urldecode($project));
 } else {
