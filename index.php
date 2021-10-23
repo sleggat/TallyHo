@@ -56,6 +56,9 @@ $info_array = get_info_array($file_structure[1]);
 
 $all_records_sorted_array = sort_tasks_by_time($all_records_array);
 
+// Show $all_records_sorted_array as JSON
+// echo json_encode($all_records_sorted_array);
+
 $clients_and_projects = clients_and_projects($all_records_array);
 $tasks_total = count($all_records_sorted_array);
 $client_options = '"' . implode('","', array_keys($clients_and_projects)) . '"';
@@ -139,12 +142,13 @@ $additional_js = ''; // extra JS to go in footer
 				<?php
 
 				// start of foreach loop
-
+				$all_tasks_for_export = [];
 				foreach ($all_records_sorted_array as $task) {
 					$add_classes = "";
 					$has_invoiced = false;
 
 					$current_task = get_task_array($task);
+					array_push($all_tasks_for_export, $current_task);
 
 					if (!empty($info_array[$current_task['Client']]['Invoiced'])) {
 						if ($info_array[$current_task['Client']]['Invoiced'] >= format_date($current_task['Date'], 'Ymd')) {
@@ -182,7 +186,7 @@ $additional_js = ''; // extra JS to go in footer
 
 					if ($previous_day != format_date($current_task['Date'], 'Ymd')) {
 						$pretty_date = '<span class="pretty_date">' . format_date($current_task['Date'], 'j M Y') . '</span> <span class="pretty_day">' . format_date($current_task['Date'], 'l') . '</span>';
-						echo '<div class="day_header" data-date="' . format_date($current_task['Date'], 'Ymd') . '">' . $pretty_date . '</div>';
+						echo '<div class="day_header ' . $add_classes . '" data-date="' . format_date($current_task['Date'], 'Ymd') . '">' . $pretty_date . '</div>';
 					}
 
 					if ($current_task['Path'] == $just_updated) {
@@ -296,5 +300,6 @@ $additional_js = ''; // extra JS to go in footer
 </div><!-- end container -->
 
 <?php
+// echo json_encode($all_tasks_for_export);
 include __DIR__ . "/guts/footer.php";
 ?>

@@ -743,3 +743,21 @@ select {
     overflow-x: hidden;
   }
 }
+
+@media print { 
+  :root {
+    font-size: 8px
+  }
+  html {
+    background-color: white;
+  }
+  .nav, .task_col_4, .show_invoiced, .pagination, .page_tally, .pagespeed, .page_number  {
+    display: none
+  }
+  .task_col_1, .day_header {
+    padding-left: .25em;
+  }
+  .task_col_1::before, .task_col_1::after {
+    display: none !important
+  }
+}

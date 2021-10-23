@@ -18,7 +18,7 @@
 	<link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
 	<link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
 	<link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
-	<link rel="stylesheet" href="guts/css/style.css">
+	<link rel="stylesheet" href="guts/css/style.min.css?Asdfads">
 	<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
