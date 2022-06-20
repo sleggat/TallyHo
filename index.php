@@ -14,6 +14,8 @@ $previous_day = "";
 $tally['cost'] = 0;
 $tally['time'] = 0;
 
+$client_invoicereminder = array();
+
 
 require_once __DIR__ . "/guts/config.php";
 require_once __DIR__ . "/guts/vendor/mustangostang/spyc/Spyc.php";
@@ -163,6 +165,7 @@ $additional_js = ''; // extra JS to go in footer
 					}
 					if (!$has_invoiced && format_date($current_task['Date'], 'Ymd') < $defaultInvoiceReminderDate) {
 						$add_classes .= "show_invoicereminder ";
+						array_push($client_invoicereminder, $current_task['Client']);
 					}
 
 					if ($filter_project != "") {
@@ -293,6 +296,11 @@ $additional_js = ''; // extra JS to go in footer
 			echo '</ul>
 			</nav>';
 			echo '<div class="page_tally">Page Tally - Cost: ' . CURRENCY_SYMBOL . ' ' . $tally['cost'] . ' / Time: ' . $tally['time'] . ' mins</div>';
+			echo '<div class="outstanding_invoice">Clients to Invoice: ';
+			foreach (array_unique($client_invoicereminder) as $result) {
+				echo '<a href="/?FilterClient=' . $result . '&Submit=filter">' . $result . '</a> / ';
+			}
+			echo '</div>';
 			echo '<div class="pagespeed">Churned out in ' . ($pagespeed_after - $pagespeed_before) . " secs. Total tasks: " . $tasks_total . "</div>\n";
 			?>
 		</div>

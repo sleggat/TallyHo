@@ -12,7 +12,7 @@
 	<meta property="og:url" content="https://github.com/sleggat/TallyHo">
 	<meta property="og:image" content="screenshot.jpg">
 
-
+	<link rel="shortcut icon" type="image/png" href="//tallyho.local/guts/images/favicon.png" />
 	<link rel="dns-prefetch" href="//fonts.googleapis.com" />
 	<link rel="dns-prefetch" href="//kit.fontawesome.com" />
 	<link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
