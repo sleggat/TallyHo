@@ -1,10 +1,8 @@
+This version of TallyHo will no longer be updated. Please visit the new home of [TallyHo](https://tallyho.app). 
+
 # TallyHo
 
 > A time tracker for the uncomplicated freelancer.
-
-![Preview](https://raw.githubusercontent.com/sleggat/TallyHo/master/screenshot.jpg)
-
-Demo at: [tallyho.steveleggat.com](http://tallyho.steveleggat.com)
 
 ## Features:
 
