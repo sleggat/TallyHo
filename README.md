@@ -1,94 +1,72 @@
-This version of TallyHo will no longer be updated. Please visit the new home of [TallyHo](https://tallyho.app). 
+# TallyHo (Open Source Archive - 2020-2024)
 
-# TallyHo
+This open-source version of TallyHo is no longer actively maintained. The project has evolved into a hosted Progressive Web App that's easier to use and always up-to-date.
 
-> A time tracker for the uncomplicated freelancer.
+## What happened to the open source version?
 
-## Features:
+After four years of development (2020-2024), I rebuilt TallyHo as a hosted Progressive Web App. Here's why:
 
-- Flat file (text/Yaml) ‘database’. Makes backups/syncing data super easy.
-- Add a New task, or continue a previous task. New Clients/Projects created on-the-fly.
-- Edit tasks (double-click, or select via dropdown)
-- Duplicate / Restart tasks
-- Filter by Client and/or Project
-- Delete tasks
-- Select rows/days to show a tally of costs and hours
-- Add Reimbursable expenses (e.g. printing costs, client's domain name, 'research' trip to Bali)
-- Different hourly rates; Default Rate / Client Rate / Project Rate
-- Easily see which tasks have been invoiced and which need to be
+**No technical setup required** - Start tracking time immediately without installing software or configuring databases
 
-#### Features I'd like to add at some point;
+**Always current** - Automatic updates mean you never need to manually upgrade or migrate data
 
-- Filtering by date range
-- Basic Reports/Charts (Historical and Projection)
-- Basic exporting to CSV
+**Works everywhere** - Access from any device with a browser (desktop, mobile, tablet)
 
-#### TallyHo is simple by design and I have no intention of adding the following;
+**Better security** - Hosted infrastructure with encrypted backups and proper authentication
 
-- Invoice Creation
-- Multiple User/Team Support, including authentication
-- Multiple currencies (e.g per client)
+**Improved features** - Faster development cycle means better tools for freelancers
 
-## Installation:
+## Try the current version
 
-Unzip and put the 'tallyho' in your '~/Sites' folder or wherever localhost points to. You'll want to configure default hourly rate, timezone and other stuff first. Just open up and edit guts/config.php
+TallyHo is now a free, hosted PWA:
+- Free Forever Plan (5 clients, unlimited projects)
+- Pro Plan ($5/month) for unlimited clients
+- Install as a native-like app on any device
+- Secure, encrypted, GDPR-compliant
 
-Once installed, just open 'http://localhost/tallyho' up in your web browser. Upon first-run TallyHo will create some demo tasks which you can edit/duplicate/delete until you're ready to start adding your own.
+Get started at [tallyho.app](https://tallyho.app)
 
-## Flat-file Structure:
+## About this repository
 
-TallyHo uses flat-files (.txt/.yaml) instead of a database.
+This repo contains the original open-source version (2020-2024) that required self-hosting. While functional, it lacks many features from the current PWA:
 
-Why flat-files instead of a MySQL database? I much prefer being able to copy/backup and manually edit a bunch of text files rather than having to deal with a MySQL database. Keeps things simple.
+- Zapier integration for automated workflows
+- Smart time-gap detection
+- Progressive Web App capabilities
+- Mobile-optimised interface
+- Advanced insights and analytics
+- Professional timesheet generation
 
-A typical file structure;
+## Historical context
 
-```
-/tallyho/data/ClientO/ProjectX/20191009-1230.txt
-/tallyho/data/SupertouchX/Website2020/20201010-1645.txt
-```
+The open-source version served as the MVP that validated TallyHo's approach to time tracking for freelancers. It proved that:
 
-## Additional info:
+- Freelancers want simple, focused tools (not complex team platforms)
+- A decent chunk of use freelncers prefer post-completion logging over timer-based or app-usage tracking
+- Universal compatibility (copy-paste timesheets) beats fragile integrations
 
-Hourly rates and invoicing info can be entered into a \_info.yaml file in a client or project folder.
-In the future, this will be available from the frontend.
+These insights shaped the current PWA, which delivers the same philosophy with a dramatically better user experience.
 
-### Hourly Rates
+## For developers
 
-Varying hourly rates can be set up per client and project.
+If you're interested in building your own time tracking tool, this codebase might provide useful insights, but I'd recommend starting fresh with modern tooling. The current TallyHo uses:
 
-```
-/tallyho/data/ClientO/ProjectX/_info.yaml
-```
+- SvelteKit 5
+- TailwindCSS 4
+- Progressive Web App architecture
+- Cloudflare hosting
 
-Add an hourly rate like so:
+Check out the [blog](https://tallyho.app/blog) for technical insights and development philosophy.
 
-```
-Rate: 75
-```
+## Questions?
 
-The heirarchy is Project>Client>Default
+**Need time tracking?** Start using [TallyHo PWA](https://tallyho.app)
 
-### Marking Tasks as Invoiced
+**Technical questions?** [Email me](mailto:info@tallyho.app)
 
-I have implemented some basic invoice marking. Again this goes in a \_info.yaml file in the client or project folder.
+**Read the story:** [The 25-Year Journey to Building TallyHo](https://tallyho.app/blog/the-25-year-journey-to-building-tallyho)
 
-Adding this line will mark everything on or before Christmas 2020 as invoiced (represented by the check/tick icon)
+---
 
-```
-Invoiced: '20201225'
-```
-
-## The Backstory:
-
-Over the course of my 17 years as [a freelance designer/developer](https://steveleggat.com "Steve Leggat has been a freelance graphic designer and coder in New Zealand and Taiwan since 2006") I've tried out a decent number of time-trackers, from native apps, browser-based and even just using MacOS' Notes app. For the last year I have been using Kimai and have for the most part been pretty happy with it. Trouble is, it occupies over 2.5GB of my server space, and with over 21,000 files it's no surprise that it's quite slooooow and easy to break ...
-
-... so I created TallyHo, with a 'simple by design' philosophy.
-
-## Disclaimer:
-
-TallyHo's code is not particularly elegant, yet. Please feel free to contribute!
-
-Don't put TallyHo where malicious users might mess with your data. Put it in a password-protected folder if you have to.
-
-TallyHo has been tested and works sweet on PHP v5.6 and PHP v7.2
+Built by [Steve Leggat](https://frontandback.co.nz), freelancing since 1996.
+Chur!
